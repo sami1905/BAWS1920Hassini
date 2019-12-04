@@ -1,0 +1,185 @@
+\documentclass[a4paper, 12pt]{scrartcl}
+
+\usepackage[ngerman]{babel}  % Deutsche Einstellungen
+\usepackage[utf8]{inputenc} %uft-8 Eingabe
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage{graphicx}
+
+\begin{document}
+
+
+\begin{titlepage}
+	
+	\begin{center}
+		
+		% Logo der Technische Hochschule Köln
+		% Kann auch in dieser Form in Schwarz/Weiß ausgedruckt werden; Graustufen sollten der .tif Version entsprechen
+		\begin{figure}[!ht]
+			%	\centering
+			\includegraphics[width=0.26\textwidth]{images/THlogoheader.pdf}
+		\end{figure}
+		
+		\vspace{0.8cm}
+		
+		%Deutscher Titel
+		\begin{rmfamily}
+			\begin{huge}
+				\textbf{Therapieoptimierung\\ für Diabetiker}\\	
+			\end{huge}
+			\vspace{0.5cm}
+			\begin{LARGE}
+				Konzept, Modellierung und\\ Implementierung\\
+			\end{LARGE}
+		\end{rmfamily}
+		
+		\vspace{1.6cm}
+		
+		%Englischer Titel
+		% \begin{rmfamily}
+		% \textbf{\LARGE Title in English}\\
+		% \large with a very\\long subtitle\\
+		% \normalsize
+		% \end{rmfamily}
+		
+		% \vspace{1.2cm}
+		
+		%Bachelorarbeit 
+		\begin{LARGE}
+			\begin{scshape}
+				Exposé zur Bachelorarbeit\\[0.8em]
+			\end{scshape}
+		\end{LARGE}
+		
+		%ausgearbeitet von...
+		\begin{large}
+			ausgearbeitet von\\ 
+			\vspace{0.2cm}
+			\begin{LARGE}
+				Sami Hassini\\
+			\end{LARGE}
+		\end{large}
+		
+		\vspace{1.0cm}
+		
+		
+		%vorgelegt an der...
+		\begin{large}
+			vorgelegt an der\\ 
+			\vspace{0.2cm}
+			\begin{scshape}
+				Technischen Hochschule Köln\\
+				Campus Gummersbach\\
+				Fakultät für Informatik und\\
+				Ingenieurwissenschaften\\
+			\end{scshape}
+		\end{large}
+		
+		\vspace{0.4cm}
+		
+		%im Studiengang...
+		\begin{large}
+			im Studiengang\\ 
+			\vspace{0.2cm}
+			\textsc{Medieninformatik}
+		\end{large}
+		
+		
+		\vspace{1.0cm}
+		
+	
+		
+		%Ort, Monat der Abgabe
+		\begin{large}
+			Köln, 25. Oktober 2019
+		\end{large}
+		
+	\end{center}
+
+\end{titlepage}
+	
+	\newpage
+	\thispagestyle{empty}
+	
+	
+
+	
+			\section{Problemfeld und Kontext}
+				Die Zahl der an Diabetes mellitus Erkrankten nimmt stetig zu. Laut der Weltgesundheitsorganisation (WHO) hat sich die Zahl der Diabetiker seit 1980 weltweit auf etwa 422 Millionen nahezu vervierfacht. 
+				Trotz der wissenschaftlichen und technologischen Fortschritte in der Medizin und im Bezug auf dem Diabetes mellitus, bringt die Stoffwechselerkrankung zahlreichen Komplikationen mit sich und beeinflusst das Leben der Betroffenen extrem. \\
+				Eine in diesem Jahr durchgeführte Studie, an der sowohl Typ-1- als auch Typ-2-Diabetiker teilnahmen, ergab, dass rund 60\% der Befragten bereits mit ihrer Erkrankung im Alltag überfordert waren. Sportabbruch, falsche Insulineinheitenberechnungen und Komplikationen bei der Ernährung senken oftmals die Lebensqualität der Diabetiker. \\
+				Über 90\% der Befragten fehlt die Kommunikationsmöglichkeit unter Diabetikern. Gerade bei neuen Geräten oder neuen Behandlungsarten sind Erfahrungen von anderen Diabetikern erwünscht.\\\\				
+				Diabetes mellitus ist eine Erkrankung der Bauchspeicheldrüse, bei der die Aufnahme von Glukose aus dem Blut in die Körperzellen unterbunden wird, wodurch erhöhte Blutzuckerwerte entstehen. Ein guter Blutzuckerwert liegt im Bereich von 80 bis 120 Milligramm pro Deziliter. Der Körper speichert Zucker im Blut, Leber und Körperzellen. Nach der Essensaufnahme werden Kohlenhydrate in Glucose umgewandelt und dieses gelangt folglich in Blut und Leber. Die Leber bietet eine Zuckerspeicherung, die als Reserve dient und aufgebraucht wird, wenn die körperliche Bewegung und der Energieverbrauch des Körpers hoch sind. Insulin wird von Inselzellen in der Bauchspeicheldrüse produziert und sorgt für den Transport des Zuckers aus dem Blut und Leber in die Körper- und von dort in die Muskelzellen. Insulin dient metaphorisch als Schlüssel für die Muskelzellen, die das Schloss darstellen, sodass man von einem Schlüssel-Schloss-Prinzip reden kann. Neben den hohen Blutzuckerwerten kann ein Diabetiker auch zu niedrige Blutzuckerwerte haben. Dies wird durch Sport oder zu viel Insulin verursacht. Eine Überzuckerung nennt man Hyperglykämie und bedeutet „zu viel Zucker im Blut“. Dies kann zur einer Ketoacidose, Übersäuerung des Blutes, führen. Hyperglykämien sind immer ernst zunehmen und müssen konsequent behandelt werden. Kommt es tatsächlich zu einer Ketoacidose, in der Ketone in die Blutbahn und in den Urin gelangen, könnte man bei Nichtbehandlung ins Koma fallen oder sogar sterben. Die Ketoacidose tritt meist bei Werten ab 200mg/dl über mehrere Stunden auf und ist die gefährlichste Akutkomplikation des Diabetes. Der Großteil der Todesfälle durch Diabetes ereignen sich durch Ketoacidosen und folglich Hirnödem. Das gefährlich bei einer Ketoacidose sind die Ketone in Blut und Urin. Bei Glucosemangel in Muskel- und Körperzellen wird Glukagon als Hunger-Signal der Zelle ausgeschüttet. Dieses Glukagon sorgt dafür, dass die Zuckerreserven aus der Leber in die Blutbahn gelangen und somit der Blutzucker steigt. Auch dieser Zucker gelangt nicht in die Körperzellen, sodass der Körper weiter Glucose in die Blutbahn befördern möchte. Die Fettreserven werden verbrannt, wodurch freie Fettsäuren entstehen und Ketonkörper als Abfallprodukt produziert werden. Ketone sorgen für eine Übersäuerung des Blutes und scheiden über die Atmung und den Urin aus. Zudem kommt es zu einer Austrocknung des Körpers, da dieser sich von Ketone durch Wasserlassen reinigen möchte. Folglich kann es durch austrocknen der Hirnzellen zur Bewusstseinsschwäche und somit zum Koma kommen. In dieser Phase schwebt man in Lebensgefahr. Eine Überzuckerung wird durch die Einnahme von Insulin vermieden. Bei einer Hypoglykämie hat man zu wenig Zucker im Blut. Dies tritt auf, wenn dem Körper zu viel Insulin zugeführt oder keine Kohlenhydrate über einen längeren Zeitraum aufgenommen wurden. Von einer Hypoglykämie oder Unterzuckerung spricht man, wenn der Blutzucker unter 80mg/dl liegt. Sinkt der Blutzuckerwert weiter gegen 0mg/dl, steigtdie Gefahr der Bewusstlosigkeit. Diese sorgt für Muskelzuckungen und hält solange an, bis der Körper Adrenalin ausstößt. Adrenalin hat eine blutzuckererhöhende Wirkung. Um aus der Unterzuckerung zu gelangen, ist es notwendig schnelle Kohlenhydrate wie Traubenzucker oder Orangensaft zu sich zu nehmen.
+
+			
+			
+			
+
+			\section{Ziele}
+				Ziel dieses Projektes ist die Weiterentwicklung des aktuellen Prototypens auf der Basis der bisher gesammelten Erkenntnisse aus den Modulen „Entwicklungsprojekt interaktiver Systeme“ und „Praxisprojekt“.  Das Ergebnis soll eine erste „fertige“ Version des Systems für die Therapieoptimierung der Diabetiker und konkurrenzfähig gegenüber den aktuellen Systemen auf dem Markt sein. \\
+				Diese Arbeit soll auf folgende Forschungsfragen und Unterfragen Antworten finden:
+
+				\begin{itemize}
+					 
+					\item Wie kann ein technisches Hilfsmittel gestaltet werden, um die Lebensqualität eines Diabetikers zu steigern?
+					\item Wie wird der Diabetes mellitus in der wissenschaftlichen Literatur aus dem medizinischen Bereich dargestellt?
+					\item Wie werden die Kommunikationsmöglichkeiten unter Diabetikern gestärkt?
+					\item Wie kann ein technisches Hilfsmittel einem Diabetiker den Umgang mit Sport erleichtern?
+					\item Wie kann ein technisches Hilfsmittel einem Diabetiker bei der Ernährung hilfreich sein?
+					\item Wie sehen die ersten Schritte der Vermarktung eines Systems aus? Spielt der Diabetes mellitus in der Vermarktung einer Rolle?
+
+				\end{itemize}
+			\newpage
+			\section{Aufgabenstellung}
+				Hauptaufgabe ist das Anfertigen des Konzepts, der Modellierung und der Implementierung in Form einer Weiterentwicklung des bisherigen Systems. Dabei soll neben den bereits erzielten und neuen Erkenntnissen aus vergangenen Modulen auch auf wissenschaftliche Literatur aus dem medizinischen Bereich eingegangen und die Analysephase somit abgeschlossen werden. Die Entwicklungsphase sollte klar und stimmig von der Analysephase hergeleitet werden und anhand der Konzipierung und Modellierung die getroffenen Entscheidungen verständlich dargestellt werden. Dabei sollten Alternativen berücksichtigt und Entscheidungen begründet werden. Die ersten Schritte nach der Entwicklungsphase sind zu recherchieren und es soll in Erfahrung gebracht werden, wie das System in einem oder mehrere App-Stores zum Download zur Verfügung gestellt werden könnte.
+			
+			\section{Lösungsansätze}
+				Erste Ansätze zu Problemlösung wären das zusammentragen der bisherigen Erkenntnisse und diese auf das notwendigste reduzieren. Um die Erkenntnisse zu stärken und weitere wissenschaftliche Resultate zu erhalten, sollte erneut eine kurze Recherchephase durchgeführt werden, um die bisherigen Erkenntnisse mit dem aktuellen medizinischen Stand abzugleichen. Auch eine erneute Marktrecherche sollte durchgeführt werden, um Veränderung erkennen oder ausschließen zu können. Neben der deskriptiven und präskriptiven ist die Modellierung, der Benutzer und der Benutzung in den jeweiligen Anwendungsbereichen und des aktuellen Nutzungskontextes von enormer Bedeutung. Hierfür muss der methodische Rahmen und das genaue Vorgehen festgelegt werden. Dabei ist zu entscheiden, ob das Usability-engineering-Lifecycle-Modell nach Mayhews weiterhin als Hauptvorgehensmodell des Projektes dienen soll. In der Implementierungsphase ist eine erste „fertige“ Version des Systems anhand der vorherigen Konzipierung zu programmieren.
+				
+							
+			\section{Chancen und Risiken}
+				Im Idealfall können alle gesetzten Ziele erreicht und eine fertige Version des Systems zur Therapieoptimierung von Diabetiker so entwickelt werden, dass diese konkurrenzfähig auf dem Markt angeboten werden kann.\\
+				Dabei ist die Komplexität der Domäne und des Projektes zu bedenken, um folgenschwere Schäden am späteren Ergebnisse zu vermeiden. Es muss bereits frühzeitig darüber nachgedacht werden, welche Priorität einzelne Aufgabenbereiche für das Projekt haben und folglich wie viel Zeitaufwand für diese eingeplant werden muss. Hier sollte ein Projektplan mit einzelnen Projektphasen und –aufgaben erstellt werden, um ein Zeitmanagement zu garantieren und zeitliche Probleme zu vermeiden. \\
+				Es besteht zu jedem Entwicklungszeitpunkt das Risiko, dass bestimmte Funktionen zu komplex zu implementieren sind. Auf Grund dessen, sollten immer Alternativen und das mögliche Fehlen dieser Funktionen in der fertigen Version bedacht werden.
+
+			
+			\section{Ressourcen}
+				Der bereits vorhandene Prototyp wird erweitert. Gearbeitet wird an den Anwendungsbereichen Ernährung, Sport und Kommunikation unter Diabetikern. Hierzu müssen in den jeweiligen Bereichen die Benutzer und der Aktivitäten modelliert und analysiert werden. Um ausreichende Benutzerdaten erhalten zu können, sollte das System mit mindestens einem, aber bestenfalls mit mehreren, Blutzuckermessgerät kompatibel sein. Hier kämen Messgeräte von Dexcom und Accu-Chek in Frage.\\
+\\
+				Erste Ansätze wären zum einen, eine Datenbank mit den Nährwerten von Lebensmitteln zu erstellen und dem Benutzer die Möglichkeit zu bieten, diese individuell erweitern zu können und zum anderen eine Plattform zur Kommunikation unter Diabetikern, auf der Beiträge gepostet, diese bewertet und kommentiert werden können.\\
+				\\
+				Eine erste dynamische Gliederung der Bachelorarbeit könnte wie folgt aussehen:\\\\
+				1.	Einleitung\\
+				2.	Ziele\\
+				3.	Domäne\\
+				3.1	Rückblick/Zusammenfassung: Diabetes Mellitus und bisherige Erkenntnisse\\
+				3.2	Diabetes mellitus: Ernährung\\
+				3.3	Diabetes mellitus: Sport\\
+				3.4	Diabetes mellitus: Erfahrungsaustausch\\
+				3.5	Diabetes mellitus in der Medizin\\
+				4.	Marktrecherche\\
+				5.	Alleinstellungsmerkmale\\
+				6.	Stakeholder\\
+				6.1	Stakeholder-Analyse\\
+				6.2	Anforderungen\\
+				7.	Kommunikationsmodelle\\
+				8.	Systemarchitektur\\
+				9.	Methodischer Rahmen\\
+				10.	Prozessmodellierung\\
+				11.	Systemmodellierung\\
+				12.	Implementierung\\
+
+
+			\section{Motivation}
+				Auf Grund der bereits erarbeiteten Ergebnissen aus den vorherigen Modulen, dem bereits erbrachten Aufwand und der Spaß an diesem Projekt, ist die Motivation, dieses Projekt weiterzuentwickeln, sehr groß. Wegen der eigenen Erkrankung an Diabetes Mellitus ist diese Arbeit zu einer Leidenschaft gewachsen. In der Medieninformatik gehört das Entwickeln von interaktiven Systemen zum Fachgebiet und mit dem Abschluss des Studiums ist das Interesse groß, dieses Projekt ebenfalls erfolgreich zu beenden und so anderen Diabetikern etwas zur Verfügung zu stellen.
+
+				
+
+			
+	
+	
+
+\end{document}
+
+
+

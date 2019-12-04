@@ -1,0 +1,61 @@
+\BOOKMARK [1][]{section*.1}{Kurzfassung/Abstract}{}% 1
+\BOOKMARK [1][]{section*.3}{Tabellenverzeichnis}{}% 2
+\BOOKMARK [1][]{section*.4}{Abbildungsverzeichnis}{}% 3
+\BOOKMARK [1][]{section*.5}{Einleitung}{}% 4
+\BOOKMARK [0][]{part.6}{I Konzept}{}% 5
+\BOOKMARK [1][]{section.7}{1 Zielhierarchie}{part.6}% 6
+\BOOKMARK [2][]{subsection.8}{1.1 Strategische Ziele}{section.7}% 7
+\BOOKMARK [2][]{subsection.9}{1.2 Taktische Ziele}{section.7}% 8
+\BOOKMARK [2][]{subsection.10}{1.3 Operative Ziele}{section.7}% 9
+\BOOKMARK [1][]{section.11}{2 Themenfeld/-recherche}{part.6}% 10
+\BOOKMARK [2][]{subsection.12}{2.1 Ern\344hrung}{section.11}% 11
+\BOOKMARK [3][]{subsubsection.14}{2.1.1 Kohlengydrate}{subsection.12}% 12
+\BOOKMARK [3][]{subsubsection.15}{2.1.2 Eiwei\337}{subsection.12}% 13
+\BOOKMARK [3][]{subsubsection.16}{2.1.3 Fett}{subsection.12}% 14
+\BOOKMARK [2][]{subsection.17}{2.2 Sport}{section.11}% 15
+\BOOKMARK [2][]{subsection.18}{2.3 Kommunikation/Erfahrungsaustausch}{section.11}% 16
+\BOOKMARK [1][]{section.19}{3 Marktrecherche}{part.6}% 17
+\BOOKMARK [2][]{subsection.20}{3.1 MySugr}{section.19}% 18
+\BOOKMARK [2][]{subsection.22}{3.2 DiabetesConnect}{section.19}% 19
+\BOOKMARK [2][]{subsection.24}{3.3 Dexcom G6}{section.19}% 20
+\BOOKMARK [2][]{subsection.26}{3.4 FreeStyle LibreLink}{section.19}% 21
+\BOOKMARK [2][]{subsection.28}{3.5 Lifesum}{section.19}% 22
+\BOOKMARK [2][]{subsection.30}{3.6 Fazit}{section.19}% 23
+\BOOKMARK [1][]{section.31}{4 Alleinstellungsmerkmal}{part.6}% 24
+\BOOKMARK [1][]{section.32}{5 Kommunikationsmodelle}{part.6}% 25
+\BOOKMARK [1][]{section.35}{6 Methodischer Rahmen}{part.6}% 26
+\BOOKMARK [2][]{subsection.36}{6.1 Nutzungsontext}{section.35}% 27
+\BOOKMARK [2][]{subsection.37}{6.2 Vorgehensmodell}{section.35}% 28
+\BOOKMARK [1][]{section.38}{7 Risiken}{part.6}% 29
+\BOOKMARK [0][]{part.39}{II Prozessmodellierung}{}% 30
+\BOOKMARK [1][]{section.40}{8 Requirments Analysis}{part.39}% 31
+\BOOKMARK [2][]{subsection.41}{8.1 Benutzer-Modellierung}{section.40}% 32
+\BOOKMARK [3][]{subsubsection.42}{8.1.1 Stakeholder}{subsection.41}% 33
+\BOOKMARK [2][]{subsection.44}{8.2 Benutzungs-Modellierung}{section.40}% 34
+\BOOKMARK [2][]{subsection.45}{8.3 Platform Capabilities/Constraints}{section.40}% 35
+\BOOKMARK [2][]{subsection.46}{8.4 Usability-Goals}{section.40}% 36
+\BOOKMARK [2][]{subsection.47}{8.5 Anforderungen}{section.40}% 37
+\BOOKMARK [2][]{subsection.48}{8.6 Style Guide}{section.40}% 38
+\BOOKMARK [1][]{section.49}{9 Design/Testing/Development}{part.39}% 39
+\BOOKMARK [2][]{subsection.50}{9.1 Work Reengineering}{section.49}% 40
+\BOOKMARK [2][]{subsection.51}{9.2 Screen Design Standards \(SDS\)}{section.49}% 41
+\BOOKMARK [2][]{subsection.52}{9.3 UI Prototyp}{section.49}% 42
+\BOOKMARK [2][]{subsection.53}{9.4 Iterative Evaluation}{section.49}% 43
+\BOOKMARK [2][]{subsection.54}{9.5 Detailed User Interface Design \(DUID\)}{section.49}% 44
+\BOOKMARK [0][]{part.55}{III Systemmodellierung}{}% 45
+\BOOKMARK [1][]{section.56}{10 Systemarchitektur}{part.55}% 46
+\BOOKMARK [1][]{section.57}{11 Datenstruktur}{part.55}% 47
+\BOOKMARK [1][]{section.58}{12 Rest-Spezifikation}{part.55}% 48
+\BOOKMARK [1][]{section.59}{13 Anwendungslogik}{part.55}% 49
+\BOOKMARK [0][]{part.60}{IV Installation}{}% 50
+\BOOKMARK [1][]{section.61}{14 Fazit}{part.60}% 51
+\BOOKMARK [2][]{subsection.62}{14.1 Zusammenfassung}{section.61}% 52
+\BOOKMARK [2][]{subsection.63}{14.2 Bewertung}{section.61}% 53
+\BOOKMARK [2][]{subsection.64}{14.3 Next Steps}{section.61}% 54
+\BOOKMARK [1][]{section*.65}{Literaturverzeichnis}{part.60}% 55
+\BOOKMARK [1][]{section*.66}{Anhang}{part.60}% 56
+\BOOKMARK [2][]{subsection.67}{A Evaluation}{section*.66}% 57
+\BOOKMARK [3][]{subsubsection.68}{A.1 Vorgehensweise}{subsection.67}% 58
+\BOOKMARK [3][]{subsubsection.69}{A.2 Auswertung}{subsection.67}% 59
+\BOOKMARK [3][]{subsubsection.74}{A.3 Fazit}{subsection.67}% 60
+\BOOKMARK [1][]{section*.75}{Erkl\344rung}{part.60}% 61
