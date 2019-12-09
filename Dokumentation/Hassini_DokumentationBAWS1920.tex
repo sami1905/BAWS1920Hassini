@@ -142,7 +142,6 @@ In der Zielhierarchie werden die Ziele dieser Arbeit anhand ihrer Fristigkeiten 
 	Im Leben eines Diabetikers kann es schnell zu Komplikationen und Unzufriedenheit kommen. Oft führen schlechte Therapien und fehlende Disziplin zur Therapieunzufriedenheit und zu einer geringen Lebensqualität. Aufgrund dessen ist der Erhalt der Lebensqualität einer der wichtigsten Aspekte einer erfolgreichen Therapie. Im Idealfall kann diese sogar gesteigert werden. \\
 	\item \lbrack \textbf{S3}\rbrack  \textbf{ Anpassungen in der Lebensführung} \\
 	Für eine erfolgreiche Therapie des Diabetes mellitus wird oft auf Dinge verzichtet, die Auswirkungen auf Therapie, Moral und Leben eines Diabetikers mit sich bringen. Durch einfache Änderungen im Leben lässt sich dies jedoch vermeiden.  Durch die Darstellung der notwendigen Eigenschaften im Umgang des Diabetes, soll dem Erkrankten die Entscheidungen in der Behandlung und im Leben erleichtern werden. \\
-
 \end{itemize}
 
 \subsection{Taktische Ziele}
@@ -470,37 +469,91 @@ Kommunikationsmodelle dienen zur Beschreibung der wechselseitigen Übermittlung 
 \newpage
 
 \section{Methodischer Rahmen}
-Der methodische Rahmen spiegelt den methodischen Ansatz für die Entwicklung interaktiver Systeme und legt fest, welches Vorgehensmodell in der Entwicklungsphase verwendet wird. Dabei sind verschiedene Ansätze, wie der benutzer-zentrierte oder der system-zentrierte, abzuwägen und sich für ein passendes Modell festzulegen. Hierzu muss zunächst der Nutzungskontext definiert werden, sodass ein interpretatorischer Rahmen vorliegt. Folglich wird anhand des Nutzungskontextes ein Vorgehensmodell und dessen Aktivitäten gewählt und diese Wahl begründet.
-\subsection{Nutzungsontext}
-
-\subsection{Vorgehensmodell}
+	Der methodische Rahmen spiegelt den methodischen Ansatz für die Entwicklung interaktiver Systeme und legt fest, welches Vorgehensmodell in der Entwicklungsphase verwendet wird. Dabei ist die Nutzung der verschiedenen Ansätze, benutzer-zentriert oder system-zentriert, abzuwägen und sich für ein passendes Modell festzulegen. Hierzu muss zunächst der Nutzungskontext definiert werden, sodass ein interpretatorischer Rahmen vorliegt. Folglich wird anhand des Nutzungskontextes ein Vorgehensmodell und dessen Aktivitäten gewählt und diese Wahl begründet.
+	\subsection{Nutzungskontext}
+		Anhand der Themenfeldrecherche wurde die Domäne des Projektes klar definiert und die Zielhierarchie weist die verschiedenen Ziele des Projektes deutlich auf. So lässt sich festlegen, dass das zu entwickelnde System, neben der Funktion als Diabetestagebuch, zur Ernährungs- und Sportdokumentation dienen soll. Hierbei sind benutzer-bezogene Daten essentiell und Dokumentationen, Berechnungen und Präsentationen von diesen Abhängig. Zudem verfolgt das Projekt das Ziel, die Lebensqualität des Benutzers zu steigern und den Umgang mit Diabetes zu erleichtern. \newline
+		Um dies erreichen zu können, muss bei der Wahl des passenden Vorgehensmodells folgende Kriterien beachtet werden:
+		\begin{itemize}
+			\item Aufgrund des knappen Zeitrahmens und des begrenzten Umfanges der Dokumentation, muss das Vorgehensmodell die Möglichkeit bieten, die Tiefe der einzelnen Arbeitsschritte gegebenenfalls anpassen zu können.
+			\item Das Vorgehensmodell sollte klar strukturiert, transparent und leicht zu verstehen sein, da dies eine schnelle und effektive Entwicklung des Systems ermöglicht.
+			\item Fokus des Systems liegt bei dem Benutzer, dessen Aufgaben, Ziele und Eigenschaften. Der Benutzer aus der Domäne und dessen Erfordernisse und Anforderungen stehen im Mittelpunkt, wodurch die Wahl auf ein benutzer-zentriertes Vorgehensmodell fallen sollte.
+		\end{itemize}
+	\subsection{Ansätze des usage-centered-design}
+		Das Usage-centered-design ist ein Vorgehensmodell, welches den Fokus auf die Funktionalität und den Verwendungszweck eines Systems legt und bei dem die Durchführung der Aufgaben des Benutzers im Zentrum stellt. Da aus der Beschreibung des Nutzungskontextes zu entnehmen ist, dass das zu entwickelnde System den Schwerpunkt auf den Benutzer, dessen Aufgaben, Ziele und Eigenschaften legt, ist die Verwendung des Usage-centered-design ausgeschlossen. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
+	\subsection{Ansätze des user-centered-design}
+		Bei dem user-centered-design stimmen die Kriterien des Nutzungskontextes und die Ansätze der Modellart überein, wodurch bei Verwendung eines benutzer-zentriertem Vorgehensmodell eine erfolgreiche Umsetzung des Systems wahrscheinlicher. Folglich werden verschiedene user-centered-designs abgewogen und sich abschließend für die Verwendung eines dieser Modelle entschieden. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
+		\subsubsection{Usability-engineering nach Rosson und Carrol}	
+			Das usabulity-engineering-Modell nach Rosson und Carrol ist ein scenario-basiertes Modell und dient zum Verstehen, Beschreiben und Modellieren des menschlichen Handels. Es stellt die Gebrauchstauglichkeit eines Systems in den Vordergrund und eignet sich somit für die Entwicklung dieses Projektes. Allerdings ist das scenario-basierte Vorgehensmodell mit user-centered-design-Ansätzen aufwendig und bringt eine gewisse Tiefe in den einzelnen Schritten, da jede Prozessstufe von scenario-basierten Aktivitäten abhängt, mit sich. Da die zeitliche Kapazität dieses Projektes begrenzt und das zu entwickelnde System in einem kurzen Zeitraum zu entwickeln ist, eignen sich dieses Vorgehensmodell im voller Verwendung nicht für dieses Projekt. Eine Verwendung des Modells in einzelnen Entwicklungsaktivitäten ist jedoch möglich und eine Teilverwendung des usability-engineering-Modells sollte in den Entwicklungsphasen abgewägt werden. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
+		\subsubsection{Discount usability-engineering nach Nielsen}
+			Auch das discount usability-engineering-Modell von Nielsen zählt zu den Vorgehensmodellen des user-centered-design und legt wie auch Rosson und Carrol die Gebrauchstauglichkeit eines Systems in den Vordergrund. Dabei wird schon früh im Entwicklungsprozess der Benutzer in den Mittelpunkt gesetzt. Da, durch den wenigen Aufwand und der fehlenden Tiefe der einzelnen Prozessstufen des Modells, die Gefahr besteht, nicht die maximale Gebrauchstauglichkeit eines Systems zu erhalten, fällt dieses Modell für das zu entwickelnde System weg. Denn die höchst mögliche Gebrauchstauglichkeit ist notwendig, um die Verwendung des Systems für den Benutzer so einfach wie möglich gestalten zu können. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
+		\subsubsection{Usability engineering lifecycle nach Mayhew}
+			Das usability engineering lifecycle von Mayhews beruht vollständig auf die User-centered-design-Prinzipien- und -methoden und stellt die Gebrauchstauglichkeit eines Systems anhand objekt-orientierter Entwicklungsprozesse her. Das Modell ist iterativ und durch die drei fundamentalen Prozess-Bestanteile wird eine gut strukturierte Entwicklung ermöglicht. Da der Zeitrahmen dieses Projektes begrenzt ist, stellt die Skalierbarkeit des Modells neben der benutzer-zentrierten Methoden die Gründe für die Verwendung dieses Vorgehensmodells in diesem Projekt. Trotz der geringen Zeitkapazität weist Mayhews Modell einen hohen Detailgrad in den einzelnen Entwicklungsphasen auf und sorgen auch bei einer Anpassung des Modells eine hohe Kontrolle über die Entwicklungsphase. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}\\
+			Abschließend ist zu sagen, dass das Modell nach Mayhews als Hauptvorgehensmodell des Projektes dienen und durch die Ergänzung der scenario-basierten-Ansätzen nach Rosson und Carroll eine hohe Wahrscheinlichkeit auf Gebrauchstauglichkeit des Systems ermöglicht. Mit diesem Modell werden eine erfolgreiche Umsetzung des Projektes und eine Verringerung des Risikos, dass das System von Benutzern nicht verwendet wird erhofft.
 
 \newpage
 
 \section{Risiken}
+	Die Analyse der Risiken während des Projektes dienen zur frühzeitigen Aufdeckung von möglichen Schäden am System und in dessen Entwicklungsphase. Die Auflistung aller Risiken bildet den ersten Schritt, um Risiken zu bewerten und anschließend durch gezielte Aktionen abzuschwächen. Sie lassen sich in interne und externe Risiken unterteilen.
+	\subsection{Interne Risiken}
+		Unter den internen fallen all die Risiken, die von dem Entwicklerteam gesteuert und beeinflusst werden.
+	\begin{itemize}
+		\item \textbf{Zeitmanagement}\newline
+		Ein mangelndes Zeitmanagement kann dazu führen, dass das Projekt unvollständig oder nicht zufriedenstellend fertiggestellt wird. Durch eine schlechte Planung kann das System an Umfang und Qualität verlieren oder sogar scheitern. Um das Risiko dieses Schadens zu reduzieren, muss bereits frühzeitig entschieden werden, welche Priorität einzelne Aufgabenbereiche für das Projekt haben und folglich wie viel Zeitaufwand für diese eingeplant werden muss. Dabei ist eine umfangreiche Planung mit festgelegten Meilensteinen notwendig. Hierzu wurde bereits ein Projektplan mit einzelnen Projektphasen und –aufgaben erstellt, um ein gutes Zeitmanagement zu garantieren und zeitliche Probleme zu vermeiden. Sollte das Zeitmanagement bereits negative Auswirkungen auf das Projekt aufweisen, ist eine neue Planung der einzelnen Aktivitäten der Entwicklung notwendig.
+		\item \textbf{Umfang}\newline
+		Der Umfang der Domäne und des Projektes ist zu beachten, sodass folgenschwere Schäden am späteren Ergebnisse vermeiden werden können. Ist das Projekt schwieriger umzusetzen als gedacht, kann dies ebenfalls folgenschwere Schäden am System verursachen. Um dies zu vermeiden, muss darüber nachgedacht werden, in wie weit sich das System vereinfachen lässt. Hierbei könnte von Funktionalitäten, die eine geringe Priorität besitzen und dessen Entfallen die Integrität des Systems nicht vernachlässigen, zunächst abgesehen werden. Dabei sollte Funktionen, die das Alleinstellungsmerkmal des Systems ausmachen, die höchste Priorität erhalten.
+		\item \textbf{Komplexität} \newline
+		Es besteht zu jedem Entwicklungszeitpunkt das Risiko, dass bestimmte Funktionen zu komplex zu implementieren sind. Auch hier sollten die Prioritäten der Funktionen als Hilfsmittel dienen und auch immer Alternativen oder ein mögliches Fehlen dieser Funktionen in der fertigen Version berücksichtigt werden.
+	\end{itemize}
+	\subsection{Externe Risiken}
+	Unter den externen fallen all die Risiken, die von außen auf das Projekt einwirken.
+	\begin{itemize}
+		\item \textbf{Fehlende Datensicherung}\newline
+		In der Entwicklungsphase können notwendige Dateien oder Source-Codes verloren gehen oder unabsichtlich gelöscht werden, wodurch eine Verzögerung der Projektentwicklung entstehen können. Gründe für dieses Risikos könnten das Ausfallen von Speichermedien oder das Versäumen der Datensicherung sein. Um dieses Risiko zu minimieren, wird ein GitHub-Repository angelegt, welches nach Veränderungen der Dateien oder des Source-Codes aktualisiert wird. Zudem werden die Daten auf ein weiteres Speichermedium als Back-Up hinterlegt.
+		\item \textbf{Krankheit}\newline
+		Bei einer Erkrankung des Entwicklers und folglich einen Ausfall kann der Entwicklungsprozess verzögern oder sogar zu einem Scheitern des Projektes führen. Die Gesundheit und das Wohlbefinden des Entwicklers ist essentiell, um den Projektplan konsequent und erfolgreich umsetzen zu können. Auf Grund dessen sollte in der Entwicklungsphase auf eine gewisse Pflege der Gesundheit geachtet und einen bewussten Lebensstil aufgewiesen werden.
+	\end{itemize}
 
 \newpage
 \vspace*{\fill}
 \part{Prozessmodellierung}
 \vfill
 \newpage
+\section{Einführung}
+	Wie bereits in den vorherigen Kapiteln beschrieben, dient das Vorgehensmodell nach Mayhew zum Erreichen der Usability beim Entwicklungsprozess von user interfaces. Die Usability ist ein messbares Merkmal des user interfaces und wird dabei an die Leichtigkeit der Verwendung und dessen Erlenen eines user interfaces für Benutzer gemessen. Das user interface dient als Sprache zwischen Benutzer und user interface. Usability Engineering ermöglicht den Gebrauch von strukturierte Methoden für die Optimierung des user interface design während der Entwicklung. Das usability engineering lifecycle-Modell nach Mayhew konzentriert sich auf 
+	\begin{itemize}
+		\item eine strukturierte Analyse von Usability-Anforderungen,
+		\item die Festlegung von Usability-Goals anhand der erlangten Anforderungen,
+		\item Aufgaben, die strukturiertes user interface design ermöglichen und dabei von den Usability-Goals und weiteren erlangten Erkenntissen ableiten und
+		\item eine Evaluation, um durch iterative Entwicklungsschritte die festgelegten Usability-Goals zu erreichen.
+	\end{itemize}
+	Diese Aufgaben werden in drei fundamentalen Prozess-Phasen durchgeführt. Diese Phasen sind Reqiurements analysis zur Anforderungsanalyse, Design/Testing/Development, zur Entwicklung von abstrakte Ideen, Konzepten und Gestaltungsrichtlinien, und Installation, zum Erlangen des User-Feedbacks. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}
+\newpage
 \section{Requirments Analysis}
-
+	In der Requirements-Analysis werden Anforderungen für das zu entwickelnde System analysiert. Sie beinhaltet die Benutzer- und Benutzungs-Modellierung, sowie das Definieren der Plattform-Einschränkungen und Design-Prinzipien. 
 \subsection{Benutzer-Modellierung}
+	Die Benutzer-Modellierung dient zum Erlangen der Charakteristika der verschiedenen Benutzer. Hierbei müssen verschiedene Benutzerkategorien anhand der Stakeholder-Analyse definiert und anhand von user profiles definiert werden.
 
-\subsubsection{Stakeholder}
+\subsubsection{Stakeholder-Analysis}
 \begin{table}[htbp]
 	\setlength{\tabcolsep}{12pt}
 	\centering
-	\begin{tabular}{p{2.5cm}p{2.5cm}p{2.5cm}p{4.5cm}}
+	\begin{tabular}{p{2cm}p{1.2cm}p{4.3cm}p{4.5cm}}
 		\toprule
-		\textbf{Bezeichnung} & \textbf{Bezug zum System} & \textbf{Objektbereich} & \textbf{Erfordernis/Erwartung}\\
+		\textbf{Bezeichnung} & \textbf{Bezug} & \textbf{Objektbereich} & \textbf{Erfordernis/Erwartung}\\
 		\midrule
 		Diabetiker & Anrecht & System & Ein Hilfsmittel für den Umgang mit Diabetes\\
-		& Anteil & - & -\\
-		& Anspruch & Merkmal: Insulin-/BE-Rechner & Korrekte Berechnung des individuellen Insulinbedarf\\
-		&  & - & -\\
-		& Interesse & - & -\\
+		\cline{2-4}
+		& Anteil & Merkmal: Datensicherung & von Benutzer eingegebene Daten werden sicher verwaltet\\
+		\cline{2-4}
+		& Anspruch & Merkmal: Funktionen zur Dokumentation von Diabetes, Ernährung und Aktivität & ausführliche Dokumenation muss gewährleistet sein\\
+		\cline{3-4}
+		& & Merkmal: Funktion zur Kontaktaufnahme zu anderen Diabetikern & sozialer Kontakt zu anderen Diabetikern muss gewährleistet sein\\
+		\cline{3-4}
+		& & Merkmal: Berechnung von Daten & Berechnungen von individuellen Daten müssen gewährleistet sein und korrekt durchgeführt werden\\
+		\cline{3-4}
+		& & Merkmal: user interface & Benutzung selbsterklärend, einfach zu lernen, zu merken\\
+		\cline{2-4}
+		& Interesse & System & Steigerung des Wohlbefindens und der Lebensqualität\\
 		\midrule
 		1,4-1,5 & kaum körperliche Aktivität\\
 		1,6-1,7 & wenig körperliche Akitivität\\
@@ -601,6 +654,11 @@ Konflikte\\
 	Diabetes Remission Clinical Trial (DiRECT):
 	Two-year results of the randomised Diabetes Remission Clinical Trial (DiRECT), veröffentlicht am 07.02.2019, \newline
 	letzter Aufruf: 30.11.2019, von: https://www.directclinicaltrial.org.uk/Pubfiles/Final\newline\%20accepted\%20draft,\%20prior\%20to\%20editing\%20and\%20corrections.pdf
+	
+	\bibitem{HG}
+	Prof. Dr. Hartmann, Gerhard: 
+	Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 
+	2016.
 	
 	\bibitem{IDF}
 	International Diabetes Federation (IDF): 

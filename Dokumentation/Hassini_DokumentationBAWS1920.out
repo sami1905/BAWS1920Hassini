@@ -24,38 +24,45 @@
 \BOOKMARK [1][]{section.31}{4 Alleinstellungsmerkmal}{part.6}% 24
 \BOOKMARK [1][]{section.32}{5 Kommunikationsmodelle}{part.6}% 25
 \BOOKMARK [1][]{section.35}{6 Methodischer Rahmen}{part.6}% 26
-\BOOKMARK [2][]{subsection.36}{6.1 Nutzungsontext}{section.35}% 27
-\BOOKMARK [2][]{subsection.37}{6.2 Vorgehensmodell}{section.35}% 28
-\BOOKMARK [1][]{section.38}{7 Risiken}{part.6}% 29
-\BOOKMARK [0][]{part.39}{II Prozessmodellierung}{}% 30
-\BOOKMARK [1][]{section.40}{8 Requirments Analysis}{part.39}% 31
-\BOOKMARK [2][]{subsection.41}{8.1 Benutzer-Modellierung}{section.40}% 32
-\BOOKMARK [3][]{subsubsection.42}{8.1.1 Stakeholder}{subsection.41}% 33
-\BOOKMARK [2][]{subsection.44}{8.2 Benutzungs-Modellierung}{section.40}% 34
-\BOOKMARK [2][]{subsection.45}{8.3 Platform Capabilities/Constraints}{section.40}% 35
-\BOOKMARK [2][]{subsection.46}{8.4 Usability-Goals}{section.40}% 36
-\BOOKMARK [2][]{subsection.47}{8.5 Anforderungen}{section.40}% 37
-\BOOKMARK [2][]{subsection.48}{8.6 Style Guide}{section.40}% 38
-\BOOKMARK [1][]{section.49}{9 Design/Testing/Development}{part.39}% 39
-\BOOKMARK [2][]{subsection.50}{9.1 Work Reengineering}{section.49}% 40
-\BOOKMARK [2][]{subsection.51}{9.2 Screen Design Standards \(SDS\)}{section.49}% 41
-\BOOKMARK [2][]{subsection.52}{9.3 UI Prototyp}{section.49}% 42
-\BOOKMARK [2][]{subsection.53}{9.4 Iterative Evaluation}{section.49}% 43
-\BOOKMARK [2][]{subsection.54}{9.5 Detailed User Interface Design \(DUID\)}{section.49}% 44
-\BOOKMARK [0][]{part.55}{III Systemmodellierung}{}% 45
-\BOOKMARK [1][]{section.56}{10 Systemarchitektur}{part.55}% 46
-\BOOKMARK [1][]{section.57}{11 Datenstruktur}{part.55}% 47
-\BOOKMARK [1][]{section.58}{12 Rest-Spezifikation}{part.55}% 48
-\BOOKMARK [1][]{section.59}{13 Anwendungslogik}{part.55}% 49
-\BOOKMARK [0][]{part.60}{IV Installation}{}% 50
-\BOOKMARK [1][]{section.61}{14 Fazit}{part.60}% 51
-\BOOKMARK [2][]{subsection.62}{14.1 Zusammenfassung}{section.61}% 52
-\BOOKMARK [2][]{subsection.63}{14.2 Bewertung}{section.61}% 53
-\BOOKMARK [2][]{subsection.64}{14.3 Next Steps}{section.61}% 54
-\BOOKMARK [1][]{section*.65}{Literaturverzeichnis}{part.60}% 55
-\BOOKMARK [1][]{section*.66}{Anhang}{part.60}% 56
-\BOOKMARK [2][]{subsection.67}{A Evaluation}{section*.66}% 57
-\BOOKMARK [3][]{subsubsection.68}{A.1 Vorgehensweise}{subsection.67}% 58
-\BOOKMARK [3][]{subsubsection.69}{A.2 Auswertung}{subsection.67}% 59
-\BOOKMARK [3][]{subsubsection.74}{A.3 Fazit}{subsection.67}% 60
-\BOOKMARK [1][]{section*.75}{Erkl\344rung}{part.60}% 61
+\BOOKMARK [2][]{subsection.36}{6.1 Nutzungskontext}{section.35}% 27
+\BOOKMARK [2][]{subsection.37}{6.2 Ans\344tze des usage-centered-design}{section.35}% 28
+\BOOKMARK [2][]{subsection.38}{6.3 Ans\344tze des user-centered-design}{section.35}% 29
+\BOOKMARK [3][]{subsubsection.39}{6.3.1 Usability-engineering nach Rosson und Carrol}{subsection.38}% 30
+\BOOKMARK [3][]{subsubsection.40}{6.3.2 Discount usability-engineering nach Nielsen}{subsection.38}% 31
+\BOOKMARK [3][]{subsubsection.41}{6.3.3 Usability engineering lifecycle nach Mayhew}{subsection.38}% 32
+\BOOKMARK [1][]{section.42}{7 Risiken}{part.6}% 33
+\BOOKMARK [2][]{subsection.43}{7.1 Interne Risiken}{section.42}% 34
+\BOOKMARK [2][]{subsection.44}{7.2 Externe Risiken}{section.42}% 35
+\BOOKMARK [0][]{part.45}{II Prozessmodellierung}{}% 36
+\BOOKMARK [1][]{section.46}{8 Einf\374hrung}{part.45}% 37
+\BOOKMARK [1][]{section.47}{9 Requirments Analysis}{part.45}% 38
+\BOOKMARK [2][]{subsection.48}{9.1 Benutzer-Modellierung}{section.47}% 39
+\BOOKMARK [3][]{subsubsection.49}{9.1.1 Stakeholder-Analysis}{subsection.48}% 40
+\BOOKMARK [2][]{subsection.51}{9.2 Benutzungs-Modellierung}{section.47}% 41
+\BOOKMARK [2][]{subsection.52}{9.3 Platform Capabilities/Constraints}{section.47}% 42
+\BOOKMARK [2][]{subsection.53}{9.4 Usability-Goals}{section.47}% 43
+\BOOKMARK [2][]{subsection.54}{9.5 Anforderungen}{section.47}% 44
+\BOOKMARK [2][]{subsection.55}{9.6 Style Guide}{section.47}% 45
+\BOOKMARK [1][]{section.56}{10 Design/Testing/Development}{part.45}% 46
+\BOOKMARK [2][]{subsection.57}{10.1 Work Reengineering}{section.56}% 47
+\BOOKMARK [2][]{subsection.58}{10.2 Screen Design Standards \(SDS\)}{section.56}% 48
+\BOOKMARK [2][]{subsection.59}{10.3 UI Prototyp}{section.56}% 49
+\BOOKMARK [2][]{subsection.60}{10.4 Iterative Evaluation}{section.56}% 50
+\BOOKMARK [2][]{subsection.61}{10.5 Detailed User Interface Design \(DUID\)}{section.56}% 51
+\BOOKMARK [0][]{part.62}{III Systemmodellierung}{}% 52
+\BOOKMARK [1][]{section.63}{11 Systemarchitektur}{part.62}% 53
+\BOOKMARK [1][]{section.64}{12 Datenstruktur}{part.62}% 54
+\BOOKMARK [1][]{section.65}{13 Rest-Spezifikation}{part.62}% 55
+\BOOKMARK [1][]{section.66}{14 Anwendungslogik}{part.62}% 56
+\BOOKMARK [0][]{part.67}{IV Installation}{}% 57
+\BOOKMARK [1][]{section.68}{15 Fazit}{part.67}% 58
+\BOOKMARK [2][]{subsection.69}{15.1 Zusammenfassung}{section.68}% 59
+\BOOKMARK [2][]{subsection.70}{15.2 Bewertung}{section.68}% 60
+\BOOKMARK [2][]{subsection.71}{15.3 Next Steps}{section.68}% 61
+\BOOKMARK [1][]{section*.72}{Literaturverzeichnis}{part.67}% 62
+\BOOKMARK [1][]{section*.73}{Anhang}{part.67}% 63
+\BOOKMARK [2][]{subsection.74}{A Evaluation}{section*.73}% 64
+\BOOKMARK [3][]{subsubsection.75}{A.1 Vorgehensweise}{subsection.74}% 65
+\BOOKMARK [3][]{subsubsection.76}{A.2 Auswertung}{subsection.74}% 66
+\BOOKMARK [3][]{subsubsection.81}{A.3 Fazit}{subsection.74}% 67
+\BOOKMARK [1][]{section*.82}{Erkl\344rung}{part.67}% 68
