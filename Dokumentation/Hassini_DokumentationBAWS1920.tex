@@ -32,6 +32,9 @@ citecolor = black] {hyperref}
 \usepackage{caption}
 \usepackage[official]{eurosym}
 \usepackage{float}
+\usepackage{longtable}
+\usepackage{siunitx}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
 	
 \begin{document}
 \begin{titlepage}
@@ -290,7 +293,7 @@ In der Zielhierarchie werden die Ziele dieser Arbeit anhand ihrer Fristigkeiten 
 	Soziale Kontakte unter Diabetikern, aber auch zu gesunden Menschen ist wichtig. Soziale Bindungen können die Lebensqualität und Gesundheit eines Menschen beeinflussen. Ein soziales Netzwerk sorgt zudem für die geistige Aufrechterhaltung des Menschen. Und gerade soziale Gruppen, in denen die Menschen ähnliche Lebensbedingungen, wie die Erkrankung an Diabetes, aufweisen, können positive Auswirkungen auf das Leben haben. \newline
 	Als Diabetiker kommt es im Alltag oft zu Problemen, welche im mitmenschlichen und nicht im medizinischen Beriech liegen. Noch heute kommt es zu Benachteiligung und Diskriminierung von Diabetikern in Kindergärten, Schulen oder im Beruf. Schon die Berufswahl kann oft eine Eingrenzung im Leben bewirken. Der Austausch von Erfahrungen und Tipp unter Diabetikern ist daher wichtig. So können beispielsweise Diabetiker-Sportgruppen gebildet werden, um den Spaß am Sport zu halten. Bei so einer Maßnahme wäre der Sport nicht erstrangig, so eine Gruppe dient zum Erfahrungsaustausch, hält Motivation für den Sport hoch und kann als medizinische Übung dienen. Gerade Menschen aus dem gleichen Netzwerken weisen gleiche Interessen auf. So spielt auch die Unterstützung unter Diabetikern eine wichtige Rolle. Einiger Diabetiker haben große Angst vor den Folgeschäden der Erkrankung. Der Austausch mit anderen Diabetikern könnte hier beruhigend wirken.  \emph{[Schmeisl, Gerhard-W: Schulungsbuch für Diabetiker, 6. Auflage, München: Elsevier GmbH, 2009.]} \newline
 	Der Deutsche Diabetiker Bund (DDB) ist die größte deutsche Ansprechstelle für Diabetiker und veranstaltet regelmäßig Events und öffentliche Aktionen um Diabetiker zusammen zu bringen. Die DDB setzt sich als Ziel, die Gesundheit und sozialen Kontakte von Diabetikern zu fördern. \emph{[Jäckle, Renate: Gut leben mit Typ-1-Diabetes, 7. Auflage, München: Elsevier GmbH, 2010.]}\\
-	Eine selbst durchgeführte Studie (s. Anhang: A \nameref{section:Evaluation} ab Seite \pageref{section:Evaluation}) in einer vergangenen Entwicklungsphase ergab, dass 69 der 81 Probanden und somit mehr als 87\% aller Teilnehmer, schon einmal alltägliche Fragen bezüglich ihrem Diabetes hatten. Und 85\% aller Probanden gaben an, schon einmal nach Antworten im Netz gesucht zu haben. Rund 88\% hatten sich schon einmal ein Erfahrungsaustausch mit einem anderen Diabetiker gewünscht.\\
+	Eine selbst durchgeführte Studie  in einer vergangenen Entwicklungsphase ergab, dass 69 der 81 Probanden und somit mehr als 87\% aller Teilnehmer, schon einmal alltägliche Fragen bezüglich ihrem Diabetes hatten. Und 85\% aller Probanden gaben an, schon einmal nach Antworten im Netz gesucht zu haben. Rund 88\% hatten sich schon einmal ein Erfahrungsaustausch mit einem anderen Diabetiker gewünscht.\\
 	Kommunikation ist wichtig und trägt zum Wohlbefinden jedes Menschen bei. Trotz Organisationen wie der DDB ist die Kontaktsuche der Diabetiker zu anderen Diabetikern hoch. Aber auch der Kontakt zu anderen Menschen ist wichtig, um Diskriminierung zu vermeiden. Der Austausch von Erfahrungen und der soziale Kontakt unter Diabetikern ist eine Säule in der Therapie des Diabetes mellitus.
 \newpage
 \section{Marktrecherche}
@@ -528,22 +531,32 @@ Kommunikationsmodelle dienen zur Beschreibung der wechselseitigen Übermittlung 
 	\end{itemize}
 	Diese Aufgaben werden in drei fundamentalen Prozess-Phasen durchgeführt. Diese Phasen sind Reqiurements analysis zur Anforderungsanalyse, Design/Testing/Development, zur Entwicklung von abstrakte Ideen, Konzepten und Gestaltungsrichtlinien, und Installation, zum Erlangen des User-Feedbacks. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}
 \newpage
-\section{Requirments Analysis}
-	In der Requirements-Analysis werden Anforderungen für das zu entwickelnde System analysiert. Sie beinhaltet die Benutzer- und Benutzungs-Modellierung, sowie das Definieren der Plattform-Einschränkungen und Design-Prinzipien. 
-\subsection{Benutzer-Modellierung}
-	Die Benutzer-Modellierung dient zum Erlangen der Charakteristika der verschiedenen Benutzer. Hierbei müssen verschiedene Benutzerkategorien anhand der Stakeholder-Analyse definiert und anhand von user profiles definiert werden.
-
+\section{Requirements Analysis}
+	In der Requireements-Analysis werden Anforderungen für das zu entwickelnde System analysiert. Sie beinhaltet die Benutzer- und Benutzungs-Modellierung, sowie das Definieren der Plattform-Einschränkungen und Design-Prinzipien. 
+\subsection{User-Profiles}
+	User Profiles dienen zur Optimierung des user interfaces für die Benutzer. Allerdings existiert nicht DAS user interface design für alle Benutzer. Ein optimiertes user interface für eine Benutzergruppe kann für eine andere Benutzergruppe weniger optimiert sein. Der Zweck der User Profiles besteht darin, die allgemeinen Anforderungen einer Benutzerkategorie in Bezug auf den Stil und der Vorgehensweise der Benutzeroberfläche insgesamt festzulegen.\newline
+	Für die User Profiles ist zunächst festzulegen, wer das zu entwickelnde System benutzen wird. Nach der Ermittlung der Benutzer, ist die Beschreibung der Kategorien in Bezug auf Merkmale, die für das Design des user interfaces relevant sind, notwendig. Diese beinhalten:
+	\begin{itemize}
+		\item Physische Merkmale
+		\item Psychologische Merkmale
+		\item Wissen und Erfahrungen
+		\item Aufgabenmerkmale
+	\end{itemize}
+	Benutzereigenschaften und –merkmale können durch Interviews und Umfragen gesammelt werden. Aus den zusammengefassten Benutzerdaten werden allgemeine Schlussfolgerungen hinsichtlich der Anforderungen an das interface design gezogen. Dabei muss für jede bedeutende Benutzerkategorie ein separates User Profil angelegt werden. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}\newline
+	Zwischen den Aufgaben des Usability Engineering Lifecycle und Aufgaben anderer Vorgehensmodelle bestehen bestimmte Abhängigkeiten. Erkenntnisse aus durchgeführten Aufgaben müssen in darauffolgenden Aufgaben einfließen. Die User Profiles sind die erste Aufgabe im Usability Engineering Lifecycle und dessen Erkenntnisse fließen direkt in die Contextual Task Analysis, indem Kategorien von Benutzern identifiziert werden, um folglich deren Aufgaben und Arbeitsfelder untersuchen zu können. Zudem werden die Erkenntnisse der User Profiles in den Usability Goals abgeleitet, da diese teilweise direkt von Benutzereigenschaften abhängen. Somit werden Usability Goals anhand der Unterschiede der Profile der verschiedenen Benutzerkategorien definiert. Folglich haben User Profiles direkten Einfluss auf alle Design-Aufgaben, welche sich auf die Umsetzung der Usability Goals beziehen. User Profiles besitzen ebenfalls einen hohen Einfluss auf die Usability evaluation und dem Style Guide. Außerdem können User Profiles parallel oder überlappend auf Aufgaben anderer Requirements Modelle durchgeführt werden oder auf diese in der Analysephase folgen. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]} \newline
+	Abhängig von der verfügbaren Zeit und anderer Ressourcen gibt es zwei Möglichkeiten, um ein User Profile zu erhalten. Zum einen können tatsächliche Benutzer befragt werden und zum anderen können Interviews mit Personen, die sich mit der Gesamtheit der Benutzer auskennen, durchgeführt werden. Auf Grund der bereits durchgeführten Evaluation (s. Anhang: A \nameref{section:Evaluation} ab Seite \pageref{section:Evaluation}) in der vorherigen Entwicklungsphase, wurde sich für die erste Möglichkeit entschieden. Dies ermöglicht das Erzielen die genauesten und zuverlässigsten Ergebnisse. Sobald User Profiles mit dieser Methode erstellt werden, kann es für alle Anwendungen des Benutzerprofiles wiederverwendet werden. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}
 \subsubsection{Stakeholder-Analysis}
-\begin{table}[htbp]
-	\setlength{\tabcolsep}{12pt}
-	\centering
-	\begin{tabular}{p{2cm}p{1.2cm}p{4.3cm}p{4.5cm}}
-		\toprule
+	Um die notwendigen User Profiles erstellen zu können, muss zunächst bestimmt werden, wer die beabsichtigten Benutzer für das zu entwickelnde System sind. Anhand der Themenfeldanalyse lassen sich diese bereits in definierten Gruppen festlegen. Diese Benutzergruppen werden folglich in der Stakeholder-Analyse (Tabelle  \ref{tab:Stakeholder}: \nameref{tab:Stakeholder}) aufgelistet, anhand ihrer Erfordernisse und Erwartungen in Kategorien festgelegt und auf Konflikte analysieren.
+\begin{center}
+	\begin{longtable}[H]{|p{3cm}|p{2cm}|p{4cm}|p{4.5cm}|}
+		\hline
 		\textbf{Bezeichnung} & \textbf{Bezug} & \textbf{Objektbereich} & \textbf{Erfordernis/Erwartung}\\
-		\midrule
-		Diabetiker & Anrecht & System & Ein Hilfsmittel für den Umgang mit Diabetes\\
+		\hline
+		Diabetiker & Anrecht & System & ein Hilfsmittel für den Umgang mit Diabetes\\
 		\cline{2-4}
 		& Anteil & Merkmal: Datensicherung & von Benutzer eingegebene Daten werden sicher verwaltet\\
+		\cline{3-4}
+		& & Merkmal: Funktionen zum Tausch von Erfahrungen & um einen Erfahrungsaustausch zwischen Diabetikern zu ermöglichen, sind Erfahrungen von verscheidenen Benutzern essentiell\\
 		\cline{2-4}
 		& Anspruch & Merkmal: Funktionen zur Dokumentation von Diabetes, Ernährung und Aktivität & ausführliche Dokumenation muss gewährleistet sein\\
 		\cline{3-4}
@@ -551,27 +564,294 @@ Kommunikationsmodelle dienen zur Beschreibung der wechselseitigen Übermittlung 
 		\cline{3-4}
 		& & Merkmal: Berechnung von Daten & Berechnungen von individuellen Daten müssen gewährleistet sein und korrekt durchgeführt werden\\
 		\cline{3-4}
+		\newpage
+		\cline{3-4}
+		& & Merkmal: user interface & Benutzung selbsterklärend, einfach zu lernen, zu merken\\
+		\cline{2-4}
+		 & Interesse & System & Steigerung des Wohlbefindens und der Lebensqualität\\
+		\hline
+		Personen aus gemeinsamen Haushalt/Umfeld & Anrecht & System & ein Hilfsmittel für die Unterstützung bei Behandlung\\
+		\cline{2-4}
+		& Anteil & - & - \\
+		\cline{2-4}
+		& Anspruch & Merkmal: Funktionen zur Berechnung von Nährwerten eines Lebensmittels & Personen (Eltern, Lebenspartner, etc.), die für einen Diabetiker kochen, sollten keine Nährwerte zählen und berechnen müssen\\
+		\cline{3-4}
+		& & Merkmal: Zugriff auf Blutzuckerdaten eines ausgewählten Diabetikers & die persönlichen Blutzuckerwerte eines Diabetikers sollten einzusehen sein\\
+		\cline{3-4}
 		& & Merkmal: user interface & Benutzung selbsterklärend, einfach zu lernen, zu merken\\
 		\cline{2-4}
 		& Interesse & System & Steigerung des Wohlbefindens und der Lebensqualität\\
+		\hline 
+		Arzt & Anrecht & System & vereinfachte Darstellung der Blutzuckerwerte zur Analyse\\
+		\cline{2-4}
+		 & Anteil & Merkmal: Datensicherung & vom Arzt festgelegte Faktoren können individuell eingespeichert werden\\
+		\cline{2-4}
+		& Anspruch &  Merkmal: Zugriff auf Blutzuckerdaten eines ausgewählten Diabetikers & die persönlichen Blutzuckerwerte eines Diabetikers sollten einzusehen sein\\
+		\cline{3-4}
+		& & Merkmal: user interface & Benutzung selbsterklärend, einfach zu lernen, zu merken\\
+		\cline{2-4}
+		 & Interesse & System & Steigung des Wohlbefindens und der Lebensqualität der Patienten\\
+		\hline
+		\newpage
+		\hline
+		Krankenkassen & Anrecht & - & -\\
+		\cline{2-4}
+		 & Anteil & System & Übernahme eventueller Kosten für die Nutzung des Systems\\
+		\cline{2-4}
+		 & Anspruch & System & ein finanzierbares System\\
+		\cline{2-4}
+		 & Interesse & System & Patienten bevorzugen Krankenkassen mit einer großteiligen Übernahme der Kosten des Systems\\
+		 \hline
+		 Pharmaindustie & Anrecht & - & -\\
+		 \cline{2-4}
+		 & Anteil & - & -\\
+		 \cline{2-4}
+		 & Anspruch & Medikamenten & Profit durch Verkauf von Medikamenten\\
+		 \cline{2-4}
+		 & Interesse & Insulinbedarf & mehr Insulinbedarf der Patienten bedeutet mehr Profit\\
+		 \hline
+		 Konkurrenz & Anrecht & - & -\\
+		 \cline{2-4}
+		 & Anteil & - & -\\
+		 \cline{2-4}
+		 & Anspruch & - & -\\
+		 \cline{2-4}
+		 & Interesse & Verkauf von eigenem Produkt & hohe Verkaufszahlen des eigenen Produkts und niedrige Verkaufszahlen der Konkurrenzprodukte\\
+		 \hline
+		 Stores für mobile Anwendungen & Anrecht & - & -\\
+		 \cline{2-4}
+		 & Anteil & - & -\\
+		 \cline{2-4}
+		 & Anspruch & - & -\\
+		 \cline{2-4}
+		 & Interesse & Verkauf von Produkt & Profit durch Erwerb des Systems\\
+		 \hline
+		\captionsetup{justification=centering}
+		\caption{Stakeholder-Analysis}
+		\label{tab:Stakeholder}
+	\end{longtable}
+\end{center}
+	\setlength{\parindent}{0pt}Die Stakeholder-Analysis stellt die verschiedenen Benutzerkategorien der Domäne dar. Anhand der Tabelle \ref{tab:Stakeholder}: \nameref{tab:Stakeholder} lassen sich die Diabetiker als Zielgruppe des zu entwickelnden System klar erkennen. Allerdings ist aus der Tabelle nicht ersichtlich, dass unter zwei verschiedenen Arten an Diabetiker zu unterscheiden ist. Zum einen Menschen, welche an Typ-1-Diabetes, und zum anderen Menschen, die an Typ-2-Diabetes, erkrankt sind. Zwar weisen die zwei Benutzerkategorien die gleichen Erfordernisse auf, allerdings ist anhand der Wichtigkeit der verschiedenen Erfordernisse an dem System zu unterscheiden. Für den Typ-1-Diabetes ist, auf Grund der Notwendigkeit einer Insulintherapie, die Dokumentation von diabetesrelevanten Daten wie Blutzuckerwerte, Insulin- und Broteinheiten essentiell. Bei Typ-2-Diabetikern ist ein Insulinmangel nicht immer die Ursache für eine Erkrankung. Hier sind eine gesunde Ernährung und regelmäßige Aktivität ausschlaggebende Aspekte für die Rückbildung dieser Diabetesart. Somit stellt die Erfassung und Dokumentation von Mahlzeiten und sportliche Aktivitäten eine höhere Priorität da, als die Dokumentation von Insulineinheiten. Auf Grund dessen ist in der weiteren Entwicklung die Berücksichtigung der zwei verschiedenen Benutzerkategorien notwendig. \\
+	Neben den Stakeholdern, die positive Erwartungen an dem System oder dessen Merkmalen haben, gibt es weitere Stakeholder, dessen Erwartungen im Konflikt mit dem System stehen. Die Pharmaindustrie und Apotheken generieren Umsatz durch den Verkauf von Medikamenten. Da das zu entwickelnde System den Blutzucker konstant regulieren und die Rückbildung des Typ-2-Diabetes bewirken soll, hat die Pharmaindustrie kein Interesse an der Entwicklung des Systems. Eine Möglichkeit zur Lösung dieses Interessenkonfliktes könnte die Nutzung von Apotheken als Verkaufs- oder Vermarktungsfläche bieten. Apotheken könnten durch Werbung und Kooperationen ebenfalls Gewinne generieren. So steht die Pharmaindustrie als Kooperator dem Entwicklerteam zur Verfügung. Auch Konkurrenzunternehmen haben kein Interesse an der Entwicklung des Systems, da diese den Verkauf ihr eigenen Produkte den der Produkte anderer Unternehmen vorziehen. Auch hier wäre die Erwägung einer Kooperation eine Möglichkeit zur Konfliktlösung. Technologien, wie Sensoren oder Geräte, der Konkurrenz zu Erfassung der Blutzuckerwerte könnten, anhand von Schnittstellen zum zu entwickelnden System, mit Anteilen an Gewinnen erworben werden. Dies ermöglicht eine einfachere Erfassung von Blutzuckerdaten und das Einsparen der Produktionskosten von eigenen Messgeräten. Zudem generiert die Konkurrenz, durch die Entwicklung des Systems und der Bereitstellung von Schnittstellen, zusätzliche Gewinne.\\
+	Um im weiteren Entwicklungsverlauf die Anforderungen der verschiedenen Benutzerkategorien an das System zu erhalten, werden im Folgenden für die festgelegten Kategorien, Typ-1-Diabetiker (Tabelle \ref{tab:User-Profile-1}) und Typ-2-Diabetiker (Tabelle \ref{tab:User-Profile-2}), User Profiles angelegt. Hierbei wurde die bereits durchgeführte Evaluation (s. Anhang: A \nameref{section:Evaluation} ab Seite \pageref{section:Evaluation}) berücksichtigt.
+\subsubsection{Typ-1-Diabetiker}
+	\begin{center}
+		\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
+			\multicolumn{2}{c}{User Profile - Typ-1-Diabetiker} \\
+			\toprule
+			\multicolumn{2}{l}{User Category Identifiers}\\
+			\multicolumn{2}{p{13.6cm}}{Menschen aus Deutschland zwischen 5 und 82 Jahren, welche an Typ-1-Diabtes erkrankt sind, aus keiner festgelegten Arbeitsgruppe stammen und Erfahrungen mit der Verwendung von mobilen Anwendungen besitzen.} \\\\
+			\textbf{Merkmal} & \textbf{Merkmalsausprägung}\\
+			\midrule
+			1. Physische Merkmale & \\[.5\normalbaselineskip]
+			Geschlecht & \tabitem männlich\\
+			 & \tabitem weiblich \\ 
+			 & \tabitem diverse \\[.3\normalbaselineskip]
+			Alter & 5-82 Jahre \\[.3\normalbaselineskip]
+			Händigkeit & Links- und Rechtshänder \\[.3\normalbaselineskip]
+			Wohnort & national (Deutschland)\\[.3\normalbaselineskip]
+			Gesundheitszustand & \tabitem Diabetes mellitus Typ 1\\
+			 & \tabitem Folgeerkrankungen\\
+			 & \tabitem körperliche Behinderung\\[.3\normalbaselineskip]
+			Sozio-ökonomischer Status &  \tabitem Schüler/-in\\
+			& \tabitem Studierende-/r \\ 
+			& \tabitem Auszubildende-/r\\
+			& \tabitem Angestellte-/r\\
+			& \tabitem Ausgelehrte./r\\
+			& \tabitem Arbeitslose-/r\\
+			& \tabitem Berufliche Selbstständigkeit\\[.3\normalbaselineskip]
+			Einkommen & \tabitem kein Einkommen\\
+			 & \tabitem Taschengeld\\
+			 & \tabitem geregeltes/staatliches Einkommen\\[.3\normalbaselineskip]
+			\midrule
+			2. Psychologische Merkmale & \\[.5\normalbaselineskip]
+			Behandlungsart & \tabitem Insulinspritzen\\
+			 & \tabitem Insulinpumpe\\[.3\normalbaselineskip]
+			 Behandlungsziele & \tabitem regulierte Blutzuckerwerte\\
+			  & \tabitem Vermeidung der Folgeerkrankungen\\
+			 & 	\tabitem hoche Lebensqualität\\[.3\normalbaselineskip]
+			 Lebensziele & \tabitem Schul-/Studium-/Ausbildungsabsch-lüsse\\
+			  & \tabitem Steigung des Wohlbefindens und der Lebensqualität\\
+			  & \tabitem Weiterbildung\\
+			  & \tabitem Existenzsicherheit\\
+			  & \tabitem möglichst lange Lebenszeit\\
+			  & \tabitem beruflicher Aufstieg\\
+			  & \tabitem hohe Lebensqualität\\[0.3\normalbaselineskip]
+			  Motivation zu Nutzung des zukünftigen Systems & \tabitem einfache Handhabung der Diabetes\\
+			  & \tabitem besser Blutzuckerwerte\\
+			  & \tabitem keine analoge/schnelle Dokumentation\\
+			  & \tabitem Abnahme der BE-Berechnung\\
+			  & \tabitem Abnahme der Insulinberechnung\\
+			  & \tabitem zeitsparende Anwendungen\\
+			  & \tabitem Darstellung der Blutzuckerwerte in verständlicher Formen (Graphen oder Tabelle)\\
+			  & \tabitem Risiko der Folgeerkrankungen reduzieren\\
+			  & \tabitem Stressreduzierung\\[0.3\normalbaselineskip]
+			 \midrule
+			 3. Wissen und Erfahrungen  & \\[.5\normalbaselineskip]
+			 Erfahrung im Anwendungsgebiet & ausreichend bis sehr gut, durch Schulungen und Eigenbehandlung des Diabetes seit Erkrankung\\[.3\normalbaselineskip]
+			 Technische Unterstützung bei Therapie & \tabitem Blutzuckermessgerät\\
+			  & \tabitem Insulinpumpe \\[0.3\normalbaselineskip]
+			  \midrule
+			  4. Aufgabenmerkmale & \\[.5\normalbaselineskip]
+			  Kenntnisse und Fähigkeiten & \tabitem Lesen/Schreiben/Rechnen\\
+			  & \tabitem Berechnung von Kohlenhydrat, BE's und Insulineinheiten\\
+			  & \tabitem Diabetes-Dokumentation\\ 
+			  & \tabitem Nutzung von verfügbaren Technologien\\[0.3\normalbaselineskip]
+			  Verfügbare relevante Technologien & \tabitem Smartphones\\
+			  & \tabitem Smartwatches\\
+			  & \tabitem Tablets\\[0.3\normalbaselineskip]
+			  
+			 \bottomrule
+			 \captionsetup{justification=centering}
+			 \caption{User Profile: Typ-1-Diabetiker}
+			 \label{tab:User-Profile-1}
+		\end{longtable}
+	\end{center}
+
+\subsubsection{Typ-2-Diabetiker}
+\begin{center}
+	\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
+		\multicolumn{2}{c}{User Profile - Typ-2-Diabetiker} \\
+		\toprule
+		\multicolumn{2}{l}{User Category Identifiers}\\
+		\multicolumn{2}{p{13.6cm}}{Menschen aus Deutschland, welche meist im Erwachsenenalter, in den letzten Jahre auch vermehrt im Jugendalter, an Typ-2-Diabtes erkrankt sind, aus keiner festgelegten Arbeitsgruppe stammen und Erfahrungen mit der Verwendung von mobilen Anwendungen besitzen.} \\\\
+		\textbf{Merkmal} & \textbf{Merkmalsausprägung}\\
 		\midrule
-		1,4-1,5 & kaum körperliche Aktivität\\
-		1,6-1,7 & wenig körperliche Akitivität\\
-		1,8-1,9 & Stehen/Gehen\\
-		2.0-2.4 & körperlich anstrengende Aktivität\\
+		1. Physische Merkmale & \\[.5\normalbaselineskip]
+		Geschlecht & \tabitem männlich\\
+		& \tabitem weiblich \\ 
+		& \tabitem diverse \\[.3\normalbaselineskip]
+		Alter & 16-82 Jahre \\[.3\normalbaselineskip]
+		Händigkeit & Links- und Rechtshänder \\[.3\normalbaselineskip]
+		Wohnort & national (Deutschland)\\[.3\normalbaselineskip]
+		Gesundheitszustand & \tabitem Diabetes mellitus Typ 1\\
+		& \tabitem Folgeerkrankungen\\
+		& \tabitem körperliche Behinderung\\
+		& \tabitem Fettleibigkeit\\
+		& \tabitem schlechter Ernährungsstil\\[.3\normalbaselineskip]
+		Sozio-ökonomischer Status &  \tabitem Schüler/-in\\
+		& \tabitem Studierende-/r \\ 
+		& \tabitem Auszubildende-/r\\
+		& \tabitem Angestellte-/r\\
+		& \tabitem Ausgelehrte./r\\
+		& \tabitem Arbeitslose-/r\\
+		& \tabitem Berufliche Selbstständigkeit\\[.3\normalbaselineskip]
+		Einkommen & \tabitem kein Einkommen\\
+		& \tabitem Taschengeld\\
+		& \tabitem geregeltes/staatliches Einkommen\\[.3\normalbaselineskip]
+		\midrule
+		2. Psychologische Merkmale & \\[.5\normalbaselineskip]
+		Behandlungsart & \tabitem Tabletten\\
+		& \tabitem Diät\\
+		& \tabitem bei Bedarf Insulintherapie\\[.3\normalbaselineskip]
+		Behandlungsziele & \tabitem Körpergewichtreduzierung\\
+		& \tabitem ausgewogene Ernährung\\
+		& \tabitem regulierte Blutzuckerwerte\\
+		& \tabitem Vermeidung der Folgeerkrankungen\\
+		& 	\tabitem hoche Lebensqualität\\[.3\normalbaselineskip]
+		Lebensziele & \tabitem Schul-/Studium-/Ausbildungsabsch-lüsse\\
+		& \tabitem Steigung des Wohlbefindens und der Lebensqualität\\
+		& \tabitem Weiterbildung\\
+		& \tabitem Existenzsicherheit\\
+		& \tabitem möglichst lange Lebenszeit\\
+		& \tabitem beruflicher Aufstieg\\
+		& \tabitem hohe Lebensqualität\\[0.3\normalbaselineskip]
+		Motivation zu Nutzung des zukünftigen Systems & \tabitem einfache Handhabung der Diabetes\\
+		& \tabitem Reduzierung des Körpergewichts\\
+		& \tabitem Rückbildung der Erkrankung\\
+		& \tabitem stabile Blutzuckerwerte\\
+		& \tabitem keine analoge/schnelle Dokumentation\\
+		& \tabitem zeitsparende Anwendungen\\
+		& \tabitem Risiko der Folgeerkrankungen reduzieren\\
+		& \tabitem Stressreduzierung\\[0.3\normalbaselineskip]
+		\midrule
+		3. Wissen und Erfahrungen  & \\[.5\normalbaselineskip]
+		Erfahrung im Anwendungsgebiet & keine bis sehr gut, durch ärztliche Unterstützung und Eigenbehandlung des Diabetes seit Erkrankung\\[.3\normalbaselineskip]
+		Technische Unterstützung bei Therapie & \tabitem Blutzuckermessgerät\\[0.3\normalbaselineskip]
+		\midrule
+		4. Aufgabenmerkmale & \\[.5\normalbaselineskip]
+		Kenntnisse und Fähigkeiten & \tabitem Lesen/Schreiben/Rechnen\\
+		& \tabitem Diabetes-Dokumentation\\ 
+		& \tabitem Nutzung von verfügbaren Technologien\\[0.3\normalbaselineskip]
+		Verfügbare relevante Technologien & \tabitem Smartphones\\
+		& \tabitem Smartwatches\\
+		& \tabitem Tablets\\[0.3\normalbaselineskip]
 		\bottomrule
-	\end{tabular}
-	\captionsetup{justification=centering}
-	\caption{Stakeholder}
-	\label{tab:Stakeholder}
-\end{table}
-Zielgruppe\\
-Konflikte\\
-
+		\captionsetup{justification=centering}
+		\caption{User Profile: Typ-2-Diabetiker}
+		\label{tab:User-Profile-2}
+	\end{longtable}
+\end{center}
+	Folglich empfiehlt es sich in der Benutzermodellierung anhand des User Profiles sogenannte Personas zu entwerfen, um reale Menschen, in fiktiver Darstellung, in die Modellierung einzubeziehen. Da dies jedoch nicht im Usability Engineering Lifecycle vorgeben und somit optional ist, ist der Entwurf von Personas unter der Berücksichtigung des begrenzten Umfanges dieser Arbeit, sowie die geringe Zeitkapazität des Projektes in dieser Entwicklungsphase nicht zu zulassen. \newline
+	Um nun anhand der User Profiles eine Contextual Task Analysis anfertigen zu können, um die Benutzung des Systems anhand der Benutzer zu modellieren, müssen zunächst eine Reihe an Funktionen des zukünftigen Systems identifiziert werden. Hierzu müssen mithilfe der Stakeholder-Analysis und der User Profiles Anforderungen am System erstellt werden.
+	\subsubsection{Anforderungen}
+	Durch die Modellierung der Benutzer, in Form von Stakeholder-Analysis und User Profiles, erfolgt eine Beschreibung der Anforderungen. Bereits in vorherigen Entwicklungsphasen wurden funktionelle und qualitative Anforderungen erstellt. Diese sind den bedeutenden Benutzerkategorien des zukünftigen Systems zuzuteilen.
+	\paragraph{funktionale Anforderungen}\mbox{}\\
+	Für alle Diabetiker
+	\begin{itemize}
+		\item \lbrack \textbf{F10}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, ein individuelles Benutzerkonto anzulegen.
+		\item \lbrack \textbf{F20}\rbrack \  Das System muss dem Benutzer die Möglichkeit bieten, die individuellen Daten seines Benutzerkontos zu bearbeiten.
+		\item \lbrack \textbf{F30}\rbrack \  Das System muss dem Benutzer die Möglichkeit bieten, sein angelegtes Benutzerkonto wieder zu löschen.
+		\item \lbrack \textbf{F40}\rbrack \	Das System kann den Benutzer die Möglichkeit bieten, Blutzuckerwerte die von externen Blutzuckermessgeräten erfasst wurden per API in das System zu übernehmen.
+		\item \lbrack \textbf{F50}\rbrack \	Das System muss dem Benutzer die Möglichkeit bieten, unterschiedliche Ereignisse (Blutzuckerwert, Mahlzeit und sportliche Aktivität) manuell in das Tagebuch einzutragen.
+		\item \lbrack \textbf{F60}\rbrack \ Das System soll dem Benutzer die Ereignisse und Blutzuckerwerte in Form von Tagebucheinträgen und anhand eines Graphen repräsentieren.
+		\item \lbrack \textbf{F70}\rbrack \ Falls ein Ereignis bereits vorhanden ist, soll das System dem Benutzer die Möglichkeit bieten, diesen zu ändern oder um weitere Daten zu erweitern zu können.
+		\item \lbrack \textbf{F80}\rbrack \ Das System soll dem Benutzer die Möglichkeit bieten, auf eine Lebensmittel-Datenbank zugreifen zu können.
+		\item \lbrack \textbf{F90}\rbrack \ Das System soll dem Benutzer die Möglichkeit bieten, erfasste Aktvitäten durch andere Anwendungen einzupflegen.
+		\item \lbrack \textbf{F100}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, Aktvitäten hinzuzufügen.
+		\item \lbrack \textbf{F110}\rbrack \ Das System soll dem Benutzer den Kalorienbedarf, bestehend aus Grundumsatz und Leistungsumsatz, repräsentieren.
+		\item \lbrack \textbf{F120}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, dem Benutzer Konakt zu anderen Benutzern anhand einer Kommunikationsplattform herzustellen.
+		\item \lbrack \textbf{F130}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, Beiträge hinzuzufügen, zu enfternen und zu bearbeiten.
+		\item \lbrack \textbf{F140}\rbrack \ Das System soll dem Benutzer Beiträge andere Benutzer repräsentieren.
+		\item \lbrack \textbf{F150}\rbrack \ Das System soll dem Benutzer die Möglichkeit bieten, Beiträge anderer Benutzer zu kommentieren.
+		\item \lbrack \textbf{F160}\rbrack \ Das System soll dem Benutzer die Möglichkeit bieten, Beiträge andere Benutzer zu bewerten.
+		\item \lbrack \textbf{F170}\rbrack \ Das System soll dem Benutzer die Möglichkeit bieten, durch Aktivität in der Kommunikationsplattform Erolgspunkte zu sammeln.
+	\end{itemize}
+	Für Typ-1-Diabetiker
+	\begin{itemize}
+		\item \lbrack \textbf{F180}\rbrack \ Falls der Benutzer eine Mahlzeit als Ereignis hinzufügt, muss das System dem Benutzer die Möglichkeit bieten, die BE's und Insulineinheiten anhand der Kohlenhydrate der Mahlzeit und der Benutzerdaten zu berechnen.
+		\item \lbrack \textbf{F190}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, individuellen Insulin- und Korrekturfaktoren anzulegen.
+		\item \lbrack \textbf{F200}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen anzulegen.
+		\item \lbrack \textbf{F210}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen zu bearbeiten.
+		\item \lbrack \textbf{F220}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen zu entfernen.
+		\item \lbrack \textbf{F230}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen einzusehen.
+	\end{itemize}
+	Für Typ-2-Diabetiker
+	\begin{itemize}
+		\item \lbrack \textbf{F240}\rbrack \ Das System muss dem Benutzer die Möglichkeit bieten, die Art der Behandlung festzulegen.
+		\item \lbrack \textbf{F250}\rbrack \ Das Sysem soll dem Benutzer die Möglichkeit bieten, sein Zielkörpergewicht anzugeben.
+	\end{itemize}
+	\paragraph{non-funktionale Anforderungen}\mbox{}\\
+	Qualitätsanforderungen
+	\begin{itemize}
+		\item \lbrack \textbf{Q10}\rbrack \ Das System soll dem Benutzer eine Aufgabenerfüllung innerhalb der Genauigkeits- und Vollständigkeitsgrenzen bieten. (Effektivität)
+		\item \lbrack \textbf{Q20}\rbrack \ Das System soll dem Benutzer eine Aufgabenerfüllung in Bezug auf den Benutzeraufwand bieten. (Effizienz)
+		\item \lbrack \textbf{Q30}\rbrack \ Das System soll dem Benutzer eine von Beeinträchtigungen freie Nutzung und mit einer positiven Einstellung gegenüber dieser bieten. (Zufriedenstellend)
+		\item \lbrack \textbf{Q40}\rbrack \ Das System soll dem Benutzer eine effektive, effiziente und zufriedenstellende Aufgabenerfüllung bieten. (Gebrauchstauglichkeit)
+		\item \lbrack \textbf{Q50}\rbrack \ Das System soll zu 99,9\% erreichbar sein und eine gewisse Ausfallsicherheit garantieren.
+		\item \lbrack \textbf{Q60}\rbrack \ Das System soll über eine strukturierte Benutzeroberfläche mit intuitiver Benutzerführung verfügen.
+		\item \lbrack \textbf{Q70}\rbrack \ Das System muss dem Benutzer fehlerfreie Ergebnisse und Informationen bieten.
+	\end{itemize}
+	Organisationale Anforderungen
+	\begin{itemize}
+		\item \lbrack \textbf{O10}\rbrack \ Das System soll sensible Daten sicher und unerreichbar für Dritte speichern.
+		\item \lbrack \textbf{O20}\rbrack \ Das System soll einen verlustfreien Datentransport zwischen den verschiedenen Systemkomponenten gewehrleisten.  
+		\item \lbrack \textbf{O30}\rbrack \ Das System soll einen geringen Akkuverbrauch aufweisen.
+		\item \lbrack \textbf{O40}\rbrack \ Das System muss jeder Zeit Kontakt zum Benutzer aufnehmen können.
+		\item \lbrack \textbf{O50}\rbrack \ Das System muss dem Benutzer einen schnellen Zugriff auf den aktuelle Daten bieten.  
+	\end{itemize}
 \newpage
-
-\subsection{Benutzungs-Modellierung}
-
+\subsection{Contextual Task Analysis}
+	Die Contextual Task Analysis im Usability Engineering Lifecycle dient zur Aufgabenanalyse eines Projektes, in dem bereits ein bestimmtes System identifiziert, definiert und im Anwendungsbereich einbezogen wurde. Sie ist am besten geeignet, wenn bereit eine Reihe von Funktionen identifiziert wurden. Hierbei bezieht sich der Anwendungsbereich auf den Diabetes mellitus in Bezug auf Ernährung, Sport und Kommunikation unter Betroffenen. Als identifizierte Funktionen dienen die bereits erfassten funktionalen Anforderungen. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}\newline
+	Zudem setzt die Contextual Task Analysis das Verstehen aktueller Arbeiten der Benutzer voraus, um diese mit einem System optimal unterstützen zu können. Um diese aktuellen Arbeiten der Benutzer verstehen zu können, werden im weiteren Verlauf mehrere Hierarchische Task Analysis zu aktuellen Arbeitsprozessen der Benutzer in den verschiedenen Anwendungsbereichen erstellt. Hierbei können Erkenntnisse der Arbeit der Benutzer in ihrem tatsächlichen Arbeitsumfeld aus der durchgeführten Evaluation in der Analyse mit einfließen. So wird ein benutzerzentriertes Arbeitsmodell, wie es gegenwärtig von den Benutzern ausgeführt wird, erhalten. \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}\newline
+	Um bei der Entwicklung eines Systems ein optimales user interface zu erhalten, sind drei Ziele essentiell:
+	\begin{itemize}
+		\item Ermöglichen eines kraftvollen und effizienten Arbeitsprozesses
+		\item Eine Neugestaltung der Arbeitsprozesse zur effektiven Unterstützung der identifizierten Projektziele
+		\item Minimaler Aufwand beim Erlernen der neuen Aufgaben, indem das zu entwickelnde System vorhandenes Aufgabenwissen der Benutzer so weit wie möglich nutzt und die Maximierung der Effizienz und der Effektivität, indem die kognitiven Einschränkungen und Fähigkeiten des Menschen in Kontext ihrer tatsächlichen Aufgaben berücksichtigt werden.
+	\end{itemize}
+ \emph{[Mayhew, Deborah J.:	The Usability Engineering Lifecycle - a pracititoner handbook for user interface design, San Francisco, California: Morgan Kaufmann, 1999.]}
+	\newpage
 \subsection{Platform Capabilities/Constraints}
 
 \subsection{Usability-Goals}

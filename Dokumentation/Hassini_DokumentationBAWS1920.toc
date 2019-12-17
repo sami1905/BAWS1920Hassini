@@ -36,38 +36,43 @@
 \contentsline {subsection}{\numberline {7.2}Externe Risiken}{30}{subsection.44}
 \contentsline {part}{II\hspace {1em}Prozessmodellierung}{32}{part.45}
 \contentsline {section}{\numberline {8}Einf\IeC {\"u}hrung}{33}{section.46}
-\contentsline {section}{\numberline {9}Requirments Analysis}{34}{section.47}
-\contentsline {subsection}{\numberline {9.1}Benutzer-Modellierung}{34}{subsection.48}
-\contentsline {subsubsection}{\numberline {9.1.1}Stakeholder-Analysis}{34}{subsubsection.49}
-\contentsline {subsection}{\numberline {9.2}Benutzungs-Modellierung}{36}{subsection.51}
-\contentsline {subsection}{\numberline {9.3}Platform Capabilities/Constraints}{36}{subsection.52}
-\contentsline {subsection}{\numberline {9.4}Usability-Goals}{36}{subsection.53}
-\contentsline {subsection}{\numberline {9.5}Anforderungen}{36}{subsection.54}
-\contentsline {subsection}{\numberline {9.6}Style Guide}{36}{subsection.55}
-\contentsline {section}{\numberline {10}Design/Testing/Development}{37}{section.56}
-\contentsline {subsection}{\numberline {10.1}Work Reengineering}{37}{subsection.57}
-\contentsline {subsection}{\numberline {10.2}Screen Design Standards (SDS)}{37}{subsection.58}
-\contentsline {subsection}{\numberline {10.3}UI Prototyp}{37}{subsection.59}
-\contentsline {subsection}{\numberline {10.4}Iterative Evaluation}{37}{subsection.60}
-\contentsline {subsection}{\numberline {10.5}Detailed User Interface Design (DUID)}{37}{subsection.61}
-\contentsline {part}{III\hspace {1em}Systemmodellierung}{38}{part.62}
-\contentsline {section}{\numberline {11}Systemarchitektur}{39}{section.63}
-\contentsline {section}{\numberline {12}Datenstruktur}{39}{section.64}
-\contentsline {section}{\numberline {13}Rest-Spezifikation}{39}{section.65}
-\contentsline {section}{\numberline {14}Anwendungslogik}{39}{section.66}
-\contentsline {part}{IV\hspace {1em}Installation}{40}{part.67}
-\contentsline {section}{\numberline {15}Fazit}{41}{section.68}
-\contentsline {subsection}{\numberline {15.1}Zusammenfassung}{41}{subsection.69}
-\contentsline {subsection}{\numberline {15.2}Bewertung}{41}{subsection.70}
-\contentsline {subsection}{\numberline {15.3}Next Steps}{41}{subsection.71}
-\contentsline {section}{Literaturverzeichnis}{42}{section*.72}
-\contentsline {section}{Anhang}{44}{section*.73}
-\contentsline {subsection}{\numberline {A}Evaluation}{44}{subsection.74}
-\contentsline {subsubsection}{\numberline {A.1}Vorgehensweise}{44}{subsubsection.75}
-\contentsline {subsubsection}{\numberline {A.2}Auswertung}{45}{subsubsection.76}
-\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{45}{section*.77}
-\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{45}{section*.78}
-\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{46}{section*.79}
-\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{47}{section*.80}
-\contentsline {subsubsection}{\numberline {A.3}Fazit}{47}{subsubsection.81}
-\contentsline {section}{Erkl\IeC {\"a}rung}{49}{section*.82}
+\contentsline {section}{\numberline {9}Requirements Analysis}{34}{section.47}
+\contentsline {subsection}{\numberline {9.1}User-Profiles}{34}{subsection.48}
+\contentsline {subsubsection}{\numberline {9.1.1}Stakeholder-Analysis}{35}{subsubsection.49}
+\contentsline {subsubsection}{\numberline {9.1.2}Typ-1-Diabetiker}{38}{subsubsection.51}
+\contentsline {subsubsection}{\numberline {9.1.3}Typ-2-Diabetiker}{40}{subsubsection.53}
+\contentsline {subsubsection}{\numberline {9.1.4}Anforderungen}{42}{subsubsection.55}
+\contentsline {paragraph}{funktionale Anforderungen}{43}{section*.56}
+\contentsline {paragraph}{non-funktionale Anforderungen}{44}{section*.57}
+\contentsline {subsection}{\numberline {9.2}Contextual Task Analysis}{46}{subsection.58}
+\contentsline {subsection}{\numberline {9.3}Platform Capabilities/Constraints}{47}{subsection.59}
+\contentsline {subsection}{\numberline {9.4}Usability-Goals}{47}{subsection.60}
+\contentsline {subsection}{\numberline {9.5}Anforderungen}{47}{subsection.61}
+\contentsline {subsection}{\numberline {9.6}Style Guide}{47}{subsection.62}
+\contentsline {section}{\numberline {10}Design/Testing/Development}{48}{section.63}
+\contentsline {subsection}{\numberline {10.1}Work Reengineering}{48}{subsection.64}
+\contentsline {subsection}{\numberline {10.2}Screen Design Standards (SDS)}{48}{subsection.65}
+\contentsline {subsection}{\numberline {10.3}UI Prototyp}{48}{subsection.66}
+\contentsline {subsection}{\numberline {10.4}Iterative Evaluation}{48}{subsection.67}
+\contentsline {subsection}{\numberline {10.5}Detailed User Interface Design (DUID)}{48}{subsection.68}
+\contentsline {part}{III\hspace {1em}Systemmodellierung}{49}{part.69}
+\contentsline {section}{\numberline {11}Systemarchitektur}{50}{section.70}
+\contentsline {section}{\numberline {12}Datenstruktur}{50}{section.71}
+\contentsline {section}{\numberline {13}Rest-Spezifikation}{50}{section.72}
+\contentsline {section}{\numberline {14}Anwendungslogik}{50}{section.73}
+\contentsline {part}{IV\hspace {1em}Installation}{51}{part.74}
+\contentsline {section}{\numberline {15}Fazit}{52}{section.75}
+\contentsline {subsection}{\numberline {15.1}Zusammenfassung}{52}{subsection.76}
+\contentsline {subsection}{\numberline {15.2}Bewertung}{52}{subsection.77}
+\contentsline {subsection}{\numberline {15.3}Next Steps}{52}{subsection.78}
+\contentsline {section}{Literaturverzeichnis}{53}{section*.79}
+\contentsline {section}{Anhang}{55}{section*.80}
+\contentsline {subsection}{\numberline {A}Evaluation}{55}{subsection.81}
+\contentsline {subsubsection}{\numberline {A.1}Vorgehensweise}{55}{subsubsection.82}
+\contentsline {subsubsection}{\numberline {A.2}Auswertung}{56}{subsubsection.83}
+\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{56}{section*.84}
+\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{56}{section*.85}
+\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{57}{section*.86}
+\contentsline {paragraph}{Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{58}{section*.87}
+\contentsline {subsubsection}{\numberline {A.3}Fazit}{58}{subsubsection.88}
+\contentsline {section}{Erkl\IeC {\"a}rung}{60}{section*.89}
