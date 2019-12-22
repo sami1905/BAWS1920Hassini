@@ -2,70 +2,83 @@
 \BOOKMARK [1][]{section*.3}{Tabellenverzeichnis}{}% 2
 \BOOKMARK [1][]{section*.4}{Abbildungsverzeichnis}{}% 3
 \BOOKMARK [1][]{section*.5}{Einleitung}{}% 4
-\BOOKMARK [0][]{part.6}{I Konzept}{}% 5
-\BOOKMARK [1][]{section.7}{1 Zielhierarchie}{part.6}% 6
-\BOOKMARK [2][]{subsection.8}{1.1 Strategische Ziele}{section.7}% 7
-\BOOKMARK [2][]{subsection.9}{1.2 Taktische Ziele}{section.7}% 8
-\BOOKMARK [2][]{subsection.10}{1.3 Operative Ziele}{section.7}% 9
-\BOOKMARK [1][]{section.11}{2 Themenfeld/-recherche}{part.6}% 10
-\BOOKMARK [2][]{subsection.12}{2.1 Ern\344hrung}{section.11}% 11
-\BOOKMARK [3][]{subsubsection.14}{2.1.1 Kohlengydrate}{subsection.12}% 12
-\BOOKMARK [3][]{subsubsection.15}{2.1.2 Eiwei\337}{subsection.12}% 13
-\BOOKMARK [3][]{subsubsection.16}{2.1.3 Fett}{subsection.12}% 14
-\BOOKMARK [2][]{subsection.17}{2.2 Sport}{section.11}% 15
-\BOOKMARK [2][]{subsection.18}{2.3 Kommunikation/Erfahrungsaustausch}{section.11}% 16
-\BOOKMARK [1][]{section.19}{3 Marktrecherche}{part.6}% 17
-\BOOKMARK [2][]{subsection.20}{3.1 MySugr}{section.19}% 18
-\BOOKMARK [2][]{subsection.22}{3.2 DiabetesConnect}{section.19}% 19
-\BOOKMARK [2][]{subsection.24}{3.3 Dexcom G6}{section.19}% 20
-\BOOKMARK [2][]{subsection.26}{3.4 FreeStyle LibreLink}{section.19}% 21
-\BOOKMARK [2][]{subsection.28}{3.5 Lifesum}{section.19}% 22
-\BOOKMARK [2][]{subsection.30}{3.6 Fazit}{section.19}% 23
-\BOOKMARK [1][]{section.31}{4 Alleinstellungsmerkmal}{part.6}% 24
-\BOOKMARK [1][]{section.32}{5 Kommunikationsmodelle}{part.6}% 25
-\BOOKMARK [1][]{section.35}{6 Methodischer Rahmen}{part.6}% 26
-\BOOKMARK [2][]{subsection.36}{6.1 Nutzungskontext}{section.35}% 27
-\BOOKMARK [2][]{subsection.37}{6.2 Ans\344tze des usage-centered-design}{section.35}% 28
-\BOOKMARK [2][]{subsection.38}{6.3 Ans\344tze des user-centered-design}{section.35}% 29
-\BOOKMARK [3][]{subsubsection.39}{6.3.1 Usability-engineering nach Rosson und Carrol}{subsection.38}% 30
-\BOOKMARK [3][]{subsubsection.40}{6.3.2 Discount usability-engineering nach Nielsen}{subsection.38}% 31
-\BOOKMARK [3][]{subsubsection.41}{6.3.3 Usability engineering lifecycle nach Mayhew}{subsection.38}% 32
-\BOOKMARK [1][]{section.42}{7 Risiken}{part.6}% 33
-\BOOKMARK [2][]{subsection.43}{7.1 Interne Risiken}{section.42}% 34
-\BOOKMARK [2][]{subsection.44}{7.2 Externe Risiken}{section.42}% 35
-\BOOKMARK [0][]{part.45}{II Prozessmodellierung}{}% 36
-\BOOKMARK [1][]{section.46}{8 Einf\374hrung}{part.45}% 37
-\BOOKMARK [1][]{section.47}{9 Requirements Analysis}{part.45}% 38
-\BOOKMARK [2][]{subsection.48}{9.1 User-Profiles}{section.47}% 39
-\BOOKMARK [3][]{subsubsection.49}{9.1.1 Stakeholder-Analysis}{subsection.48}% 40
-\BOOKMARK [3][]{subsubsection.51}{9.1.2 Typ-1-Diabetiker}{subsection.48}% 41
-\BOOKMARK [3][]{subsubsection.53}{9.1.3 Typ-2-Diabetiker}{subsection.48}% 42
-\BOOKMARK [3][]{subsubsection.55}{9.1.4 Anforderungen}{subsection.48}% 43
-\BOOKMARK [2][]{subsection.58}{9.2 Contextual Task Analysis}{section.47}% 44
-\BOOKMARK [2][]{subsection.59}{9.3 Platform Capabilities/Constraints}{section.47}% 45
-\BOOKMARK [2][]{subsection.60}{9.4 Usability-Goals}{section.47}% 46
-\BOOKMARK [2][]{subsection.61}{9.5 Anforderungen}{section.47}% 47
-\BOOKMARK [2][]{subsection.62}{9.6 Style Guide}{section.47}% 48
-\BOOKMARK [1][]{section.63}{10 Design/Testing/Development}{part.45}% 49
-\BOOKMARK [2][]{subsection.64}{10.1 Work Reengineering}{section.63}% 50
-\BOOKMARK [2][]{subsection.65}{10.2 Screen Design Standards \(SDS\)}{section.63}% 51
-\BOOKMARK [2][]{subsection.66}{10.3 UI Prototyp}{section.63}% 52
-\BOOKMARK [2][]{subsection.67}{10.4 Iterative Evaluation}{section.63}% 53
-\BOOKMARK [2][]{subsection.68}{10.5 Detailed User Interface Design \(DUID\)}{section.63}% 54
-\BOOKMARK [0][]{part.69}{III Systemmodellierung}{}% 55
-\BOOKMARK [1][]{section.70}{11 Systemarchitektur}{part.69}% 56
-\BOOKMARK [1][]{section.71}{12 Datenstruktur}{part.69}% 57
-\BOOKMARK [1][]{section.72}{13 Rest-Spezifikation}{part.69}% 58
-\BOOKMARK [1][]{section.73}{14 Anwendungslogik}{part.69}% 59
-\BOOKMARK [0][]{part.74}{IV Installation}{}% 60
-\BOOKMARK [1][]{section.75}{15 Fazit}{part.74}% 61
-\BOOKMARK [2][]{subsection.76}{15.1 Zusammenfassung}{section.75}% 62
-\BOOKMARK [2][]{subsection.77}{15.2 Bewertung}{section.75}% 63
-\BOOKMARK [2][]{subsection.78}{15.3 Next Steps}{section.75}% 64
-\BOOKMARK [1][]{section*.79}{Literaturverzeichnis}{part.74}% 65
-\BOOKMARK [1][]{section*.80}{Anhang}{part.74}% 66
-\BOOKMARK [2][]{subsection.81}{A Evaluation}{section*.80}% 67
-\BOOKMARK [3][]{subsubsection.82}{A.1 Vorgehensweise}{subsection.81}% 68
-\BOOKMARK [3][]{subsubsection.83}{A.2 Auswertung}{subsection.81}% 69
-\BOOKMARK [3][]{subsubsection.88}{A.3 Fazit}{subsection.81}% 70
-\BOOKMARK [1][]{section*.89}{Erkl\344rung}{part.74}% 71
+\BOOKMARK [2][]{subsection.6}{0.1 Problemstellung}{section*.5}% 5
+\BOOKMARK [2][]{subsection.7}{0.2 Aufgabenstellung}{section*.5}% 6
+\BOOKMARK [2][]{subsection.8}{0.3 Vorgehensweise}{section*.5}% 7
+\BOOKMARK [0][]{part.9}{I Konzept}{}% 8
+\BOOKMARK [1][]{section.10}{1 Zielhierarchie}{part.9}% 9
+\BOOKMARK [2][]{subsection.11}{1.1 Strategische Ziele}{section.10}% 10
+\BOOKMARK [2][]{subsection.12}{1.2 Taktische Ziele}{section.10}% 11
+\BOOKMARK [2][]{subsection.13}{1.3 Operative Ziele}{section.10}% 12
+\BOOKMARK [1][]{section.14}{2 Themenfeld/-recherche}{part.9}% 13
+\BOOKMARK [2][]{subsection.15}{2.1 Ern\344hrung}{section.14}% 14
+\BOOKMARK [3][]{subsubsection.17}{2.1.1 Kohlenhydrate}{subsection.15}% 15
+\BOOKMARK [3][]{subsubsection.18}{2.1.2 Eiwei\337}{subsection.15}% 16
+\BOOKMARK [3][]{subsubsection.19}{2.1.3 Fett}{subsection.15}% 17
+\BOOKMARK [2][]{subsection.20}{2.2 Sport}{section.14}% 18
+\BOOKMARK [2][]{subsection.21}{2.3 Kommunikation/Erfahrungsaustausch}{section.14}% 19
+\BOOKMARK [1][]{section.22}{3 Marktrecherche}{part.9}% 20
+\BOOKMARK [2][]{subsection.23}{3.1 MySugr}{section.22}% 21
+\BOOKMARK [2][]{subsection.25}{3.2 DiabetesConnect}{section.22}% 22
+\BOOKMARK [2][]{subsection.27}{3.3 Dexcom G6}{section.22}% 23
+\BOOKMARK [2][]{subsection.29}{3.4 FreeStyle LibreLink}{section.22}% 24
+\BOOKMARK [2][]{subsection.31}{3.5 Lifesum}{section.22}% 25
+\BOOKMARK [2][]{subsection.33}{3.6 Fazit}{section.22}% 26
+\BOOKMARK [1][]{section.34}{4 Alleinstellungsmerkmal}{part.9}% 27
+\BOOKMARK [1][]{section.35}{5 Kommunikationsmodelle}{part.9}% 28
+\BOOKMARK [1][]{section.38}{6 Methodischer Rahmen}{part.9}% 29
+\BOOKMARK [2][]{subsection.39}{6.1 Nutzungskontext}{section.38}% 30
+\BOOKMARK [0][]{part.40}{II Prozessmodellierung}{}% 31
+\BOOKMARK [1][]{section.41}{7 Requirements Analysis}{part.40}% 32
+\BOOKMARK [2][]{subsection.42}{7.1 Stakeholder-Analysis}{section.41}% 33
+\BOOKMARK [2][]{subsection.44}{7.2 User-Profiles}{section.41}% 34
+\BOOKMARK [3][]{subsubsection.45}{7.2.1 Typ-1-Diabetiker}{subsection.44}% 35
+\BOOKMARK [3][]{subsubsection.47}{7.2.2 Typ-2-Diabetiker}{subsection.44}% 36
+\BOOKMARK [2][]{subsection.49}{7.3 Anforderungen}{section.41}% 37
+\BOOKMARK [3][]{subsubsection.50}{7.3.1 funktionale Anforderungen}{subsection.49}% 38
+\BOOKMARK [2][]{subsection.55}{7.4 Contextual Task Analysis}{section.41}% 39
+\BOOKMARK [2][]{subsection.56}{7.5 Platform Capabilities/Constraints}{section.41}% 40
+\BOOKMARK [2][]{subsection.57}{7.6 Usability-Goals}{section.41}% 41
+\BOOKMARK [2][]{subsection.58}{7.7 Style Guide}{section.41}% 42
+\BOOKMARK [1][]{section.59}{8 Design/Testing/Development}{part.40}% 43
+\BOOKMARK [2][]{subsection.60}{8.1 Work Reengineering}{section.59}% 44
+\BOOKMARK [2][]{subsection.61}{8.2 Screen Design Standards \(SDS\)}{section.59}% 45
+\BOOKMARK [2][]{subsection.62}{8.3 UI Prototyp}{section.59}% 46
+\BOOKMARK [2][]{subsection.63}{8.4 Iterative Evaluation}{section.59}% 47
+\BOOKMARK [2][]{subsection.64}{8.5 Detailed User Interface Design \(DUID\)}{section.59}% 48
+\BOOKMARK [0][]{part.65}{III Systemmodellierung}{}% 49
+\BOOKMARK [1][]{section.66}{9 Systemarchitektur}{part.65}% 50
+\BOOKMARK [1][]{section.67}{10 Datenstruktur}{part.65}% 51
+\BOOKMARK [1][]{section.68}{11 Rest-Spezifikation}{part.65}% 52
+\BOOKMARK [1][]{section.69}{12 Anwendungslogik}{part.65}% 53
+\BOOKMARK [0][]{part.70}{IV Installation}{}% 54
+\BOOKMARK [1][]{section.71}{13 Fazit}{part.70}% 55
+\BOOKMARK [2][]{subsection.72}{13.1 Zusammenfassung}{section.71}% 56
+\BOOKMARK [2][]{subsection.73}{13.2 Bewertung}{section.71}% 57
+\BOOKMARK [2][]{subsection.74}{13.3 Next Steps}{section.71}% 58
+\BOOKMARK [1][]{section*.75}{Literaturverzeichnis}{part.70}% 59
+\BOOKMARK [0][]{part*.76}{Anhang}{}% 60
+\BOOKMARK [1][]{appendix.77}{A Themenfeld/-recherche}{part*.76}% 61
+\BOOKMARK [2][]{subsection.78}{A.1 Diabetes-Arten}{appendix.77}% 62
+\BOOKMARK [2][]{subsection.79}{A.2 Analoge Dokumentation}{appendix.77}% 63
+\BOOKMARK [1][]{appendix.81}{B Evaluation}{part*.76}% 64
+\BOOKMARK [2][]{subsection.82}{B.1 Vorgehensweise}{appendix.81}% 65
+\BOOKMARK [2][]{subsection.83}{B.2 Auswertung}{appendix.81}% 66
+\BOOKMARK [3][]{subsubsection.84}{B.2.1 Kategorie \214Pers\366nliche Daten\215}{subsection.83}% 67
+\BOOKMARK [3][]{subsubsection.85}{B.2.2 Kategorie \214Behandlung\215}{subsection.83}% 68
+\BOOKMARK [3][]{subsubsection.86}{B.2.3 Kategorie \214Lebensstil\215}{subsection.83}% 69
+\BOOKMARK [3][]{subsubsection.87}{B.2.4 Kategorie \214Bewertung\215}{subsection.83}% 70
+\BOOKMARK [2][]{subsection.88}{B.3 Fazit}{appendix.81}% 71
+\BOOKMARK [1][]{appendix.89}{C Methodischer Rahmen}{part*.76}% 72
+\BOOKMARK [2][]{subsection.90}{C.1 Nutzungskontex}{appendix.89}% 73
+\BOOKMARK [2][]{subsection.91}{C.2 Ans\344tze des usage-centered-design}{appendix.89}% 74
+\BOOKMARK [2][]{subsection.92}{C.3 Ans\344tze des user-centered-design}{appendix.89}% 75
+\BOOKMARK [3][]{subsubsection.93}{C.3.1 Usability-engineering nach Rosson und Carrol}{subsection.92}% 76
+\BOOKMARK [3][]{subsubsection.94}{C.3.2 Discount usability-engineering nach Nielsen}{subsection.92}% 77
+\BOOKMARK [3][]{subsubsection.95}{C.3.3 Usability engineering lifecycle nach Mayhew}{subsection.92}% 78
+\BOOKMARK [1][]{appendix.96}{D User Profiles}{part*.76}% 79
+\BOOKMARK [1][]{appendix.97}{E Personas}{part*.76}% 80
+\BOOKMARK [1][]{appendix.98}{F Non-funktionale Anforderungen}{part*.76}% 81
+\BOOKMARK [2][]{subsection.99}{F.1 Qualit\344tsanforderungen}{appendix.98}% 82
+\BOOKMARK [2][]{subsection.100}{F.2 Organisationale Anforderungen}{appendix.98}% 83
+\BOOKMARK [1][]{section*.101}{Erkl\344rung}{part*.76}% 84
