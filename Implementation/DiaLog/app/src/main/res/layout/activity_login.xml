@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dialog_logo"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Willkommen bei DiaLog!"
+            android:textColor="@color/darkblue"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Melde Dich mit deiner E-Mail-Adresse und Passwort an oder erstelle ein neues Konto."
+            android:textColor="@color/darkblue"
+            android:textStyle="bold" />
+        
+        <EditText
+            android:id="@+id/input_email_adresse"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="E-Mail-Adresse"
+            android:textColorHint="@color/darkblue"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_person"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_login"
+            android:padding="15dp"
+            />
+
+        <EditText
+            android:id="@+id/input_passwort"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Passwort"
+            android:textColorHint="@color/darkblue"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_key"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edit_login"
+            android:padding="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:text="Passwort vergessen?"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginRight="25dp"/>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="Anmelden"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_button"
+            />
+
+        <TextView
+            android:id="@+id/registrieren_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Registrieren"
+            android:textColor="@color/darkblue"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
