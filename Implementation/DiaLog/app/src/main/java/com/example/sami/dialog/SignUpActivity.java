@@ -6,8 +6,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,24 +17,31 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Calendar;
-import java.util.Date;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static java.util.Calendar.YEAR;
 
 public class SignUpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = "SignUpActivity";
-    private User user;
     private EditText firstname;
     private EditText name;
     private TextView birthday;
+    private int age;
+    private EditText height;
+    private EditText weight;
     private Spinner genger;
     private EditText nickname;
     private EditText email;
     private EditText password;
-    private Button signUp;
+    private Button next;
     private TextView quit;
-    int i = 0;
-
     private DatePickerDialog.OnDateSetListener mDateSetListener;
+    private User user;
 
 
     @Override
@@ -52,7 +57,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
             @Override
             public void onClick(View v) {
                 Calendar cal = Calendar.getInstance();
-                int year = cal.get(Calendar.YEAR);
+                int year = cal.get(YEAR);
                 int month = cal.get(Calendar.MONTH);
                 int day = cal.get(Calendar.DAY_OF_MONTH);
 
@@ -61,16 +66,24 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                 dialog.show();
             }
         });
-
         mDateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
+                Calendar cal = Calendar.getInstance();
+                int currentYear = cal.get(YEAR);
+                int currentMonth = cal.get(Calendar.MONTH);
+                int currentDay = cal.get(Calendar.DAY_OF_MONTH);
+                age = currentYear - year;
+                if (month > currentMonth || month == currentMonth && day > currentDay) age--;
                 month = month + 1;
                 String date = month + "/" + day + "/" + year;
                 birthday.setText(date);
             }
         };
 
+
+        height = findViewById(R.id.input_height);
+        weight = findViewById(R.id.input_weight);
         genger = findViewById(R.id.spinner_genger);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genger, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -80,74 +93,83 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
         nickname = findViewById(R.id.input_nickame);
         email = findViewById(R.id.input_email_adresse);
         password = findViewById(R.id.input_passwort);
-        signUp = findViewById(R.id.registrieren_button);
+        next = findViewById(R.id.next_button);
         quit = findViewById(R.id.text_abbrechen);
 
 
+
+
         //bei Click auf "Weiter" die Eingabe prüfen und SignUp2Activity öffnen
-        signUp.setOnClickListener(new View.OnClickListener() {
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                    if(firstname.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe deinen Vornamen ein. ", Toast.LENGTH_LONG);
+                    if(firstname.getText().toString().equals("") || name.getText().toString().equals("") || birthday.getText().toString().equals("") ||
+                            height.getText().toString().equals("")|| weight.getText().toString().equals("") || genger.getSelectedItem().toString().equals("") ||
+                            nickname.getText().toString().equals("") || email.getText().toString().equals("") || password.getText().toString().equals("")) {
+                        if(firstname.getText().toString().equals("")) firstname.setHintTextColor(Color.RED);
+                        if(name.getText().toString().equals("")) name.setHintTextColor(Color.RED);
+                        if(birthday.getText().toString().equals("")) birthday.setHintTextColor(Color.RED);
+                        if(height.getText().toString().equals("")) height.setHintTextColor(Color.RED);
+                        if(weight.getText().toString().equals("")) weight.setHintTextColor(Color.RED);
+                        if(genger.getSelectedItem().toString().equals("")) genger.setBackgroundColor(Color.RED);
+                        if(nickname.getText().toString().equals("")) nickname.setHintTextColor(Color.RED);
+                        if(email.getText().toString().equals("")) email.setHintTextColor(Color.RED);
+                        if(password.getText().toString().equals("")) password.setHintTextColor(Color.RED);
+                        Toast toast = Toast.makeText(getBaseContext(), " Bitte vervollständige deine Angaben. ", Toast.LENGTH_LONG);
                         View toastView = toast.getView();
                         toastView.setBackgroundResource(R.drawable.toast_drawable);
                         toast.show();
                         return;
                     }
-                    else if(name.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe deinen Nachnamen ein. ", Toast.LENGTH_LONG);
+
+                    else if(Float.valueOf(weight.getText().toString()) > 400.0){
+                        Toast toast = Toast.makeText(getBaseContext(), " Dein Körpergewicht muss unter 400 kg liegen. ", Toast.LENGTH_LONG);
                         View toastView = toast.getView();
                         toastView.setBackgroundResource(R.drawable.toast_drawable);
                         toast.show();
                         return;
+
                     }
-                    else if(birthday.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe dein Geburtdatum ein. ", Toast.LENGTH_LONG);
-                        View toastView = toast.getView();
-                        toastView.setBackgroundResource(R.drawable.toast_drawable);
-                        toast.show();
-                        return;
-                    }
-                    else if(nickname.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe einen Benutzernamen ein. ", Toast.LENGTH_LONG);
-                        View toastView = toast.getView();
-                        toastView.setBackgroundResource(R.drawable.toast_drawable);
-                        toast.show();
-                        return;
-                    }
-                    else if(email.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe deine E-Mail-Adresse ein. ", Toast.LENGTH_LONG);
+
+                    else if(Float.valueOf(height.getText().toString()) > 250 || Float.valueOf(height.getText().toString()) < 80){
+                        Toast toast = Toast.makeText(getBaseContext(), " Deine Körpergöße muss zwischen 80 und 250 cm liegen. ", Toast.LENGTH_LONG);
                         View toastView = toast.getView();
                         toastView.setBackgroundResource(R.drawable.toast_drawable);
                         toast.show();
                         return;
                     }
                     else if(validMailAddress(email.getText().toString()) == false){
+                        email.setHintTextColor(Color.RED);
+                        email.setTextColor(Color.RED);
                         Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe deine korrekte E-Mail-Adresse ein. ", Toast.LENGTH_LONG);
                         View toastView = toast.getView();
                         toastView.setBackgroundResource(R.drawable.toast_drawable);
                         toast.show();
                         return;
                     }
-                    else if(password.getText().toString().equals("")){
-                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gebe ein Passwort ein. ", Toast.LENGTH_LONG);
-                        View toastView = toast.getView();
-                        toastView.setBackgroundResource(R.drawable.toast_drawable);
-                        toast.show();
-                        return;
-                    }
+
                     else if(validPassword(password.getText().toString()) == false) {
+                        password.setHintTextColor(Color.RED);
+                        password.setTextColor(Color.RED);
                         Toast toast = Toast.makeText(getBaseContext(), " Dein Passwort muss mindestens aus 8 Zeichen bestehen. ", Toast.LENGTH_LONG);
                         View toastView = toast.getView();
                         toastView.setBackgroundResource(R.drawable.toast_drawable);
                         toast.show();
                         return;
                     }
-                    else{
-                        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
-                        startActivity(intent);
+                    else if(age < 0){
+                        birthday.setHintTextColor(Color.RED);
+                        birthday.setTextColor(Color.RED);
+                        Toast toast = Toast.makeText(getBaseContext(), " Bitte gib dein richtiges Geburtsdatum an. ", Toast.LENGTH_LONG);
+                        View toastView = toast.getView();
+                        toastView.setBackgroundResource(R.drawable.toast_drawable);
+                        toast.show();
+                        return;
+                    }
+                    else {
+                        checkUsers();
+
                     }
 
 
@@ -210,16 +232,15 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+        parent.setBackgroundColor(Color.WHITE);
         String text = parent.getItemAtPosition(position).toString();
-        if(i > 0) {
+        if(!text.trim().isEmpty()) {
             Toast toast = Toast.makeText(parent.getContext(), "  Auswahl: " + text + "  ", Toast.LENGTH_SHORT);
             View toastView = toast.getView();
             toastView.setBackgroundResource(R.drawable.toast_drawable);
             toast.show();
 
         }
-        i++;
         return;
     }
 
@@ -227,4 +248,63 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
+    public void checkUsers(){
+
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<List<User>> call = jsonPlaceHolderApi.getUsers();
+
+        call.enqueue(new Callback<List<User>>() {
+
+            @Override
+            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                if(!response.isSuccessful()){
+
+                }
+
+                if(response.isSuccessful() || response.code() == 200){
+                    List<User> users = response.body();
+                    for(User user : users){
+                        if(nickname.getText().toString().equals(user.getNickname())){
+                            Toast toast = Toast.makeText(getBaseContext(), " Benutzername ist bereits vergeben. ", Toast.LENGTH_LONG);
+                            View toastView = toast.getView();
+                            toastView.setBackgroundResource(R.drawable.toast_drawable);
+                            toast.show();
+                        }
+
+                        else if( email.getText().toString().equals(user.getEmail())){
+                            Toast toast = Toast.makeText(getBaseContext(), " Es existiert bereits ein Konto mit der \n angegebenen E-Mail-Adresse. ", Toast.LENGTH_LONG);
+                            View toastView = toast.getView();
+                            toastView.setBackgroundResource(R.drawable.toast_drawable);
+                            toast.show();
+                        }
+                        else{
+                            User newUser = new User(firstname.getText().toString(), name.getText().toString(), birthday.getText().toString(), age,
+                                    Integer.parseInt(height.getText().toString()), Float.parseFloat(weight.getText().toString()),
+                                    genger.getSelectedItem().toString(), nickname.getText().toString(), email.getText().toString(),
+                                    password.getText().toString(), "", "", false, "", "",
+                                    0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+
+                            Intent intent = new Intent(SignUpActivity.this, SignUp2Activity.class);
+                            intent.putExtra("User", newUser);
+                            startActivity(intent);
+
+                        }
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<User>> call, Throwable t) {
+                Toast toast = Toast.makeText(getBaseContext(), " Verbindungsfehler! Überprüfen Sie Ihre Internetverbindung \n oder versuchen Sie es zu einem späteren Zeitpunkt erneut!.", Toast.LENGTH_LONG);
+                View toastView = toast.getView();
+                toastView.setBackgroundResource(R.drawable.toast_drawable);
+                toast.show();
+            }
+        });
+
+    }
+
 }

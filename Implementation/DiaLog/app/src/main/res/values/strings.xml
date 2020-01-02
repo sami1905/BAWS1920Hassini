@@ -2,7 +2,42 @@
     <string name="app_name">DiaLog</string>
 
     <string-array name="genger">
+        <item></item>
         <item>männlich</item>
         <item>weiblich</item>
     </string-array>
+
+    <string-array name="dm_type">
+        <item></item>
+        <item>Diabetes mellitus 1</item>
+        <item>Diabetes mellitus 2</item>
+        <item>einen anderen Type</item>
+    </string-array>
+
+    <string-array name="insulin">
+        <item></item>
+        <item>Spritze</item>
+        <item>Pumpe</item>
+        <item>Kein Insulin</item>
+    </string-array>
+
+    <string-array name="janein">
+        <item></item>
+        <item>Ja</item>
+        <item>Nein</item>
+    </string-array>
+
+    <string-array name="unit_bz">
+        <item></item>
+        <item>mg/dL</item>
+        <item>mmol/L</item>
+    </string-array>
+
+    <string-array name="unit_kh">
+        <item></item>
+        <item>BE</item>
+        <item>KE</item>
+    </string-array>
+
+
 </resources>
