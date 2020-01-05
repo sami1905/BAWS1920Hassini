@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".Welcome3Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Bitte gib für die folgenden Aktivitäten die Anzahl der Stunden pro Tag an, in denen du die jeweilige Aktivität durchführst. Du kannst insgesamt maximal 24 Stunden eintragen."
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:text="Schlafen"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_schlafen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_schlafen"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_schlafen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text="Sitzen/Liegen"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_sitzen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_sitzen"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_sitzen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text="kaum körperliche Aktivität"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_kaum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_kaum"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_kaum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text="wenig körperliche Aktivität"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_wenig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_wenig"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_wenig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text="Stehen/Gehen"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_stehen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_stehen"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_stehen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text="körperlich anstrengende Anktivität"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_anstrengende"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/seekbar_anstrengende"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_anstrengende"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Du möchtest: "
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner_weight_goal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            />
+
+        <Button
+            android:id="@+id/bestätigen_button"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Bestätigen"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/text_überspringen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Überspringen"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

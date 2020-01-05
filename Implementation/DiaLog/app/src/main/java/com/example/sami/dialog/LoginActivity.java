@@ -144,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
                         if(user.getEmail().equals(editEmail.getText().toString()) && user.getPassword().equals(editPassword.getText().toString())){
                             i++;
                             User matchUser = user;
-                            Intent intent = new Intent(LoginActivity.this, WelcomeActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                             intent.putExtra("User", matchUser);
                             startActivity(intent);
                         }

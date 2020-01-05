@@ -6,20 +6,20 @@ import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 public class User implements Parcelable {
+    @SerializedName("id")
+    private int id;
     @SerializedName("firstname")
     private String firstname;
     @SerializedName("name")
     private String name;
     @SerializedName("birthday")
     private String birthday;
-    @SerializedName("age")
-    private int age;
     @SerializedName("height")
     private int height;
     @SerializedName("weight")
     private float weight;
-    @SerializedName("genger")
-    private String genger;
+    @SerializedName("gender")
+    private String gender;
     @SerializedName("nickname")
     private String nickname;
     @SerializedName("email")
@@ -52,18 +52,42 @@ public class User implements Parcelable {
     @SerializedName("beFactor")
     private float beFactor;
 
-    public User(String firstname, String name, String birthday, int age, int height, float weight,
-                String genger, String nickname, String email, String password,
-                String dmType, String insulin, boolean tablets, String unitBZ,
-                String unitKH, float lowlimit, float upperLimit, float lowSugar,
-                float upperSugar, float correctionFactor, float beFactor) {
+    @SerializedName("calorieDegreeOne")
+    private float calorieGegreeOne;
+    @SerializedName("calorieDegreeTwo")
+    private float calorieGegreeTwo;
+    @SerializedName("calorieDegreeThree")
+    private float calorieGegreeThree;
+    @SerializedName("calorieDegreeFour")
+    private float calorieGegreeFour;
+    @SerializedName("calorieDegreeFive")
+    private float calorieGegreeFive;
+    @SerializedName("calorieDegreeSix")
+    private float calorieGegreeSix;
+    @SerializedName("weightGoal")
+    private String weightGoal;
+
+    @SerializedName("posts")
+    private int[] posts;
+    @SerializedName("comments")
+    private int[] comments;
+    @SerializedName("score")
+    private int score;
+
+    public User(int id, String firstname, String name, String birthday, int height, float weight,
+                String gender, String nickname, String email, String password, String dmType,
+                String insulin, boolean tablets, String unitBZ, String unitKH, float lowlimit,
+                float upperLimit, float lowSugar, float upperSugar, float correctionFactor,
+                float beFactor, float calorieGegreeOne, float calorieGegreeTwo, float calorieGegreeThree,
+                float calorieGegreeFour, float calorieGegreeFive, float calorieGegreeSix,
+                String weightGoal, int[] posts, int[] comments, int score) {
+        this.id = id;
         this.firstname = firstname;
         this.name = name;
         this.birthday = birthday;
-        this.age = age;
         this.height = height;
         this.weight = weight;
-        this.genger = genger;
+        this.gender = gender;
         this.nickname = nickname;
         this.email = email;
         this.password = password;
@@ -78,16 +102,26 @@ public class User implements Parcelable {
         this.upperSugar = upperSugar;
         this.correctionFactor = correctionFactor;
         this.beFactor = beFactor;
+        this.calorieGegreeOne = calorieGegreeOne;
+        this.calorieGegreeTwo = calorieGegreeTwo;
+        this.calorieGegreeThree = calorieGegreeThree;
+        this.calorieGegreeFour = calorieGegreeFour;
+        this.calorieGegreeFive = calorieGegreeFive;
+        this.calorieGegreeSix = calorieGegreeSix;
+        this.weightGoal = weightGoal;
+        this.posts = posts;
+        this.comments = comments;
+        this.score = score;
     }
 
     protected User(Parcel in) {
+        id = in.readInt();
         firstname = in.readString();
         name = in.readString();
         birthday = in.readString();
-        age = in.readInt();
         height = in.readInt();
         weight = in.readFloat();
-        genger = in.readString();
+        gender = in.readString();
         nickname = in.readString();
         email = in.readString();
         password = in.readString();
@@ -102,6 +136,16 @@ public class User implements Parcelable {
         upperSugar = in.readFloat();
         correctionFactor = in.readFloat();
         beFactor = in.readFloat();
+        calorieGegreeOne = in.readFloat();
+        calorieGegreeTwo = in.readFloat();
+        calorieGegreeThree = in.readFloat();
+        calorieGegreeFour = in.readFloat();
+        calorieGegreeFive = in.readFloat();
+        calorieGegreeSix = in.readFloat();
+        weightGoal = in.readString();
+        posts = in.createIntArray();
+        comments = in.createIntArray();
+        score = in.readInt();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -115,6 +159,14 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getFirstname() {
         return firstname;
@@ -140,14 +192,6 @@ public class User implements Parcelable {
         this.birthday = birthday;
     }
 
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public int getHeight() {
         return height;
     }
@@ -164,12 +208,12 @@ public class User implements Parcelable {
         this.weight = weight;
     }
 
-    public String getGenger() {
-        return genger;
+    public String getGender() {
+        return gender;
     }
 
-    public void setGenger(String genger) {
-        this.genger = genger;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getNickname() {
@@ -284,6 +328,86 @@ public class User implements Parcelable {
         this.beFactor = beFactor;
     }
 
+    public float getCalorieGegreeOne() {
+        return calorieGegreeOne;
+    }
+
+    public void setCalorieGegreeOne(float calorieGegreeOne) {
+        this.calorieGegreeOne = calorieGegreeOne;
+    }
+
+    public float getCalorieGegreeTwo() {
+        return calorieGegreeTwo;
+    }
+
+    public void setCalorieGegreeTwo(float calorieGegreeTwo) {
+        this.calorieGegreeTwo = calorieGegreeTwo;
+    }
+
+    public float getCalorieGegreeThree() {
+        return calorieGegreeThree;
+    }
+
+    public void setCalorieGegreeThree(float calorieGegreeThree) {
+        this.calorieGegreeThree = calorieGegreeThree;
+    }
+
+    public float getCalorieGegreeFour() {
+        return calorieGegreeFour;
+    }
+
+    public void setCalorieGegreeFour(float calorieGegreeFour) {
+        this.calorieGegreeFour = calorieGegreeFour;
+    }
+
+    public float getCalorieGegreeFive() {
+        return calorieGegreeFive;
+    }
+
+    public void setCalorieGegreeFive(float calorieGegreeFive) {
+        this.calorieGegreeFive = calorieGegreeFive;
+    }
+
+    public float getCalorieGegreeSix() {
+        return calorieGegreeSix;
+    }
+
+    public void setCalorieGegreeSix(float calorieGegreeSix) {
+        this.calorieGegreeSix = calorieGegreeSix;
+    }
+
+    public String getWeightGoal() {
+        return weightGoal;
+    }
+
+    public void setWeightGoal(String weightGoal) {
+        this.weightGoal = weightGoal;
+    }
+
+    public int[] getPosts() {
+        return posts;
+    }
+
+    public void setPosts(int[] posts) {
+        this.posts = posts;
+    }
+
+    public int[] getComments() {
+        return comments;
+    }
+
+    public void setComments(int[] comments) {
+        this.comments = comments;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -291,13 +415,13 @@ public class User implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
         dest.writeString(firstname);
         dest.writeString(name);
         dest.writeString(birthday);
-        dest.writeInt(age);
         dest.writeInt(height);
         dest.writeFloat(weight);
-        dest.writeString(genger);
+        dest.writeString(gender);
         dest.writeString(nickname);
         dest.writeString(email);
         dest.writeString(password);
@@ -312,5 +436,15 @@ public class User implements Parcelable {
         dest.writeFloat(upperSugar);
         dest.writeFloat(correctionFactor);
         dest.writeFloat(beFactor);
+        dest.writeFloat(calorieGegreeOne);
+        dest.writeFloat(calorieGegreeTwo);
+        dest.writeFloat(calorieGegreeThree);
+        dest.writeFloat(calorieGegreeFour);
+        dest.writeFloat(calorieGegreeFive);
+        dest.writeFloat(calorieGegreeSix);
+        dest.writeString(weightGoal);
+        dest.writeIntArray(posts);
+        dest.writeIntArray(comments);
+        dest.writeInt(score);
     }
 }

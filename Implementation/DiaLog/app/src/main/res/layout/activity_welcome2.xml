@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".Welcome2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dialog_logo_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Lass dir deinen Kalorienbedarf pro Tag berechnen."
+            android:textColor="@color/white"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/josefin_sans_light"
+        android:gravity="center"
+        android:text="DiaLog kann anhand deines Geschlechtes, deiner Größe, deinem Gewicht und deinem Alter den Grundumsatz deines Kalorienbedarfs berechnen. Um neben dem Grundumsatz auch deinen Leistungsumsatz erhalten zu können, benötigt DiaLog Informationen zu deinen täglichen Aktivitäten. Klicke auf Weiter, um deine Aktivitäten anzugeben. Solltest du dir nicht deinen Leistungsumsatz und somit lediglich den Grundumsatz deines Kalorienbedarfs berechnen lassen wollen, klick auf Überspringen."
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/login_button"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Weiter"
+        android:textColor="#fff"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/überspringen_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Überspringen"
+        android:textColor="@color/colorAccent"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+</LinearLayout>

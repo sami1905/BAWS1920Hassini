@@ -54,10 +54,9 @@ app.post('/users', bodyParser.json(), function(req, res){
                 "firstname" : req.body.firstname,
                 "name" : req.body.name,
                 "birthday" : req.body.birthday,
-                "age" : req.body.age,
                 "height" : req.body.height,
                 "weight" : req.body.weight,
-                "genger" : req.body.genger,
+                "gender" : req.body.gender,
                 "nickname" : req.body.nickname,
                 "email" : req.body.email,
                 "password" : req.body.password,
@@ -71,14 +70,97 @@ app.post('/users', bodyParser.json(), function(req, res){
                 "lowSugar" : req.body.lowSugar,
                 "upperSugar" : req.body.upperSugar,
                 "correctionFactor" : req.body.correctionFactor,
-                "beFactor" : req.body.beFactor
+                "beFactor" : req.body.beFactor,
+                "calorie" : [{
+                    "calorieDegreeOne" : req.body.calorieDegreeOne,
+                    "calorieDegreeTwo" : req.body.calorieDegreeTwo,
+                    "calorieDegreeThree" : req.body.calorieDegreeThree,
+                    "calorieDegreeFour" : req.body.calorieDegreeFour,
+                    "calorieDegreeFive" : req.body.calorieDegreeFive,
+                    "calorieDegreeSix" : req.body.calorieDegreeSix,
+                    "weightGoal" : req.body.weightGoal
+                }],
+                "posts" : req.body.posts,
+                "comments" : req.body.comments,
+                "score" : req.body.score
         };
         
         //creat user
         users.splice(numberOfUsers, 0, userToAdd);
         fs.writeFile(settings.users, JSON.stringify(users, null, 2));
-        res.status(201).send("Benutzer erfolgreich hinzugefügt.");
+        res.status(201).send("User erfolgreich angelegt.");
     });
+});
+
+
+
+// PUT /users/:userID
+app.put('/users/:userID', bodyParser.json(), function(req, res){
+  fs.readFile(settings.users, function(err, data){
+    var users = JSON.parse(data);
+    var currentUser;
+    //find the searched user and edit his attribute
+    for(var i = 0; i < users.length; i++ ){
+      if(users[i].id == req.params.userID){
+          currentUser = users[i];
+          users[i].firstname = req.body.firstname;
+          users[i].name = req.body.name;
+          users[i].birthday = req.body.birthday;
+          users[i].height = req.body.height;
+          users[i].weight = req.body.weight;
+          users[i].nickname = req.body.nickname;
+          users[i].email = req.body.email;
+          users[i].password = req.body.password;
+          users[i].dmType = req.body.dmType;
+          users[i].insulin = req.body.insulin;
+          users[i].tablets = req.body.tablets;
+          users[i].unitBZ = req.body.unitBZ;
+          users[i].unitKH = req.body.unitKH;
+          users[i].lowLimit = req.body.lowLimit;
+          users[i].upperLimit = req.body.upperLimit;
+          users[i].lowSugar = req.body.lowSugar;
+          users[i].upperSugar = req.body.upperSugar;
+          users[i].correctionFactor = req.body.correctionFactor;
+          users[i].beFactor = req.body.beFactor;
+          users[i].calorie[0].calorieDegreeOne = req.body.calorieDegreeOne;
+          users[i].calorie[0].calorieDegreeTwo = req.body.calorieDegreeTwo;
+          users[i].calorie[0].calorieDegreeThree = req.body.calorieDegreeThree;
+          users[i].calorie[0].calorieDegreeFour = req.body.calorieDegreeFour;
+          users[i].calorie[0].calorieDegreeFive = req.body.calorieDegreeFive;          
+          users[i].calorie[0].calorieDegreeSix = req.body.calorieDegreeSix;
+          users[i].calorie[0].weightGoal = req.body.weightGoal;
+          users[i].posts = req.body.posts;
+          users[i].comments = req.body.comments;
+          users[i].score = req.body.score;
+          fs.writeFile(settings.users, JSON.stringify(users, null, 2));
+          res.status(200).send("User erfolgreich bearbeitet");
+      }
+    }
+      if(currentUser == null)res.status(400).send("User zum bearbeiten nicht vorhanden.");
+  });
+});
+
+// DELETE /usersID
+app.delete('/users/:userID', function(req, res){
+  fs.readFile(settings.users, function(err, data){
+    var users = JSON.parse(data);
+    var current_i = users.length;
+
+    // Find the position of the searched user and save it in current_i
+    for(var i = 0; i < users.length; i++ ){
+      if(users[i].id == req.params.userID){
+        current_i = i;
+      }
+    }
+    // if current_i is already the same like number of the users, there are no user found. is current_i not the same, delete the user
+    if(current_i < users.length){
+      users.splice(current_i,1);
+      fs.writeFile(settings.users, JSON.stringify(users, null, 2));
+      res.status(204).send("User erfolgreich gelöscht");
+    } else {
+      res.status(404).send("User NOT FOUND");
+    }
+  });
 });
 
 app.listen(settings.port, function(){

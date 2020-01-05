@@ -28,13 +28,14 @@ import static java.util.Calendar.YEAR;
 public class SignUpActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = "SignUpActivity";
+    private int id;
     private EditText firstname;
     private EditText name;
     private TextView birthday;
     private int age;
     private EditText height;
     private EditText weight;
-    private Spinner genger;
+    private Spinner gender;
     private EditText nickname;
     private EditText email;
     private EditText password;
@@ -84,11 +85,11 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
 
         height = findViewById(R.id.input_height);
         weight = findViewById(R.id.input_weight);
-        genger = findViewById(R.id.spinner_genger);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.genger, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        genger.setAdapter(adapter);
-        genger.setOnItemSelectedListener(this);
+        gender = findViewById(R.id.spinner_gender);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gender, R.layout.layout_spinner);
+        adapter.setDropDownViewResource(R.layout.layout_spinner_drop_down);
+        gender.setAdapter(adapter);
+        gender.setOnItemSelectedListener(this);
 
         nickname = findViewById(R.id.input_nickame);
         email = findViewById(R.id.input_email_adresse);
@@ -105,14 +106,14 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
             public void onClick(View v) {
 
                     if(firstname.getText().toString().equals("") || name.getText().toString().equals("") || birthday.getText().toString().equals("") ||
-                            height.getText().toString().equals("")|| weight.getText().toString().equals("") || genger.getSelectedItem().toString().equals("") ||
+                            height.getText().toString().equals("")|| weight.getText().toString().equals("") || gender.getSelectedItem().toString().equals("") ||
                             nickname.getText().toString().equals("") || email.getText().toString().equals("") || password.getText().toString().equals("")) {
                         if(firstname.getText().toString().equals("")) firstname.setHintTextColor(Color.RED);
                         if(name.getText().toString().equals("")) name.setHintTextColor(Color.RED);
                         if(birthday.getText().toString().equals("")) birthday.setHintTextColor(Color.RED);
                         if(height.getText().toString().equals("")) height.setHintTextColor(Color.RED);
                         if(weight.getText().toString().equals("")) weight.setHintTextColor(Color.RED);
-                        if(genger.getSelectedItem().toString().equals("")) genger.setBackgroundColor(Color.RED);
+                        if(gender.getSelectedItem().toString().equals("")) gender.setBackgroundColor(Color.RED);
                         if(nickname.getText().toString().equals("")) nickname.setHintTextColor(Color.RED);
                         if(email.getText().toString().equals("")) email.setHintTextColor(Color.RED);
                         if(password.getText().toString().equals("")) password.setHintTextColor(Color.RED);
@@ -233,14 +234,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         parent.setBackgroundColor(Color.WHITE);
-        String text = parent.getItemAtPosition(position).toString();
-        if(!text.trim().isEmpty()) {
-            Toast toast = Toast.makeText(parent.getContext(), "  Auswahl: " + text + "  ", Toast.LENGTH_SHORT);
-            View toastView = toast.getView();
-            toastView.setBackgroundResource(R.drawable.toast_drawable);
-            toast.show();
 
-        }
         return;
     }
 
@@ -266,11 +260,13 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                 if(response.isSuccessful() || response.code() == 200){
                     List<User> users = response.body();
                     for(User user : users){
+                        id = user.getId() + 1;
                         if(nickname.getText().toString().equals(user.getNickname())){
                             Toast toast = Toast.makeText(getBaseContext(), " Benutzername ist bereits vergeben. ", Toast.LENGTH_LONG);
                             View toastView = toast.getView();
                             toastView.setBackgroundResource(R.drawable.toast_drawable);
                             toast.show();
+                            return;
                         }
 
                         else if( email.getText().toString().equals(user.getEmail())){
@@ -278,13 +274,18 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                             View toastView = toast.getView();
                             toastView.setBackgroundResource(R.drawable.toast_drawable);
                             toast.show();
+                            return;
                         }
                         else{
-                            User newUser = new User(firstname.getText().toString(), name.getText().toString(), birthday.getText().toString(), age,
-                                    Integer.parseInt(height.getText().toString()), Float.parseFloat(weight.getText().toString()),
-                                    genger.getSelectedItem().toString(), nickname.getText().toString(), email.getText().toString(),
-                                    password.getText().toString(), "", "", false, "", "",
-                                    0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+
+                            User newUser = new User(id, firstname.getText().toString(), name.getText().toString(), birthday.getText().toString(),
+                                    Integer.parseInt(height.getText().toString()), Float.parseFloat(weight.getText().toString()), gender.getSelectedItem().toString(),
+                                    nickname.getText().toString(), email.getText().toString(), password.getText().toString(), "", "", false, "", "",
+                                    0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                                    0.0f, 0.0f,0.0f, 0.0f, 0.0f,
+                                    0.0f, 0.0f, "Gewicht halten", new int[]{}, new int[]{}, 0);
+
+                            createUser(newUser);
 
                             Intent intent = new Intent(SignUpActivity.this, SignUp2Activity.class);
                             intent.putExtra("User", newUser);
@@ -305,6 +306,34 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
             }
         });
 
+    }
+
+    public void createUser(User user) {
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<User> call = jsonPlaceHolderApi.createUser(user);
+
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                if (!response.isSuccessful()) {
+                    Toast toast = Toast.makeText(getBaseContext(), "FEHLER-CODE " + response.code() + ": Benutzer konnte nicht hinzugefügt werden.", Toast.LENGTH_LONG);
+                    View toastView = toast.getView();
+                    toastView.setBackgroundResource(R.drawable.toast_drawable);
+                    toast.show();
+                    return;
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                return;
+
+
+            }
+        });
     }
 
 }

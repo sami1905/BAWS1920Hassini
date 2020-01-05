@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">DiaLog</string>
 
-    <string-array name="genger">
+    <string-array name="gender">
         <item></item>
         <item>männlich</item>
         <item>weiblich</item>
@@ -37,6 +37,12 @@
         <item></item>
         <item>BE</item>
         <item>KE</item>
+    </string-array>
+
+    <string-array name="weight_goal">
+        <item>abnehmen</item>
+        <item>Gewicht halten</item>
+        <item>zunehmen</item>
     </string-array>
 
 

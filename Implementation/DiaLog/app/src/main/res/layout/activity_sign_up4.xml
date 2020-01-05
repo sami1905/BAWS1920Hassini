@@ -18,38 +18,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bitte gib die Grenzen für den Zielbereich für Deine Blutzuckerwerte ein."
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Bitte gib die Grenzen für den Zielbereich für deine Blutzuckerwerte ein."
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
             android:text="Untere Grenze"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text_low_limit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textColor="@color/white"
-            android:textSize="15dp"
             android:layout_above="@id/seekbar_low_limit"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            />
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <SeekBar
             android:id="@+id/seekbar_low_limit"
@@ -62,27 +64,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
             android:text="Obere Grenze"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text_upper_limit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textColor="@color/white"
-            android:textSize="15dp"
             android:layout_above="@id/seekbar_upper_limit"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            />
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <SeekBar
             android:id="@+id/seekbar_upper_limit"
@@ -94,38 +97,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
             android:text="Bitte gib die Grenzen für Unter- und Überzuckerungen an."
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
             android:text="Unterzuckerung"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text_unterzuckerung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textColor="@color/white"
-            android:textSize="15dp"
             android:layout_above="@id/seekbar_unterzuckerung"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            />
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <SeekBar
             android:id="@+id/seekbar_unterzuckerung"
@@ -138,27 +143,28 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
             android:text="Überzuckerung"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/text_überzuckerung"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" "
-            android:textColor="@color/white"
-            android:textSize="15dp"
             android:layout_above="@id/seekbar_überzuckerung"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
-            />
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/josefin_sans_light"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
         <SeekBar
             android:id="@+id/seekbar_überzuckerung"
@@ -170,74 +176,79 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Um wie viel senkt 1 Insulineinheit Deinen Blutzucker?"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Um wie viel senkt 1 Insulineinheit deinen Blutzucker?"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/input_correction"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="mmol/L"
-            android:textColorHint="@color/colorAccent"
-            android:background="@color/white"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:hint="mmol/L"
+            android:inputType="numberDecimal"
             android:padding="15dp"
-            />
+            android:textColorHint="@color/colorAccent"
+            android:textSize="17dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wie viel Insulin spritzt Du für 1 BE/KE?"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Wie viel Insulin spritzt du für 1 BE/KE?"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/input_be_factor"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:hint="Insulineinheiten"
-            android:textColorHint="@color/colorAccent"
-            android:background="@color/white"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:hint="Insulineinheiten"
+            android:inputType="numberDecimal"
             android:padding="15dp"
-            />
+            android:textColorHint="@color/colorAccent"
+            android:textSize="17dp" />
 
         <Button
             android:id="@+id/sign_up_button"
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/josefin_sans_bold"
             android:text="Registrieren"
             android:textColor="#fff"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/login_button"
-            />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/text_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/josefin_sans_bold"
             android:text="Abbrechen"
             android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:layout_marginBottom="50dp"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:textStyle="bold" />
 
 
 

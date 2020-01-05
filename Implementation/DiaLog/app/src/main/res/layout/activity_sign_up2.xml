@@ -18,13 +18,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bitte gib Deinen Diabetes-Typen an."
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Bitte gib deinen Diabetes-Typen an."
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner_dm_type"
@@ -39,13 +40,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wie spritzt Du Insulin?"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Wie spritzt du Insulin?"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner_insulin"
@@ -60,13 +62,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nimmst Du Tabletten zur Behandlung deines Diabetes?"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
+            android:text="Nimmst du Tabletten zur Behandlung deines Diabetes?"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner_tablets"
@@ -82,13 +85,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
             android:text="Bitte gib die gewünschte Blutzucker-Einheit an."
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner_unit_bz"
@@ -103,13 +107,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:gravity="center"
             android:text="Bitte gib die gewünschte Kohlenhydrate-Einheit an."
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
+            android:textSize="17dp"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner_unit_kh"
@@ -127,24 +132,25 @@
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:text="Weiter"
-            android:textColor="#fff"
             android:layout_marginTop="20dp"
             android:background="@drawable/login_button"
-            />
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Weiter"
+            android:textColor="#fff"
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/text_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/josefin_sans_semibold"
             android:text="Abbrechen"
             android:textColor="@color/colorAccent"
-            android:textStyle="bold"
-            android:layout_marginBottom="50dp"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </ScrollView>

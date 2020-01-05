@@ -12,6 +12,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class SignUp2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Spinner dmType;
     private Spinner insulin;
@@ -32,32 +36,32 @@ public class SignUp2Activity extends AppCompatActivity implements AdapterView.On
 
 
         dmType = findViewById(R.id.spinner_dm_type);
-        ArrayAdapter<CharSequence> adapterDmType = ArrayAdapter.createFromResource(this, R.array.dm_type, android.R.layout.simple_spinner_item);
-        adapterDmType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterDmType = ArrayAdapter.createFromResource(this, R.array.dm_type, R.layout.layout_spinner);
+        adapterDmType.setDropDownViewResource(R.layout.layout_spinner_drop_down);
         dmType.setAdapter(adapterDmType);
         dmType.setOnItemSelectedListener(this);
 
         insulin = findViewById(R.id.spinner_insulin);
-        ArrayAdapter<CharSequence> adapterInsulin = ArrayAdapter.createFromResource(this, R.array.insulin, android.R.layout.simple_spinner_item);
-        adapterInsulin.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterInsulin = ArrayAdapter.createFromResource(this, R.array.insulin, R.layout.layout_spinner);
+        adapterInsulin.setDropDownViewResource(R.layout.layout_spinner_drop_down);
         insulin.setAdapter(adapterInsulin);
         insulin.setOnItemSelectedListener(this);
 
         tablets = findViewById(R.id.spinner_tablets);
-        ArrayAdapter<CharSequence> adapterTablets = ArrayAdapter.createFromResource(this, R.array.janein, android.R.layout.simple_spinner_item);
-        adapterTablets.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterTablets = ArrayAdapter.createFromResource(this, R.array.janein, R.layout.layout_spinner);
+        adapterTablets.setDropDownViewResource(R.layout.layout_spinner_drop_down);
         tablets.setAdapter(adapterTablets);
         tablets.setOnItemSelectedListener(this);
 
         unitBZ = findViewById(R.id.spinner_unit_bz);
-        ArrayAdapter<CharSequence> adapterUnitBz = ArrayAdapter.createFromResource(this, R.array.unit_bz, android.R.layout.simple_spinner_item);
-        adapterUnitBz.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterUnitBz = ArrayAdapter.createFromResource(this, R.array.unit_bz, R.layout.layout_spinner);
+        adapterUnitBz.setDropDownViewResource(R.layout.layout_spinner_drop_down);
         unitBZ.setAdapter(adapterUnitBz);
         unitBZ.setOnItemSelectedListener(this);
 
         unitKH = findViewById(R.id.spinner_unit_kh);
-        ArrayAdapter<CharSequence> adapterUnitKh = ArrayAdapter.createFromResource(this, R.array.unit_kh, android.R.layout.simple_spinner_item);
-        adapterUnitKh.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapterUnitKh = ArrayAdapter.createFromResource(this, R.array.unit_kh, R.layout.layout_spinner);
+        adapterUnitKh.setDropDownViewResource(R.layout.layout_spinner_drop_down);
         unitKH.setAdapter(adapterUnitKh);
         unitKH.setOnItemSelectedListener(this);
 
@@ -92,12 +96,14 @@ public class SignUp2Activity extends AppCompatActivity implements AdapterView.On
                     user.setUnitKH(unitKH.getSelectedItem().toString());
 
                     if(user.getUnitBZ().equals("mg/dL")){
+                        changeUser(user);
                         Intent intent = new Intent(SignUp2Activity.this, SignUp3Activity.class);
                         intent.putExtra("User", user);
                         startActivity(intent);
                     }
 
                     else if(user.getUnitBZ().equals("mmol/L")){
+                        changeUser(user);
                         Intent intent = new Intent(SignUp2Activity.this, SignUp4Activity.class);
                         intent.putExtra("User", user);
                         startActivity(intent);
@@ -116,6 +122,7 @@ public class SignUp2Activity extends AppCompatActivity implements AdapterView.On
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                deleteUser(user);
                 Intent intent = new Intent(SignUp2Activity.this, LoginActivity.class);
                 startActivity(intent);
             }
@@ -127,19 +134,48 @@ public class SignUp2Activity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         parent.setBackgroundColor(Color.WHITE);
-        String text = parent.getItemAtPosition(position).toString();
-        if(!text.trim().isEmpty()) {
-            Toast toast = Toast.makeText(parent.getContext(), "  Auswahl: " + text + "  ", Toast.LENGTH_SHORT);
-            View toastView = toast.getView();
-            toastView.setBackgroundResource(R.drawable.toast_drawable);
-            toast.show();
 
-        }
-        return;
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void changeUser(User user){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<User> call = jsonPlaceHolderApi.putUser(user.getId(), user);
+
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                return;
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                return;
+            }
+        });
+    }
+
+    public void deleteUser(User user){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deleteUser(user.getId());
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
     }
 }

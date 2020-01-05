@@ -208,52 +208,18 @@ public class SignUp3Activity extends AppCompatActivity {
                     toast.show();
                     return;
                 }
-                else{
+                else {
                     user.setLowlimit(seekBarValueLowLimit);
                     user.setUpperLimit(seekBarValueUpperLimit);
                     user.setLowSugar(seekBarValueUnterzuckerung);
                     user.setUpperSugar(seekBarValueÜberzuckerung);
                     user.setCorrectionFactor(Float.valueOf(editCorrection.getText().toString()));
                     user.setBeFactor(Float.valueOf(editBeFactor.getText().toString()));
-
-                    Call<User> call = jsonPlaceHolderApi.createUser(user);
-
-                    call.enqueue(new Callback<User>() {
-                        @Override
-                        public void onResponse(Call<User> call, Response<User> response) {
-                            if(!response.isSuccessful()){
-                                Toast toast = Toast.makeText(getBaseContext(), "FEHLER-CODE " + response.code() + ": " + response.body(), Toast.LENGTH_LONG);
-                                View toastView = toast.getView();
-                                toastView.setBackgroundResource(R.drawable.toast_drawable);
-                                toast.show();
-                                return;
-                            }
-
-                            if(response.isSuccessful() || response.code() == 201){
-
-                                Toast toast = Toast.makeText(getBaseContext(), "CODE " + response.code() + ": " + "Benutzer erfolgreich hinzugefügt", Toast.LENGTH_LONG);
-                                View toastView = toast.getView();
-                                toastView.setBackgroundResource(R.drawable.toast_drawable);
-                                toast.show();
-
-                                Intent intent = new Intent(SignUp3Activity.this, WelcomeActivity.class);
-                                intent.putExtra("User", user);
-                                startActivity(intent);
-                                return;
-
-                            }
-
-
-                        }
-
-                        @Override
-                        public void onFailure(Call<User> call, Throwable t) {
-
-                        }
-                    });
-
+                    changeUser(user);
+                    Intent intent = new Intent(SignUp3Activity.this, WelcomeActivity.class);
+                    intent.putExtra("User", user);
+                    startActivity(intent);
                 }
-
 
 
             }
@@ -264,8 +230,45 @@ public class SignUp3Activity extends AppCompatActivity {
         quit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                deleteUser(user);
                 Intent intent = new Intent(SignUp3Activity.this, LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    public void changeUser(User user){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<User> call = jsonPlaceHolderApi.putUser(user.getId(), user);
+
+        call.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                return;
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                return;
+            }
+        });
+    }
+    public void deleteUser(User user){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deleteUser(user.getId());
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
             }
         });
     }
