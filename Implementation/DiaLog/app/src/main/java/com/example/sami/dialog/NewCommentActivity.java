@@ -63,8 +63,11 @@ public class NewCommentActivity extends AppCompatActivity {
 
                 String currentDate = currentMonth+1 + "/" + currentDay + "/" + currentYear;
                 String currentTime = currentHour + ":" + currentMin;
-                Comment newComment = new Comment(currentPostId, user.getId(), user.getNickname(), textEingabe.getText().toString(), currentDate, currentTime, 0 );
+                Comment newComment = new Comment(currentPostId, user.getId(), user.getNickname(), textEingabe.getText().toString(), currentDate, currentTime );
                 createComment(postID, newComment);
+
+                user.setScore(user.getScore()+20);
+                updateUser();
 
                 Intent intent = new Intent(NewCommentActivity.this, CommentActivity.class);
                 Bundle extra = new Bundle();
@@ -113,6 +116,23 @@ public class NewCommentActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Comment> call, Throwable t) {
+
+            }
+        });
+    }
+    public void updateUser(){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<User> call = jsonPlaceHolderApi.putUser(user.getId(), user);
+
+        call.enqueue(new Callback<com.example.sami.dialog.User>() {
+            @Override
+            public void onResponse(Call<com.example.sami.dialog.User> call, Response<com.example.sami.dialog.User> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<com.example.sami.dialog.User> call, Throwable t) {
 
             }
         });

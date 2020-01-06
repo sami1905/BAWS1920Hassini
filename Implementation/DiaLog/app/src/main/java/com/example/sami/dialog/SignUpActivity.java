@@ -254,14 +254,14 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
 
             @Override
             public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                if(!response.isSuccessful()){
 
-                }
 
                 if(response.isSuccessful() || response.code() == 200){
                     List<User> users = response.body();
+
                     for(User user : users){
-                        id = user.getId() + 1;
+                        id = user.getId();
+
                         if(nickname.getText().toString().equals(user.getNickname())){
                             Toast toast = Toast.makeText(getBaseContext(), " Benutzername ist bereits vergeben. ", Toast.LENGTH_LONG);
                             View toastView = toast.getView();
@@ -277,23 +277,21 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                             toast.show();
                             return;
                         }
-                        else{
 
-                            User newUser = new User(id, firstname.getText().toString(), name.getText().toString(), birthday.getText().toString(),
-                                    Integer.parseInt(height.getText().toString()), Float.parseFloat(weight.getText().toString()), gender.getSelectedItem().toString(),
-                                    nickname.getText().toString(), email.getText().toString(), password.getText().toString(), "", "", false, "", "",
-                                    0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
-                                    0.0f, 0.0f,0.0f, 0.0f, 0.0f,
-                                    0.0f, 0.0f, "Gewicht halten", 150);
-
-                            createUser(newUser);
-
-                            Intent intent = new Intent(SignUpActivity.this, SignUp2Activity.class);
-                            intent.putExtra("User", newUser);
-                            startActivity(intent);
-
-                        }
                     }
+                    User newUser = new User(id+1, firstname.getText().toString(), name.getText().toString(), birthday.getText().toString(),
+                            Integer.parseInt(height.getText().toString()), Float.parseFloat(weight.getText().toString()), gender.getSelectedItem().toString(),
+                            nickname.getText().toString(), email.getText().toString(), password.getText().toString(), "", "", false, "", "",
+                            0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f,0.0f, 0.0f, 0.0f,
+                            0.0f, 0.0f, "Gewicht halten", 150);
+
+                    createUser(newUser);
+
+                    Intent intent = new Intent(SignUpActivity.this, SignUp2Activity.class);
+                    intent.putExtra("User", newUser);
+                    startActivity(intent);
+                    return;
 
                 }
             }

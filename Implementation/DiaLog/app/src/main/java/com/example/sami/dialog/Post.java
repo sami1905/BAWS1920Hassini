@@ -8,17 +8,15 @@ public class Post {
     private String text;
     private String date;
     private String time;
-    private int rating;
     private Comment[] comments;
 
-    public Post(int id, int userID, String userNickname, String text, String date, String time, int rating, Comment[] comments) {
+    public Post(int id, int userID, String userNickname, String text, String date, String time, Comment[] comments) {
         this.id = id;
         this.userID = userID;
         this.userNickname = userNickname;
         this.text = text;
         this.date = date;
         this.time = time;
-        this.rating = rating;
         this.comments = comments;
     }
 
@@ -68,14 +66,6 @@ public class Post {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
     }
 
     public Comment[] getComments() {

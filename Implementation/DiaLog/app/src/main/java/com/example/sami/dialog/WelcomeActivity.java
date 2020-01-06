@@ -20,7 +20,7 @@ public class WelcomeActivity extends AppCompatActivity {
         textView = findViewById(R.id.text_wellcome);
 
 
-        textView.setText("Hallo " + user.getFirstname() + ",\n" + "herzlich Willkommen bei DiaLog! Starte gleich mit der Dokumentation deiner Blutzuckerwerte, trage Mahlzeiten und sportliche Aktivitäten in Ereignissen ein oder tausche dich mit anderen Diabetikern im Wartezimmer aus. Verwalte deine Benutzdaten und erweitere sie, um alle Funktionen von DiaLog verwenden zu können.");
+        textView.setText("Hallo " + user.getFirstname() + ",\n" + "herzlich Willkommen bei DiaLog! Für deine Registrierung erhälst du 150 Punkte auf deinem Punktekonto. Starte gleich mit der Dokumentation deiner Blutzuckerwerte, trage Mahlzeiten und sportliche Aktivitäten in Ereignissen ein oder tausche dich mit anderen Diabetikern im Wartezimmer aus. Verwalte deine Benutzdaten und erweitere sie, um alle Funktionen von DiaLog verwenden zu können. Beim Dokumentieren von Ereignissen und Posten von Beiträgen oder Kommentaren erhälst du für deine Aktivität bei DiaLog weitere Punkte auf deinem Punktekonto und kannst so um den Highscore der DiaLog-Community kämpfen. \n Viel Spaß mit DiaLog! ");
 
         buttonNext = findViewById(R.id.next_button);
         buttonNext.setOnClickListener(new View.OnClickListener() {

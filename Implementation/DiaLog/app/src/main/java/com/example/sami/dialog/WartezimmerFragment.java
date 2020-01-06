@@ -87,15 +87,18 @@ public class WartezimmerFragment extends Fragment {
                     if(uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 1){
                         uhrzeit =  "0" + uhrzeit;
                     }
+                    if(uhrzeit.length() == 3 && uhrzeit.indexOf(":") == 1){
+                        uhrzeit = "0" + uhrzeit.substring(0,2) + "0" + uhrzeit.substring(2,3);
+                    }
                     String text1 = posts.get(i).getUserNickname() + " | " + posts.get(i).getDate() + " " + uhrzeit + " Uhr";
-                    String text2 = String.valueOf(posts.get(i).getRating());
+
                     String text3 = String.valueOf(posts.get(i).getComments().length);
                     int resource = R.drawable.ic_comment_blue;
                     if(text3.equals("0")){
                         text3 = " ";
                         resource = 0;
                     }
-                    postList.add(new PostItem(text1, posts.get(i).getText(), text2, text3,resource, posts.get(i).getId()));
+                    postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId()));
 
 
                     mAdapter.notifyDataSetChanged();

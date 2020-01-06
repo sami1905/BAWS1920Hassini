@@ -197,7 +197,8 @@
             android:inputType="numberDecimal"
             android:padding="15dp"
             android:textColorHint="@color/colorAccent"
-            android:textSize="17dp" />
+            android:textSize="17dp"
+            android:textColor="@color/darkblue"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -223,7 +224,8 @@
             android:inputType="numberDecimal"
             android:padding="15dp"
             android:textColorHint="@color/colorAccent"
-            android:textSize="17dp" />
+            android:textSize="17dp"
+            android:textColor="@color/darkblue"/>
 
         <Button
             android:id="@+id/sign_up_button"

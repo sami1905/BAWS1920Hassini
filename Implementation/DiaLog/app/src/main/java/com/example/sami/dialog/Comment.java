@@ -8,16 +8,14 @@ public class Comment {
     private String text;
     private String date;
     private String time;
-    private int rating;
 
-    public Comment(int id, int userID, String userNickname, String text, String date, String time, int rating) {
+    public Comment(int id, int userID, String userNickname, String text, String date, String time) {
         this.id = id;
         this.userID = userID;
         this.userNickname = userNickname;
         this.text = text;
         this.date = date;
         this.time = time;
-        this.rating = rating;
     }
 
     public int getId() {
@@ -38,10 +36,6 @@ public class Comment {
 
     public String getTime() {
         return time;
-    }
-
-    public int getRating() {
-        return rating;
     }
 
     public String getUserNickname() {

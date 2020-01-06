@@ -209,7 +209,6 @@ app.post('/posts', bodyParser.json(), function(req, res){
                 "text" : req.body.text,
                 "date" : req.body.date,
                 "time" : req.body.time,
-                "rating" : req.body.rating,
                 "comments" : req.body.comments
         };
     
@@ -253,8 +252,7 @@ app.post('/comment/:postID', bodyParser.json(), function(req, res){
                 "userNickname" : req.body.userNickname,
                 "text" : req.body.text,
                 "date" : req.body.date,
-                "time" : req.body.time,
-                "rating" : req.body.rating
+                "time" : req.body.time
             
         }
     

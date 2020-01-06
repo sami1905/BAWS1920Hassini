@@ -38,7 +38,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         holder.mNickname.setText(currentItem.getmNickname());
         holder.mText.setText(currentItem.getmText());
-        holder.mRating.setText(currentItem.getmRating());
         holder.mAnzahlComments.setText(currentItem.getmAnzahlComment());
         holder.mCommentRessource.setImageResource(currentItem.getmImageResource());
 
@@ -53,7 +52,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
 
         public TextView mNickname;
         public TextView mText;
-        public TextView mRating;
         public TextView mAnzahlComments;
         public ImageView mCommentRessource;
 
@@ -63,7 +61,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             super(itemView);
             mNickname = itemView.findViewById(R.id.text_nickname);
             mText = itemView.findViewById(R.id.text);
-            mRating = itemView.findViewById(R.id.rating);
             mAnzahlComments = itemView.findViewById(R.id.comment_anzahl);
             mCommentRessource = itemView.findViewById(R.id.button_comment);
 

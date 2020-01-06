@@ -100,15 +100,18 @@ public class CommentActivity extends AppCompatActivity {
                 if(uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 1){
                     uhrzeit =  "0" + uhrzeit;
                 }
+                if(uhrzeit.length() == 3 && uhrzeit.indexOf(":") == 1){
+                    uhrzeit = "0" + uhrzeit.substring(0,2) + "0" + uhrzeit.substring(2,3);
+                }
                 String text1 = post.getUserNickname() + " | " + post.getDate() + " " + uhrzeit + " Uhr";
-                String text2 = String.valueOf(post.getRating());
+
                 String text3 = String.valueOf(post.getComments().length);
                 int resource = R.drawable.ic_comment_blue;
                 if(text3.equals("0")){
                     text3 = " ";
                     resource = 0;
                 }
-                postList.add(new PostItem(text1, post.getText(), text2, text3,resource, post.getId()));
+                postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId()));
                 mAdapter.notifyDataSetChanged();
                 Comment[] comment = post.getComments();
                 for(int i = 0; i < comment.length; i++){
@@ -119,15 +122,18 @@ public class CommentActivity extends AppCompatActivity {
                     if(uhrzeit2.length() == 4 && uhrzeit2.indexOf(":") == 1){
                         uhrzeit2 =  "0" + uhrzeit2;
                     }
+                    if(uhrzeit2.length() == 3 && uhrzeit2.indexOf(":") == 1){
+                        uhrzeit2 = "0" + uhrzeit2.substring(0,2) + "0" + uhrzeit2.substring(2,3);
+                    }
                     String text4 = "Antwort von: \n" + comment[i].getUserNickname() + " | " + comment[i].getDate() + " " + uhrzeit2 + " Uhr";
-                    String text5 = String.valueOf(comment[i].getRating());
+
                     String text6 = String.valueOf(0);
                     int resource2 = R.drawable.ic_comment_blue;
                     if(text6.equals("0")){
                         text6 = " ";
                         resource2 = 0;
                     }
-                    postList.add(new PostItem(text4, comment[i].getText(), text5, text6,resource2, comment[i].getId()));
+                    postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId()));
 
                     mAdapter.notifyDataSetChanged();
 

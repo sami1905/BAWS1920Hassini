@@ -54,7 +54,10 @@ public class NewPostActivity extends AppCompatActivity {
                 String currentDate = currentMonth+1 + "/" + currentDay + "/" + currentYear;
                 String currentTime = currentHour + ":" + currentMin;
 
-                Post newPost = new Post(id+1, user.getId(), user.getNickname(), textEingabe.getText().toString(), currentDate, currentTime, 0, new Comment[]{});
+                user.setScore(user.getScore()+50);
+                updateUser();
+
+                Post newPost = new Post(id+1, user.getId(), user.getNickname(), textEingabe.getText().toString(), currentDate, currentTime, new Comment[]{});
                 createPost(newPost);
 
                 Intent intent = new Intent(NewPostActivity.this, HomeActivity.class);
@@ -131,23 +134,16 @@ public class NewPostActivity extends AppCompatActivity {
     public void updateUser(){
         JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
-        Call<List<User>> call = jsonPlaceHolderApi.getUsers();
+        Call<User> call = jsonPlaceHolderApi.putUser(user.getId(), user);
 
-        call.enqueue(new Callback<List<User>>() {
+        call.enqueue(new Callback<com.example.sami.dialog.User>() {
             @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                List<User> users = response.body();
+            public void onResponse(Call<com.example.sami.dialog.User> call, Response<com.example.sami.dialog.User> response) {
 
-                for(User matchUser : users) {
-                    if (matchUser.getId() == user.getId()) {
-                        updateUser = matchUser;
-
-                    }
-                }
             }
 
             @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
+            public void onFailure(Call<com.example.sami.dialog.User> call, Throwable t) {
 
             }
         });
