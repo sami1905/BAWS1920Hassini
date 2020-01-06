@@ -1,5 +1,6 @@
 package com.example.sami.dialog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -12,15 +13,21 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class WartezimmerFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private PostAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private User user;
     private TextView text;
+    private ArrayList<PostItem> postList;
 
     @Nullable
     @Override
@@ -31,14 +38,9 @@ public class WartezimmerFragment extends Fragment {
             user = getArguments().getParcelable("User");
         }
 
-        ArrayList<PostItem> postList = new ArrayList<>();
-        postList.add(new PostItem("SamiNo | 2s", "Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut.",
-                "0", "0"));
-        postList.add(new PostItem("Anni95 | 32min", "Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut. Hallo, ich habe seit gestern Dexcom G6 und mein Sensor ist voll mit Blut.",
-                "-1", "1"));
-        postList.add(new PostItem("MaxiMax | 7w", "Haasdsdasdasd edgf ergrg reg l mit BlutHaasdsdasdasd edgf ergrg reg l mit Blut. Haasdsdasdasd edgf ergrg reg l mit Blut Haasdsdasdasd edgf ergrg reg l mit Blut.",
-                "7", "15"));
 
+
+        postList = new ArrayList<>();
         mRecyclerView = v.findViewById(R.id.recycleview);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(v.getContext());
@@ -47,7 +49,69 @@ public class WartezimmerFragment extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
 
+        getPosts();
+
+        mAdapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                int clickedPostID = postList.get(position).getmID();
+                Intent intent = new Intent(getContext(), CommentActivity.class);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("ID", clickedPostID);
+                intent.putExtras(extra);
+                startActivity(intent);
+
+
+            }
+        });
+
+
 
         return v;
     }
+    public void getPosts(){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+
+        call.enqueue(new Callback<List<Post>>() {
+            @Override
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                List<Post> posts = response.body();
+                for(int i = posts.size()-1; i >= 0; i--){
+                    String uhrzeit = posts.get(i).getTime();
+                    if(uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 2){
+                        uhrzeit = uhrzeit.substring(0, 3) + "0" + uhrzeit.substring(3,4);
+                    }
+                    if(uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 1){
+                        uhrzeit =  "0" + uhrzeit;
+                    }
+                    String text1 = posts.get(i).getUserNickname() + " | " + posts.get(i).getDate() + " " + uhrzeit + " Uhr";
+                    String text2 = String.valueOf(posts.get(i).getRating());
+                    String text3 = String.valueOf(posts.get(i).getComments().length);
+                    int resource = R.drawable.ic_comment_blue;
+                    if(text3.equals("0")){
+                        text3 = " ";
+                        resource = 0;
+                    }
+                    postList.add(new PostItem(text1, posts.get(i).getText(), text2, text3,resource, posts.get(i).getId()));
+
+
+                    mAdapter.notifyDataSetChanged();
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Post>> call, Throwable t) {
+
+            }
+        });
+    }
+
+
+
+
 }

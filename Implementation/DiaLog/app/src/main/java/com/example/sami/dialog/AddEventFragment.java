@@ -37,6 +37,15 @@ public class AddEventFragment extends Fragment {
             }
         });
 
+        ibPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), NewPostActivity.class);
+                intent.putExtra("User", user);
+                startActivity(intent);
+            }
+        });
+
 
 
 

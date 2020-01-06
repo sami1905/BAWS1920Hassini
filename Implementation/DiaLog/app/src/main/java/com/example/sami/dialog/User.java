@@ -5,6 +5,9 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User implements Parcelable {
     @SerializedName("id")
     private int id;
@@ -53,34 +56,29 @@ public class User implements Parcelable {
     private float beFactor;
 
     @SerializedName("calorieDegreeOne")
-    private float calorieGegreeOne;
+    private float calorieDegreeOne;
     @SerializedName("calorieDegreeTwo")
-    private float calorieGegreeTwo;
+    private float calorieDegreeTwo;
     @SerializedName("calorieDegreeThree")
-    private float calorieGegreeThree;
+    private float calorieDegreeThree;
     @SerializedName("calorieDegreeFour")
-    private float calorieGegreeFour;
+    private float calorieDegreeFour;
     @SerializedName("calorieDegreeFive")
-    private float calorieGegreeFive;
+    private float calorieDegreeFive;
     @SerializedName("calorieDegreeSix")
-    private float calorieGegreeSix;
+    private float calorieDegreeSix;
     @SerializedName("weightGoal")
     private String weightGoal;
 
-    @SerializedName("posts")
-    private int[] posts;
-    @SerializedName("comments")
-    private int[] comments;
     @SerializedName("score")
     private int score;
 
     public User(int id, String firstname, String name, String birthday, int height, float weight,
                 String gender, String nickname, String email, String password, String dmType,
                 String insulin, boolean tablets, String unitBZ, String unitKH, float lowlimit,
-                float upperLimit, float lowSugar, float upperSugar, float correctionFactor,
-                float beFactor, float calorieGegreeOne, float calorieGegreeTwo, float calorieGegreeThree,
-                float calorieGegreeFour, float calorieGegreeFive, float calorieGegreeSix,
-                String weightGoal, int[] posts, int[] comments, int score) {
+                float upperLimit, float lowSugar, float upperSugar, float correctionFactor, float beFactor, float calorieDegreeOne,
+                float calorieDegreeTwo, float calorieDegreeThree, float calorieDegreeFour,
+                float calorieDegreeFive, float calorieDegreeSix, String weightGoal, int score) {
         this.id = id;
         this.firstname = firstname;
         this.name = name;
@@ -102,15 +100,13 @@ public class User implements Parcelable {
         this.upperSugar = upperSugar;
         this.correctionFactor = correctionFactor;
         this.beFactor = beFactor;
-        this.calorieGegreeOne = calorieGegreeOne;
-        this.calorieGegreeTwo = calorieGegreeTwo;
-        this.calorieGegreeThree = calorieGegreeThree;
-        this.calorieGegreeFour = calorieGegreeFour;
-        this.calorieGegreeFive = calorieGegreeFive;
-        this.calorieGegreeSix = calorieGegreeSix;
+        this.calorieDegreeOne = calorieDegreeOne;
+        this.calorieDegreeTwo = calorieDegreeTwo;
+        this.calorieDegreeThree = calorieDegreeThree;
+        this.calorieDegreeFour = calorieDegreeFour;
+        this.calorieDegreeFive = calorieDegreeFive;
+        this.calorieDegreeSix = calorieDegreeSix;
         this.weightGoal = weightGoal;
-        this.posts = posts;
-        this.comments = comments;
         this.score = score;
     }
 
@@ -136,15 +132,13 @@ public class User implements Parcelable {
         upperSugar = in.readFloat();
         correctionFactor = in.readFloat();
         beFactor = in.readFloat();
-        calorieGegreeOne = in.readFloat();
-        calorieGegreeTwo = in.readFloat();
-        calorieGegreeThree = in.readFloat();
-        calorieGegreeFour = in.readFloat();
-        calorieGegreeFive = in.readFloat();
-        calorieGegreeSix = in.readFloat();
+        calorieDegreeOne = in.readFloat();
+        calorieDegreeTwo = in.readFloat();
+        calorieDegreeThree = in.readFloat();
+        calorieDegreeFour = in.readFloat();
+        calorieDegreeFive = in.readFloat();
+        calorieDegreeSix = in.readFloat();
         weightGoal = in.readString();
-        posts = in.createIntArray();
-        comments = in.createIntArray();
         score = in.readInt();
     }
 
@@ -328,52 +322,52 @@ public class User implements Parcelable {
         this.beFactor = beFactor;
     }
 
-    public float getCalorieGegreeOne() {
-        return calorieGegreeOne;
+    public float getCalorieDegreeOne() {
+        return calorieDegreeOne;
     }
 
-    public void setCalorieGegreeOne(float calorieGegreeOne) {
-        this.calorieGegreeOne = calorieGegreeOne;
+    public void setCalorieDegreeOne(float calorieDegreeOne) {
+        this.calorieDegreeOne = calorieDegreeOne;
     }
 
-    public float getCalorieGegreeTwo() {
-        return calorieGegreeTwo;
+    public float getCalorieDegreeTwo() {
+        return calorieDegreeTwo;
     }
 
-    public void setCalorieGegreeTwo(float calorieGegreeTwo) {
-        this.calorieGegreeTwo = calorieGegreeTwo;
+    public void setCalorieDegreeTwo(float calorieDegreeTwo) {
+        this.calorieDegreeTwo = calorieDegreeTwo;
     }
 
-    public float getCalorieGegreeThree() {
-        return calorieGegreeThree;
+    public float getCalorieDegreeThree() {
+        return calorieDegreeThree;
     }
 
-    public void setCalorieGegreeThree(float calorieGegreeThree) {
-        this.calorieGegreeThree = calorieGegreeThree;
+    public void setCalorieDegreeThree(float calorieDegreeThree) {
+        this.calorieDegreeThree = calorieDegreeThree;
     }
 
-    public float getCalorieGegreeFour() {
-        return calorieGegreeFour;
+    public float getCalorieDegreeFour() {
+        return calorieDegreeFour;
     }
 
-    public void setCalorieGegreeFour(float calorieGegreeFour) {
-        this.calorieGegreeFour = calorieGegreeFour;
+    public void setCalorieDegreeFour(float calorieDegreeFour) {
+        this.calorieDegreeFour = calorieDegreeFour;
     }
 
-    public float getCalorieGegreeFive() {
-        return calorieGegreeFive;
+    public float getCalorieDegreeFive() {
+        return calorieDegreeFive;
     }
 
-    public void setCalorieGegreeFive(float calorieGegreeFive) {
-        this.calorieGegreeFive = calorieGegreeFive;
+    public void setCalorieDegreeFive(float calorieDegreeFive) {
+        this.calorieDegreeFive = calorieDegreeFive;
     }
 
-    public float getCalorieGegreeSix() {
-        return calorieGegreeSix;
+    public float getCalorieDegreeSix() {
+        return calorieDegreeSix;
     }
 
-    public void setCalorieGegreeSix(float calorieGegreeSix) {
-        this.calorieGegreeSix = calorieGegreeSix;
+    public void setCalorieDegreeSix(float calorieDegreeSix) {
+        this.calorieDegreeSix = calorieDegreeSix;
     }
 
     public String getWeightGoal() {
@@ -382,22 +376,6 @@ public class User implements Parcelable {
 
     public void setWeightGoal(String weightGoal) {
         this.weightGoal = weightGoal;
-    }
-
-    public int[] getPosts() {
-        return posts;
-    }
-
-    public void setPosts(int[] posts) {
-        this.posts = posts;
-    }
-
-    public int[] getComments() {
-        return comments;
-    }
-
-    public void setComments(int[] comments) {
-        this.comments = comments;
     }
 
     public int getScore() {
@@ -436,15 +414,13 @@ public class User implements Parcelable {
         dest.writeFloat(upperSugar);
         dest.writeFloat(correctionFactor);
         dest.writeFloat(beFactor);
-        dest.writeFloat(calorieGegreeOne);
-        dest.writeFloat(calorieGegreeTwo);
-        dest.writeFloat(calorieGegreeThree);
-        dest.writeFloat(calorieGegreeFour);
-        dest.writeFloat(calorieGegreeFive);
-        dest.writeFloat(calorieGegreeSix);
+        dest.writeFloat(calorieDegreeOne);
+        dest.writeFloat(calorieDegreeTwo);
+        dest.writeFloat(calorieDegreeThree);
+        dest.writeFloat(calorieDegreeFour);
+        dest.writeFloat(calorieDegreeFive);
+        dest.writeFloat(calorieDegreeSix);
         dest.writeString(weightGoal);
-        dest.writeIntArray(posts);
-        dest.writeIntArray(comments);
         dest.writeInt(score);
     }
 }

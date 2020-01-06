@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/colorPrimaryDark"
-android:orientation="vertical"
-tools:context=".NewPostActivity">
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    tools:context=".NewCommentActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -18,15 +17,15 @@ tools:context=".NewPostActivity">
         android:layout_marginTop="0dp"
         android:fontFamily="@font/josefin_sans_bold"
         android:gravity="center"
-        android:text="Post verfassen"
+        android:text="Kommentar verfassen"
         android:textColor="@color/white"
         android:textSize="22dp" />
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="2dp"
-    android:layout_marginTop="40dp"
-    android:background="@color/white"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"/>
 
     <EditText
         android:id="@+id/text_eingabe"
@@ -40,7 +39,7 @@ tools:context=".NewPostActivity">
         android:layout_marginBottom="10dp"
         android:background="@color/colorPrimaryDark"
         android:fontFamily="@font/josefin_sans_semibold"
-        android:hint="Teile Fragen, Erlebnisse und Gedanken mit anderen Diabetikern!"
+        android:hint=" "
         android:textColor="@color/white"
         android:textColorHint="@color/colorPrimary"
         android:textSize="20dp" />
@@ -53,7 +52,7 @@ tools:context=".NewPostActivity">
         android:layout_gravity="center"
         android:background="@drawable/login_button"
         android:fontFamily="@font/josefin_sans_bold"
-        android:text="Post veröffentlichen"
+        android:text="Kommentar veröffentlichen"
         android:textColor="#fff"
         android:textSize="15dp"
         android:layout_alignParentBottom="true"

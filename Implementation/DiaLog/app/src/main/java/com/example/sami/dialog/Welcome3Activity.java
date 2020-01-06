@@ -244,18 +244,21 @@ public class Welcome3Activity extends AppCompatActivity implements AdapterView.O
                 }
 
                 else{
-                    user.setCalorieGegreeOne(seekBarValueSchlafen);
-                    user.setCalorieGegreeTwo(seekBarValueSitzen);
-                    user.setCalorieGegreeThree(seekBarValueKaum);
-                    user.setCalorieGegreeFour(seekBarValueWenig);
-                    user.setCalorieGegreeFive(seekBarValueStehen);
-                    user.setCalorieGegreeSix(seekBarValueAnstrengend);
+                    user.setCalorieDegreeOne(seekBarValueSchlafen);
+                    user.setCalorieDegreeTwo(seekBarValueSitzen);
+                    user.setCalorieDegreeThree(seekBarValueKaum);
+                    user.setCalorieDegreeFour(seekBarValueWenig);
+                    user.setCalorieDegreeFive(seekBarValueStehen);
+                    user.setCalorieDegreeSix(seekBarValueAnstrengend);
                     user.setWeightGoal(spinnerWeightGoal.getSelectedItem().toString());
 
                     changeUser(user);
 
                     Intent intent = new Intent(Welcome3Activity.this, HomeActivity.class);
-                    intent.putExtra("User", user);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("Fragment", 0);
+                    intent.putExtras(extra);
                     startActivity(intent);
                 }
             }
@@ -266,7 +269,10 @@ public class Welcome3Activity extends AppCompatActivity implements AdapterView.O
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Welcome3Activity.this, HomeActivity.class);
-                intent.putExtra("User", user);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 0);
+                intent.putExtras(extra);
                 startActivity(intent);
             }
         });

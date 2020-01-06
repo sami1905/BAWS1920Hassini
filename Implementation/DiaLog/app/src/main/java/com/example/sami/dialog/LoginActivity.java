@@ -145,7 +145,10 @@ public class LoginActivity extends AppCompatActivity {
                             i++;
                             User matchUser = user;
                             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                            intent.putExtra("User", matchUser);
+                            Bundle extra = new Bundle();
+                            extra.putParcelable("User", matchUser);
+                            extra.putInt("Fragment", 0);
+                            intent.putExtras(extra);
                             startActivity(intent);
                         }
 

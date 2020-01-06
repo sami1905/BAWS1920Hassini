@@ -33,7 +33,10 @@ public class Welcome2Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Welcome2Activity.this, HomeActivity.class);
-                intent.putExtra("User", user);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 0);
+                intent.putExtras(extra);
                 startActivity(intent);
             }
         });

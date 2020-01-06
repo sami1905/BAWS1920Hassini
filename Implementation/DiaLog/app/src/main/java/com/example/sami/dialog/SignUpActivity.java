@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
@@ -283,7 +284,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                                     nickname.getText().toString(), email.getText().toString(), password.getText().toString(), "", "", false, "", "",
                                     0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
                                     0.0f, 0.0f,0.0f, 0.0f, 0.0f,
-                                    0.0f, 0.0f, "Gewicht halten", new int[]{}, new int[]{}, 0);
+                                    0.0f, 0.0f, "Gewicht halten", 150);
 
                             createUser(newUser);
 

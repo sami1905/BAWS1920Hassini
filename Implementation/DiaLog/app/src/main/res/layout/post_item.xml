@@ -17,11 +17,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/josefin_sans_light"
             android:text="SamiNo | 20min"
             android:textColor="@color/colorPrimary"
-            android:textSize="12dp"
-            android:fontFamily="@font/josefin_sans_light"/>
-
+            android:textSize="12dp" />
 
 
         <TextView
@@ -29,30 +28,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/text_nickname"
-            android:layout_marginTop="20dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="50dp"
-            android:textColor="@color/colorPrimary"
-            android:textSize="15dp"
+            android:fontFamily="@font/josefin_sans_semibold"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:fontFamily="@font/josefin_sans_semibold"
-            android:text="ask k aosjsk adi jojask aosjsk adi jojask aosjsk adijsk a aosjsk aosj"/>
+            android:text="ask jhjuh asdhajs akshdiashjd ashdaishd aishdioashd aishd asdo asoihdasd asd asdasd asd asd asd "
+            android:textColor="@color/colorPrimary"
+            android:textSize="15dp" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@+id/text"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="-40dp"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginStart="-38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/text"
+            android:gravity="right"
             android:orientation="vertical"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
 
             <ImageButton
                 android:id="@+id/vote_up"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
                 android:background="@drawable/ic_arrow_drop_up"
 
                 />
@@ -61,16 +64,18 @@
                 android:id="@+id/rating"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:textSize="15dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
                 android:text="0"
                 android:textColor="@color/colorPrimary"
-                android:fontFamily="@font/josefin_sans_semibold"
-                android:gravity="center"/>
+                android:textSize="15dp" />
+
             <ImageButton
                 android:id="@+id/vote_down"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_arrow_drop_down"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_arrow_drop_down" />
 
 
         </LinearLayout>
@@ -79,34 +84,31 @@
             android:id="@+id/button_comment"
             android:layout_width="15dp"
             android:layout_height="15dp"
+            android:layout_below="@+id/text"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/ic_comment_blue"
-            android:layout_below="@+id/text"/>
+            android:layout_marginTop="20dp" />
 
         <TextView
             android:id="@+id/comment_anzahl"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginTop="20dp"
             android:layout_below="@+id/text"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/button_comment"
-            android:textSize="10dp"
-            android:text="0"
-            android:textColor="@color/colorAccent"
             android:fontFamily="@font/josefin_sans_light"
-            android:gravity="center"/>
-
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/colorAccent"
+            android:textSize="10dp" />
 
 
         <FrameLayout
+            android:id="@+id/card_line"
             android:layout_width="match_parent"
             android:layout_height="5dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/button_comment"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/button_comment"/>
-
-
+            android:background="@color/colorPrimaryDark" />
 
 
     </RelativeLayout>

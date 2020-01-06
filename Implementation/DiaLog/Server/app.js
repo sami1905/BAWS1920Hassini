@@ -7,7 +7,8 @@ app.use(bodyParser.json());
 
 const settings = {
     port: 3000,
-    users: './users.json'
+    users: './users.json',
+    posts: './posts.json'
 };
 
 app.use(function(err, req, res, next){
@@ -19,6 +20,7 @@ app.use(function(req, res, next){
   console.log('Time ' + Date.now() + ' | Request-Pfad: ' + req.path);
   next();
 });
+
 
 
 
@@ -71,17 +73,13 @@ app.post('/users', bodyParser.json(), function(req, res){
                 "upperSugar" : req.body.upperSugar,
                 "correctionFactor" : req.body.correctionFactor,
                 "beFactor" : req.body.beFactor,
-                "calorie" : [{
-                    "calorieDegreeOne" : req.body.calorieDegreeOne,
-                    "calorieDegreeTwo" : req.body.calorieDegreeTwo,
-                    "calorieDegreeThree" : req.body.calorieDegreeThree,
-                    "calorieDegreeFour" : req.body.calorieDegreeFour,
-                    "calorieDegreeFive" : req.body.calorieDegreeFive,
-                    "calorieDegreeSix" : req.body.calorieDegreeSix,
-                    "weightGoal" : req.body.weightGoal
-                }],
-                "posts" : req.body.posts,
-                "comments" : req.body.comments,
+                "calorieDegreeOne" : req.body.calorieDegreeOne,
+                "calorieDegreeTwo" : req.body.calorieDegreeTwo,
+                "calorieDegreeThree" : req.body.calorieDegreeThree,
+                "calorieDegreeFour" : req.body.calorieDegreeFour,
+                "calorieDegreeFive" : req.body.calorieDegreeFive,
+                "calorieDegreeSix" : req.body.calorieDegreeSix,
+                "weightGoal" : req.body.weightGoal,
                 "score" : req.body.score
         };
         
@@ -122,15 +120,13 @@ app.put('/users/:userID', bodyParser.json(), function(req, res){
           users[i].upperSugar = req.body.upperSugar;
           users[i].correctionFactor = req.body.correctionFactor;
           users[i].beFactor = req.body.beFactor;
-          users[i].calorie[0].calorieDegreeOne = req.body.calorieDegreeOne;
-          users[i].calorie[0].calorieDegreeTwo = req.body.calorieDegreeTwo;
-          users[i].calorie[0].calorieDegreeThree = req.body.calorieDegreeThree;
-          users[i].calorie[0].calorieDegreeFour = req.body.calorieDegreeFour;
-          users[i].calorie[0].calorieDegreeFive = req.body.calorieDegreeFive;          
-          users[i].calorie[0].calorieDegreeSix = req.body.calorieDegreeSix;
-          users[i].calorie[0].weightGoal = req.body.weightGoal;
-          users[i].posts = req.body.posts;
-          users[i].comments = req.body.comments;
+          users[i].calorieDegreeOne = req.body.calorieDegreeOne;
+          users[i].calorieDegreeTwo = req.body.calorieDegreeTwo;
+          users[i].calorieDegreeThree = req.body.calorieDegreeThree;
+          users[i].calorieDegreeFour = req.body.calorieDegreeFour;
+          users[i].calorieDegreeFive = req.body.calorieDegreeFive;          
+          users[i].calorieDegreeSix = req.body.calorieDegreeSix;
+          users[i].weightGoal = req.body.weightGoal;
           users[i].score = req.body.score;
           fs.writeFile(settings.users, JSON.stringify(users, null, 2));
           res.status(200).send("User erfolgreich bearbeitet");
@@ -161,6 +157,115 @@ app.delete('/users/:userID', function(req, res){
       res.status(404).send("User NOT FOUND");
     }
   });
+});
+
+
+//GET /posts
+app.get('/posts', function(req, res){
+    fs.readFile(settings.posts,function(err,data){
+        var posts = JSON.parse(data);
+        res.status(200).send(posts);
+    });
+});
+
+//GET /posts/postID
+app.get('/posts/:postID', function(req, res){
+    
+    fs.readFile(settings.posts,function(err,data){
+        var posts = JSON.parse(data);
+        var postID = req.param.postID;
+        var current_i;
+        var post;
+        
+        for(var i = 0; i < posts.length; i++ ){
+            if(posts[i].id == req.params.postID){
+                post = posts[i]
+            }
+        }
+        res.status(200).send(post);
+        
+    });
+    
+});
+
+
+//POST /posts
+app.post('/posts', bodyParser.json(), function(req, res){
+    fs.readFile(settings.posts, function(err, data){
+        var posts = JSON.parse(data);
+        var numberOfPosts = posts.length;
+        var postIndex = 0;
+        
+        //id of the last post is inserted into userIndex
+            for(var i = 0; i < numberOfPosts; i++){
+                if(posts[i].id > postIndex){
+                    postIndex = posts[i].id;
+                }
+            }
+        var postToAdd = {
+                "id" : ++postIndex,
+                "userID" : req.body.userID,
+                "userNickname" : req.body.userNickname,
+                "text" : req.body.text,
+                "date" : req.body.date,
+                "time" : req.body.time,
+                "rating" : req.body.rating,
+                "comments" : req.body.comments
+        };
+    
+        
+        //creat post
+        posts.splice(numberOfPosts, 0, postToAdd);
+        fs.writeFile(settings.posts, JSON.stringify(posts, null, 2));
+        res.status(201).send("Post erfolgreich angelegt.");
+    });
+});
+
+//POST /comment/postID
+app.post('/comment/:postID', bodyParser.json(), function(req, res){
+    fs.readFile(settings.posts, function(err, data){
+        
+        
+        var posts = JSON.parse(data);
+        var postID = req.params.postID;
+        var post;
+        var postPosition = 0;
+        
+        for(var i = 0; i < posts.length; i++ ){
+            if(posts[i].id == req.params.postID){
+                post = posts[i]
+                postPosition = i;
+            }
+        } 
+        var numberOfComments = post.comments.length;
+        var commentIndex = 0;
+        
+        //id of the last post is inserted into userIndex
+            for(var i = 0; i < numberOfComments; i++){
+                if(post.comments[i].id > commentIndex){
+                    commentIndex = post.comments[i].id;
+                }
+            }
+        
+        var commentToAdd = {
+                "id" : ++commentIndex,
+                "userID" : req.body.userID,
+                "userNickname" : req.body.userNickname,
+                "text" : req.body.text,
+                "date" : req.body.date,
+                "time" : req.body.time,
+                "rating" : req.body.rating
+            
+        }
+    
+        
+        //creat post
+        post.comments.splice(numberOfComments, 0, commentToAdd);
+        //posts.post[postPosition].comment.splice(numberOfComments,0, commentToAdd);
+        
+        fs.writeFile(settings.posts, JSON.stringify(posts, null, 2));
+        res.status(201).send(post);
+    });
 });
 
 app.listen(settings.port, function(){

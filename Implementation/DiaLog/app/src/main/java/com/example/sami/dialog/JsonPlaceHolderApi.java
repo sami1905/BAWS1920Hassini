@@ -27,4 +27,16 @@ public interface JsonPlaceHolderApi {
 
     @DELETE("users/{id}")
     Call<Void> deleteUser(@Path("id") int id);
+
+    @GET("posts")
+    Call<List<Post>> getPosts();
+
+    @GET("posts/{id}")
+    Call<Post> getPost(@Path("id") int id);
+
+    @POST("posts")
+    Call<Post> createPost(@Body Post post);
+
+    @POST("comment/{id}")
+    Call<Comment> createComment(@Path("id")  int id, @Body Comment comment);
 }

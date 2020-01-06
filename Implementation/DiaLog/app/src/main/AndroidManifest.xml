@@ -62,7 +62,9 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".NewPostActivity"></activity>
+        <activity android:name=".NewPostActivity" />
+        <activity android:name=".CommentActivity" />
+        <activity android:name=".NewCommentActivity"></activity>
     </application>
 
 </manifest>

@@ -6,14 +6,20 @@ public class PostItem {
     private String mText;
     private String mRating;
     private String mAnzahlComment;
+    private int mImageResource;
+    private int mID;
 
 
-    public PostItem(String nickname, String text, String rating, String anzahlComment) {
-        mNickname = nickname;
-        mText = text;
-        mRating = rating;
-        mAnzahlComment = anzahlComment;
+    public PostItem(String mNickname, String mText, String mRating, String mAnzahlComment, int mImageResource, int mID) {
+        this.mNickname = mNickname;
+        this.mText = mText;
+        this.mRating = mRating;
+        this.mAnzahlComment = mAnzahlComment;
+        this.mImageResource = mImageResource;
+        this.mID = mID;
     }
+
+
 
     public String getmNickname() {
         return mNickname;
@@ -31,7 +37,11 @@ public class PostItem {
         return mAnzahlComment;
     }
 
+    public int getmImageResource() {
+        return mImageResource;
+    }
 
-
-
+    public int getmID() {
+        return mID;
+    }
 }
