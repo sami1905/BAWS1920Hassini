@@ -4,13 +4,270 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="40dp"
-    android:background="@android:color/holo_purple">
+    android:background="@color/colorPrimaryDark">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent" />
+
+    <FrameLayout
+    android:id="@+id/über_mich"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_alignParentStart="true"
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="31dp"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="60dp"
+        android:background="@color/colorAccent" />
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ueber_mich"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:text="Über mich"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=">"
+            android:textSize="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="@color/colorAccent"/>
+
+
+
+</FrameLayout>
+    <FrameLayout
+        android:id="@+id/blutzuckermessung"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="76dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="60dp"
+            android:background="@color/colorAccent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/blutzuckermessung"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Blutzzuckermessung"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=">"
+            android:textSize="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/insulin_therapie"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="121dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="60dp"
+            android:background="@color/colorAccent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/insulin"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Insulin-Therapie"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=">"
+            android:textSize="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/ernährung"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="166dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="60dp"
+            android:background="@color/colorAccent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ernaehrung"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Ernährung"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=">"
+            android:textSize="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/highscore"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="211dp"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/colorAccent" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/highscore"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Highscore"
+            android:textSize="17dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text=">"
+            android:textSize="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_light"
+            android:textColor="@color/colorAccent"/>
+
+
+
+    </FrameLayout>
 
     <TextView
-        android:id="@+id/testtext"
+        android:id="@+id/text_abmeldung"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Nicht funktioniert"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="Abmelden"
+        android:textColor="@color/colorAccent"
+        android:textSize="17dp" />
+
+
+
+
+
 
 </RelativeLayout>

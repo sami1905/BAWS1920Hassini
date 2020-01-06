@@ -1,16 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="40dp"
-    android:background="@android:color/holo_orange_light">
+    android:background="@color/colorPrimaryDark">
 
-    <TextView
-        android:id="@+id/testtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Nicht funktioniert"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorAccent" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="SamiNo"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dein_gewicht"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Dein Gewicht: 88 kg"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/text_weight_goal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Dein Ziel: abnehmen"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/button_gewicht_aktualisieren"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/login_button"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="Aktualisiere dein Gewicht"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorAccent" />
+
+        <FrameLayout
+            android:id="@+id/meine_posts"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@color/colorPrimary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginLeft="60dp"
+                android:background="@color/colorAccent" />
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/myposts"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:text="Meine Posts"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=">"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_light"
+                android:textColor="@color/colorAccent"/>
+
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/meine_comments"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@color/colorPrimary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginLeft="60dp"
+                android:background="@color/colorAccent" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/mycomments"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Meine Kommentare"
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=">"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_light"
+                android:textColor="@color/colorAccent"/>
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/meine_berichte"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:background="@color/colorPrimary">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="44dp"
+                android:background="@color/colorAccent" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/myreports"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="Meine Berichte"
+                android:textSize="17dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text=">"
+                android:textSize="25dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/josefin_sans_light"
+                android:textColor="@color/colorAccent"/>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -25,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editEmail;
     private EditText editPassword;
     private Button buttonLogin;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         getConnection();
 
+        Intent intent = getIntent();
+        Bundle extra = intent.getExtras();
+        user = intent.getParcelableExtra("User");
+
         editEmail = findViewById(R.id.input_email_adresse);
         editPassword = findViewById(R.id.input_passwort);
         buttonLogin = findViewById(R.id.login_button);
+
+        if(user != null)editEmail.setText(user.getEmail().toString());
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override

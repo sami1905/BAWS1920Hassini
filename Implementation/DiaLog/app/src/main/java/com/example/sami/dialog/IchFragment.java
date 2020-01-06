@@ -12,8 +12,6 @@ import android.widget.TextView;
 public class IchFragment extends Fragment {
 
     private User user;
-    private TextView text;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -24,8 +22,6 @@ public class IchFragment extends Fragment {
         }
 
 
-        text = v.findViewById(R.id.testtext);
-        text.setText("User: " + user.getFirstname() + " " + user.getName() + "\n" + "Nickname: " + user.getNickname());
 
 
         return v;

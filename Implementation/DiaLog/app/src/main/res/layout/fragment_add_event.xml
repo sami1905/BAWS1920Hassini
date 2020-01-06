@@ -6,15 +6,14 @@
     android:layout_marginTop="40dp"
     android:background="@color/colorPrimaryDark">
 
-    <ImageButton
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="50dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/ic_invert_"
-        android:backgroundTint="@color/white" />
+        android:background="@drawable/diabetes"/>
 
     <TextView
         android:layout_width="100dp"
@@ -26,7 +25,7 @@
         android:layout_marginTop="160dp"
         android:fontFamily="@font/josefin_sans_semibold"
         android:text="Diabetes"
-        android:textColor="@color/white"
+        android:textColor="@color/red"
         android:textSize="20dp" />
 
     <ImageButton
@@ -36,8 +35,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginEnd="50dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/ic_local_pizza_black_24dp"
-        android:backgroundTint="@color/white" />
+        android:background="@drawable/mahlzeit"/>
 
 
     <TextView
@@ -50,20 +48,21 @@
         android:layout_marginTop="160dp"
         android:fontFamily="@font/josefin_sans_semibold"
         android:text="Mahlzeit"
-        android:textColor="@color/white"
+        android:textColor="@color/grey"
         android:textSize="20dp" />
 
 
 
 
-    <ImageButton
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/ic_fitness" />
+        android:background="@drawable/aktivitaet"
+        />
 
 
     <TextView
@@ -76,10 +75,10 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/josefin_sans_semibold"
         android:text="Aktivität"
-        android:textColor="@color/white"
+        android:textColor="@color/gold"
         android:textSize="20dp" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/image_button_post"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -87,8 +86,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="100dp"
-        android:background="@drawable/ic_comment"
-        android:backgroundTint="@color/white" />
+        android:background="@drawable/post" />
 
     <TextView
         android:id="@+id/text_post"
@@ -101,7 +99,7 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/josefin_sans_semibold"
         android:text="Post"
-        android:textColor="@color/white"
+        android:textColor="@color/green"
         android:textSize="20dp" />
 
 

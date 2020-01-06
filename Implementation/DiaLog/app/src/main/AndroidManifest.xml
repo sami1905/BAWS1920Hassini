@@ -62,13 +62,20 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".NewPostActivity"
+        <activity
+            android:name=".NewPostActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CommentActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".NewCommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewCommentActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".HighscoreActivity"
+
             android:configChanges="orientation"
             android:screenOrientation="portrait"></activity>
     </application>

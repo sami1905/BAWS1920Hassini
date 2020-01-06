@@ -10,12 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AddEventFragment extends Fragment {
     private User user;
     private TextView textPost;
-    private ImageButton ibPost;
+    private ImageView ivPost;
 
     @Nullable
     @Override
@@ -26,7 +27,7 @@ public class AddEventFragment extends Fragment {
             user = getArguments().getParcelable("User");
         }
         textPost = v.findViewById(R.id.text_post);
-        ibPost = v.findViewById(R.id.image_button_post);
+        ivPost = v.findViewById(R.id.image_button_post);
 
         textPost.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +38,7 @@ public class AddEventFragment extends Fragment {
             }
         });
 
-        ibPost.setOnClickListener(new View.OnClickListener() {
+        ivPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), NewPostActivity.class);

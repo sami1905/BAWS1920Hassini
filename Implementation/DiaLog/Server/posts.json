@@ -130,6 +130,24 @@
     "text": "ghggzu",
     "date": "1/6/2020",
     "time": "5:0",
+    "comments": [
+      {
+        "id": 1,
+        "userID": 1,
+        "userNickname": "Type_One",
+        "text": "asdasdasd",
+        "date": "1/6/2020",
+        "time": "5:27"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "userID": 1,
+    "userNickname": "Type_One",
+    "text": "sami",
+    "date": "1/6/2020",
+    "time": "5:28",
     "comments": []
   }
 ]
