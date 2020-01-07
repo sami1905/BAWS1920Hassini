@@ -51,6 +51,8 @@ public class WartezimmerFragment extends Fragment {
 
         getPosts();
 
+        mAdapter.notifyDataSetChanged();
+
         mAdapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -59,6 +61,7 @@ public class WartezimmerFragment extends Fragment {
                 Bundle extra = new Bundle();
                 extra.putParcelable("User", user);
                 extra.putInt("ID", clickedPostID);
+                extra.putInt("Fragment", 3);
                 intent.putExtras(extra);
                 startActivity(intent);
 
@@ -105,6 +108,7 @@ public class WartezimmerFragment extends Fragment {
 
 
                 }
+                mAdapter.notifyDataSetChanged();
             }
 
             @Override

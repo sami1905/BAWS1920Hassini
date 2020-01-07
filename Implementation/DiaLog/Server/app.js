@@ -37,6 +37,24 @@ app.get('/users', function(req, res){
     });
 });
 
+//GET /users/userID
+app.get('/users/:userID', function(req, res){
+    fs.readFile(settings.users,function(err,data){
+        var users = JSON.parse(data);
+        
+        var currentUser;
+        
+        for(var i = 0; i < users.length; i++){
+            if(users[i].id == req.params.userID){
+                currentUser = users[i];
+                
+                res.status(200).send(currentUser);
+            }   
+        }
+        if(currentUser == null) {res.status(404).send("User not found")};
+    });
+});
+
 
 //POST /users
 app.post('/users', bodyParser.json(), function(req, res){
@@ -180,9 +198,11 @@ app.get('/posts/:postID', function(req, res){
         for(var i = 0; i < posts.length; i++ ){
             if(posts[i].id == req.params.postID){
                 post = posts[i]
+                res.status(200).send(post);
             }
         }
-        res.status(200).send(post);
+        if(post == null){res.status(404).send("Nicht gefunden")};
+        
         
     });
     

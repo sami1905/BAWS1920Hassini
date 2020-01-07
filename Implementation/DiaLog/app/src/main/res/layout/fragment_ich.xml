@@ -5,11 +5,6 @@
     android:layout_marginTop="40dp"
     android:background="@color/colorPrimaryDark">
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentStart="true"
-        android:background="@color/colorAccent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,17 +12,27 @@
         android:background="@color/colorPrimaryDark"
         android:layout_marginTop="1dp"
         android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <TextView
             android:id="@+id/text_nickname"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="SamiNo"
+            android:text=" "
             android:fontFamily="@font/josefin_sans_bold"
             android:textSize="20dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:textColor="@color/white"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +44,18 @@
                 android:id="@+id/dein_gewicht"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Dein Gewicht: 88 kg"
+                android:text=" "
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/dein_bmi"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text=" "
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:textSize="17dp"
                 android:textColor="@color/white"
@@ -50,9 +66,21 @@
                 android:id="@+id/text_weight_goal"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="Dein Ziel: abnehmen"
+                android:text=" "
                 android:fontFamily="@font/josefin_sans_semibold"
                 android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/text_weight_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="17dp"
+                android:layout_margin="20dp"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:gravity="center"/>
@@ -63,15 +91,94 @@
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/login_button"
                 android:fontFamily="@font/josefin_sans_bold"
-                android:text="Aktualisiere dein Gewicht"
+                android:text="Aktualisiere dein Gewicht und Ziel"
                 android:textColor="#fff"
-                android:textSize="15dp" />
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Anhand deines Körpergewichtes, deiner -größe, deines Body-Mass-Index und deines Ziels berechnet dir DiaLog deinen idealen Kalorienbedarf. Halte dein Körpergewicht und dein Ziel also stets auf dem aktuellen Stand, um so auch immer deinen aktuellen Kalorienbedarf zu erhalten. "
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"/>
 
 
         </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Meine Aktivitäten"
+                android:fontFamily="@font/josefin_sans_semibold"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/deine_aktivitäten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text=" "
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="17dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+
+            <Button
+                android:id="@+id/button_aktivität_aktualisieren"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/login_button"
+                android:fontFamily="@font/josefin_sans_bold"
+                android:text="Aktualisiere deine Aktivitäten"
+                android:textColor="#fff"
+                android:textSize="14dp" />
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Dein Kalorienbedarf setzt sich aus dem so genannten Grund- und dem Leistungsumsatz zusammen. Der Grundumsatz resultiert aus deinem Alter, deinem Geschlecht und deinem Gewicht und macht den Grundbedarf an Kalorien für deinen Körper aus. Der Leistungsumsatz ergibt sich aus den sportlichen Aktivitäten, welche du täglich aufwendest und repräsentiert deine verbrannten Kalorien. Um den Leistungsumsatz erfassen zu können, benötigt DiaLog die Anzahl der Stunden, welche du für die jeweilige Aktivität täglich aufbringst. "
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -181,6 +288,7 @@
             android:layout_height="45dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
+            android:layout_marginBottom="40dp"
             android:background="@color/colorPrimary">
 
             <FrameLayout

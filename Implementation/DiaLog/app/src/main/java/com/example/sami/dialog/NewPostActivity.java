@@ -21,6 +21,7 @@ import static java.util.Calendar.YEAR;
 public class NewPostActivity extends AppCompatActivity {
 
     private User user;
+    private int whichFragment;
     private User updateUser;
     private EditText textEingabe;
     private Button buttonPosten;
@@ -34,6 +35,7 @@ public class NewPostActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         user = intent.getParcelableExtra("User");
+        whichFragment = intent.getIntExtra("Fragment", 0);
 
         textEingabe = findViewById(R.id.text_eingabe);
         buttonPosten = findViewById(R.id.posten_button);
@@ -80,7 +82,7 @@ public class NewPostActivity extends AppCompatActivity {
                 Intent intent = new Intent(NewPostActivity.this, HomeActivity.class);
                 Bundle extra = new Bundle();
                 extra.putParcelable("User", user);
-                extra.putInt("Fragment", 2);
+                extra.putInt("Fragment", whichFragment);
                 intent.putExtras(extra);
                 startActivity(intent);
             }

@@ -22,6 +22,8 @@ public class CommentActivity extends AppCompatActivity {
     private User user;
     private Bundle userBdl = new Bundle();
     private int postID;
+    private int whichFragment;
+    private int postOrComment;
     private TextView score;
     private ImageView addCommentButton;
     private TextView textBack;
@@ -41,6 +43,8 @@ public class CommentActivity extends AppCompatActivity {
         Bundle extra = intent.getExtras();
         user = intent.getParcelableExtra("User");
         postID = intent.getIntExtra("ID", 0);
+        whichFragment = intent.getIntExtra("Fragment", 0);
+        postOrComment = intent.getIntExtra("PostOrComment", 0);
 
         score = findViewById(R.id.score_text);
 
@@ -54,33 +58,74 @@ public class CommentActivity extends AppCompatActivity {
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
-        getPost(postID);
 
-        textBack = findViewById(R.id.button_back);
-        textBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CommentActivity.this, HomeActivity.class);
-                Bundle extra = new Bundle();
-                extra.putParcelable("User", user);
-                extra.putInt("Fragment", 3);
-                intent.putExtras(extra);
-                startActivity(intent);
-            }
-        });
+        //Aus Fragment "Ich"; Meine Posts
 
-        addCommentButton = findViewById(R.id.add_comment_button);
-        addCommentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(CommentActivity.this, NewCommentActivity.class);
-                Bundle extra = new Bundle();
-                extra.putParcelable("User", user);
-                extra.putInt("ID", postID);
-                intent.putExtras(extra);
-                startActivity(intent);
-            }
-        });
+        if(whichFragment == 1 && postOrComment == 0){
+            getPosts();
+            textBack = findViewById(R.id.button_back);
+            textBack.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CommentActivity.this, HomeActivity.class);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("Fragment", 1);
+                    intent.putExtras(extra);
+                    startActivity(intent);
+                }
+            });
+
+            addCommentButton = findViewById(R.id.add_comment_button);
+            addCommentButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CommentActivity.this, NewPostActivity.class);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("ID", postID);
+                    extra.putInt("Fragment", 1);
+                    intent.putExtras(extra);
+                    startActivity(intent);
+                }
+            });
+
+        }
+
+
+        //Aus Fragment "Wartezimmer; Kommentare zu einem Post
+        if(whichFragment == 3){
+            getPost(postID);
+
+            textBack = findViewById(R.id.button_back);
+            textBack.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CommentActivity.this, HomeActivity.class);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("Fragment", 3);
+                    intent.putExtras(extra);
+                    startActivity(intent);
+                }
+            });
+
+            addCommentButton = findViewById(R.id.add_comment_button);
+            addCommentButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CommentActivity.this, NewCommentActivity.class);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("ID", postID);
+                    intent.putExtras(extra);
+                    startActivity(intent);
+                }
+            });
+        }
+
+
+
     }
 
     public void getPost(int id){
@@ -151,5 +196,51 @@ public class CommentActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    public void getPosts(){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<List<Post>> call = jsonPlaceHolderApi.getPosts();
+
+        call.enqueue(new Callback<List<Post>>() {
+                @Override
+                public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
+                    List<Post> posts = response.body();
+                    for(int i = posts.size()-1; i >= 0; i--){
+                        if(user.getId() == posts.get(i).getUserID()) {
+                            String uhrzeit = posts.get(i).getTime();
+                            if (uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 2) {
+                                uhrzeit = uhrzeit.substring(0, 3) + "0" + uhrzeit.substring(3, 4);
+                            }
+                            if (uhrzeit.length() == 4 && uhrzeit.indexOf(":") == 1) {
+                                uhrzeit = "0" + uhrzeit;
+                            }
+                            if (uhrzeit.length() == 3 && uhrzeit.indexOf(":") == 1) {
+                                uhrzeit = "0" + uhrzeit.substring(0, 2) + "0" + uhrzeit.substring(2, 3);
+                            }
+                            String text1 = posts.get(i).getUserNickname() + " | " + posts.get(i).getDate() + " " + uhrzeit + " Uhr";
+
+                            String text3 = String.valueOf(posts.get(i).getComments().length);
+                            int resource = R.drawable.ic_comment_blue;
+                            if (text3.equals("0")) {
+                                text3 = " ";
+                                resource = 0;
+                            }
+                            postList.add(new PostItem(text1, posts.get(i).getText(), text3, resource, posts.get(i).getId()));
+
+
+                            mAdapter.notifyDataSetChanged();
+                        }
+
+
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<List<Post>> call, Throwable t) {
+
+                }
+            });
     }
 }

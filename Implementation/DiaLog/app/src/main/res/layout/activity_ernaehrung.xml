@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ErnaehrungActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:gravity="center"
+            android:text="Ernährung"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorAccent" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/colorAccent" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="Mein Körpergewicht in kg:"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:background="@color/colorAccent" />
+
+
+                <EditText
+                    android:id="@+id/edit_mein_gewicht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  "
+                    android:textSize="17dp"
+                    android:paddingLeft="120dp"
+                    android:paddingRight="120dp"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/hellblau"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:textColor="@color/white"
+                    android:inputType="numberDecimal"
+                    android:hint="kg"/>
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/colorAccent" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/colorAccent" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="Meine Körpergröße in cm:"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:background="@color/colorAccent" />
+
+
+                <EditText
+                    android:id="@+id/edit_meine_größe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  "
+                    android:textSize="17dp"
+                    android:paddingLeft="120dp"
+                    android:paddingRight="120dp"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/hellblau"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:textColor="@color/white"
+                    android:inputType="number"
+                    android:hint="cm"/>
+
+
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Dein Body-Index-Mass lässt sich durch dein Körpergewicht und deine Körpergröße berechnen. Der BMI kann Einfluss auf deinen täglichen Kalorienbedarf nehmen."/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/colorAccent" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="Meine Ziel ist:"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+
+
+                <Spinner
+                    android:id="@+id/spinner_weight_goal"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/josefin_sans_light"
+                android:textSize="12dp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Anhand deines Ziels passt DiaLog dein täglichen Kalorienbedarf an."/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="@color/colorAccent" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/josefin_sans_semibold"
+                    android:text="Kohlenhydrat-Einheit:"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="0dp"
+                android:background="@color/colorPrimary">
+
+
+
+
+
+                <Spinner
+                    android:id="@+id/spinner_unit_kh"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:padding="15dp"
+                    />
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorAccent" />
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Speichern"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/text_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Abbrechen"
+            android:textColor="@color/colorAccent"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

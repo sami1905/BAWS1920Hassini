@@ -14,6 +14,8 @@ import android.widget.TextView;
 public class MehrFragment extends Fragment {
 
     private User user;
+    private FrameLayout mErnährung;
+    private FrameLayout mAktivität;
     private FrameLayout mHighscore;
     private TextView textAbmelden;
 
@@ -24,6 +26,32 @@ public class MehrFragment extends Fragment {
         if(getArguments() != null){
             user = getArguments().getParcelable("User");
         }
+
+        mAktivität = v.findViewById(R.id.aktivität);
+        mAktivität.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AktivitaetActivity.class);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 4);
+                intent.putExtras(extra);
+                startActivity(intent);
+            }
+        });
+
+        mErnährung = v.findViewById(R.id.ernährung);
+        mErnährung.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ErnaehrungActivity.class);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 4);
+                intent.putExtras(extra);
+                startActivity(intent);
+            }
+        });
 
         mHighscore = v.findViewById(R.id.highscore);
         mHighscore.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +73,8 @@ public class MehrFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
 
 
 

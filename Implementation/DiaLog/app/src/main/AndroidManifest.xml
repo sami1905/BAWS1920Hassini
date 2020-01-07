@@ -74,10 +74,12 @@
             android:name=".NewCommentActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".HighscoreActivity"
-
+        <activity
+            android:name=".HighscoreActivity"
             android:configChanges="orientation"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ErnaehrungActivity" />
+        <activity android:name=".AktivitaetActivity"></activity>
     </application>
 
 </manifest>
