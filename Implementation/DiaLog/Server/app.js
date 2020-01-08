@@ -240,6 +240,31 @@ app.post('/posts', bodyParser.json(), function(req, res){
     });
 });
 
+
+
+// DELETE /post/:postID
+app.delete('/post/:postID', function(req, res){
+  fs.readFile(settings.posts, function(err, data){
+    var posts = JSON.parse(data);
+    var current_i = posts.length;
+
+    // Find the position of the searched user and save it in current_i
+    for(var i = 0; i < posts.length; i++ ){
+      if(posts[i].id == req.params.postID){
+        current_i = i;
+      }
+    }
+    // if current_i is already the same like number of the users, there are no user found. is current_i not the same, delete the user
+    if(current_i < posts.length){
+      posts.splice(current_i,1);
+      fs.writeFile(settings.posts, JSON.stringify(posts, null, 2));
+      res.status(204).send("Post erfolgreich gelöscht");
+    } else {
+      res.status(404).send("Post NOT FOUND");
+    }
+  });
+});
+
 //POST /comment/postID
 app.post('/comment/:postID', bodyParser.json(), function(req, res){
     fs.readFile(settings.posts, function(err, data){
@@ -257,12 +282,15 @@ app.post('/comment/:postID', bodyParser.json(), function(req, res){
             }
         } 
         var numberOfComments = post.comments.length;
+        var numberOfPosts = posts.length;
         var commentIndex = 0;
         
         //id of the last post is inserted into userIndex
-            for(var i = 0; i < numberOfComments; i++){
-                if(post.comments[i].id > commentIndex){
-                    commentIndex = post.comments[i].id;
+            for(var i = 0; i < numberOfPosts; i++){
+                for(var j = 0; j < posts[i].comments.length; j++){
+                    if(posts[i].comments[j].id > commentIndex){
+                    commentIndex = posts[i].comments[j].id;
+                    }
                 }
             }
         
@@ -284,6 +312,40 @@ app.post('/comment/:postID', bodyParser.json(), function(req, res){
         fs.writeFile(settings.posts, JSON.stringify(posts, null, 2));
         res.status(201).send(post);
     });
+});
+
+// DELETE /comment/:commentID
+app.delete('/comment/:commentID', function(req, res){
+  fs.readFile(settings.posts, function(err, data){
+    var posts = JSON.parse(data);
+    var searchedID = req.params.commentID;
+    var current_i = 0;
+      var current_j = 0;
+      var numberOfComments = 0;
+      
+      for (var i = 0; i < posts.length; i++){
+          numberOfComments = numberOfComments + posts[i].comments.length;
+      }
+      
+      current_j = numberOfComments;
+
+    // Find the position of the searched user and save it in current_i
+    for(var i = 0; i < posts.length; i++ ){
+        for(var j = 0; j < posts[i].comments.length; j++)
+            if(posts[i].comments[j].id == req.params.commentID){
+        current_j = j;
+                current_i = i;
+      }
+    }
+    // if current_i is already the same like number of the users, there are no user found. is current_i not the same, delete the user
+    if(current_j < numberOfComments){
+      posts[current_i].comments.splice(current_j,1);
+      fs.writeFile(settings.posts, JSON.stringify(posts, null, 2));
+      res.status(204).send("Comment erfolgreich gelöscht");
+    } else {
+      res.status(404).send("Comment NOT FOUND");
+    }
+  });
 });
 
 app.listen(settings.port, function(){

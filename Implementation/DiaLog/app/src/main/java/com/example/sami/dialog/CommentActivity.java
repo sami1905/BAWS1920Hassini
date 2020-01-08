@@ -106,6 +106,14 @@ public class CommentActivity extends AppCompatActivity {
 
 
                 }
+
+                @Override
+                public void onDeleteClick(int position) {
+
+                    deletePost(postList.get(position).getmID());
+                    postList.remove(position);
+                    mAdapter.notifyItemRemoved(position);
+                }
             });
 
         }
@@ -160,6 +168,27 @@ public class CommentActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
+
+            mAdapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+
+
+
+                }
+
+                @Override
+                public void onDeleteClick(int position) {
+                    if(postList.get(position).getmUserID() == user.getId() && position > 0){
+
+
+                        deleteComment(postList.get(position).getmID());
+
+                        postList.remove(position);
+                        mAdapter.notifyItemRemoved(position);
+                    }
+                }
+            });
         }
 
 
@@ -194,8 +223,8 @@ public class CommentActivity extends AppCompatActivity {
                     text3 = " ";
                     resource = 0;
                 }
-                if(post.getUserID() == user.getId()) postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), 0, R.color.colorPrimaryDark));
-                else postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), 0, R.color.colorPrimaryDark));
+                if(post.getUserID() == user.getId()) postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), post.getUserID(), 0, R.color.colorPrimaryDark));
+                else postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), post.getUserID(), 0, R.color.colorPrimaryDark));
                 mAdapter.notifyDataSetChanged();
                 Comment[] comment = post.getComments();
                 for(int i = 0; i < comment.length; i++){
@@ -217,8 +246,8 @@ public class CommentActivity extends AppCompatActivity {
                         text6 = " ";
                         resource2 = 0;
                     }
-                    if(comment[i].getUserID() == user.getId()) postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), R.drawable.ic_delete, R.color.colorAccent));
-                    else postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), 0, R.color.colorAccent));
+                    if(comment[i].getUserID() == user.getId()) postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), comment[i].getUserID(), R.drawable.ic_delete, R.color.colorAccent));
+                    else postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), comment[i].getUserID(),0, R.color.colorAccent));
 
                     mAdapter.notifyDataSetChanged();
 
@@ -267,7 +296,7 @@ public class CommentActivity extends AppCompatActivity {
                                 text3 = " ";
                                 resource = 0;
                             }
-                            postList.add(new PostItem(text1, posts.get(i).getText(), text3, resource, posts.get(i).getId(), R.drawable.ic_delete, R.color.colorPrimaryDark));
+                            postList.add(new PostItem(text1, posts.get(i).getText(), text3, resource, posts.get(i).getId(), posts.get(i).getUserID(), R.drawable.ic_delete, R.color.colorPrimaryDark));
 
 
                             mAdapter.notifyDataSetChanged();
@@ -282,6 +311,45 @@ public class CommentActivity extends AppCompatActivity {
 
                 }
             });
+    }
+
+
+    public void deletePost(int id){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deletePost(id);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void deleteComment(int id){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deleteComment(id);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
+
     }
 
 

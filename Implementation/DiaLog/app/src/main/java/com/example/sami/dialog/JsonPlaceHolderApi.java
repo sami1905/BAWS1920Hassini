@@ -40,6 +40,12 @@ public interface JsonPlaceHolderApi {
     @POST("posts")
     Call<Post> createPost(@Body Post post);
 
+    @DELETE("post/{id}")
+    Call<Void> deletePost(@Path("id") int id);
+
     @POST("comment/{id}")
     Call<Comment> createComment(@Path("id")  int id, @Body Comment comment);
+
+    @DELETE("comment/{id}")
+    Call<Void> deleteComment(@Path("id") int id);
 }

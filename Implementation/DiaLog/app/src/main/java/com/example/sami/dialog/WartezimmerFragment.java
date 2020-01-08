@@ -67,6 +67,16 @@ public class WartezimmerFragment extends Fragment {
 
 
             }
+
+            @Override
+            public void onDeleteClick(int position) {
+                if(postList.get(position).getmUserID() == user.getId()){
+                    deletePost(postList.get(position).getmID());
+
+                    postList.remove(position);
+                    mAdapter.notifyItemRemoved(position);
+                }
+            }
         });
 
 
@@ -102,8 +112,8 @@ public class WartezimmerFragment extends Fragment {
                         resource = 0;
                     }
                     if(posts.get(i).getUserID() == user.getId())
-                    postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), R.drawable.ic_delete,R.color.colorPrimaryDark));
-                    else postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), 0,R.color.colorPrimaryDark));
+                    postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), posts.get(i).getUserID(), R.drawable.ic_delete,R.color.colorPrimaryDark));
+                    else postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), posts.get(i).getUserID(), 0,R.color.colorPrimaryDark));
 
 
                     mAdapter.notifyDataSetChanged();
@@ -118,6 +128,25 @@ public class WartezimmerFragment extends Fragment {
 
             }
         });
+    }
+
+    public void deletePost(int id){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deletePost(id);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
+
     }
 
 

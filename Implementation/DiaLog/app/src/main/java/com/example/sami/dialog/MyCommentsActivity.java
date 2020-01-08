@@ -67,6 +67,25 @@ public class MyCommentsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        mAdapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+
+
+            }
+
+            @Override
+            public void onDeleteClick(int position) {
+                if(postList.get(position).getmUserID() == user.getId()){
+
+                    deleteComment(postList.get(position).getmID());
+
+                    postList.remove(position);
+                    mAdapter.notifyItemRemoved(position);
+                }
+            }
+        });
     }
 
     public void getComments(){
@@ -93,10 +112,20 @@ public class MyCommentsActivity extends AppCompatActivity {
                             if (uhrzeit.length() == 3 && uhrzeit.indexOf(":") == 1) {
                                 uhrzeit = "0" + uhrzeit.substring(0, 2) + "0" + uhrzeit.substring(2, 3);
                             }
+                            String uhrzeit2 = posts.get(i).getTime();
+                            if (uhrzeit2.length() == 4 && uhrzeit2.indexOf(":") == 2) {
+                                uhrzeit2 = uhrzeit2.substring(0, 3) + "0" + uhrzeit2.substring(3, 4);
+                            }
+                            if (uhrzeit2.length() == 4 && uhrzeit2.indexOf(":") == 1) {
+                                uhrzeit2 = "0" + uhrzeit2;
+                            }
+                            if (uhrzeit2.length() == 3 && uhrzeit2.indexOf(":") == 1) {
+                                uhrzeit2 = "0" + uhrzeit2.substring(0, 2) + "0" + uhrzeit2.substring(2, 3);
+                            }
 
-                            String text1 = "Antwort auf einen Post von: " + posts.get(i).getUserNickname() + "\n" +
+                            String text1 = "Antwort auf einen Post von: " + posts.get(i).getUserNickname() + " (" + posts.get(i).getDate() + " " + uhrzeit2 + " Uhr)" + "\n" +
                                     comments[j].getUserNickname() + " | " + comments[j].getDate() + " " + uhrzeit + " Uhr";
-                            postList.add(new PostItem(text1, comments[j].getText(), " ", 0, comments[j].getId(), R.drawable.ic_delete, R.color.colorAccent));
+                            postList.add(new PostItem(text1, comments[j].getText(), " ", 0, comments[j].getId(), comments[j].getUserID(), R.drawable.ic_delete, R.color.colorAccent));
 
 
                             mAdapter.notifyDataSetChanged();
@@ -113,5 +142,24 @@ public class MyCommentsActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void deleteComment(int id){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<Void> call = jsonPlaceHolderApi.deleteComment(id);
+
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+
+            }
+        });
+
     }
 }
