@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,6 +41,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         holder.mText.setText(currentItem.getmText());
         holder.mAnzahlComments.setText(currentItem.getmAnzahlComment());
         holder.mCommentRessource.setImageResource(currentItem.getmImageResource());
+        holder.mDeletResource.setImageResource(currentItem.getmDeleteImageResource());
+        holder.mColorResource.setImageResource(currentItem.getmColorImageResource());
 
     }
 
@@ -54,6 +57,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         public TextView mText;
         public TextView mAnzahlComments;
         public ImageView mCommentRessource;
+        public ImageView mDeletResource;
+        public ImageView mColorResource;
+
 
 
 
@@ -63,6 +69,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
             mText = itemView.findViewById(R.id.text);
             mAnzahlComments = itemView.findViewById(R.id.comment_anzahl);
             mCommentRessource = itemView.findViewById(R.id.button_comment);
+            mDeletResource = itemView.findViewById(R.id.button_delete);
+            mColorResource = itemView.findViewById(R.id.card_line);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

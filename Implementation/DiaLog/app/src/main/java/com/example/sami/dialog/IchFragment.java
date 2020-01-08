@@ -143,6 +143,21 @@ public class IchFragment extends Fragment {
             }
         });
 
+        mComments = v.findViewById(R.id.meine_comments);
+        mComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getContext(), MyCommentsActivity.class);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 1);
+                intent.putExtras(extra);
+                startActivity(intent);
+
+            }
+        });
+
 
 
 

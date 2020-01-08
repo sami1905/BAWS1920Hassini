@@ -29,7 +29,7 @@ public class CommentActivity extends AppCompatActivity {
     private TextView textBack;
 
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
+    private PostAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
     private ArrayList<PostItem> postList;
@@ -85,12 +85,32 @@ public class CommentActivity extends AppCompatActivity {
                     extra.putParcelable("User", user);
                     extra.putInt("ID", postID);
                     extra.putInt("Fragment", 1);
+
                     intent.putExtras(extra);
                     startActivity(intent);
                 }
             });
 
+            mAdapter.setOnItemClickListener(new PostAdapter.OnItemClickListener() {
+                @Override
+                public void onItemClick(int position) {
+                    int clickedPostID = postList.get(position).getmID();
+                    Intent intent = new Intent(CommentActivity.this, CommentActivity.class);
+                    Bundle extra = new Bundle();
+                    extra.putParcelable("User", user);
+                    extra.putInt("ID", clickedPostID);
+                    extra.putInt("Fragment", 3);
+                    extra.putInt("PostOrComment", 1);
+                    intent.putExtras(extra);
+                    startActivity(intent);
+
+
+                }
+            });
+
         }
+
+
 
 
         //Aus Fragment "Wartezimmer; Kommentare zu einem Post
@@ -101,12 +121,28 @@ public class CommentActivity extends AppCompatActivity {
             textBack.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(CommentActivity.this, HomeActivity.class);
-                    Bundle extra = new Bundle();
-                    extra.putParcelable("User", user);
-                    extra.putInt("Fragment", 3);
-                    intent.putExtras(extra);
-                    startActivity(intent);
+                    if(postOrComment == 1){
+                        Intent intent = new Intent(CommentActivity.this, CommentActivity.class);
+                        Bundle extra = new Bundle();
+                        extra.putParcelable("User", user);
+                        extra.putInt("ID", postID);
+                        extra.putInt("Fragment", 1);
+                        extra.putInt("PostOrComment", 0);
+                        intent.putExtras(extra);
+                        startActivity(intent);
+
+                    }
+                    else{
+                        Intent intent = new Intent(CommentActivity.this, HomeActivity.class);
+                        Bundle extra = new Bundle();
+                        extra.putParcelable("User", user);
+                        extra.putInt("ID", postID);
+                        extra.putInt("Fragment", 3);
+                        intent.putExtras(extra);
+                        startActivity(intent);
+
+                    }
+
                 }
             });
 
@@ -118,6 +154,8 @@ public class CommentActivity extends AppCompatActivity {
                     Bundle extra = new Bundle();
                     extra.putParcelable("User", user);
                     extra.putInt("ID", postID);
+
+                    if(postOrComment == 1) extra.putInt("Fragment", 1);
                     intent.putExtras(extra);
                     startActivity(intent);
                 }
@@ -156,7 +194,8 @@ public class CommentActivity extends AppCompatActivity {
                     text3 = " ";
                     resource = 0;
                 }
-                postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId()));
+                if(post.getUserID() == user.getId()) postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), 0, R.color.colorPrimaryDark));
+                else postList.add(new PostItem(text1, post.getText(), text3,resource, post.getId(), 0, R.color.colorPrimaryDark));
                 mAdapter.notifyDataSetChanged();
                 Comment[] comment = post.getComments();
                 for(int i = 0; i < comment.length; i++){
@@ -178,7 +217,8 @@ public class CommentActivity extends AppCompatActivity {
                         text6 = " ";
                         resource2 = 0;
                     }
-                    postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId()));
+                    if(comment[i].getUserID() == user.getId()) postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), R.drawable.ic_delete, R.color.colorAccent));
+                    else postList.add(new PostItem(text4, comment[i].getText(), text6,resource2, comment[i].getId(), 0, R.color.colorAccent));
 
                     mAdapter.notifyDataSetChanged();
 
@@ -227,7 +267,7 @@ public class CommentActivity extends AppCompatActivity {
                                 text3 = " ";
                                 resource = 0;
                             }
-                            postList.add(new PostItem(text1, posts.get(i).getText(), text3, resource, posts.get(i).getId()));
+                            postList.add(new PostItem(text1, posts.get(i).getText(), text3, resource, posts.get(i).getId(), R.drawable.ic_delete, R.color.colorPrimaryDark));
 
 
                             mAdapter.notifyDataSetChanged();
@@ -243,4 +283,6 @@ public class CommentActivity extends AppCompatActivity {
                 }
             });
     }
+
+
 }

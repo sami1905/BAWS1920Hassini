@@ -21,6 +21,7 @@ import static java.util.Calendar.YEAR;
 public class NewCommentActivity extends AppCompatActivity {
     private User user;
     private int postID;
+    private int whichFragment;
 
     private User updateUser;
     private EditText textEingabe;
@@ -36,6 +37,7 @@ public class NewCommentActivity extends AppCompatActivity {
         Bundle extra = intent.getExtras();
         user = intent.getParcelableExtra("User");
         postID = intent.getIntExtra("ID", 0);
+        whichFragment = intent.getIntExtra("Fragment",0);
 
 
         textEingabe = findViewById(R.id.text_eingabe);
@@ -73,6 +75,8 @@ public class NewCommentActivity extends AppCompatActivity {
                 Bundle extra = new Bundle();
                 extra.putParcelable("User", user);
                 extra.putInt("ID", postID);
+                extra.putInt("Fragment", 3);
+                if(whichFragment == 1)extra.putInt("PostOrComment", 1);
                 intent.putExtras(extra);
                 startActivity(intent);
 

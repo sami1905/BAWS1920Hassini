@@ -101,7 +101,9 @@ public class WartezimmerFragment extends Fragment {
                         text3 = " ";
                         resource = 0;
                     }
-                    postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId()));
+                    if(posts.get(i).getUserID() == user.getId())
+                    postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), R.drawable.ic_delete,R.color.colorPrimaryDark));
+                    else postList.add(new PostItem(text1, posts.get(i).getText(), text3,resource, posts.get(i).getId(), 0,R.color.colorPrimaryDark));
 
 
                     mAdapter.notifyDataSetChanged();

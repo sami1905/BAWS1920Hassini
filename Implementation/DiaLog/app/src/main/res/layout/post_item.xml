@@ -48,6 +48,14 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp" />
 
+        <ImageView
+            android:id="@+id/button_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/text_nickname"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"/>
+
         <TextView
             android:id="@+id/comment_anzahl"
             android:layout_width="15dp"
@@ -62,13 +70,12 @@
             android:textSize="10dp" />
 
 
-        <FrameLayout
+        <ImageView
             android:id="@+id/card_line"
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_below="@+id/button_comment"
-            android:layout_marginTop="20dp"
-            android:background="@color/colorPrimaryDark" />
+            android:layout_marginTop="20dp" />
 
 
     </RelativeLayout>

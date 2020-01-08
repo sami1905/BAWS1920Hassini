@@ -7,14 +7,18 @@ public class PostItem {
     private String mAnzahlComment;
     private int mImageResource;
     private int mID;
+    private int mDeleteImageResource;
+    private int mColorImageResource;
 
 
-    public PostItem(String mNickname, String mText,  String mAnzahlComment, int mImageResource, int mID) {
+    public PostItem(String mNickname, String mText,  String mAnzahlComment, int mImageResource, int mID, int mDeleteImageResource, int mColorImageResource) {
         this.mNickname = mNickname;
         this.mText = mText;
         this.mAnzahlComment = mAnzahlComment;
         this.mImageResource = mImageResource;
         this.mID = mID;
+        this.mDeleteImageResource = mDeleteImageResource;
+        this.mColorImageResource = mColorImageResource;
     }
 
 
@@ -37,5 +41,13 @@ public class PostItem {
 
     public int getmID() {
         return mID;
+    }
+
+    public int getmDeleteImageResource() {
+        return mDeleteImageResource;
+    }
+
+    public int getmColorImageResource() {
+        return mColorImageResource;
     }
 }
