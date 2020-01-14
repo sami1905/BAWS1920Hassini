@@ -5,80 +5,56 @@
 \BOOKMARK [2][]{subsection.6}{0.1 Problemstellung}{section*.5}% 5
 \BOOKMARK [2][]{subsection.7}{0.2 Aufgabenstellung}{section*.5}% 6
 \BOOKMARK [2][]{subsection.8}{0.3 Vorgehensweise}{section*.5}% 7
-\BOOKMARK [0][]{part.9}{I Konzept}{}% 8
-\BOOKMARK [1][]{section.10}{1 Zielhierarchie}{part.9}% 9
-\BOOKMARK [2][]{subsection.11}{1.1 Strategische Ziele}{section.10}% 10
-\BOOKMARK [2][]{subsection.12}{1.2 Taktische Ziele}{section.10}% 11
-\BOOKMARK [2][]{subsection.13}{1.3 Operative Ziele}{section.10}% 12
-\BOOKMARK [1][]{section.14}{2 Themenfeld/-recherche}{part.9}% 13
-\BOOKMARK [2][]{subsection.15}{2.1 Ern\344hrung}{section.14}% 14
-\BOOKMARK [3][]{subsubsection.17}{2.1.1 Kohlenhydrate}{subsection.15}% 15
-\BOOKMARK [3][]{subsubsection.18}{2.1.2 Eiwei\337}{subsection.15}% 16
-\BOOKMARK [3][]{subsubsection.19}{2.1.3 Fett}{subsection.15}% 17
-\BOOKMARK [2][]{subsection.20}{2.2 Sport}{section.14}% 18
-\BOOKMARK [2][]{subsection.21}{2.3 Kommunikation/Erfahrungsaustausch}{section.14}% 19
-\BOOKMARK [1][]{section.22}{3 Marktrecherche}{part.9}% 20
-\BOOKMARK [2][]{subsection.23}{3.1 MySugr}{section.22}% 21
-\BOOKMARK [2][]{subsection.25}{3.2 DiabetesConnect}{section.22}% 22
-\BOOKMARK [2][]{subsection.27}{3.3 Dexcom G6}{section.22}% 23
-\BOOKMARK [2][]{subsection.29}{3.4 FreeStyle LibreLink}{section.22}% 24
-\BOOKMARK [2][]{subsection.31}{3.5 Lifesum}{section.22}% 25
-\BOOKMARK [2][]{subsection.33}{3.6 Fazit}{section.22}% 26
-\BOOKMARK [1][]{section.34}{4 Alleinstellungsmerkmal}{part.9}% 27
-\BOOKMARK [1][]{section.35}{5 Kommunikationsmodelle}{part.9}% 28
-\BOOKMARK [1][]{section.38}{6 Methodischer Rahmen}{part.9}% 29
-\BOOKMARK [2][]{subsection.39}{6.1 Nutzungskontext}{section.38}% 30
-\BOOKMARK [0][]{part.40}{II Prozessmodellierung}{}% 31
-\BOOKMARK [1][]{section.41}{7 Requirements Analysis}{part.40}% 32
-\BOOKMARK [2][]{subsection.42}{7.1 Stakeholder-Analysis}{section.41}% 33
-\BOOKMARK [2][]{subsection.44}{7.2 User-Profiles}{section.41}% 34
-\BOOKMARK [3][]{subsubsection.45}{7.2.1 Typ-1-Diabetiker}{subsection.44}% 35
-\BOOKMARK [3][]{subsubsection.47}{7.2.2 Typ-2-Diabetiker}{subsection.44}% 36
-\BOOKMARK [2][]{subsection.49}{7.3 Anforderungen}{section.41}% 37
-\BOOKMARK [3][]{subsubsection.50}{7.3.1 funktionale Anforderungen}{subsection.49}% 38
-\BOOKMARK [2][]{subsection.55}{7.4 Contextual Task Analysis}{section.41}% 39
-\BOOKMARK [2][]{subsection.56}{7.5 Platform Capabilities/Constraints}{section.41}% 40
-\BOOKMARK [2][]{subsection.57}{7.6 Usability-Goals}{section.41}% 41
-\BOOKMARK [2][]{subsection.58}{7.7 Style Guide}{section.41}% 42
-\BOOKMARK [1][]{section.59}{8 Design/Testing/Development}{part.40}% 43
-\BOOKMARK [2][]{subsection.60}{8.1 Work Reengineering}{section.59}% 44
-\BOOKMARK [2][]{subsection.61}{8.2 Screen Design Standards \(SDS\)}{section.59}% 45
-\BOOKMARK [2][]{subsection.62}{8.3 UI Prototyp}{section.59}% 46
-\BOOKMARK [2][]{subsection.63}{8.4 Iterative Evaluation}{section.59}% 47
-\BOOKMARK [2][]{subsection.64}{8.5 Detailed User Interface Design \(DUID\)}{section.59}% 48
-\BOOKMARK [0][]{part.65}{III Systemmodellierung}{}% 49
-\BOOKMARK [1][]{section.66}{9 Systemarchitektur}{part.65}% 50
-\BOOKMARK [1][]{section.67}{10 Datenstruktur}{part.65}% 51
-\BOOKMARK [1][]{section.68}{11 Rest-Spezifikation}{part.65}% 52
-\BOOKMARK [1][]{section.69}{12 Anwendungslogik}{part.65}% 53
-\BOOKMARK [0][]{part.70}{IV Installation}{}% 54
-\BOOKMARK [1][]{section.71}{13 Fazit}{part.70}% 55
-\BOOKMARK [2][]{subsection.72}{13.1 Zusammenfassung}{section.71}% 56
-\BOOKMARK [2][]{subsection.73}{13.2 Bewertung}{section.71}% 57
-\BOOKMARK [2][]{subsection.74}{13.3 Next Steps}{section.71}% 58
-\BOOKMARK [1][]{section*.75}{Literaturverzeichnis}{part.70}% 59
-\BOOKMARK [0][]{part*.76}{Anhang}{}% 60
-\BOOKMARK [1][]{appendix.77}{A Themenfeld/-recherche}{part*.76}% 61
-\BOOKMARK [2][]{subsection.78}{A.1 Diabetes-Arten}{appendix.77}% 62
-\BOOKMARK [2][]{subsection.79}{A.2 Analoge Dokumentation}{appendix.77}% 63
-\BOOKMARK [1][]{appendix.81}{B Evaluation}{part*.76}% 64
-\BOOKMARK [2][]{subsection.82}{B.1 Vorgehensweise}{appendix.81}% 65
-\BOOKMARK [2][]{subsection.83}{B.2 Auswertung}{appendix.81}% 66
-\BOOKMARK [3][]{subsubsection.84}{B.2.1 Kategorie \214Pers\366nliche Daten\215}{subsection.83}% 67
-\BOOKMARK [3][]{subsubsection.85}{B.2.2 Kategorie \214Behandlung\215}{subsection.83}% 68
-\BOOKMARK [3][]{subsubsection.86}{B.2.3 Kategorie \214Lebensstil\215}{subsection.83}% 69
-\BOOKMARK [3][]{subsubsection.87}{B.2.4 Kategorie \214Bewertung\215}{subsection.83}% 70
-\BOOKMARK [2][]{subsection.88}{B.3 Fazit}{appendix.81}% 71
-\BOOKMARK [1][]{appendix.89}{C Methodischer Rahmen}{part*.76}% 72
-\BOOKMARK [2][]{subsection.90}{C.1 Nutzungskontex}{appendix.89}% 73
-\BOOKMARK [2][]{subsection.91}{C.2 Ans\344tze des usage-centered-design}{appendix.89}% 74
-\BOOKMARK [2][]{subsection.92}{C.3 Ans\344tze des user-centered-design}{appendix.89}% 75
-\BOOKMARK [3][]{subsubsection.93}{C.3.1 Usability-engineering nach Rosson und Carrol}{subsection.92}% 76
-\BOOKMARK [3][]{subsubsection.94}{C.3.2 Discount usability-engineering nach Nielsen}{subsection.92}% 77
-\BOOKMARK [3][]{subsubsection.95}{C.3.3 Usability engineering lifecycle nach Mayhew}{subsection.92}% 78
-\BOOKMARK [1][]{appendix.96}{D User Profiles}{part*.76}% 79
-\BOOKMARK [1][]{appendix.97}{E Personas}{part*.76}% 80
-\BOOKMARK [1][]{appendix.98}{F Non-funktionale Anforderungen}{part*.76}% 81
-\BOOKMARK [2][]{subsection.99}{F.1 Qualit\344tsanforderungen}{appendix.98}% 82
-\BOOKMARK [2][]{subsection.100}{F.2 Organisationale Anforderungen}{appendix.98}% 83
-\BOOKMARK [1][]{section*.101}{Erkl\344rung}{part*.76}% 84
+\BOOKMARK [1][]{section.9}{1 Themenfeld/-recherche}{}% 8
+\BOOKMARK [2][]{subsection.10}{1.1 Ern\344hrung}{section.9}% 9
+\BOOKMARK [3][]{subsubsection.12}{1.1.1 Kohlenhydrate}{subsection.10}% 10
+\BOOKMARK [3][]{subsubsection.13}{1.1.2 Eiwei\337}{subsection.10}% 11
+\BOOKMARK [3][]{subsubsection.14}{1.1.3 Fett}{subsection.10}% 12
+\BOOKMARK [2][]{subsection.15}{1.2 Sport}{section.9}% 13
+\BOOKMARK [2][]{subsection.16}{1.3 Kommunikation/Erfahrungsaustausch}{section.9}% 14
+\BOOKMARK [1][]{section.17}{2 Marktrecherche}{}% 15
+\BOOKMARK [2][]{subsection.18}{2.1 MySugr}{section.17}% 16
+\BOOKMARK [2][]{subsection.20}{2.2 DiabetesConnect}{section.17}% 17
+\BOOKMARK [2][]{subsection.22}{2.3 Dexcom G6}{section.17}% 18
+\BOOKMARK [2][]{subsection.24}{2.4 FreeStyle LibreLink}{section.17}% 19
+\BOOKMARK [2][]{subsection.26}{2.5 Lifesum}{section.17}% 20
+\BOOKMARK [2][]{subsection.28}{2.6 Fazit}{section.17}% 21
+\BOOKMARK [1][]{section.29}{3 Alleinstellungsmerkmal}{}% 22
+\BOOKMARK [1][]{section.30}{4 Kommunikationsmodelle}{}% 23
+\BOOKMARK [1][]{section.33}{5 Benutzermodellierung}{}% 24
+\BOOKMARK [2][]{subsection.34}{5.1 Stakeholder-Analysis}{section.33}% 25
+\BOOKMARK [2][]{subsection.36}{5.2 User-Profiles}{section.33}% 26
+\BOOKMARK [3][]{subsubsection.37}{5.2.1 Typ-1-Diabetiker}{subsection.36}% 27
+\BOOKMARK [3][]{subsubsection.39}{5.2.2 Typ-2-Diabetiker}{subsection.36}% 28
+\BOOKMARK [2][]{subsection.41}{5.3 Personas}{section.33}% 29
+\BOOKMARK [2][]{subsection.44}{5.4 Anforderungen}{section.33}% 30
+\BOOKMARK [3][]{subsubsection.45}{5.4.1 funktionale Anforderungen}{subsection.44}% 31
+\BOOKMARK [3][]{subsubsection.50}{5.4.2 Non-funktionale Anforderungen}{subsection.44}% 32
+\BOOKMARK [1][]{section.53}{6 Aufgabenmodellierung}{}% 33
+\BOOKMARK [2][]{subsection.54}{6.1 Persona Use Cases \(OUC\)}{section.53}% 34
+\BOOKMARK [2][]{subsection.56}{6.2 Task Scenario}{section.53}% 35
+\BOOKMARK [2][]{subsection.58}{6.3 Task Organization Model}{section.53}% 36
+\BOOKMARK [2][]{subsection.60}{6.4 Concrete Use Cases \(CUC\)}{section.53}% 37
+\BOOKMARK [1][]{section.73}{7 Reengineered Task Organization Model}{}% 38
+\BOOKMARK [1][]{section.75}{8 Systemarchitektur}{}% 39
+\BOOKMARK [1][]{section*.77}{Literaturverzeichnis}{}% 40
+\BOOKMARK [0][]{part*.78}{Anhang}{}% 41
+\BOOKMARK [1][]{appendix.79}{A Themenfeld/-recherche}{part*.78}% 42
+\BOOKMARK [2][]{subsection.80}{A.1 Diabetes-Arten}{appendix.79}% 43
+\BOOKMARK [2][]{subsection.81}{A.2 Analoge Dokumentation}{appendix.79}% 44
+\BOOKMARK [1][]{appendix.83}{B Evaluation}{part*.78}% 45
+\BOOKMARK [2][]{subsection.84}{B.1 Vorgehensweise}{appendix.83}% 46
+\BOOKMARK [2][]{subsection.85}{B.2 Auswertung}{appendix.83}% 47
+\BOOKMARK [3][]{subsubsection.86}{B.2.1 Kategorie \214Pers\366nliche Daten\215}{subsection.85}% 48
+\BOOKMARK [3][]{subsubsection.87}{B.2.2 Kategorie \214Behandlung\215}{subsection.85}% 49
+\BOOKMARK [3][]{subsubsection.88}{B.2.3 Kategorie \214Lebensstil\215}{subsection.85}% 50
+\BOOKMARK [3][]{subsubsection.89}{B.2.4 Kategorie \214Bewertung\215}{subsection.85}% 51
+\BOOKMARK [2][]{subsection.90}{B.3 Fazit}{appendix.83}% 52
+\BOOKMARK [1][]{appendix.91}{C Methodischer Rahmen}{part*.78}% 53
+\BOOKMARK [2][]{subsection.92}{C.1 Nutzungskontex}{appendix.91}% 54
+\BOOKMARK [2][]{subsection.93}{C.2 Ans\344tze des usage-centered-design}{appendix.91}% 55
+\BOOKMARK [2][]{subsection.94}{C.3 Ans\344tze des user-centered-design}{appendix.91}% 56
+\BOOKMARK [3][]{subsubsection.95}{C.3.1 Usability-engineering nach Rosson und Carrol}{subsection.94}% 57
+\BOOKMARK [3][]{subsubsection.96}{C.3.2 Discount usability-engineering nach Nielsen}{subsection.94}% 58
+\BOOKMARK [3][]{subsubsection.97}{C.3.3 Usability engineering lifecycle nach Mayhew}{subsection.94}% 59
+\BOOKMARK [1][]{section*.98}{Erkl\344rung}{part*.78}% 60

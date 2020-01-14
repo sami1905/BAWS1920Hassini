@@ -1,16 +1,16 @@
-\ifglsentryexists{latex}{}%
+\ifglsentryexists{maths}{}%
 {%
-\gls@defglossaryentry{latex}%
+\gls@defglossaryentry{maths}%
 {%
-name={latex},%
-sort={latex},%
+name={mathematics},%
+sort={mathematics},%
 type={main},%
-first={latex},%
-firstplural={latexs},%
-text={latex},%
-plural={latexs},%
-description={Is a mark up language specially suited for scientific documents},%
-descriptionplural={Is a mark up language specially suited for scientific documents},%
+first={mathematics},%
+firstplural={mathematicss},%
+text={mathematics},%
+plural={mathematicss},%
+description={Mathematics is what mathematicians do},%
+descriptionplural={Mathematics is what mathematicians do},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
@@ -28,19 +28,19 @@ parent={},%
 %
 }%
 }%
-\ifglsentryexists{maths}{}%
+\ifglsentryexists{ex}{}%
 {%
-\gls@defglossaryentry{maths}%
+\gls@defglossaryentry{ex}%
 {%
-name={mathematics},%
-sort={mathematics},%
+name={sample},%
+sort={sample},%
 type={main},%
-first={mathematics},%
-firstplural={mathematicss},%
-text={mathematics},%
-plural={mathematicss},%
-description={Mathematics is what mathematicians do},%
-descriptionplural={Mathematics is what mathematicians do},%
+first={sample},%
+firstplural={samples},%
+text={sample},%
+plural={samples},%
+description={an example},%
+descriptionplural={an example},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%

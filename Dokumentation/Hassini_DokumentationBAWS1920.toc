@@ -1,89 +1,73 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{Kurzfassung/Abstract}{I}{section*.1}
-\contentsline {section}{Tabellenverzeichnis}{V}{section*.3}
-\contentsline {section}{Abbildungsverzeichnis}{VI}{section*.4}
+\contentsline {section}{Tabellenverzeichnis}{IV}{section*.3}
+\contentsline {section}{Abbildungsverzeichnis}{V}{section*.4}
 \contentsline {section}{Einleitung}{1}{section*.5}
 \contentsline {subsection}{\numberline {0.1}Problemstellung}{1}{subsection.6}
-\contentsline {subsection}{\numberline {0.2}Aufgabenstellung}{1}{subsection.7}
+\contentsline {subsection}{\numberline {0.2}Aufgabenstellung}{2}{subsection.7}
 \contentsline {subsection}{\numberline {0.3}Vorgehensweise}{2}{subsection.8}
-\contentsline {part}{I\hspace {1em}Konzept}{3}{part.9}
-\contentsline {section}{\numberline {1}Zielhierarchie}{4}{section.10}
-\contentsline {subsection}{\numberline {1.1}Strategische Ziele}{4}{subsection.11}
-\contentsline {subsection}{\numberline {1.2}Taktische Ziele}{4}{subsection.12}
-\contentsline {subsection}{\numberline {1.3}Operative Ziele}{5}{subsection.13}
-\contentsline {section}{\numberline {2}Themenfeld/-recherche}{7}{section.14}
-\contentsline {subsection}{\numberline {2.1}Ern\IeC {\"a}hrung}{7}{subsection.15}
-\contentsline {subsubsection}{\numberline {2.1.1}Kohlenhydrate}{9}{subsubsection.17}
-\contentsline {subsubsection}{\numberline {2.1.2}Eiwei\IeC {\ss }}{10}{subsubsection.18}
-\contentsline {subsubsection}{\numberline {2.1.3}Fett}{11}{subsubsection.19}
-\contentsline {subsection}{\numberline {2.2}Sport}{12}{subsection.20}
-\contentsline {subsection}{\numberline {2.3}Kommunikation/Erfahrungsaustausch}{14}{subsection.21}
-\contentsline {section}{\numberline {3}Marktrecherche}{16}{section.22}
-\contentsline {subsection}{\numberline {3.1}MySugr}{16}{subsection.23}
-\contentsline {subsection}{\numberline {3.2}DiabetesConnect}{17}{subsection.25}
-\contentsline {subsection}{\numberline {3.3}Dexcom G6}{18}{subsection.27}
-\contentsline {subsection}{\numberline {3.4}FreeStyle LibreLink}{19}{subsection.29}
-\contentsline {subsection}{\numberline {3.5}Lifesum}{20}{subsection.31}
-\contentsline {subsection}{\numberline {3.6}Fazit}{21}{subsection.33}
-\contentsline {section}{\numberline {4}Alleinstellungsmerkmal}{23}{section.34}
-\contentsline {section}{\numberline {5}Kommunikationsmodelle}{24}{section.35}
-\contentsline {section}{\numberline {6}Methodischer Rahmen}{26}{section.38}
-\contentsline {subsection}{\numberline {6.1}Nutzungskontext}{26}{subsection.39}
-\contentsline {part}{II\hspace {1em}Prozessmodellierung}{27}{part.40}
-\contentsline {section}{\numberline {7}Requirements Analysis}{28}{section.41}
-\contentsline {subsection}{\numberline {7.1}Stakeholder-Analysis}{28}{subsection.42}
-\contentsline {subsection}{\numberline {7.2}User-Profiles}{31}{subsection.44}
-\contentsline {subsubsection}{\numberline {7.2.1}Typ-1-Diabetiker}{32}{subsubsection.45}
-\contentsline {subsubsection}{\numberline {7.2.2}Typ-2-Diabetiker}{34}{subsubsection.47}
-\contentsline {subsection}{\numberline {7.3}Anforderungen}{36}{subsection.49}
-\contentsline {subsubsection}{\numberline {7.3.1}funktionale Anforderungen}{36}{subsubsection.50}
-\contentsline {paragraph}{F\IeC {\"u}r alle Diabetiker}{36}{section*.51}
-\contentsline {paragraph}{F\IeC {\"u}r Typ-1-Diabetiker}{37}{section*.52}
-\contentsline {paragraph}{F\IeC {\"u}r Typ-2-Diabetiker}{38}{section*.53}
-\contentsline {paragraph}{F\IeC {\"u}r Personen im Umfeld (Eltern, Lebenspartner-/in, ...)}{38}{section*.54}
-\contentsline {subsection}{\numberline {7.4}Contextual Task Analysis}{38}{subsection.55}
-\contentsline {subsection}{\numberline {7.5}Platform Capabilities/Constraints}{39}{subsection.56}
-\contentsline {subsection}{\numberline {7.6}Usability-Goals}{39}{subsection.57}
-\contentsline {subsection}{\numberline {7.7}Style Guide}{39}{subsection.58}
-\contentsline {section}{\numberline {8}Design/Testing/Development}{40}{section.59}
-\contentsline {subsection}{\numberline {8.1}Work Reengineering}{40}{subsection.60}
-\contentsline {subsection}{\numberline {8.2}Screen Design Standards (SDS)}{40}{subsection.61}
-\contentsline {subsection}{\numberline {8.3}UI Prototyp}{40}{subsection.62}
-\contentsline {subsection}{\numberline {8.4}Iterative Evaluation}{40}{subsection.63}
-\contentsline {subsection}{\numberline {8.5}Detailed User Interface Design (DUID)}{40}{subsection.64}
-\contentsline {part}{III\hspace {1em}Systemmodellierung}{41}{part.65}
-\contentsline {section}{\numberline {9}Systemarchitektur}{42}{section.66}
-\contentsline {section}{\numberline {10}Datenstruktur}{42}{section.67}
-\contentsline {section}{\numberline {11}Rest-Spezifikation}{42}{section.68}
-\contentsline {section}{\numberline {12}Anwendungslogik}{42}{section.69}
-\contentsline {part}{IV\hspace {1em}Installation}{43}{part.70}
-\contentsline {section}{\numberline {13}Fazit}{44}{section.71}
-\contentsline {subsection}{\numberline {13.1}Zusammenfassung}{44}{subsection.72}
-\contentsline {subsection}{\numberline {13.2}Bewertung}{44}{subsection.73}
-\contentsline {subsection}{\numberline {13.3}Next Steps}{44}{subsection.74}
-\contentsline {section}{Literaturverzeichnis}{45}{section*.75}
-\contentsline {part}{Anhang}{47}{part*.76}
-\contentsline {section}{\numberline {A}Themenfeld/-recherche}{48}{appendix.77}
-\contentsline {subsection}{\numberline {A.1}Diabetes-Arten}{48}{subsection.78}
-\contentsline {subsection}{\numberline {A.2}Analoge Dokumentation}{49}{subsection.79}
-\contentsline {section}{\numberline {B}Evaluation}{51}{appendix.81}
-\contentsline {subsection}{\numberline {B.1}Vorgehensweise}{51}{subsection.82}
-\contentsline {subsection}{\numberline {B.2}Auswertung}{52}{subsection.83}
-\contentsline {subsubsection}{\numberline {B.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{52}{subsubsection.84}
-\contentsline {subsubsection}{\numberline {B.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{52}{subsubsection.85}
-\contentsline {subsubsection}{\numberline {B.2.3}Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{53}{subsubsection.86}
-\contentsline {subsubsection}{\numberline {B.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{54}{subsubsection.87}
-\contentsline {subsection}{\numberline {B.3}Fazit}{54}{subsection.88}
-\contentsline {section}{\numberline {C}Methodischer Rahmen}{56}{appendix.89}
-\contentsline {subsection}{\numberline {C.1}Nutzungskontex}{56}{subsection.90}
-\contentsline {subsection}{\numberline {C.2}Ans\IeC {\"a}tze des usage-centered-design}{56}{subsection.91}
-\contentsline {subsection}{\numberline {C.3}Ans\IeC {\"a}tze des user-centered-design}{56}{subsection.92}
-\contentsline {subsubsection}{\numberline {C.3.1}Usability-engineering nach Rosson und Carrol}{57}{subsubsection.93}
-\contentsline {subsubsection}{\numberline {C.3.2}Discount usability-engineering nach Nielsen}{57}{subsubsection.94}
-\contentsline {subsubsection}{\numberline {C.3.3}Usability engineering lifecycle nach Mayhew}{57}{subsubsection.95}
-\contentsline {section}{\numberline {D}User Profiles}{59}{appendix.96}
-\contentsline {section}{\numberline {E}Personas}{60}{appendix.97}
-\contentsline {section}{\numberline {F}Non-funktionale Anforderungen}{61}{appendix.98}
-\contentsline {subsection}{\numberline {F.1}Qualit\IeC {\"a}tsanforderungen}{61}{subsection.99}
-\contentsline {subsection}{\numberline {F.2}Organisationale Anforderungen}{61}{subsection.100}
-\contentsline {section}{Erkl\IeC {\"a}rung}{62}{section*.101}
+\contentsline {section}{\numberline {1}Themenfeld/-recherche}{4}{section.9}
+\contentsline {subsection}{\numberline {1.1}Ern\IeC {\"a}hrung}{4}{subsection.10}
+\contentsline {subsubsection}{\numberline {1.1.1}Kohlenhydrate}{6}{subsubsection.12}
+\contentsline {subsubsection}{\numberline {1.1.2}Eiwei\IeC {\ss }}{7}{subsubsection.13}
+\contentsline {subsubsection}{\numberline {1.1.3}Fett}{8}{subsubsection.14}
+\contentsline {subsection}{\numberline {1.2}Sport}{9}{subsection.15}
+\contentsline {subsection}{\numberline {1.3}Kommunikation/Erfahrungsaustausch}{11}{subsection.16}
+\contentsline {section}{\numberline {2}Marktrecherche}{13}{section.17}
+\contentsline {subsection}{\numberline {2.1}MySugr}{13}{subsection.18}
+\contentsline {subsection}{\numberline {2.2}DiabetesConnect}{14}{subsection.20}
+\contentsline {subsection}{\numberline {2.3}Dexcom G6}{15}{subsection.22}
+\contentsline {subsection}{\numberline {2.4}FreeStyle LibreLink}{16}{subsection.24}
+\contentsline {subsection}{\numberline {2.5}Lifesum}{17}{subsection.26}
+\contentsline {subsection}{\numberline {2.6}Fazit}{18}{subsection.28}
+\contentsline {section}{\numberline {3}Alleinstellungsmerkmal}{20}{section.29}
+\contentsline {section}{\numberline {4}Kommunikationsmodelle}{21}{section.30}
+\contentsline {section}{\numberline {5}Benutzermodellierung}{23}{section.33}
+\contentsline {subsection}{\numberline {5.1}Stakeholder-Analysis}{23}{subsection.34}
+\contentsline {subsection}{\numberline {5.2}User-Profiles}{26}{subsection.36}
+\contentsline {subsubsection}{\numberline {5.2.1}Typ-1-Diabetiker}{27}{subsubsection.37}
+\contentsline {subsubsection}{\numberline {5.2.2}Typ-2-Diabetiker}{28}{subsubsection.39}
+\contentsline {subsection}{\numberline {5.3}Personas}{31}{subsection.41}
+\contentsline {subsection}{\numberline {5.4}Anforderungen}{33}{subsection.44}
+\contentsline {subsubsection}{\numberline {5.4.1}funktionale Anforderungen}{34}{subsubsection.45}
+\contentsline {paragraph}{F\IeC {\"u}r alle Diabetiker}{34}{section*.46}
+\contentsline {paragraph}{F\IeC {\"u}r Typ-1-Diabetiker}{35}{section*.47}
+\contentsline {paragraph}{F\IeC {\"u}r Typ-2-Diabetiker}{35}{section*.48}
+\contentsline {paragraph}{F\IeC {\"u}r Personen im Umfeld (Eltern, Lebenspartner-/in, ...)}{36}{section*.49}
+\contentsline {subsubsection}{\numberline {5.4.2}Non-funktionale Anforderungen}{36}{subsubsection.50}
+\contentsline {paragraph}{Qualit\IeC {\"a}tsanforderungen}{36}{section*.51}
+\contentsline {paragraph}{Organisationale Anforderungen}{37}{section*.52}
+\contentsline {section}{\numberline {6}Aufgabenmodellierung}{38}{section.53}
+\contentsline {subsection}{\numberline {6.1}Persona Use Cases (OUC)}{38}{subsection.54}
+\contentsline {subsection}{\numberline {6.2}Task Scenario}{40}{subsection.56}
+\contentsline {subsection}{\numberline {6.3}Task Organization Model}{42}{subsection.58}
+\contentsline {subsection}{\numberline {6.4}Concrete Use Cases (CUC)}{43}{subsection.60}
+\contentsline {paragraph}{CUC 01 - Benutzerprofil anlegen}{43}{section*.61}
+\contentsline {paragraph}{CUC 02 - Benutzerprofil bearbeiten}{43}{section*.63}
+\contentsline {paragraph}{CUC 03 - Diabetes-Ereignis anlegen}{43}{section*.65}
+\contentsline {paragraph}{CUC 04 - Mahlzeit anlegen}{44}{section*.67}
+\contentsline {paragraph}{CUC 05 - Aktivit\IeC {\"a}t anlegen}{45}{section*.69}
+\contentsline {paragraph}{CUC 06 - Beitrag teilen}{45}{section*.71}
+\contentsline {section}{\numberline {7}Reengineered Task Organization Model}{46}{section.73}
+\contentsline {section}{\numberline {8}Systemarchitektur}{47}{section.75}
+\contentsline {section}{Literaturverzeichnis}{48}{section*.77}
+\contentsline {part}{Anhang}{50}{part*.78}
+\contentsline {section}{\numberline {A}Themenfeld/-recherche}{51}{appendix.79}
+\contentsline {subsection}{\numberline {A.1}Diabetes-Arten}{51}{subsection.80}
+\contentsline {subsection}{\numberline {A.2}Analoge Dokumentation}{52}{subsection.81}
+\contentsline {section}{\numberline {B}Evaluation}{54}{appendix.83}
+\contentsline {subsection}{\numberline {B.1}Vorgehensweise}{54}{subsection.84}
+\contentsline {subsection}{\numberline {B.2}Auswertung}{55}{subsection.85}
+\contentsline {subsubsection}{\numberline {B.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{55}{subsubsection.86}
+\contentsline {subsubsection}{\numberline {B.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{55}{subsubsection.87}
+\contentsline {subsubsection}{\numberline {B.2.3}Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{56}{subsubsection.88}
+\contentsline {subsubsection}{\numberline {B.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{57}{subsubsection.89}
+\contentsline {subsection}{\numberline {B.3}Fazit}{57}{subsection.90}
+\contentsline {section}{\numberline {C}Methodischer Rahmen}{59}{appendix.91}
+\contentsline {subsection}{\numberline {C.1}Nutzungskontex}{59}{subsection.92}
+\contentsline {subsection}{\numberline {C.2}Ans\IeC {\"a}tze des usage-centered-design}{59}{subsection.93}
+\contentsline {subsection}{\numberline {C.3}Ans\IeC {\"a}tze des user-centered-design}{59}{subsection.94}
+\contentsline {subsubsection}{\numberline {C.3.1}Usability-engineering nach Rosson und Carrol}{60}{subsubsection.95}
+\contentsline {subsubsection}{\numberline {C.3.2}Discount usability-engineering nach Nielsen}{60}{subsubsection.96}
+\contentsline {subsubsection}{\numberline {C.3.3}Usability engineering lifecycle nach Mayhew}{60}{subsubsection.97}
+\contentsline {section}{Erkl\IeC {\"a}rung}{62}{section*.98}

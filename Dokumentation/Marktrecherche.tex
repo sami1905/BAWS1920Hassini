@@ -1,0 +1,154 @@
+\section{Marktrecherche}
+	Bei der Marktforschung geht es darum, den Markt und seine Systeme, die bereits angeboten werden, zu erkunden, um das Nutzungsproblem zu lösen. Da es sich in dieser Arbeit um die Entwicklung einer mobilen Anwendung handelt, werden nur Systeme in Form von mobilen Anwendungen erforscht. Diese Marktforschung umfasst neben den Anwendungen aus der bereits durchgeführten Evaluation zur Behandlung von Diabetes mellitus (s. Anhang: A \nameref{section:Evaluation} ab Seite \pageref{section:Evaluation}) auch Systeme aus den Anwendungsbereichen dieser Arbeit. Um die Marktrecherche möglichst übersichtlich und transparent zu halten und um den Markt vollständig abzudecken, werden nicht nur Systeme aus dem Bereich Diabetes, sondern auch aus den Bereichen Kommunikation, Ernährung und Sports hinsichtlich des Nutzungsproblems, berücksichtigt.
+	\subsection{MySugr}
+	MySugr ist eine Anwendung für die Betriebssysteme iOS und Android. Sie ist derzeit der stärkste Wettbewerber auf dem Markt. Zusätzlich zur Möglichkeit der Dokumentation der Blutzuckerwerte kann der Benutzer die zugeführten Kohlenhydrate in BE's und Insulineinheiten umwandeln und tägliche, wöchentliche und monatliche Analysen durchführen.  In der kostenlosen Version lässt sich zudem der HbA1c-Wert berechnen und Blutzuckereinträge können mit Kommentaren, wie zum Beispiel „Sport“ oder „Büroarbeit“ versehen werden. In der Pro-Version kostet die Anwendung 2,99\euro{}/Monat oder 27,99\euro{}/Jahr und erweitert die kostenlose Version um die Möglichkeit, Blutzuckerwerte aus den Blutzuckermessgeräten \glqq Accu Check\grqq{} aus dem Hause Roche Diabetes Care und \glqq Contour Next One\grqq{} von Bayer (aka Ascensia Diabetes Care) zu importieren. Auch der bereits angesprochene BE- und Insulineinheiten-Rechner ist erst in der Pro-Version inbegriffen. Des Weiteren ermöglicht die kostenpflichtige Version Features wie das Exportieren der Daten als PDF-Datei und die Erinnerung an den Benutzer, den Blutzuckerspiegel regelmäßig zu überprüfen. Bei der Dokumentation von Mahlzeiten muss der Anwender die Kohlenhydrate selber ermitteln und in die Anwendung eintragen, um von ihr die BE’s und Insulineinheiten berechnen zu lassen. Bei Sport kann man keine Angaben über die Dauer der Aktivität oder die Intensität machen. Dennoch wurde MySugr 2015 vom Focus Diabetes und Chip zum Testsieger der „Besten Diabetes Apps“ gekürt.  In der Tabelle  \ref{tab:MySugr}: \nameref{tab:MySugr}  sind alle Vor und Nachteile der Applikation gegliedert.\cite{MS}
+	\begin{table}[H]
+		\setlength{\tabcolsep}{12pt}
+		\centering
+		\begin{tabular}{p{6cm}|p{6cm}}
+			\toprule
+			\textbf{Vorteile} & \textbf{Nachteile}\\
+			\hline
+			Importieren von Daten aus externen Blutzuckermessgeräten & manuelle Eingabe von Blutzuckermessungen\\
+			\hline
+			Tages-, Wochen- und Monats-Analysen & kostenpflichtige Pro-Version\\
+			\hline
+			BE-/Insulineinheiten-Rechner & keine Lebensmitteldatenbank\\
+			\hline
+			HbA1c-Rechner & limitierte Sport-Dokumentation\\
+			\hline
+			pdf-Ausgabe der Benutzerdaten & Mahlzeiten-Dokumentation nur durch Angabe von Kohlenhydraten\\
+			\hline
+			& keinen BE-/KE-Rechner\\
+			\bottomrule
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{MySugr: Nach- und Vorteile}
+		\label{tab:MySugr}
+	\end{table}
+	\setlength{\parindent}{0pt}MySugr ist eine mögliche Lösung für das Nutzungsproblem. Mit dem Rechner für BE und Insulineinheiten können Mahlzeiten einfach und zeitsparend dokumentiert werden. In der Pro-Version erleichtert die Übertragung von Blutzuckerwerten von externen Blutzuckermessgeräten den Anwendern das Handling erheblich. Die kostenlose Variante ist nicht mehr als ein Blutzuckertagebuch.  Aufgrund ihres Umfanges ist MySugr ein Maßstab, der während der Entwicklungsphase verfolgt werden kann und man kann aus den Nachteilen Schlussfolgerungen ziehen, um Alleinstellungsmerkmale für das zu entwickelnde System zu identifizieren. 
+	\subsection{DiabetesConnect}
+	DiabetesConnect ist eine weitere Anwendung für die Behandlung von Diabetes. Sie ermöglicht ebenfalls die Dokumentation von Blutzuckerwerten und legt ihren Schwerpunkt auch auf diese Funktion fest. Mahlzeiten werden dabei als BE, KE oder Kohlenhydrate angegeben. BE’s werden nicht automatisch berechnet. Der Anwender muss diese Berechnung und die Bestimmung der zu injizierenden Insulineinheiten selbst durchführen. Eine sportliche Aktivität kann man unter Angabe der Dauer und der Sportart dokumentieren. Es ist zudem möglich, Erinnerungen einzustellen und Statistiken zu Blutzuckerwerten, Mahlzeiten und Insulin anzeigen zu lassen. Die Anwendung ist recht einfach, funktionsarm und dient in erster Linie als Diabetes-Manager. Funktionen zur Steuerung von Ernährung und Sport fehlen. Es gibt keine vollständige Lösung für das Nutzungsproblem. Die Vor- und Nachteile von DiabetesConnect werden in der nachfolgenden Tabelle \ref{tab:DiabetesConnect}: \nameref{tab:DiabetesConnect} aufgelistet.\cite{DC}
+	\begin{table}[H]
+		\setlength{\tabcolsep}{12pt}
+		\centering
+		\begin{tabular}{p{6cm}|p{6cm}}
+			\toprule
+			\textbf{Vorteile} & \textbf{Nachteile}\\
+			\hline
+			Diabetestagebuch & limitierte Eingabe von Mahlzeiten und Sport\\
+			\hline
+			Neben iOS und Android auch eine Webanwendung & keine Lebensmitteldatenbank\\
+			\hline
+			Statistiken zu Blutzuckerwerten, Mahlzeiten und Insulin & keinen HbA1c-Rechner\\
+			\hline
+			& keinen BE-/KE-Rechner\\
+			\bottomrule
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{DiabetesConnect: Nach- und Vorteile}
+		\label{tab:DiabetesConnect}
+	\end{table}
+	\setlength{\parindent}{0pt}DiabetesConnect ist von den Funktionen limitierter als MySugr und dient lediglich zu Dokumentation von Blutzuckerwerten. Anwendungen wie DiabetesConnect sind oft auf dem Markt vertreten. Ohnehin erledigt die Anwendung die notwendigen Aufgaben eines Diabetestagebuchs. Allerdings fehlt es auch hier an Umfang in den Bereichen Ernährung und Sport um eine komplette Lösung des Nutzungsproblems darzustellen.
+	\subsection{Dexcom G6}
+	Die Probanden gaben auch Dexcom G6 an. Das Hauptziel  dieser Anwendung ist die kontinuierliche Blutzuckerüberwachung in Echtzeit. Die Blutmessungen erfolgen nicht durch Bluttropfen, sondern anhand von Gewebeblutmessungen, die  von Sensoren gelesen und übertragen werden. Diese Sensoren lassen sich bis zu 10 Tage lang am Körper tragen. Im Sensor befindet sich ein  Transmitter, samt Speichereinheit, Akku und Bluetooth-Schnittstelle zur Verbindung mit einem Bluetooth-Endgerät, wie einem Smartphone. Die Anwendung läuft auf iOS und Android und zeigt grafisch die erfassten Blutzucker-Daten des Benutzers in einem Diagramm an. Dem Benutzer werden Hypo- und Hyperglykämien  sowie  der  Trend seines Blutzuckerspiegels in den letzten Stunden angezeigt. Darüber hinaus informiert die Anwendung den Anwender proaktiv und rechtzeitig über das Risiko einer Unterzuckerung. Dexcom ermöglicht, seine Daten zu teilen und so den „Followers“ des Benutzers, seine Blutzuckerwerte in den sozialen Netzen mit zu verfolgen. Im Wesentlichen bietet diese App Folgendes:
+	
+	\begin{itemize}
+		\item Dokumentation von Blutzuckerwerten, Insulineinheiten und sportlicher Aktivität
+		\item Berechnungen von Statistiken für die Analyse der Blutzuckerwerte
+		\item Dokumentation von Insulineinheiten, Mahlzeiten und Bewegungen in Form von Ereignissen
+	\end{itemize}
+	Für eine Mahlzeit müssen jeweils ein Ereignis für die Nahrung mit Angabe der verbrauchten Kohlenhydrate und ein Ereignis für die Insulineinheiten mit Angabe der injizierten Insulinmenge erstellt werden. Dieser Prozess ist langwierig und umständlich. Auch eine Aktivität wird durch das Ereignis „Bewegung“ hinzugefügt. Hier ist auszuwählen, ob die sportliche Aktivität  „leicht“, „mittel“ oder „schwer“ ist und die Dauer der Aktivität ist ebenfalls anzugeben. \newline
+	Nachstehend werden die Vor- und Nachteile von Dexcom G6 angezeigt. \cite{D}
+	\begin{table}[H]
+		\setlength{\tabcolsep}{12pt}
+		\centering
+		\begin{tabular}{p{6cm}|p{6cm}}
+			\toprule
+			\textbf{Vorteile} & \textbf{Nachteile}\\
+			\hline
+			kontinuierliche Blutzuckermessung/keine manuelle Blutzuckermessung notwendig & langwierige und limitierte Eingabe von Ereignissen\\
+			\hline
+			Statistiken auf benutzerbezogene Blutzuckerwerte & keine Lebensmitteldatenbank\\
+			\hline
+			Warnung hoher und niedriger Wert & keine Angaben von sportlicher Aktivität in Bezug auf verbrannte Kalorien möglich\\
+			\hline
+			Follower-Funktion & keine umfangreiche Angabe von Mahlzeiten möglich\\
+			\hline
+			 & nicht abstellbarer Alarm bei schlechten Blutzuckerwerten\\
+			 \hline
+			 & keinen HbA1c-Rechner\\
+			 \hline
+			 & keinen BE-/KE-Rechner\\
+			\bottomrule
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{Dexcom: Nach- und Vorteile}
+		\label{tab:Dexcom}
+	\end{table}
+	\setlength{\parindent}{0pt}Dexcom G6 gilt als eines der größeren Systeme auf dem Markt für die Behandlung von Diabetes mellitus und weist mit seiner permanenten Blutzuckermessung, der grafischen Darstellung und der Alarmfunktion einige positive Aspekte auf. Allerdings kann diese App eher für die kontinuierliche Blutzuckermessung verwendet werden, denn ihre Funktionen zur Erfassung und Verwalten von Mahlzeiten und sportlichen Aktivitäten im Umfang sind begrenzt. Deshalb ist dieses System in dieser Entwicklungsphase kein Konkurrent mehr.\newline
+	\subsection{FreeStyle LibreLink}
+	FreeStyle LibreLink ist die dritte und letzte vorgestellte Anwendung, die von den Probanden verwendet wird. Ähnlich wie Dexcom G6 ermöglicht sie eine kontinuierliche Blutzuckerüberwachung in Echtzeit, aber ohne eine permanente Verbindung zwischen Sensor und Endgerät. Die Blutzuckerwerte müssen beim Anlegen an den Sensor mit der Applikation, die sowohl für iOS und Android angeboten wird, noch interaktiv am Smartphone abgerufen werden. Diese App verfügt über einen integrierten HbA1c-Rechner. Bei der Dokumentation der Mahlzeiten können BE’s und KE’s angegeben werden. \newline
+	Im Folgenden werden die Vor- und Nachteile der FreeStyle LibreLink-Anwendung dargelegt. \cite{AD}
+	\begin{table}[H]
+		\setlength{\tabcolsep}{12pt}
+		\centering
+		\begin{tabular}{p{6cm}|p{6cm}}
+			\toprule
+			\textbf{Vorteile} & \textbf{Nachteile}\\
+			\hline
+			kontinuierliche Blutzuckermessung & Blutzuckerwerte sind dennoch manuell abzurufen\\
+			\hline
+			Statistiken auf benutzerbezogene Blutzuckerwerte & keine Lebensmitteldatenbank\\
+			\hline
+			optionale Warnung hoher und niedriger Wert & keine Angaben von sportlicher Aktivität in Bezug auf verbrannte Kalorien möglich\\
+			\hline
+			HbA1c-Rechner & keine umfangreiche Angabe von Mahlzeiten möglich\\
+			\hline
+			 & keinen BE-/KE-Rechner\\
+			\bottomrule
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{FreeStyle LibreLink: Nach- und Vorteile}
+		\label{tab:Libre}
+	\end{table}
+	\setlength{\parindent}{0pt}Die FreeStyle LibreLink-App gilt als wesentlicher Ersatz für die üblichen Blutzuckermessgeräte und ist daher bei Diabetikern zu Recht beliebt. Sie kann jedoch nicht als direkter Konkurrent angesehen werden, weil auch sie „nur“ ein smartes Blutzuckermessgerät ist und ebenfalls nicht auf einer umfassenden Dokumentation von Mahlzeiten und sportlichen Aktivitäten basiert.
+	\subsection{Lifesum}
+	Lifesum ist eine Anwendung für iOS und Android, die sich nicht direkt auf Diabetiker spezialisiert hat. Sie dient als Diät-Planer und Kalorienzähler und stellt unteranderem Diätpläne für einen gewünschten Zeitraum unter Angabe des gewünschten Zielgewichts auf. Sie hilft so dem Benutzer, eine bewusste und ausgewogene Ernährung umzusetzen und das Gewicht zu reduzieren. Darüber hinaus bietet sie eine Funktion zur detaillierten Dokumentation sportlicher Aktivitäten:
+	\begin{itemize}
+		\item Durch die Zählung der vom Benutzer gelieferten Nährwerte ermöglicht Lifesum dem Anwender einen transparenten Überblick über seine Essgewohnheiten, wie es ein Diabetiker in einer Begleitanwendung haben sollte. 
+		\item Durch das Scannen von Barcodes erhält der Benutzer  in kurzer Zeit die Nährwerte wie Kalorien, Kohlenhydrate, Eiweiß und Fett und kann sich seinen täglichen Bedarf anzeigen lassen.
+		\item Nach der Eingabe von Daten über sportliche Aktivitäten werden die verbrannten Kalorien berechnet und vom Kalorienzählerkonto abgezogen.
+	\end{itemize}
+	Auch wenn Ernährungspläne, Rezepte und viele andere Inhalte nur im Premium-Abo abrufbar sind, bietet die Basisversion mit den bereits vorgestellten Funktionen ausreichend Umfang, um Unterstützung bei der Ernährung zu leisten.\newline
+	Die wichtigsten Vor- und Nachteile von Lifesum sind in der folgenden Tabelle aufgeführt\cite{L}:
+	\begin{table}[H]
+		\setlength{\tabcolsep}{12pt}
+		\centering
+		\begin{tabular}{p{6cm}|p{6cm}}
+			\toprule
+			\textbf{Vorteile} & \textbf{Nachteile}\\
+			\hline
+			Hinzufügen von Lebensmitteln durch Barcode-Scan & keine Diabetes-Anwendung\\
+			\hline
+			Kalorienzähler & kostenpflichtige Premium-Version\\
+			\hline
+			Diätplaner & \\
+			\hline
+			Lebensmitteldatenbank mit Nährwerten & \\
+			\hline
+			intuitive und ansprechende Benutzeroberfläche & \\
+			\bottomrule
+		\end{tabular}
+		\captionsetup{justification=centering}
+		\caption{Lifesum: Nach- und Vorteile}
+		\label{tab:Lifesum}
+	\end{table}
+	\setlength{\parindent}{0pt}Lifesum gilt zwar nicht als direkter Konkurrent, ist aber aufgrund der umfangreichen Funktionalität und ihrer Qualität eine große Hilfe bei der Ernährung für alle Menschen und insbesondere für Diabetiker. Sie ist daher in der Marktrecherche gelistet, auch wenn sie keinen Bezug zum Thema Diabetes mellitus hat und mit ihren Funktionen nur für Teile des Nutzungsproblems Lösungen bietet. Ihre Features sollen in der Entwicklungsphase ebenfalls in Betracht gezogen werden.
+
+	\subsection{Fazit}
+	Es gibt einen enorm großen Markt für Anwendungen für Diabetiker, und diese Marktrecherche könnte um einige weitere Systeme erweitert werden. Mit den oben vorgestellten fünf Systemen wurde jedoch, unter Berücksichtigung des zeitlichen Rahmens der Entwicklungsphase, eine möglichst umfassende und aussagekräftige Untersuchung der Systeme durchgeführt, mit denen das Nutzungsproblem gelöst werden könnte. Infolgedessen sind Dexcom G6 und Freestyle LibreLink beide recht erfolgreiche Anwendungen, aber ihr Umfang unterscheidet sich von dem der vorgestellten Arbeit. Beide Systeme werden nur zur Echtzeit-Dokumentation des Blutzuckers verwendet. Die Dokumentationsmöglichkeiten für Ernährung und Sport sind begrenzt und tragen nicht zur Lösung des Nutzungsproblems bei.\\
+	Bei MySugr und DiabtesConnect ist der Mehrwert ein anderer. Beide Systeme dokumentieren neben den Blutzuckerwerten auch die Ernährung und die körperliche Aktivität. Allerdings nur in begrenztem Umfang: Ihr Anwendungsziel ist hier die Erfassung von Blutzuckerwerten unter Berücksichtigung von Ereignissen aus den Bereichen Ernährung und Sport. Es gibt unzählige Anwendungen auf dem Markt mit dem gleichen Anwendungsauftrag wie beispielsweise MeinDiabetes, oder MyTherapy, die ebenfalls bei dieser Studie erforscht wurden, aber aufgrund ihrer Ähnlichkeit mit MySugr und DiabtesConnect nicht näher beschrieben werden können. Alle diese Anwendungen dienen demselben Zweck und unterscheiden sich nur in der Art der Implementierung. Einige enthalten einen BE-Rechner und in anderen können Sportaktivitäten höchstens durch einen kurzen Kommentar dokumentiert werden. Bei der Behandlung von Diabetes sollte jedoch besonderes Augenmerk auf Ernährung und Bewegung gelegt werden, weshalb andere Anwendungsbereiche durchforstet wurden, um Anwendungen zu finden und hier vorzustellen, die nicht unbedingt speziell für Diabetiker entwickelt wurden.\\
+	Insbesondere die Applikation Lifesum zeichnete sich durch eine umfangreiche und sehr hilfreiche Funktion zur Dokumentation von Sport und Ernährung in der Recherche aus. Andere Anwendungen haben andere Funktionen, die in Lifesum fehlen. Beispielsweise könnten sich Lifesum und MySugr sehr gut ergänzen, aber leider ist es noch keinem Entwicklerteam gelungen, eine solche Ernährungs- und Sportdokumentation wie die von Lifesum zusätzlich in ihre Systeme zu implementieren. Stellvertretend für zahlreiche Apps auf dem Markt mit diesen wichtigen Features wurde einzig Lifesum  in dieser Arbeit vorgestellt, denn auch hier unterscheiden sich die Anwendungen lediglich durch die Art der Präsentation von Daten. Zum Beispiel sind Yazio und MyFitnessPal andere Anwendungen, die Lifesum sehr ähnlich sind.\\
+	Sucht man nach Anwendungen für die Benutzerkommunikation in Gruppen, findet man schnell Anwendungen aus dem Bereich der sozialen Medien und man landet häufig in Online-Foren oder Selbsthilfegruppen. Anwendungen wie Jodel, Facebook oder WhatsApp werden verwendet, um Kontakte zu vernetzen, spielen jedoch keine besondere Rolle im Austausch über Diabetes, weshalb die Erforschung dieser Systeme in dieser Recherche nicht erforderlich war.\newline
+	Die hier vorgestellten Anwendungen, wie MySugr oder DiabetesConnect, bieten ebenfalls keine Möglichkeit zur Kommunikation zwischen Benutzern. Eine Kombination von MySugr und Lifesum sowie einer Netzwerk- und Kommunikationsplattform könnte zur gewünschten Anwendung für eine optimale Diabetes-Therapie führen.
