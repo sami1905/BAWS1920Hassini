@@ -35,26 +35,31 @@
 \BOOKMARK [2][]{subsection.56}{6.2 Task Scenario}{section.53}% 35
 \BOOKMARK [2][]{subsection.58}{6.3 Task Organization Model}{section.53}% 36
 \BOOKMARK [2][]{subsection.60}{6.4 Concrete Use Cases \(CUC\)}{section.53}% 37
-\BOOKMARK [1][]{section.73}{7 Reengineered Task Organization Model}{}% 38
-\BOOKMARK [1][]{section.75}{8 Systemarchitektur}{}% 39
-\BOOKMARK [1][]{section*.77}{Literaturverzeichnis}{}% 40
-\BOOKMARK [0][]{part*.78}{Anhang}{}% 41
-\BOOKMARK [1][]{appendix.79}{A Themenfeld/-recherche}{part*.78}% 42
-\BOOKMARK [2][]{subsection.80}{A.1 Diabetes-Arten}{appendix.79}% 43
-\BOOKMARK [2][]{subsection.81}{A.2 Analoge Dokumentation}{appendix.79}% 44
-\BOOKMARK [1][]{appendix.83}{B Evaluation}{part*.78}% 45
-\BOOKMARK [2][]{subsection.84}{B.1 Vorgehensweise}{appendix.83}% 46
-\BOOKMARK [2][]{subsection.85}{B.2 Auswertung}{appendix.83}% 47
-\BOOKMARK [3][]{subsubsection.86}{B.2.1 Kategorie \214Pers\366nliche Daten\215}{subsection.85}% 48
-\BOOKMARK [3][]{subsubsection.87}{B.2.2 Kategorie \214Behandlung\215}{subsection.85}% 49
-\BOOKMARK [3][]{subsubsection.88}{B.2.3 Kategorie \214Lebensstil\215}{subsection.85}% 50
-\BOOKMARK [3][]{subsubsection.89}{B.2.4 Kategorie \214Bewertung\215}{subsection.85}% 51
-\BOOKMARK [2][]{subsection.90}{B.3 Fazit}{appendix.83}% 52
-\BOOKMARK [1][]{appendix.91}{C Methodischer Rahmen}{part*.78}% 53
-\BOOKMARK [2][]{subsection.92}{C.1 Nutzungskontex}{appendix.91}% 54
-\BOOKMARK [2][]{subsection.93}{C.2 Ans\344tze des usage-centered-design}{appendix.91}% 55
-\BOOKMARK [2][]{subsection.94}{C.3 Ans\344tze des user-centered-design}{appendix.91}% 56
-\BOOKMARK [3][]{subsubsection.95}{C.3.1 Usability-engineering nach Rosson und Carrol}{subsection.94}% 57
-\BOOKMARK [3][]{subsubsection.96}{C.3.2 Discount usability-engineering nach Nielsen}{subsection.94}% 58
-\BOOKMARK [3][]{subsubsection.97}{C.3.3 Usability engineering lifecycle nach Mayhew}{subsection.94}% 59
-\BOOKMARK [1][]{section*.98}{Erkl\344rung}{part*.78}% 60
+\BOOKMARK [1][]{section.73}{7 Design}{}% 38
+\BOOKMARK [2][]{subsection.74}{7.1 Reengineered Task Organization Model}{section.73}% 39
+\BOOKMARK [2][]{subsection.76}{7.2 Conceptual Model \(CM\) Design}{section.73}% 40
+\BOOKMARK [2][]{subsection.83}{7.3 Screen Design Standards \(SDS\)}{section.73}% 41
+\BOOKMARK [2][]{subsection.86}{7.4 Style Guide}{section.73}% 42
+\BOOKMARK [1][]{section.87}{8 Systemdokumentation}{}% 43
+\BOOKMARK [2][]{subsection.88}{8.1 Systemarchitektur}{section.87}% 44
+\BOOKMARK [1][]{section*.90}{Literaturverzeichnis}{}% 45
+\BOOKMARK [0][]{part*.91}{Anhang}{}% 46
+\BOOKMARK [1][]{appendix.92}{A Themenfeld/-recherche}{part*.91}% 47
+\BOOKMARK [2][]{subsection.93}{A.1 Diabetes-Arten}{appendix.92}% 48
+\BOOKMARK [2][]{subsection.94}{A.2 Analoge Dokumentation}{appendix.92}% 49
+\BOOKMARK [1][]{appendix.96}{B Evaluation}{part*.91}% 50
+\BOOKMARK [2][]{subsection.97}{B.1 Vorgehensweise}{appendix.96}% 51
+\BOOKMARK [2][]{subsection.98}{B.2 Auswertung}{appendix.96}% 52
+\BOOKMARK [3][]{subsubsection.99}{B.2.1 Kategorie \214Pers\366nliche Daten\215}{subsection.98}% 53
+\BOOKMARK [3][]{subsubsection.100}{B.2.2 Kategorie \214Behandlung\215}{subsection.98}% 54
+\BOOKMARK [3][]{subsubsection.101}{B.2.3 Kategorie \214Lebensstil\215}{subsection.98}% 55
+\BOOKMARK [3][]{subsubsection.102}{B.2.4 Kategorie \214Bewertung\215}{subsection.98}% 56
+\BOOKMARK [2][]{subsection.103}{B.3 Fazit}{appendix.96}% 57
+\BOOKMARK [1][]{appendix.104}{C Methodischer Rahmen}{part*.91}% 58
+\BOOKMARK [2][]{subsection.105}{C.1 Nutzungskontex}{appendix.104}% 59
+\BOOKMARK [2][]{subsection.106}{C.2 Ans\344tze des usage-centered-design}{appendix.104}% 60
+\BOOKMARK [2][]{subsection.107}{C.3 Ans\344tze des user-centered-design}{appendix.104}% 61
+\BOOKMARK [3][]{subsubsection.108}{C.3.1 Usability-engineering nach Rosson und Carrol}{subsection.107}% 62
+\BOOKMARK [3][]{subsubsection.109}{C.3.2 Discount usability-engineering nach Nielsen}{subsection.107}% 63
+\BOOKMARK [3][]{subsubsection.110}{C.3.3 Usability engineering lifecycle nach Mayhew}{subsection.107}% 64
+\BOOKMARK [1][]{section*.111}{Erkl\344rung}{part*.91}% 65

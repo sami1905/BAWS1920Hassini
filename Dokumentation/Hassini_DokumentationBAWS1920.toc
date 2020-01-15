@@ -48,26 +48,31 @@
 \contentsline {paragraph}{CUC 04 - Mahlzeit anlegen}{44}{section*.67}
 \contentsline {paragraph}{CUC 05 - Aktivit\IeC {\"a}t anlegen}{45}{section*.69}
 \contentsline {paragraph}{CUC 06 - Beitrag teilen}{45}{section*.71}
-\contentsline {section}{\numberline {7}Reengineered Task Organization Model}{46}{section.73}
-\contentsline {section}{\numberline {8}Systemarchitektur}{47}{section.75}
-\contentsline {section}{Literaturverzeichnis}{48}{section*.77}
-\contentsline {part}{Anhang}{50}{part*.78}
-\contentsline {section}{\numberline {A}Themenfeld/-recherche}{51}{appendix.79}
-\contentsline {subsection}{\numberline {A.1}Diabetes-Arten}{51}{subsection.80}
-\contentsline {subsection}{\numberline {A.2}Analoge Dokumentation}{52}{subsection.81}
-\contentsline {section}{\numberline {B}Evaluation}{54}{appendix.83}
-\contentsline {subsection}{\numberline {B.1}Vorgehensweise}{54}{subsection.84}
-\contentsline {subsection}{\numberline {B.2}Auswertung}{55}{subsection.85}
-\contentsline {subsubsection}{\numberline {B.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{55}{subsubsection.86}
-\contentsline {subsubsection}{\numberline {B.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{55}{subsubsection.87}
-\contentsline {subsubsection}{\numberline {B.2.3}Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{56}{subsubsection.88}
-\contentsline {subsubsection}{\numberline {B.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{57}{subsubsection.89}
-\contentsline {subsection}{\numberline {B.3}Fazit}{57}{subsection.90}
-\contentsline {section}{\numberline {C}Methodischer Rahmen}{59}{appendix.91}
-\contentsline {subsection}{\numberline {C.1}Nutzungskontex}{59}{subsection.92}
-\contentsline {subsection}{\numberline {C.2}Ans\IeC {\"a}tze des usage-centered-design}{59}{subsection.93}
-\contentsline {subsection}{\numberline {C.3}Ans\IeC {\"a}tze des user-centered-design}{59}{subsection.94}
-\contentsline {subsubsection}{\numberline {C.3.1}Usability-engineering nach Rosson und Carrol}{60}{subsubsection.95}
-\contentsline {subsubsection}{\numberline {C.3.2}Discount usability-engineering nach Nielsen}{60}{subsubsection.96}
-\contentsline {subsubsection}{\numberline {C.3.3}Usability engineering lifecycle nach Mayhew}{60}{subsubsection.97}
-\contentsline {section}{Erkl\IeC {\"a}rung}{62}{section*.98}
+\contentsline {section}{\numberline {7}Design}{46}{section.73}
+\contentsline {subsection}{\numberline {7.1}Reengineered Task Organization Model}{46}{subsection.74}
+\contentsline {subsection}{\numberline {7.2}Conceptual Model (CM) Design}{46}{subsection.76}
+\contentsline {subsection}{\numberline {7.3}Screen Design Standards (SDS)}{51}{subsection.83}
+\contentsline {subsection}{\numberline {7.4}Style Guide}{52}{subsection.86}
+\contentsline {section}{\numberline {8}Systemdokumentation}{53}{section.87}
+\contentsline {subsection}{\numberline {8.1}Systemarchitektur}{53}{subsection.88}
+\contentsline {section}{Literaturverzeichnis}{54}{section*.90}
+\contentsline {part}{Anhang}{56}{part*.91}
+\contentsline {section}{\numberline {A}Themenfeld/-recherche}{57}{appendix.92}
+\contentsline {subsection}{\numberline {A.1}Diabetes-Arten}{57}{subsection.93}
+\contentsline {subsection}{\numberline {A.2}Analoge Dokumentation}{58}{subsection.94}
+\contentsline {section}{\numberline {B}Evaluation}{60}{appendix.96}
+\contentsline {subsection}{\numberline {B.1}Vorgehensweise}{60}{subsection.97}
+\contentsline {subsection}{\numberline {B.2}Auswertung}{61}{subsection.98}
+\contentsline {subsubsection}{\numberline {B.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{61}{subsubsection.99}
+\contentsline {subsubsection}{\numberline {B.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{61}{subsubsection.100}
+\contentsline {subsubsection}{\numberline {B.2.3}Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{62}{subsubsection.101}
+\contentsline {subsubsection}{\numberline {B.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{63}{subsubsection.102}
+\contentsline {subsection}{\numberline {B.3}Fazit}{63}{subsection.103}
+\contentsline {section}{\numberline {C}Methodischer Rahmen}{65}{appendix.104}
+\contentsline {subsection}{\numberline {C.1}Nutzungskontex}{65}{subsection.105}
+\contentsline {subsection}{\numberline {C.2}Ans\IeC {\"a}tze des usage-centered-design}{65}{subsection.106}
+\contentsline {subsection}{\numberline {C.3}Ans\IeC {\"a}tze des user-centered-design}{65}{subsection.107}
+\contentsline {subsubsection}{\numberline {C.3.1}Usability-engineering nach Rosson und Carrol}{66}{subsubsection.108}
+\contentsline {subsubsection}{\numberline {C.3.2}Discount usability-engineering nach Nielsen}{66}{subsubsection.109}
+\contentsline {subsubsection}{\numberline {C.3.3}Usability engineering lifecycle nach Mayhew}{66}{subsubsection.110}
+\contentsline {section}{Erkl\IeC {\"a}rung}{68}{section*.111}
