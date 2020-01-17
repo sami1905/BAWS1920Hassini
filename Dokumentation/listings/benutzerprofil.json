@@ -1,0 +1,49 @@
+{
+    "id": Integer,
+    "firstname": String,
+    "name": String,
+    "birthday": String,
+    "height": Integer,
+    "weight": Number,
+    "gender": String,
+    "nickname": String,
+    "email": String,
+    "password": String,
+    "dmType": String,
+    "insulin": String,
+    "tablets": String,
+    "unitBZ": String,
+    "unitKH": String,
+    "lowLimit": Number,
+    "upperLimit": Number,
+    "lowSugar": Number,
+    "upperSugar": Number,
+    "correctionFactor": Number,
+    "beFactor": Number,
+    "diary" : [{
+        "id" : Integer,
+        "date" : String,
+        "events" : [{
+            "id" : Integer,
+            "time" : String,
+            "sugar" : Number,
+            "meals" : [{
+                "id" : Integer,
+                "description" : String,
+                "kcal" : Integer,
+                "e" : Integer,
+                "kh" : Integer,
+                "f" : Integer
+            }],
+            "BE/KE" : Number,
+            "ie" : Number,
+            "sport" : [{
+                "id" : Integer,
+                "description" : String,
+                "duration" : Number,
+                "kcal" : Integer
+            }]
+        }]
+    
+    }]
+}

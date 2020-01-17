@@ -1,0 +1,16 @@
+{
+    "id": Integer,
+    "userID": Integer,
+    "userNickname": String,
+    "text": String,
+    "date": String,
+    "time": String,
+    "comments": [{
+        "id": Integer,
+        "userID": Integer,
+        "userNickname": String,
+        "text": String,
+        "date": String,
+        "time": String
+    }]
+}

@@ -1,0 +1,12 @@
+{
+    "id": Integer,
+    "name": String,
+    "category": String,
+    "amount": Integer,
+    "kcal": Integer,
+    "kj": Integer,
+    "e": Integer,
+    "kh": Integer,
+    "f": Integer,
+    "unit": String
+}

@@ -34,6 +34,32 @@ citecolor = black] {hyperref}
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{siunitx}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{RGB}{210,210,210}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
 
 
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
@@ -84,14 +110,6 @@ citecolor = black] {hyperref}
 	\pagestyle{fancy}
 	\newpage
 	
-	\section*{Kurzfassung/Abstract}\markboth{Kurzfassung/Abstract}{Kurzfassung/Abstract}\addcontentsline{toc}{section}{Kurzfassung/Abstract}
-	%Eine Kurzfassung (wenn verlangt) in Deutsch und/oder in Englisch (Abstract) umfasst auf etwa 1/2 bis 1 Seite die Darstellung der Problemstellung, der angewandten Methode(n) und des wichtigsten Ergebnisses.\\
-	%Ein Abstract ist eine Kurzfassung der Arbeit, die - je nach Vorgabe - auf 1-3 Seiten deren wichtigste Inhalte enthält. 
-	%Das Abstract ist streng genimmen kein Teil des inhaltlichen, sondern des formalen Aufbaus, weil keine neuen Inhalte oder gar Erkenntnisse präsentiert werden, 
-	%sondern eine Kurzfassung von Einleitung, Hauptteil und Schluss. Das Abstract ist von der inhaltlichen Zusammenfassung im Schlusskapitel streng zu unterscheiden und wird erst nach dem Fertigstellen der Abschlussarbeit geschrieben. 
-	%Anders als die Zusammenfassung folgt das Abstact als normierte Kurzfassung einer eigenen, meist vorgegebenen Logik im Textaufbau.
-	\newpage
-	
 	\tableofcontents
 	\newpage
 	
@@ -129,118 +147,19 @@ citecolor = black] {hyperref}
 	\newpage
 	
 	\section{Systemdokumentation}
-	\input{Systemarchitektur}
+	\input{Systemdokumentation}
 	\newpage
 	
-	
-	
+	\input{Fazit}
 	\newpage
 	
-	\begin{thebibliography}{1}\markboth{Literaturverzeichnis}{Literaturverzeichnis}\addcontentsline{toc}{section}{Literaturverzeichnis}
-		
-		\bibitem{AD}
-		Abbott Diabetes Care Inc.:
-		Produkte zur Grukosemessung - Willkommen in der FreesStyle Familie, letzter Aufruf: 02.12.19 von:
-		https://freestyle.de/produkte/	
-		
-		\bibitem{CL}
-		Constantine, Larry L.; Lochwood, Lucy A.D.: 
-		Software for Use, 
-		Reading, Massachusetts: Addison Wesley,
-		1999.
-		
-		\bibitem{DDG}
-		Deutsche Diabetes Gesellschaft (DDG); diabetesDE - Deutsche Diabetes-Hilfe:
-		Deutscher Gesundheitsbericht, Diabetes 2019 - Die Bestandsaufnahme, 
-		Mainz: Verlag Kirchheim + Co. GmbH,
-		2019.
-		
-		\bibitem{D}
-		Dexcom:
-		Das neue Dexcom G6® - Real-Time-CGM-System (rtCGM). Entdecken Sie die Vorteile des Dexcom G6., letzter Aufruf: 01.12.19, von: https://www.dexcom.com/de-DE/de-dexcom-g6-cgm-system
-		
-		\bibitem{DC}
-		DiabetesConnect:
-		Deine Dokumentation - Einfach und schnell, letzter Aufruf: 01.12.19, von: http://www.diabetesconnect.de
-		
-		\bibitem{DiRECT}
-		Diabetes Remission Clinical Trial (DiRECT):
-		Two-year results of the randomised Diabetes Remission Clinical Trial (DiRECT), veröffentlicht am 07.02.2019, \newline
-		letzter Aufruf: 30.11.2019, von: https://www.directclinicaltrial.org.uk/Pubfiles/Final\newline\%20accepted\%20draft,\%20prior\%20to\%20editing\%20and\%20corrections.pdf
-		
-		\bibitem{DED}
-		Die Ernährungs-Docs | NDR:
-		Typ-2-Diabetes: Wie man vom Insulin wieder wegkommt, \newline
-		https://www.youtube.com/watch?v=CTR7KQog5kU\newline
-		2017
-		
-		\bibitem{HG}
-		Prof. Dr. Hartmann, Gerhard: 
-		Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 
-		2016.
-		
-		\bibitem{IDF}
-		International Diabetes Federation (IDF): 
-		IDF Diabetes Atlas, Eighth Edition 2017.
-		
-		\bibitem{JR}
-		Jäckle, Renate: 
-		Gut leben mit Typ-1-Diabetes, 7. Auflage
-		München: Elsevier GmbH,
-		2010.
-		
-		\bibitem{JS}
-		Journal Stuttgart - Regio TV: 
-		Leben mit Diabetes | 15.08.2018, \newline
-		https://www.youtube.com/watch?v=EqZEZyEz7sM \newline
-		2018.
-		
-		\bibitem{KM}
-		Karmasin, Matthias; Ribing, Rainer: 
-		Die Gestaltung wissenschaftlicher Arbeit, 9. Auflage,
-		Wien: facultas,
-		2017.
-		
-		\bibitem{L}
-		Lifesum: Gesund leben. Leicht gemacht., letzter Aufruf: 02.12.19, von: \newline https://lifesum.com/de/
-		
-		
-		\bibitem{MD}
-		Mayhew, Deborah J.: 
-		The Usability Engineering Lifecycle - a pracititoner handbook for user interface design,
-		San Francisco, California: Morgan Kaufmann,
-		1999.
-		
-		\bibitem{MS}
-		MySugr:
-		mySugr Diabetes App - dein digitales Tagebuch, letzter Aufruf: 30.11.2019, von:	
-		https://mysugr.com/de-de/diabetes-app
-		
-		\bibitem{ND}
-		Nestlé Deutschland AG: 
-		Kalorien mundgerecht, 13. Auflage, Frankfurt/Main: Umschau,
-		2006.
-		
-		\bibitem{RP}
-		Rechenberg, Peter: 
-		Technisches Schreiben - (nicht nur) für Informatiker, 2. Auflage,
-		München Wien: Carl Hansen Verlag,
-		2003.
-		
-		\bibitem{SG}
-		Schmeisl, Gerhard-W: 
-		Schulungsbuch für Diabetiker, 6. Auflage, 
-		München: Elsevier GmbH,
-		2009.
-		
-		\bibitem{TA}
-		Tanenbaum, Andrew; van Steen, Marten: 
-		Verteilte Systeme - Grundlagen und Paradigmen,
-		München: Pearson Studium
-		2003.
-		
-	\end{thebibliography}
+	\input{literaturverzeichnis}
 	\newpage
+	
+	\appendix
+	\section*{Glossar}\markboth{Glossar}{Glossar}\addcontentsline{toc}{section}{Glossar}
+	\newpage
+	
 	\appendix
 	\vspace*{\fill}
 	\part*{Anhang}\markboth{Anhang}{Anhang}\addcontentsline{toc}{part}{Anhang}
@@ -251,7 +170,8 @@ citecolor = black] {hyperref}
 	\renewcommand\thefigure{\Alph{section}\arabic{figure}}
 	\vfill
 	\newpage
-	
+	\input{Zielhierarchie}
+	\newpage
 	
 	
 	\section{Themenfeld/-recherche}
@@ -327,30 +247,6 @@ citecolor = black] {hyperref}
 	69 Probanden und somit mehr als 87\% aller Befragten, hatten schon einmal Fragen bezüglich ihrem Diabetes und 85\% aller Probanden gaben an, schon einmal nach Antworten im Netz gesucht zu haben. Rund 88\% hatten sich schon einmal ein Erfahrungsaustausch mit einem anderen Diabetiker gewünscht.
 	\subsection{Fazit}
 	Abschließend ist zu sagen, dass einige neue Erkenntnisse aus der Auswertung der Bögen erlangt wurde. Neben der Bestätigung der Problematik bei der Ernährung und der inbegriffenen Berechnung der Insulineinheiten, sowie den Komplikationen beim Sport, wurden vorherige Gedankengänge gestärkt. Als neue Erkenntnis ist die fehlende Kommunikationsmöglichkeit zu betrachten. Diese wurde im vorherigen Verlauf des Projektes nicht mit einbezogen. Neben den neuen Erkenntnissen, gab es auch wenige Fragen, die zwar neue Informationen bereitstellten, allerdings keine Auswirkung auf das weitere Vorgehen haben. Beispielsweise die Frage „2.9 Spüren Sie eine Unterzuckerung oder Überzuckerung ohne eine Messung durchzuführen?“ ergab sich nicht als nützlich für die nächsten Entwicklungsphasen. Zusammengefasst, kann man jedoch sagen, dass die Umfrage Auswirkungen auf die nächsten Schritte in der Entwicklung und somit auch Auswirkungen auf das endgültige System haben wird, da sowohl die Marktrecherche erneut durchgeführt und der Nutzungskontext für die Weiterentwicklung neu definiert werden kann.
-	\newpage
-	\section{Methodischer Rahmen}
-	\label{section:Rahmen}
-	Der methodische Rahmen dient zur Festlegung der zu verwendenden Modelle aus der Mensch-Computer-Interaktion und enthält die Begründung dieser Festlegung. Zunächst wird der Nutzungskontext des zu entwickelnden Systems betrachte und sich folglich anhand des Nutzungskontext für ein Vorgehensmodell entschieden. Abschließend werden für einzelne Aktivitäten des Vorgehensmodells, für das sich entschieden wurde, angemessene Methoden gewählt und diese Wahl begründet.
-	\subsection{Nutzungskontex}
-	Das zu entwickelnde System soll zur Verwaltung der Blutzuckerwerte eines Diabetikers dienen. Anhand der Domänenrecherche und dessen Stakeholder ist die Zielgruppe des Systems klar erkenntlich. Benutzer des Systems sind sämtliche Diabetiker und Einzelpersonen in dessen Umfeld. Das System soll für eine Steigerung der Lebensqualität des Benutzers und auch Einzelpersonen in dessen Umfeld unter Einfluss der Diabetes des Benutzers sorgen. Um dies zu erreichen, muss das System folgende Kriterien aufweisen:
-	\begin{itemize}
-		\item Der Hauptfokus des Systems liegt bei dem Benutzer, dessen Aufgaben, Ziele und Eigenschaften.
-		\item Das System sollte gebrauchstauglich und zweckdienlich für den Benutzer sein und für eine Verbesserung dessen User Experience sorgen.
-		\item Konzentration liegt auf dem Benutzer, dessen Erfordernisse und Anforderungen.
-		\item Verbesserung des menschlichen Wohlbefindens und eine Zufriedenstellung des Benutzers bewirken.
-		\item Positive Auswirkung auf die Gesundheit des Benutzers.
-	\end{itemize}
-	\subsection{Ansätze des usage-centered-design}
-	Das Usage-centered-design ist ein Vorgehensmodell, welches den Fokus auf die Funktionalität und den Verwendungszweck eines Systems legt und bei dem die Durchführung der Aufgaben des Benutzers im Zentrum stellt. Da aus der Beschreibung des Nutzungskontextes zu entnehmen ist, dass das zu entwickelnde System den Schwerpunkt auf den Benutzer, dessen Aufgaben, Ziele und Eigenschaften legt, ist die Verwendung des Usage-centered-design ausgeschlossen. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
-	\subsection{Ansätze des user-centered-design}
-	Bei dem user-centered-design stimmen die Kriterien des Nutzungskontextes und die Ansätze der Modellart überein, wodurch bei Verwendung eines benutzer-zentriertem Vorgehensmodell eine erfolgreiche Umsetzung des Systems wahrscheinlicher. Folglich werden verschiedene user-centered-designs abgewogen und sich abschließend für die Verwendung eines dieser Modelle entschieden. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
-	\subsubsection{Usability-engineering nach Rosson und Carrol}
-	Das usabulity-engineering-Modell nach Rosson und Carrol ist ein scenario-basiertes Modell und dient zum Verstehen, Beschreiben und Modellieren des menschlichen Handels. Es stellt die Gebrauchstauglichkeit eines Systems in den Vordergrund und eignet sich somit für die Entwicklung dieses Projektes. Allerdings ist das scenario-basierte Vorgehensmodell mit user-centered-design-Ansätzen aufwendig und bringt eine gewisse Tiefe in den einzelnen Schritten, da jede Prozessstufe von scenario-basierten Aktivitäten abhängt, mit sich. Da die zeitliche Kapazität dieses Projektes begrenzt und das zu entwickelnde System in einem kurzen Zeitraum zu entwickeln ist, eignen sich dieses Vorgehensmodell im voller Verwendung nicht für dieses Projekt. Eine Verwendung des Modells in einzelnen Entwicklungsaktivitäten ist jedoch möglich und eine Teilverwendung des usability-engineering-Modells sollte in den Entwicklungsphasen abgewägt werden. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
-	\subsubsection{Discount usability-engineering nach Nielsen}
-	Auch das discount usability-engineering-Modell von Nielsen zählt zu den Vorgehensmodellen des user-centered-design und legt wie auch Rosson und Carrol die Gebrauchstauglichkeit eines Systems in den Vordergrund. Dabei wird schon früh im Entwicklungsprozess der Benutzer in den Mittelpunkt gesetzt. Da, durch den wenigen Aufwand und der fehlenden Tiefe der einzelnen Prozessstufen des Modells, die Gefahr besteht, nicht die maximale Gebrauchstauglichkeit eines Systems zu erhalten, fällt dieses Modell für das zu entwickelnde System weg. Denn die höchst mögliche Gebrauchstauglichkeit ist notwendig, um die Verwendung des Systems für den Benutzer so einfach wie möglich gestalten zu können. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}
-	\subsubsection{Usability engineering lifecycle nach Mayhew}
-	Das usability engineering lifecycle von Mayhews beruht vollständig auf die User-centered-design-Prinzipien- und -methoden und stellt die Gebrauchstauglichkeit eines Systems anhand objekt-orientierter Entwicklungsprozesse her. Das Modell ist iterativ und durch die drei fundamentalen Prozess-Bestanteile wird eine gut strukturierte Entwicklung ermöglicht. Da der Zeitrahmen dieses Projektes begrenzt ist, stellt die Skalierbarkeit des Modells neben der benutzer-zentrierten Methoden die Gründe für die Verwendung dieses Vorgehensmodells in diesem Projekt. Trotz der geringen Zeitkapazität weist Mayhews Modell einen hohen Detailgrad in den einzelnen Entwicklungsphasen auf und sorgen auch bei einer Anpassung des Modells eine hohe Kontrolle über die Entwicklungsphase. \emph{[Prof. Dr. Hartmann, Gerhard: Vorlesungsbegleitende Materialien zum Modul Mensch-Computer Interaktion, 2016.]}\\
-	Abschließend ist zu sagen, dass das Modell nach Mayhews als Hauptvorgehensmodell des Projektes dienen und durch die Ergänzung der scenario-basierten-Ansätzen nach Rosson und Carroll eine hohe Wahrscheinlichkeit auf Gebrauchstauglichkeit des Systems ermöglicht. Mit diesem Modell werden eine erfolgreiche Umsetzung des Projektes und eine Verringerung des Risikos, dass das System von Benutzern nicht verwendet wird erhofft.
 	\newpage
 	\appendix
 	\section*{Erklärung}\markboth{Erklärung}{Erklärung}\addcontentsline{toc}{section}{Erklärung}
