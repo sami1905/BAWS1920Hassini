@@ -1,18 +1,18 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.15)  17 JAN 2020 21:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.4.15)  18 JAN 2020 00:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**statistics.tex
+**kalorienbedarf.tex
 
 ! Emergency stop.
-<*> statistics.tex
-                  
+<*> kalorienbedarf.tex
+                      
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
  3 strings out of 492649
- 105 string characters out of 6129622
+ 109 string characters out of 6129622
  56311 words of memory out of 5000000
  3988 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000

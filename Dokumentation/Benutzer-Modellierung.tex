@@ -1,7 +1,7 @@
 \section{Benutzermodellierung}
-	Der Usability Engineering Lifecycle nach Mayhew hilft, die Benutzerfreundlichkeit eines Systems (Usability) und das entsprechende Design der Benutzeroberflächen (User Interfaces) zu erreichen. Nach Mayhew wird diese Benutzerfreundlichkeit daran gemessen, wie einfach eine Benutzeroberfläche verwendet und erlernt werden kann. Die Benutzermodellierung ist Teil der „Requirements Analysis“, eine von drei fundamentalen Prozess-Phasen im Usability Engineering Lifecycle und dient zur Anforderungsanalyse. \cite{MD}
+	Der Usability Engineering Lifecycle nach Mayhew hilft, die Benutzerfreundlichkeit eines Systems (Usability) und das entsprechende Design der Benutzeroberflächen (User Interfaces) zu optimieren. Nach Mayhew wird diese Benutzerfreundlichkeit daran gemessen, wie einfach eine Benutzeroberfläche verwendet und erlernt werden kann. Die Benutzermodellierung ist Teil der \glqq Requirements Analysis\grqq{}, eine von drei fundamentalen Prozess-Phasen im Usability Engineering Lifecycle und dient zur Anforderungsanalyse. \cite{MD}
 	\subsection{Stakeholder-Analysis}
-	Um für das zu entwickelnde System eine strukturierte Analyse von Usability-Anforderungen durchführen zu können, muss zunächst die Zielgruppe der Anwerdung bestimmt werden. Zwar lässt sich diese bereits in den früheren Entwicklungsphasen und auch während der erneuten Themenfeldanalyse gut definieren, allerding sind diese Benutzergruppen und ihr Bezug zur Domäne und zum System und  seinen Merkmalen in dieser Phase noch zu überarbeiten und anhand  der Erwartungen und Erfordernisse spezifischer zu definieren.  Mit Hilfe der Stakeholder-Analyse (Tabelle  \ref{tab:Stakeholder}: \nameref{tab:Stakeholder}) werden die Benutzer anhand ihrer Erwartungen und Anforderungen in Kategorien eingeteilt und diese konsequent auf Konflikte hin analysiert.
+	Um für das zu entwickelnde System eine strukturierte Analyse von Usability-Anforderungen durchführen zu können, muss zunächst die Zielgruppe der Anwendung bestimmt werden. Zwar lässt sich diese bereits in den früheren Entwicklungsphasen und auch während der erneuten Themenfeldanalyse gut definieren, allerding sind diese Benutzergruppen und ihr Bezug zur Domäne und zum System und seinen Merkmalen in dieser Phase noch zu überarbeiten und anhand der Erwartungen und Erfordernisse spezifischer zu definieren. Mit Hilfe der Stakeholder-Analyse (Tabelle \ref{tab:Stakeholder}: \glqq \nameref{tab:Stakeholder}\grqq{}) werden die Benutzer anhand ihrer Erwartungen und Anforderungen in Kategorien eingeteilt und diese konsequent auf Konflikte hin analysiert.
 	\begin{center}
 		\begin{longtable}[H]{|p{3cm}|p{2cm}|p{4cm}|p{4.5cm}|}
 			\hline
@@ -13,7 +13,7 @@
 			\cline{3-4}
 			& & Merkmal: Funktionen zum Tausch von Erfahrungen & um einen Erfahrungsaustausch zwischen Diabetikern zu ermöglichen, sind Erfahrungen von verscheidenen Benutzern essentiell\\
 			\cline{2-4}
-			& Anspruch & Merkmal: Funktionen zur Dokumentation von Diabetes, Ernährung und Aktivität & ausführliche Dokumenation muss gewährleistet sein\\
+			& Anspruch & Merkmal: Funktionen zur Dokumentation von Diabetes, Ernährung und Aktivität & ausführliche Dokumentation muss gewährleistet sein\\
 			\cline{3-4}
 			& & Merkmal: Funktion zur Kontaktaufnahme zu anderen Diabetikern & sozialer Kontakt zu anderen Diabetikern muss gewährleistet sein\\
 			\cline{3-4}
@@ -41,7 +41,7 @@
 			\cline{2-4}
 			& Anteil & Merkmal: Datensicherung & vom Arzt festgelegte Faktoren können individuell eingespeichert werden\\
 			\cline{2-4}
-			& Anspruch &  Merkmal: Zugriff auf Blutzuckerdaten eines ausgewählten Diabetikers & die persönlichen Blutzuckerwerte eines Diabetikers sollten einzusehen sein\\
+			& Anspruch & Merkmal: Zugriff auf Blutzuckerdaten eines ausgewählten Diabetikers & die persönlichen Blutzuckerwerte eines Diabetikers sollten einzusehen sein\\
 			\cline{3-4}
 			& & Merkmal: user interface & Benutzung selbsterklärend, einfach zu lernen, zu merken\\
 			\cline{2-4}
@@ -57,7 +57,7 @@
 			\cline{2-4}
 			& Interesse & System & Patienten bevorzugen Krankenkassen mit einer großteiligen Übernahme der Kosten des Systems\\
 			\hline
-			Pharmaindustie & Anrecht & - & -\\
+			Pharmaindustrie & Anrecht & - & -\\
 			\cline{2-4}
 			& Anteil & - & -\\
 			\cline{2-4}
@@ -86,8 +86,8 @@
 			\label{tab:Stakeholder}
 		\end{longtable}
 	\end{center}
-	\setlength{\parindent}{0pt}Mit Hilfe der Tabelle \ref{tab:Stakeholder}: \nameref{tab:Stakeholder} können Diabetiker und Personen aus ihrem Umfeld wie Eltern oder Lebenspartner eindeutig als Zielgruppe des zu entwickelnden Systems identifiziert werden. Die Tabelle zeigt jedoch nicht, dass es zwei verschiedene Arten von Diabetikern gibt (Typ-1- und Typ-2-Diabetiker). Obwohl die beiden Benutzerkategorien dieselben Anforderungen haben, muss eine Unterscheidung nach der Wichtigkeit der Anforderungen getroffen und an das System gestellt werden: Bei Typ-1-Diabetes ist aufgrund der Notwendigkeit einer Insulintherapie die Dokumentation von diabetesrelevanten Daten wie Blutzuckerspiegel, Insulin und Broteinheiten unerlässlich, während bei den Typ-2-Diabetikern Insulinmangel nicht immer die Ursache für eine Erkrankung ist. Vielmehr sind hier eine gesunde Ernährung und regelmäßige Bewegung entscheidend für die Regression dieser Art von Diabetes und die Aufzeichnung und Dokumentation von Mahlzeiten und sportlichen Aktivitäten hat daher einen höheren Stellenwert als die Dokumentation von Insulineinheiten. Aus diesem Grund müssen die verschiedenen Benutzerkategorien bei der Weiterentwicklung berücksichtigt werden.\\
-	Neben den Stakeholdern mit ihren positiven Erwartungen an das System oder seine Funktionen gibt es weitere Stakeholder, die möglicherweise in Konflikt mit dem System stehen. Die Pharmaindustrie und Apotheken erzielen Umsatz durch den Verkauf von Medikamenten. Da das zu entwickelnde System den Blutzuckerspiegel konstant regulieren und die Rückbildung des Typ-2-Diabetes bewirken sollte,  hätte die Pharmaindustrie kein großes Interesse an der Entwicklung eines solchen Systems.  Eine Möglichkeit, diesen Interessenkonflikt zu lösen, könnte darin bestehen, Apotheken als Verkaufs- oder Marketingfläche zu nutzen. Die Apotheken könnten durch Werbung und Zusammenarbeit Gewinne ebenfalls erzielen, und die Pharmaindustrie könnte als Kooperationspartner für das Entwicklungsteam fungieren. Wettbewerberunternehmen haben logischerweise auch kein Interesse an der Entwicklung des Systems, da sie den Verkauf ihrer eigenen Produkte den Produkten anderer Unternehmen vorziehen. Auch hier wäre eine Kooperation eine Option zur Konfliktlösung und zur Erweckung von Interessen. Technologien wie Sensoren oder Geräte von Wettbewerbern zu Erfassung von Blutzuckerwerten könnten  über Programmierschnittstellen in Systeme von Drittanbietern mit Gewinnbeteiligung integriert werden. Dies erleichtert die Erfassung von Blutzuckerdaten und macht die Herstellung zusätzlicher Messgeräte überflüssig. Der Wettbewerb generiert auch zusätzliche Gewinne durch die Entwicklung des Systems und die Bereitstellung eigener Schnittstellen.	
+	\setlength{\parindent}{0pt}Mit Hilfe der Tabelle \ref{tab:Stakeholder}: \glqq \nameref{tab:Stakeholder}\grqq{} können Diabetiker und Personen aus ihrem Umfeld wie Eltern oder Lebenspartner eindeutig als Zielgruppe des zu entwickelnden Systems identifiziert werden. Die Tabelle zeigt jedoch nicht, dass es zwei verschiedene Arten von Diabetikern gibt (Typ-1- und Typ-2-Diabetiker). Obwohl die beiden Benutzerkategorien dieselben Anforderungen haben, muss eine Unterscheidung nach der Wichtigkeit der Anforderungen getroffen und an das System gestellt werden: Bei Typ-1-Diabetes ist aufgrund der Notwendigkeit einer Insulintherapie die Dokumentation von diabetesrelevanten Daten wie Blutzuckerspiegel, Insulin und Broteinheiten unerlässlich, während bei den Typ-2-Diabetikern Insulinmangel nicht immer die Ursache für eine Erkrankung ist. Vielmehr sind hier eine gesunde Ernährung und regelmäßige Bewegung entscheidend für die Regression dieser Art von Diabetes und die Aufzeichnung und Dokumentation von Mahlzeiten und sportlichen Aktivitäten hat daher einen höheren Stellenwert als die Dokumentation von Insulineinheiten. Aus diesem Grund müssen die verschiedenen Benutzerkategorien bei der Weiterentwicklung berücksichtigt werden.\\
+	Neben den Stakeholdern mit ihren positiven Erwartungen an das System oder seine Funktionen gibt es weitere Stakeholder, die möglicherweise in Konflikt mit dem System stehen. Die Pharmaindustrie und Apotheken erzielen Umsatz durch den Verkauf von Medikamenten. Da das zu entwickelnde System den Blutzuckerspiegel konstant regulieren und die Rückbildung des Typ-2-Diabetes bewirken sollte, hätte die Pharmaindustrie kein großes Interesse an der Entwicklung eines solchen Systems. Eine Möglichkeit, diesen Interessenkonflikt zu lösen, könnte darin bestehen, Apotheken als Verkaufs- oder Marketingfläche zu nutzen. Die Apotheken könnten durch Werbung und Zusammenarbeit Gewinne ebenfalls erzielen, und die Pharmaindustrie könnte als Kooperationspartner für das Entwicklungsteam fungieren. Wettbewerberunternehmen haben logischerweise auch kein Interesse an der Entwicklung des Systems, da sie den Verkauf ihrer eigenen Produkte den Produkten anderer Unternehmen vorziehen. Auch hier wäre eine Kooperation eine Option zur Konfliktlösung und zur Erweckung von Interessen. Technologien wie Sensoren oder Geräte von Wettbewerbern zu Erfassung von Blutzuckerwerten könnten über Programmierschnittstellen in Systeme von Drittanbietern mit Gewinnbeteiligung integriert werden. Dies erleichtert die Erfassung von Blutzuckerdaten und macht die Herstellung zusätzlicher Messgeräte überflüssig. Der Wettbewerb generiert auch zusätzliche Gewinne durch die Entwicklung des Systems und die Bereitstellung eigener Schnittstellen.	
 	\subsection{User-Profiles}
 	Um im weiteren Entwicklungsverlauf die Anforderungen der verschiedenen Benutzerkategorien an das System zu erhalten, werden im Folgenden User Profiles für die definierten Kategorien Typ-1-Diabetiker (Tabelle \ref{tab:User-Profile-1}) und Typ-2-Diabetiker (Tabelle \ref{tab:User-Profile-2}) erstellt. Beim Anlegen dieser User Profiles können Benutzereigenschaften und -merkmale auch aus der bereits durchgeführten Befragung von Probanden aus den beiden Benutzerkategorien (s. Anhang: A \nameref{section:Evaluation} ab Seite \pageref{section:Evaluation}) definiert werden. Diese Merkmale sind wie folgt zu ordnen:
 	\begin{itemize}
@@ -96,7 +96,7 @@
 		\item Wissen und Erfahrungen
 		\item Aufgabenmerkmale
 	\end{itemize}
-	Alternativ können Diabetiker Gruppen auch in „Kinder und Jugendliche mit Diabetes“ und „Erwachsene mit Diabetes“ eingeteilt werden. Ergebnisse der bisherigen Recherche zeigen jedoch, dass eine Aufschlüsselung nach Diabetes-Typen eine höhere Priorität hat als die nach Altersgruppen. 
+	Alternativ können Diabetiker Gruppen auch in \glqq Kinder und Jugendliche mit Diabetes\grqq{} und \glqq Erwachsene mit Diabetes\grqq{} eingeteilt werden. Ergebnisse der bisherigen Recherche zeigen jedoch, dass eine Aufschlüsselung nach Diabetes-Typen eine höhere Priorität hat als die nach Altersgruppen. 
 	\subsubsection{Typ-1-Diabetiker}
 	\begin{center}
 		\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
@@ -116,7 +116,7 @@
 			Gesundheitszustand & \tabitem Diabetes mellitus Typ 1\\
 			& \tabitem Folgeerkrankungen\\
 			& \tabitem körperliche Behinderung\\[.3\normalbaselineskip]
-			Sozio-ökonomischer Status &  \tabitem Schüler/-in\\
+			Sozio-ökonomischer Status & \tabitem Schüler/-in\\
 			& \tabitem Studierende-/r \\ 
 			& \tabitem Auszubildende-/r\\
 			& \tabitem Angestellte-/r\\
@@ -132,7 +132,7 @@
 			& \tabitem Insulinpumpe\\[.3\normalbaselineskip]
 			Behandlungsziele & \tabitem regulierte Blutzuckerwerte\\
 			& \tabitem Vermeidung der Folgeerkrankungen\\
-			& 	\tabitem hoche Lebensqualität\\[.3\normalbaselineskip]
+			& 	\tabitem hohe Lebensqualität\\[.3\normalbaselineskip]
 			Lebensziele & \tabitem Schul-/Studium-/Ausbildungsabsch-lüsse\\
 			& \tabitem Steigung des Wohlbefindens und der Lebensqualität\\
 			& \tabitem Weiterbildung\\
@@ -146,11 +146,11 @@
 			& \tabitem Abnahme der BE-Berechnung\\
 			& \tabitem Abnahme der Insulinberechnung\\
 			& \tabitem zeitsparende Anwendungen\\
-			& \tabitem Darstellung der Blutzuckerwerte in verständlicher Formen (Graphen oder Tabelle)\\
+			& \tabitem Darstellung der Blutzuckerwerte in verständlicher Formen (Gafen oder Tabelle)\\
 			& \tabitem Risiko der Folgeerkrankungen reduzieren\\
 			& \tabitem Stressreduzierung\\[0.3\normalbaselineskip]
 			\midrule
-			3. Wissen und Erfahrungen  & \\[.5\normalbaselineskip]
+			3. Wissen und Erfahrungen & \\[.5\normalbaselineskip]
 			Erfahrung im Anwendungsgebiet & ausreichend bis sehr gut, durch Schulungen und Eigenbehandlung des Diabetes seit Erkrankung\\[.3\normalbaselineskip]
 			Technische Unterstützung bei Therapie & \tabitem Blutzuckermessgerät\\
 			& \tabitem Insulinpumpe \\[0.3\normalbaselineskip]
@@ -163,13 +163,13 @@
 			Verfügbare relevante Technologien & \tabitem Smartphones\\
 			& \tabitem Smartwatches\\
 			& \tabitem Tablets\\[0.3\normalbaselineskip]
-			
 			\bottomrule
 			\captionsetup{justification=centering}
 			\caption{User Profile: Typ-1-Diabetiker}
 			\label{tab:User-Profile-1}
 		\end{longtable}
 	\end{center}
+\newpage
 	\subsubsection{Typ-2-Diabetiker}
 	\begin{center}
 		\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
@@ -191,7 +191,7 @@
 			& \tabitem körperliche Behinderung\\
 			& \tabitem Fettleibigkeit\\
 			& \tabitem schlechter Ernährungsstil\\[.3\normalbaselineskip]
-			Sozio-ökonomischer Status &  \tabitem Schüler/-in\\
+			Sozio-ökonomischer Status & \tabitem Schüler/-in\\
 			& \tabitem Studierende-/r \\ 
 			& \tabitem Auszubildende-/r\\
 			& \tabitem Angestellte-/r\\
@@ -210,7 +210,7 @@
 			& \tabitem ausgewogene Ernährung\\
 			& \tabitem regulierte Blutzuckerwerte\\
 			& \tabitem Vermeidung der Folgeerkrankungen\\
-			& 	\tabitem hoche Lebensqualität\\[.3\normalbaselineskip]
+			& 	\tabitem hohe Lebensqualität\\[.3\normalbaselineskip]
 			Lebensziele & \tabitem Schul-/Studium-/Ausbildungsabsch-lüsse\\
 			& \tabitem Steigung des Wohlbefindens und der Lebensqualität\\
 			& \tabitem Weiterbildung\\
@@ -227,7 +227,7 @@
 			& \tabitem Risiko der Folgeerkrankungen reduzieren\\
 			& \tabitem Stressreduzierung\\[0.3\normalbaselineskip]
 			\midrule
-			3. Wissen und Erfahrungen  & \\[.5\normalbaselineskip]
+			3. Wissen und Erfahrungen & \\[.5\normalbaselineskip]
 			Erfahrung im Anwendungsgebiet & keine bis sehr gut, durch ärztliche Unterstützung und Eigenbehandlung des Diabetes seit Erkrankung\\[.3\normalbaselineskip]
 			Technische Unterstützung bei Therapie & \tabitem Blutzuckermessgerät\\[0.3\normalbaselineskip]
 			\midrule
@@ -244,12 +244,12 @@
 			\label{tab:User-Profile-2}
 		\end{longtable}
 	\end{center}
-	Es empfiehlt sich, in der Benutzermodellierung auf der Grundlage des Benutzerprofils sogenannte Personas zu entwerfen, um reale Personen in einer fiktiven Darstellung in die Modellierung einzubeziehen. Zwar ist dies im Usability Engineering Lifecycle nicht vorgegeben und optional, allerdings bieten Personas eine Grundlage für die spätere Aufgabenmodellierung. Es wird folglich jeweils ein Persona zum User Profil der Typ-1 und der Typ-2-Diabetiker angefertigt. Die erste Persona wird in Anlehnung der Dokumentation von Journal Stuttgart - RegioTV „Leben mit Diabetes“ vom 15.08.2018 und die zweite in Anlehung der Dokumentation von NDR Ratgeber „Typ-2-Diabetes: Wie man vom Insulin wieder wegkommt | Die Ernährungs-Docs | NDR“ verfasst. 
+	Es empfiehlt sich, in der Benutzermodellierung auf der Grundlage des Benutzerprofils sogenannte Personas zu entwerfen, um reale Personen in einer fiktiven Darstellung in die Modellierung einzubeziehen. Obwohl dies im Usability Engineering Lifecycle nicht vorgegeben und daher optional ist, bieten Personas eine Grundlage für die spätere Modellierung von Aufgaben. Aus diesem Grund wird für jedes User Profile der Typ-1- und der Typ-2-Diabetiker jeweils eine Persona angefertigt. Die erste Persona basiert auf der Dokumentation von Journal Stuttgart - RegioTV \glqq Leben mit Diabetes\grqq{} vom 15.08.2018 \cite{JS} und die zweite auf der Dokumentation von NDR Ratgeber \glqq Typ-2-Diabetes: Wie man vom Insulin wieder wegkommt | Die Ernährungs-Docs | NDR\grqq{} \cite{DED} verfasst.
 	\subsection{Personas}
 	\textbf{Persona - Typ-1-Diabetiker}
+	\addtocounter{table}{-1}
 	\begin{center}
 		\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
-			\addtocounter{table}{-1}
 			\texttt{Name: }& \texttt{Lucie}\\
 			\texttt{Alter: }& \texttt{6 Jahre}\\
 			\texttt{Geschlecht: }&\texttt{weiblich}\\
@@ -257,107 +257,109 @@
 			\texttt{Gesundheitszustand:} & \texttt{Diabete-mellitus-Typ-1}\\
 			\texttt{Sozio-ökonomischer Status: }& \texttt{Schülerin}\\
 			\texttt{Behandlungsart:} & \texttt{Insulinpumpe}\\
-			&  \texttt{stündliche Blutzuckermessung}\\
-			&  \texttt{analoges Tagebuch}\\
-			\texttt{Behandlungsziel:} &  \texttt{Diabetes kontrollieren}\\
-			&  \texttt{ein normales Leben}\\
-			\texttt{Erfahrungen: }&  \texttt{seit 3 Jahren an Diabetes erkrankt}\\
-			&  \texttt{Erfahrung der Eltern und Betreuer durch Schulungen in Krankenhäuser}\\
+			& \texttt{stündliche Blutzuckermessung}\\
+			& \texttt{analoges Tagebuch}\\
+			\texttt{Behandlungsziel:} & \texttt{Diabetes kontrollieren}\\
+			& \texttt{ein normales Leben}\\
+			\texttt{Erfahrungen: }& \texttt{seit 3 Jahren an Diabetes erkrankt}\\
+			& \texttt{Erfahrung der Eltern und Betreuer durch Schulungen in Krankenhäuser}\\
 			\texttt{Technische Unterstützung:} & \texttt{FreeStyle-Libre Blutzuckermessgerät}\\
-			&  \texttt{Insulinpumpe}\\
+			& \texttt{Insulinpumpe}\\
 		\end{longtable}
 	\end{center}
-	\texttt{Lucie ist 6 Jahre alt und seit 3 Jahren an Diabetes mellitus Typ 1 \newline
-		erkrankt. Gleich am Morgen wird Lucie mit ihrer Krankheit konfrontiert, \newline 
-		denn ein Leben wie ein gesundes Kind wird sie nicht mehr leben können. \newline
-		Noch vor dem Frühstück misst sie gemeinsam mit ihrer Mutter ihren \newline
-		Blutzuckerspiegel. Fast alle  Aufgaben in ihrer Diabetesbehandlung macht \newline 
-		sie gemeinsam mit ihren Eltern. Ihre Mutter musste nach der Erkrankung \newline
-		von Lucie ihre Arbeit kündigen, um jederzeit abrufbereit zu sein.}\newline
-		 \texttt{Lucie schnappt sich ihr Blutzuckermessgerät und legt es auf ihren\newline
-		 	 FreeStyle Libre-Sensor am Oberarm. Ihr Blutzuckerspiegel ist in einem \newline 
-		 	 gesunden Bereich. Als es an den Frühstückstisch geht, muss Lucies Mutter \newline
-		 	 sie an das Spritzen des Insulins für die Mahlzeit erinnern. Gemeinsam \newline
-		 	 schnappen sie sich die  Wage, wiegen die Scheibe Vollkornbrot \newline
-		 	 und den Apfel und ermitteln anhand der Kohlenhydrate die Broteinheiten\newline
-		 	  und Insulineinheit, die Lucie spritzen muss. Sie zückt ihre \newline
-		 	 Insulinpumpe und trägt die Insulineinheiten ein, die ihre Mutter \newline
-		 	 ihr vorgerechnet hat. Aber auch nach dem Spritzen des Insulins muss \newline 
-		 	 sich Lucie noch einige Minuten gedulden. Denn wenn sie direkt essen \newline
-		 	 würde, würde sie den nötigen Spritz-Ess-Abstand von 10 Minuten nicht \newline
-		 	 einhalten und  die Kohlenhydrate des Essens würden schneller wirken \newline
-		 	 als das Insulin. }\newline
-		\texttt{Nachdem Lucie ihr Frühstück verspeist und ihre Schulsachen \newline
-			zusammengepackt hat, fährt Lucies Mutter sie in die Schule. \newline
-			Lucie besucht eine ganz besondere Schule. Sie besucht die Waldschule \newline
-			in Stuttgart. Die Waldschule ist die erste Schule, die Schulklassen aus \newline
-			Schülern mit Diabetes gebildet hat. Neben diesen Klassen gehen auch \newline
-			gesunde Schüler zur Waldschule. Lucies Eltern sind froh, dass es diese \newline
-			 Schule gibt, auch wenn sie monatlich 160\euro für diese zahlen  müssen. \newline
-			 Bereits bei der Suche eines Kitaplatzes hatten Lucies Eltern große \newline
-			 Probleme und erhielten auf Nachfrage einige Absagen. An der Waldschule \newline
-			 werden die Schüler von geschulten Lehrer unterrichtet und von \newline
-			 Diabetesassistenten und Krankenschwestern betreut, die Fachwissen\newline
-			  besitzen und immer mit nötiger Sicherheit in Situation handeln können. \newline
-			  Dennoch ist Lucie auch während der Schulzeit und ihrer Freizeit \newline
-			  dazu verpflichtet, den Diabetes zu kontrollieren. Zur Sicherheit trägt sie \newline
-			  immer eine kleine Tasche mit Süßigkeiten, Blutzuckermessgerät\newline
-			   und Notfallspritzen bei sich mit. Blutzuckermessungen  führt sie \newline
-			   stündlich durch. Während den großen Pausen und dem Sportunterricht besteht \newline
-			   wegen der Bewegung die Gefahr eines niedrigen Blutzuckerspiegels. Hierzu \newline
-			   misst Lucie sogar alle 20-30 Minuten ihren Blutzucker und isyt vor dem Sport \newline
-			   eine Banane oder Traubenzucker. Wenn sie während der Schulzeit ihren \newline
-			   Blutzuckerspiegel misst, trägt sie diesen und auch ihre Mahlzeiten in ihr \newline
-			   analoges Tagebuch ein, damit ihre Eltern nach der Schule diese kontrollieren können.\newline
-			    Lucie kann ihre Erkrankung und ihre Blutzuckerwerte schon sehr gut \newline
-			    einschätzen, allerding wünscht sie sich sehr oft, einfach ein normales \newline
-			    Leben leben zu können. }\\
-		    
-		    
-		    \textbf{Persona - Typ-2-Diabetiker}
-		    \begin{center}
-		    	\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
-		    		\addtocounter{table}{-1}
-		    		\texttt{Name: }& \texttt{Bernd Pache}\\
-		    		\texttt{Alter: }& \texttt{53 Jahre}\\
-		    		\texttt{Geschlecht: }&\texttt{männlich}\\
-		    		\texttt{Wohnort:} & \texttt{Hamburg}\\
-		    		\texttt{Gesundheitszustand:} & \texttt{Diabete-mellitus-Typ-2}\\
-		    		\texttt{Sozio-ökonomischer Status: }& \texttt{Schulleiter}\\
-		    		\texttt{Behandlungsart:} & \texttt{Insulinspritze}\\
-		    		&  \texttt{Tabletten}\\
-		    		\texttt{Behandlungsziel:} &  \texttt{Insolinlose Behandlung}\\
-		    		&  \texttt{Körpergewicht reduzieren}\\
-		    		\texttt{Erfahrungen: }&  \texttt{seit 8 Jahren an Diabetes erkrankt}\\
-		    		&  \texttt{Schulungen zur Ernährung}\\
-		    	\end{longtable}
-		    \end{center}
-		    \texttt{Bernd Pache ist 53 Jahre alt und leidet seit 8 Jahren an Diabetes mellitus \newline
-		    	Typ 2. Da seine Muskelzellen inzwischen eine sehr geringe Insulin-\newline
-		    	empfindlichkeit aufweisen und das vom Körper produzierte \newline
-		    	Insulin nicht ausreicht, muss der Schulleiter aus Hamburg neben der \newline
-		    	Einnahme von Tabletten auch täglich Insulin spritzen. Dieses Insulin \newline
-		    	reduziert zwar den Blutzuckerspiegel, sorgt allerdings auch für ein \newline
-		    	höheres Risiko dauerhaft das Körpergewicht zuzunehmen. Senkt das \newline
-		    	Insulin den Blutzuckerspiegel zu sehr und Bernd unterzuckert, \newline
-		    	bekommt er Hunger und muss etwas essen. Isst Bernd dann mehr\newline
-		    	als für die Unterzuckerung notwendig war, muss er erneut Insulin spritzen.\newline
-		    	Ein Teufelskreis. Nach 4 Jahren Insulinbehandlung und 20 kg \newline
-		    	Gewichtszunahme möchte Bernd sein Lebensstil ändern und so \newline
-		    	schnell wie möglich das Spritzen von Insulin absetzten. Um dies umsetzten\newline
-		    	zu können, gilt es sich ausgewogen zu Ernähren und regelmäßig Sport zu \newline
-		    	treiben. Gefährliche Kombinationen aus Kohlenhydrate und Fett darf Bernd \newline
-		    	nicht mehr zu sich nehmen. Stattdessen stehen viel Eiweiß, viel Gemüse \newline
-		    	und keine Süßigkeiten auf den Speiseplan. Seine Kohlenhydrate-, \newline
-		    	Eiweiß- und Fettaufnahme muss Bernd ebenfalls im Auge behalten. \newline
-		    	Nach 6 Monaten bewusster Ernährung, aus überwiegend Obst und Gemüse,\newline
-		    	und regelmäßigem Sport sind bereits erstaunliche Erfolge zu sehen. \newline
-		    	Bernd hat insgesamt 21 kg Körpergewicht	verloren und konnte das \newline
-		    	Insulinspritzen bereits nach 2 Monaten einstellen. Auch seine \newline
-		    	Blutzuckerwerte haben sich verbessert. Sein HbA1c-Wert ist \newline
-		    	von 8\% auf 6,8\% gesunken. Führt Bernd auch weiterhin den Lebensstil \newline
-		    	wie in den vergangenen 6 Monaten, ist das Halbieren oder sogar \newline
-		    	Absetzen der Tablettendosis das neue Ziel.}
+	\texttt{Lucie ist 6 Jahre alt und seit 3 Jahren an Diabetes mellitus Typ 1 erkrankt.\newline
+		Gleich am Morgen wird Lucie mit ihrer Krankheit konfrontiert, denn ein Leben \newline
+		eines gesunden Kindes wird sie nicht mehr leben können. Noch vor dem \newline
+		Frühstück misst sie gemeinsam mit ihrer Mutter ihren Blutzuckerspiegel. \newline
+		Fast alle Aufgaben bei ihrer Diabetesbehandlung erledigt sie gemeinsam \newline
+		mit ihren Eltern. Ihre Mutter musste nach der Erkrankung von Lucie ihre \newline
+		Arbeit kündigen, um für sie jederzeit verfügbar zu sein.\newline
+		Lucie hält ihr Blutzuckermessgerät gegen ihren FreeStyle Libre-Sensor \newline
+		am Oberarm: Ihr Blutzuckerwert ist in einem gesunden Bereich. \newline
+		Als es an den Frühstückstisch geht, muss ihre Mutter sie daran \newline
+		erinnern, Insulin für die Mahlzeit zu injizieren. Mit Hilfe einer \newline
+		Digitalwaage wiegen sie die Scheibe Vollkornbrot und den \newline
+		Apfel und ermitteln anhand der darin enthaltenen Kohlenhydrate \newline
+		die Broteinheiten und die Insulineinheit, die Lucie injizieren muss. \newline
+		Sie zieht ihre Insulinpumpe heraus und trägt die Insulineinheiten ein,\newline
+		die ihre Mutter ihr vorgerechnet hat. \newline
+		Aber auch nach dem Spritzen des Insulins muss sich Lucie noch \newline
+		einige Minuten gedulden. Denn wenn sie direkt essen würde, \newline
+		würde sie den nötigen Spritz-Ess-Abstand von 10 Minuten nicht\newline
+		einhalten und die Kohlenhydrate des Essens würden schneller \newline
+		wirken als das Insulin.\newline
+		Nachdem Lucie ihr Frühstück verspeist und ihre Schulsachen \newline
+		zusammengepackt hat, fährt Lucies Mutter sie in die Schule.\newline
+		Lucie besucht eine ganz besondere Schule, die Waldschule in \newline
+		Stuttgart. Sie ist die erste Schule, in der Schulklassen ausschließlich \newline
+		aus Schülern mit Diabetes bestehen. Neben diesen Klassen gehen \newline
+		ebenfalls gesunde Schüler zur Waldschule. Lucies Eltern sind froh, \newline
+		dass es diese Schule gibt, auch wenn sie monatlich 160\euro{} dafür bezahlen \newline
+		müssen. Bereits bei der Suche nach einem Kitaplatz für Lucie hatten \newline
+		sie große Probleme und erhielten einige Absagen. An der Waldschule \newline
+		werden die Schüler von geschulten Lehrern unterrichtet und von Diabetes-\newline
+		Assistenten und Krankenschwestern betreut, die das Fachwissen besitzen \newline
+		und in der Lage sind, jederzeit mit der nötigen Sicherheit in der \newline
+		jeweilgen Situation handeln können.\newline
+		Dennoch ist Lucie auch während der Schulzeit und ihrer Freizeit dazu \newline
+		verpflichtet, den Diabetes zu kontrollieren. Zur Sicherheit trägt sie \newline
+		immer eine kleine Tasche mit Süßigkeiten, Blutzuckermessgerät und \newline
+		Notspritzen mit sich. Blutzuckermessungen führt sie stündlich durch.\newline
+		In den großen Pausen und im Sportunterricht besteht wegen der \newline
+		Bewegung die Gefahr eines niedrigen Blutzuckerspiegels. Deswegen \newline
+		misst Lucie sogar alle 20-30 Minuten ihren Blutzucker und isst vor dem \newline
+		Sport eine Banane oder Traubenzucker. Wenn sie während der \newline
+		Schulzeit ihren Blutzuckerwert misst, trägt sie diesen und auch ihre\newline
+		Mahlzeiten in ihr analoges Tagebuch ein, damit ihre Eltern nach der \newline
+		Schule dies nachkontrollieren können.\newline
+		Lucie kann ihre Erkrankung und ihre Blutzuckerwerte schon sehr gut \newline
+		einschätzen, dennoch wünscht sie sich sehr oft, einfach ein normales\newline
+		Leben führen zu können.}\\
+	\newpage
+ \textbf{Persona - Typ-2-Diabetiker}
+ \addtocounter{table}{-1}
+    \begin{center}
+    	\begin{longtable}[H]{p{6.6cm}p{6.6cm}}
+    		\texttt{Name: }& \texttt{Bernd Pache}\\
+    		\texttt{Alter: }& \texttt{53 Jahre}\\
+    		\texttt{Geschlecht: }&\texttt{männlich}\\
+    		\texttt{Wohnort:} & \texttt{Hamburg}\\
+    		\texttt{Gesundheitszustand:} & \texttt{Diabete-mellitus-Typ-2}\\
+    		\texttt{Sozio-ökonomischer Status: }& \texttt{Schulleiter}\\
+    		\texttt{Behandlungsart:} & \texttt{Insulinspritze}\\
+    		& \texttt{Tabletten}\\
+    		\texttt{Behandlungsziel:} & \texttt{Insulinfreie Behandlung}\\
+    		& \texttt{Körpergewicht reduzieren}\\
+    		\texttt{Erfahrungen: }& \texttt{seit 8 Jahren an Diabetes erkrankt}\\
+	   		& \texttt{Schulungen zur Ernährung}\\
+	    	\end{longtable}
+	    \end{center}
+	    \texttt{Bernd Pache ist 53 Jahre alt und leidet seit 8 Jahren an Diabetes \newline
+	mellitus Typ-2. Da seine Muskelzellen inzwischen eine sehr geringe \newline
+	Empfindlichkeit gegenüber Insulin haben und das vom Körper produzierte \newline
+	Insulin nicht mehr ausreicht, muss der Schulleiter aus Hamburg neben \newline
+	der Einnahme von Tabletten auch täglich Insulin spritzen. Dieses Insulin \newline
+	reduziert zwar den Blutzuckerspiegel, sorgt allerdings auch für ein \newline
+	höheres Risiko, dauerhaft an Körpergewicht zuzunehmen. Senkt das \newline
+	Insulin den Blutzuckerspiegel zu sehr und Bernd unterzuckert, \newline
+	bekommt er Hunger und muss etwas essen. Isst Bernd dann mehr \newline
+	als für die Unterzuckerung notwendig war, muss er erneut Insulin \newline
+	injizieren: Ein Teufelskreis. Nach 4 jähriger Insulinbehandlung und \newline
+	20 kg Gewichtszunahme möchte Bernd sein Lebensstil ändern und \newline
+	so schnell wie möglich das Spritzen von Insulin absetzen. Dafür gilt es, \newline
+	sich ausgewogen zu Ernähren und regelmäßig Sport zu treiben. \newline
+	Gefährliche Kombinationen aus Kohlenhydrate und Fett darf Bernd \newline
+	nicht mehr zu sich nehmen. Stattdessen stehen viel Eiweiß, viel Gemüse \newline
+	und keine Süßigkeiten auf den Speiseplan. Seine Kohlenhydrate-, \newline
+	Eiweiß- und Fettaufnahme muss Bernd ebenfalls im Auge behalten.\newline
+	Nach 6 Monaten bewusster Ernährung, aus überwiegend Obst und \newline
+	Gemüse, und regelmäßigem Sport sind bereits erstaunliche Erfolge \newline
+	zu verzeichnen: Bernd hat insgesamt 21 kg Körpergewicht verloren \newline
+	und konnte die Insulininjektion bereits nach 2 Monaten einstellen. \newline
+	Seine Blutzuckerwerte haben sich auch verbessert. Sein HbA1c-Wert \newline
+	ist von 8\% auf 6,8\% gesunken. Wenn Bernd den Lebensstil der letzten \newline
+	6 Monate fortsetzt, ist es das neue Ziel, die Tablettendosis zu halbieren \newline
+	oder sogar abzusetzen.}
 	
 	\subsection{Anforderungen}
 	Um anhand der User Profiles und der Personas eine kontextbezogene Aufgabenanalyse (Contextual Task Analysis) erstellen und die Nutzung des Systems modellieren zu können, müssen zunächst einige Funktionen des zukünftigen Systems identifiziert werden. Dazu müssen mit Hilfe der Stakeholder-Analysis und der User Profiles Systemanforderungen erstellt werden.
@@ -366,34 +368,34 @@
 	\paragraph{Für alle Diabetiker}\mbox{}
 	\begin{itemize}
 		\item\textbf{\lbrack F10\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, ein individuelles Benutzerkonto anzulegen.
-		\item\textbf{\lbrack F20\rbrack}  Das System muss dem Benutzer die Möglichkeit bieten, die individuellen Daten seines Benutzerkontos zu bearbeiten.
+		\item\textbf{\lbrack F20\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, seine persönlichen Datem im Benutzerprofil zu bearbeiten.
 		\item\textbf{\lbrack F30\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, sein angelegtes Benutzerkonto wieder zu löschen.
-		\item\textbf{\lbrack F40\rbrack}	Das System kann dem Benutzer die Möglichkeit bieten, Blutzuckerwerte die von externen Blutzuckermessgeräten erfasst wurden per API in das System zu übernehmen.
-		\item\textbf{\lbrack F50\rbrack}	Das System muss dem Benutzer die Möglichkeit bieten, unterschiedliche Ereignisse (Blutzuckerwert, Mahlzeit und sportliche Aktivität) manuell in das Tagebuch einzutragen.
-		\item\textbf{\lbrack F50\rbrack} Das System soll dem Benutzer die Ereignisse und Blutzuckerwerte in Form von Tagebucheinträgen und anhand eines Graphen repräsentieren.
-		\item\textbf{\lbrack F70\rbrack} Falls ein Ereignis bereits vorhanden ist, soll das System dem Benutzer die Möglichkeit bieten, diesen zu ändern oder um weitere Daten zu erweitern zu können.
+		\item\textbf{\lbrack F40\rbrack} Das System kann dem Benutzer die Möglichkeit bieten, Blutzuckerwerte die von externen Blutzuckermessgeräten erfasst wurden per API in das System zu übernehmen.
+		\item\textbf{\lbrack F50\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, unterschiedliche Ereignisse (Blutzuckerwert, Mahlzeit und sportliche Aktivität) manuell in das Tagebuch einzutragen.
+		\item\textbf{\lbrack F60\rbrack} Das System soll dem Benutzer die Ereignisse und Blutzuckerwerte in Form von Tagebucheinträgen und anhand eines Grafen präsentieren.
+		\item\textbf{\lbrack F70\rbrack} Falls ein Ereignis bereits vorhanden ist, soll das System dem Benutzer die Möglichkeit bieten, diesen zu ändern oder mit anderenDaten zu erweitern zu können.
 		\item\textbf{\lbrack F80\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, auf eine Lebensmittel-Datenbank zugreifen zu können.
-		\item\textbf{\lbrack F90\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, erfasste Aktivitäten durch andere Anwendungen einzupflegen.
+		\item\textbf{\lbrack F90\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, erfasste Aktivitäten in andere Anwendungen einzupflegen.
 		\item\textbf{\lbrack F100\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, Aktivitäten hinzuzufügen.
-		\item\textbf{\lbrack F110\rbrack} Das System soll dem Benutzer den Kalorienbedarf, bestehend aus Grundumsatz und Leistungsumsatz, repräsentieren.
-		\item\textbf{\lbrack F120\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, Kontakt zu anderen Benutzern in einer Kommunikationsplattform herzustellen.
+		\item\textbf{\lbrack F110\rbrack} Das System soll dem Benutzer den Kalorienbedarf, bestehend aus Grundumsatz und Leistungsumsatz, anzeigen.
+		\item\textbf{\lbrack F120\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, in Kontakt zu anderen Benutzern in einer Kommunikationsplattform zu treten.
 		\item\textbf{\lbrack F130\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, Beiträge hinzuzufügen, zu entfernen und zu bearbeiten.
-		\item\textbf{\lbrack F140\rbrack} Das System soll dem Benutzer Beiträge andere Benutzer repräsentieren.
+		\item\textbf{\lbrack F140\rbrack} Das System soll dem Benutzer Beiträge anderer Benutzer anzeigen.
 		\item\textbf{\lbrack F150\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, Beiträge anderer Benutzer zu kommentieren.
-		\item\textbf{\lbrack F160\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, Beiträge andere Benutzer zu bewerten.
-		\item\textbf{\lbrack F170\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, durch Aktivität in der Kommunikationsplattform Erolgspunkte zu sammeln.
+		\item\textbf{\lbrack F160\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, Beiträge anderer Benutzer zu bewerten.
+		\item\textbf{\lbrack F170\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, für die Beteiligung an der Kommunikationsplattform Erfolgspunkte zu sammeln.
 		\item\textbf{\lbrack F180\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, verschiedene Benutzeroberflächen und Funktionen für verschiedene Benutzergruppen zu benutzen.
-		\item\textbf{\lbrack F190\rbrack} Das System soll den Benutzer die Möglichkeit bieten, seine Tagebuch-Einträge in Form einer Tabelle als PDF-Datei zu exportieren und an einer beliebigen E-Mail-Adresse zu senden.
-		\item\textbf{\lbrack F200\rbrack} Falls ein zweiter Benutzer um Erlaubnis des Einblicks in die Blutzuckerwerte eines Benutzers gefragt hat, muss das System dem Benutzer die Möglichkeit bieten, die Erlaubnis zu erteilen oder abzulehnen.
+		\item\textbf{\lbrack F190\rbrack} Das System soll dem Benutzer die Möglichkeit bieten, seine Tagebuch-Einträge in Form einer Tabelle als PDF-Datei zu exportieren und an eine beliebige E-Mail-Adresse zu senden.
+		\item\textbf{\lbrack F200\rbrack} Wenn ein zweiter Benutzer um Erlaubnis gebeten hat, den Blutzuckerspiegel eines anderen Benutzers anzuzeigen, muss das System dem Benutzer die Möglichkeit bieten, die Erlaubnis zu erteilen oder abzulehnen.
 	\end{itemize}
 	\paragraph{Für Typ-1-Diabetiker}\mbox{}
 	\begin{itemize}
 		\item\textbf{\lbrack F210\rbrack} Falls der Benutzer eine Mahlzeit als Ereignis hinzufügt, muss das System dem Benutzer die Möglichkeit bieten, die BE's und Insulineinheiten anhand der Kohlenhydrate der Mahlzeit und der Benutzerdaten zu berechnen.
 		\item\textbf{\lbrack F220\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, individuellen Insulin- und Korrekturfaktoren anzulegen.
-		\item\textbf{\lbrack F230\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen anzulegen.
-		\item\textbf{\lbrack F240\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen zu bearbeiten.
-		\item\textbf{\lbrack F250\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen zu entfernen.
-		\item\textbf{\lbrack F260\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinzunahmen einzusehen.
+		\item\textbf{\lbrack F230\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinaufnahmen einzustellen.
+		\item\textbf{\lbrack F240\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinaufnahmen zu bearbeiten.
+		\item\textbf{\lbrack F250\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinaufnahmen zu entfernen.
+		\item\textbf{\lbrack F260\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, feste Insulinaufnahmen anzuzeigen.
 	\end{itemize}
 	\paragraph{Für Typ-2-Diabetiker}\mbox{}
 	\begin{itemize}
@@ -403,12 +405,12 @@
 	\paragraph{Für Personen im Umfeld (Eltern, Lebenspartner-/in, ...)}\mbox{}
 	\begin{itemize}
 		\item\textbf{\lbrack F10\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, ein individuelles Benutzerkonto anzulegen.
-		\item\textbf{\lbrack F20\rbrack}  Das System muss dem Benutzer die Möglichkeit bieten, die individuellen Daten seines Benutzerkontos zu bearbeiten.
+		\item\textbf{\lbrack F20\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, seine persönlichen Datem im Benutzerprofil zu bearbeiten.
 		\item\textbf{\lbrack F30\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, sein angelegtes Benutzerkonto wieder zu löschen.
 		\item\textbf{\lbrack F40\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, unterschiedliche Ereignisse (Blutzuckerwert, Mahlzeit und sportliche Aktivität) manuell in das Tagebuch einzutragen.
 		\item\textbf{\lbrack F290\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, verschiedene Benutzeroberflächen und Funktionen für verschiedene Benutzergruppen zu benutzen.
-		\item\textbf{\lbrack F300\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, um Erlaubnis des Einblicks in die Blutzuckerwerte eines zweiten Benutzers zu fragen.
-		\item\textbf{\lbrack F310\rbrack} Falls der Benutzer die Erlaubnis eines zweiten Benutzers erhalten hat, muss das System dem Benutzer die Möglichkeit bieten, Einblick in Blutzuckerwerte des zweiten Benutzers zu haben.
+		\item\textbf{\lbrack F300\rbrack} Das System muss dem Benutzer die Möglichkeit bieten, um Erlaubnis zu bitten, die Blutzuckerwerte eines zweiten Benutzers sehen zu dürfen.
+		\item\textbf{\lbrack F310\rbrack} Nach Zustimmung eines zweiten Benutzers muss das System dem Anwender die Möglichkeit bieten, den Blutzuckerspiegel des zweiten Benutzers anzuzeigen.
 	\end{itemize}
 \subsubsection{Non-funktionale Anforderungen}
 \label{section:nfAnforderungen}
@@ -416,18 +418,18 @@
 \begin{itemize}
 	\item\textbf{\lbrack Q10\rbrack} Das System soll dem Benutzer eine Aufgabenerfüllung innerhalb der Genauigkeits- und Vollständigkeitsgrenzen bieten. (Effektivität)
 	\item\textbf{\lbrack Q20\rbrack} Das System soll dem Benutzer eine Aufgabenerfüllung in Bezug auf den Benutzeraufwand bieten. (Effizienz)
-	\item\textbf{\lbrack Q30\rbrack} Das System soll dem Benutzer eine von Beeinträchtigungen freie Nutzung und mit einer positiven Einstellung gegenüber dieser bieten. (Zufriedenstellend)
+	\item\textbf{\lbrack Q30\rbrack} Das System soll dem Nutzer eine störungsfreie und positive Nutzung ermöglichen. (Zufriedenstellend)
 	\item\textbf{\lbrack Q40\rbrack} Das System soll dem Benutzer eine effektive, effiziente und zufriedenstellende Aufgabenerfüllung bieten. (Gebrauchstauglichkeit)
 	\item\textbf{\lbrack Q50\rbrack} Das System soll zu 99,9\% erreichbar sein und eine gewisse Ausfallsicherheit garantieren.
 	\item\textbf{\lbrack Q60\rbrack} Das System soll über eine strukturierte Benutzeroberfläche mit intuitiver Benutzerführung verfügen.
-	\item\textbf{\lbrack Q70\rbrack} Das System muss dem Benutzer fehlerfreie Ergebnisse und Informationen bieten.
+	\item\textbf{\lbrack Q70\rbrack} Das System muss dem Benutzer fehlerfreie Ergebnisse und Informationen übermitteln.
 \end{itemize}
 \paragraph{Organisationale Anforderungen}
 \begin{itemize}
 	\item\textbf{\lbrack O10\rbrack} Das System soll sensible Daten sicher und unerreichbar für Dritte speichern.
-	\item\textbf{\lbrack O20\rbrack} Das System soll einen verlustfreien Datentransport zwischen den verschiedenen Systemkomponenten gewehrleisten.  
-	\item\textbf{\lbrack O30\rbrack} Das System soll einen geringen Akkuverbrauch aufweisen.
-	\item\textbf{\lbrack O40\rbrack} Das System muss jeder Zeit Kontakt zum Benutzer aufnehmen können.
-	\item\textbf{\lbrack O50\rbrack} Das System muss dem Benutzer einen schnellen Zugriff auf den aktuelle Daten bieten.  
+	\item\textbf{\lbrack O20\rbrack} Das System soll einen verlustfreien Datentransport zwischen den verschiedenen Systemkomponenten gewehrleisten.
+	\item\textbf{\lbrack O30\rbrack} Das System soll einen niedrigen Batterieverbrauch haben.
+	\item\textbf{\lbrack O40\rbrack} Das System soll jederzeit in der Lage sein, Kontakt zu Benutzern herzustellen.
+	\item\textbf{\lbrack O50\rbrack} Das System muss dem Benutzer einen schnellen Zugriff auf den aktuelle Daten bieten.
 \end{itemize}
-	Diese Anforderungen werden in den folgenden Aufgaben direkt zum Treffen von Entscheidungen für das User Interface Design verwendet.
+	Die obengenannten Anforderungen werden in den folgenden Aufgaben direkt bei der Entscheidungsfindung für das User Interface Design verwendet.

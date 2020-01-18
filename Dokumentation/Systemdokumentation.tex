@@ -1,5 +1,5 @@
 \subsection{Systemarchitektur}
-Abbildung \ref{img:Systemarchitektur}: \nameref{img:Systemarchitektur} zeigt die Systemarchitektur des zu entwickelnden Systems. Es handelt sich um eine Server-Client-Architektur, bei der die Instanzen über die REST-API-Schnittstelle kommunizieren.
+Abbildung \ref{img:Systemarchitektur}: \glqq \nameref{img:Systemarchitektur}\grqq{} zeigt die Systemarchitektur des zu entwickelnden Systems. Es handelt sich um eine Server-Client-Architektur, bei der die Instanzen über die REST-API-Schnittstelle kommunizieren.
 \begin{figure}[H]
 	\centering
 	\setlength{\fboxsep}{1pt}
@@ -42,8 +42,9 @@ Abbildung \ref{img:Systemarchitektur}: \nameref{img:Systemarchitektur} zeigt die
 	\subsubsection{Sportart}
 	Eine Sportartendatenbank soll es dem Benutzer auch ermöglichen, sportliche Aktivitäten zu dokumentieren. Um den Kalorienverbrauch einer Sportart zu berechnen, verwendet man das sogenannte metabolische Äquivalent (metabolic equivalent of task; MET). Ein MET entspricht einem Energieverbrauch von einer Kalorie pro kg Körpergewicht und Stunde. Eine Sportart besteht also aus ihrem Namen und der MET-Anzahl zur Berechnung des Kalorienverbrauchs.
 	\lstinputlisting{listings/sportart.json}
+		\newpage
 \subsection{REST-Spezifikation}
-	Die REST Spezifikation des Servers beschäftigt sich mit ihren Ressourcen und dessen HTTP-Methoden, die folglich erläutert werden.
+	Die REST-Spezifikation des Servers befasst sich mit dessen Ressourcen und HTTP-Methoden, die im Folgenden erläutert werden.
 	\subsubsection{Benutzer}
 	\begin{itemize}
 	\item Methode: POST\newline
@@ -119,35 +120,37 @@ Abbildung \ref{img:Systemarchitektur}: \nameref{img:Systemarchitektur} zeigt die
 	\noindent\hspace*{10mm} - HTTP-Statuscode (erfolgreich): 200 OK \newline
 	\noindent\hspace*{10mm} - HTTP-Statuscode (nicht erfolgreich): 404 Not Found
 	\end{itemize}
-	Um Benutzer und Beiträge hinzufügen, aufrufen, bearbeiten oder löschen zu können sind die oben genannten HTTP-Methoden notwendig. Da Kommentare Bestandteil eines Beitrags ist, können Kommentare durch die HTTP-Methoden der Beiträge hinzugefügt, aufgerufen und gelöscht werden. Selbiges gilt für Tagebucheinträge und Ereignisse. Diese sind Bestandteil eines Benutzers und können mit seinen Methoden verwaltet werden.
-	Lebensmittel und Sportarten sind feste Datensätze, die nur zum lesen, aber nicht zum löschen oder überschreiben sind.\newline
+	Um Benutzer und Beiträge hinzufügen, anzeigen, bearbeiten oder löschen zu können, sind die oben genannten HTTP-Methoden erforderlich. Da Kommentare Teil eines Posts sind, können sie mit den HTTP-Methoden für \glqq Beitrag\grqq{} hinzugefügt, angezeigt und gelöscht werden. Gleiches gilt für Tagebucheinträge und Ereignisse. Diese sind benutzerspezifische Daten und können mit den HTTP-Methoden für \glqq Benutzer\grqq{} verwaltet werden.\newline
+	Lebensmittel und Sportarten haben feste Datensätze, die nur gelesen, aber nicht gelöscht oder editiert werden können (GET-Methode).
 	\subsection{Anwendungslogik}
-	Um die einzelnen Funktionalitäten der einzelnen Komponenten des Systems zu verstehen, wird im folgenden Abschnitt auf die Anwendungslogik von Server und Client eingegangen.
+	Um die einzelnen Funktionen jeder Systemkomponente zu verstehen, befasst sich der folgende Abschnitt mit der Anwendungslogik von Server und Client.
 	\subsubsection{Client}
-	Auf der Seite das Clients mussten einige Java-Klassen implementiert werden. Zum einen die Klassen der Objekte, die auch serverseitig in der Datenbank gespeichert sind und zum anderen Helfer-Klassen wie die RestService-Klasse. Mit ihr und dem Interface JsonPlaceHolderApi kann der Client mit dem Server kommunizieren. Beide Klassen sehen wie folgt aus:
+	Einige Java-Klassen mussten clientseitig implementiert werden. Dies sind zum einen die Klassen der Objekte, die auch serverseitig in der Datenbank gespeichert sind, und zum anderen die Helfer-Klassen wie die RestService-Klasse. Der Client kann anhand dieser Klassen und der JsonPlaceHolderApi-Schnittstelle mit dem Server kommunizieren. Beide Klassen sehen folgendermaßen aus:
 	\lstinputlisting{listings/RestService.java}
 	\lstinputlisting{listings/JsonPlaceHolderApi.java}
-	Neben mehreren Java-Klassen, die nicht alle in der Dokumentation präsentiert werden können, werden im folgenden Funktionen erläutert und ihre Algorithmen präsentiert.
+	Zusätzlich zu einigen Java-Klassen, die in der Dokumentation nicht beschrieben werden können, werden nachfolgend Funktionen und ihre Algorithmen erläutert. 
 	\paragraph{BE/KE-Rechner}$~$\\
-	Der BE/KE-Rechner wird verwendet, sobald der Benutzer ein Lebensmittel als Ereigniss hinzufügt. Da die Anzahl der BE/KE nach der Berechnung von Benutzer verändert werden kann, müssen diese im Eingabe-Screen eines Ereignisses angezeigt werden. Hierzu wird ein TextWatcher verwendet, der bei Änderung der Mahlzeit und dessen Kohlenhydrate die BE/KE-Anzahl aktualisiert. Der Programmier-Code sieht wie folgt aus:
+	Der BE/KE-Rechner wird verwendet, sobald der Benutzer ein Lebensmittel als Ereignis hinzufügt. Da die Anzahl der BE/KE nach der Berechnung vom Benutzer geändert werden kann, muss sie im Eingabe-Screen eines Ereignisses angezeigt werden. Hierfür wird ein TextWatcher verwendet, der diese aktualisiert, wenn die Mahlzeit und ihre Kohlenhydrate geändert werden. Der Programmcode sieht folgendermaßen aus: 
 	\lstinputlisting{listings/beFactor_berechnung.java}
 	\paragraph{Korrektureinheiten-Rechner}$~$\\
-	Auch für die Berechnung von Korrektureinheiten wurde ein TextWatcher implementiert, der bei Eingabe des Blutzuckerwertes, der über der Zielbereiches des Benutzers liegt, die Korrektureinheiten angepasst. Vom  überhöhten Blutzuckerwert werden 100 mg/dL abgezogen, da dies der Zielwert ist, und die Differenz wir durch den Korrektur-Faktor vom Benutzer geteilt:
+	Ein TextWatcher wurde auch für die Berechnung von Korrektureinheiten implementiert. Die Korrektureinheiten werden angepasst, wenn ein Blutzuckerwert eingegeben wird, der über dem Zielbereich des Benutzers liegt. Der Zielwert von 100 mg/dL wird vom überhöhten Blutzuckerwert abgezogen und die Differenz wird durch den Korrekturfaktor geteilt:
 	\lstinputlisting{listings/korrektur_berechnung.java}
 	\paragraph{Insulineinheiten-Rechner}$~$\\
-	Die Insulineinheiten ergeben sich aus den Korrektureinheiten addiert mit Multiplikation der BE/KE einer Mahlzeit und den BE/KE-Faktor des Benutzers. Auch hier wird ein TextWatcher verwendet:
+	Zur Ermittlung der Insulineinheiten wird die Anzahl von BE/KE einer Mahlzeit mit dem BE/KE-Faktor des Benutzers multipliziert und die Korrektureinheiten werden dazu addiert:
 	\lstinputlisting{listings/insulineinheiten_berechnung.java}
 	\paragraph{Kalorienbedarf}$~$ \\
-	Der Kalorienbedarf pro Tag eines Benutzers wird aus seinem Grund- und Leistungsumsatzes berechnet. Um den Grundumsatz ergibt sich aus dem Körpergewicht, der Körpergröße und dem Alter des Benutzers. Der Leistungsumsatz wird anhat der täglichen Aktivitäten berechnet. Die Algoritmus hierfür sieht folgendermaßen aus:
-	\lstinputlisting{listings/kalorienbedarf.java}$~$ \\
-	Neben den bereits präsentierten Algorithmen besitzt der Client noch viele weiter Funktionen, welche allerdings nicht alle aufgelistet werden können. Um beispielsweise die Blutzuckerwerte in Form eines Graphen in einem Koordinatensystem darzustellen, wird die MPAndroidChart-Libary verwendet. Hierzu müssen zunächst die Uhrzeiten der Blutzuckerwerte in eine Dezimalschreibweise umgerechnet werden. Dazu wurde eine eigene Mehtode implementiert.\newline
-	Zudem berechnet der Client die verbrannten Kalorien von sportlichen Aktivitäten, die der Benutzer in seinen Ereignissen angibt. Diese werden anhand des Metabolische Äquivalent der jeweiligen Sportart aus der Datenbank berechnet. \newline
-	Desweiteren erstellt der Client eine Highscore-Liste, in der die Benutzer mit den zehn höhsten Punktezahlen aufgelistet werden. Punkte erhält der Benutzer bei Hinzufügen von Ereignissen, Teilen oder Kommentieren von Beiträgen. \newline 
-	Beim Abgleichen der eingebenen Lebensmittel von Benutzer mit der Lebensmitteldatenbank, wird ein TextWatcher verwendet, der bei Änderung der Eingabe des Benutzers die Eingabe mit den Lebensmitteln aus der Datenbank vergleicht. Ist die Eingabe Inhalt des Namens eines Lebensmittel, gibt es ein Treffer und das Lebensmittel wir vorgeschlagen.
+	Der Kalorienbedarf pro Tag eines Benutzers errechnet sich aus seinem Grund- und Leistungsumsatz. Die Grundumsatzrate wird basierend auf dem Körpergewicht, der Größe und dem Alter des Benutzers bestimmt. Der Leistungsumsatz wird durch die täglichen Aktivitäten definiert. Der Algorithmus dafür sieht wie folgt aus: 
+	\lstinputlisting{listings/kalorienbedarf.java}$~$ \newline
+	Mit der MPAndroidChart-Libary werden beispielsweise die Blutzuckerwerte in Form eines Grafen in einem Koordinatensystem dargestellt. Dazu müssen die Zeiten der Blutzuckermessungen zunächst in eine Dezimalschreibweise umgerechnet werden. Hierzu wurde eine eigene Methode implementiert.\newline
+	Der Client berechnet auch den Kalorienverbrauch bei sportlichen Aktivitäten, die der Benutzer unter \glqq Ereignisse\grqq{} angibt. Er wird anhand des metabolischen Äquivalents (MET) der jeweiligen Sportart aus der Datenbank berechnet.\newline
+	Der Client erstellt außerdem eine Highscore-Liste, in der die Benutzer mit den zehn höchsten Punktzahlen aufgeführt sind. Der Benutzer erhält Punkte, wenn er Ereignisse hinzufügt, Beiträge teilt oder kommentiert.  \newline
+	Zum Abgleich von vom Benutzer eingegebenen Lebensmitteln mit der Lebensmitteldatenbank, wird ein TextWatcher verwendet. Bei einer Änderung oder Neuanlage wird nach dem neuen Lebensmittelnamen in der Datenbank gesucht. Wenn die Suche einen Treffer liefert, wird das bereits existierende Lebensmittel vorgeschlagen.\newline
+	Zusätzlich zu den bereits vorgestellten Algorithmen verfügt der Client über viele andere Funktionen, von denen jedoch nicht alle aufgelistet werden können. 
 	\subsubsection{Server}
-	Neben der Kommunikation zur Datenbank gehört das Berechnen von Statistiken anhand der Blutzuckerwerte des Benutzers zu seinen Aufgaben. Hierzu ruft der Server die Datensätze von der Datenbank ab, berechnet den HbA1c-Wert, die Anzahl der Blutzuckerwerte im Zielbereich und den durchschnittlichen Blutzuckerwert.
+	Neben der Kommunikation mit der Datenbank, dem Lesen und Schreiben in die Datenbank gehört die Datenverarbeitung (Data Processing) zu den Aufgaben eines App-Servers. Er berechnet Statistiken und überträgt Auswertungen basierend auf den Blutzuckerwerten des Benutzers. Zu diesem Zweck ruft der Server die Datensätze aus der Datenbank ab, berechnet den entsprechenden HbA1c-Wert, die Anzahl der Blutzuckerwerte im Zielbereich und den durchschnittlichen Blutzuckerwert und überträgt die aktualisierten Daten in die Datenbank.\newline
+	Der Datenaustausch erfolgt auch zwischen Client und Server. Alle Clients in einem System zeigen den gleichen aktuellen Datenbestand an, da alle Daten in der Datenbank gespeichert sind und der Server sie dem Client auf Anfrage zur Verfügung stellt.
 	 \lstinputlisting{listings/statics.js}$~$ \\
-	 Um die Funktionsweise innerhalb des Systems mit allen Instanzen darzustellen, dient die Abbildung \ref{img:funktionsweise}: \nameref{img:funktionsweise}:
+	 In Abbildung \ref{img:funktionsweise}: \glqq \nameref{img:funktionsweise}\grqq{} wird die Funktionsweise aller Instanzen im System veranschaulicht.
 	 \begin{figure}[H]
 	 \centering
 	 \setlength{\fboxsep}{1pt}
@@ -157,9 +160,8 @@ Abbildung \ref{img:Systemarchitektur}: \nameref{img:Systemarchitektur} zeigt die
 	 \caption{Funktionsweise}
 	 \label{img:funktionsweise}
 	 \end{figure}
-	 
 	 \subsection{Installationsdokumentation}
-	 Um das System erfolgreich installieren zu können, muss zunächst muss das GitHub-Repository geklont werden. Das Repository kann in der Shell mit folgenden Befehl geklont werden:\\	 
+	 Um das System erfolgreich zu installieren, muss das GitHub-Repository zuerst geklont werden. Das Repository kann mit dem folgenden Befehl in die Shell geklont werden:\\	 
 	 \textit{\$ git clone https://github.com/sami1905/BAWS1920Hassini}\\
 	 Nun folgt die Beschreibung, mit der Server und Client installiert werden können.
 	 \subsubsection{Server}
@@ -172,5 +174,7 @@ Abbildung \ref{img:Systemarchitektur}: \nameref{img:Systemarchitektur} zeigt die
 	  1. Android Studio starten und den Odner \textit{Client} aus dem Repository öffnen.\\
 	  2. Ein Virtual Device einrichten.\\
 	  3. Emulator starten.\\
-	  4. Um das System verwenden zu können, mit der E-Mail-Adresse \textit{\glqq m.mustermann@th-koeln.de\grqq{}} und dem Passwort \textit{\glqq 12345678\grqq{}} anmelden.
+	  4. Um das System nutzen zu können, werden folgende Zugangsdaten verwendet:\newline
+	  \textbf{E-Mail-Adresse: }\textit{\glqq m.mustermann@th-koeln.de\grqq{}} \newline
+	  \textbf{Passwort: }\textit{\glqq 12345678\grqq{}}
 	

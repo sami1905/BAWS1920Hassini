@@ -25,80 +25,79 @@
 \contentsline {subsection}{\numberline {5.1}Stakeholder-Analysis}{23}{subsection.33}
 \contentsline {subsection}{\numberline {5.2}User-Profiles}{26}{subsection.35}
 \contentsline {subsubsection}{\numberline {5.2.1}Typ-1-Diabetiker}{27}{subsubsection.36}
-\contentsline {subsubsection}{\numberline {5.2.2}Typ-2-Diabetiker}{28}{subsubsection.38}
+\contentsline {subsubsection}{\numberline {5.2.2}Typ-2-Diabetiker}{29}{subsubsection.38}
 \contentsline {subsection}{\numberline {5.3}Personas}{31}{subsection.40}
-\contentsline {subsection}{\numberline {5.4}Anforderungen}{33}{subsection.43}
+\contentsline {subsection}{\numberline {5.4}Anforderungen}{34}{subsection.43}
 \contentsline {subsubsection}{\numberline {5.4.1}funktionale Anforderungen}{34}{subsubsection.44}
 \contentsline {paragraph}{F\IeC {\"u}r alle Diabetiker}{34}{section*.45}
 \contentsline {paragraph}{F\IeC {\"u}r Typ-1-Diabetiker}{35}{section*.46}
-\contentsline {paragraph}{F\IeC {\"u}r Typ-2-Diabetiker}{35}{section*.47}
+\contentsline {paragraph}{F\IeC {\"u}r Typ-2-Diabetiker}{36}{section*.47}
 \contentsline {paragraph}{F\IeC {\"u}r Personen im Umfeld (Eltern, Lebenspartner-/in, ...)}{36}{section*.48}
 \contentsline {subsubsection}{\numberline {5.4.2}Non-funktionale Anforderungen}{36}{subsubsection.49}
 \contentsline {paragraph}{Qualit\IeC {\"a}tsanforderungen}{36}{section*.50}
 \contentsline {paragraph}{Organisationale Anforderungen}{37}{section*.51}
 \contentsline {section}{\numberline {6}Aufgabenmodellierung}{38}{section.52}
 \contentsline {subsection}{\numberline {6.1}Persona Use Cases (OUC)}{38}{subsection.53}
-\contentsline {subsection}{\numberline {6.2}Task Scenario}{40}{subsection.55}
-\contentsline {subsection}{\numberline {6.3}Task Organization Model}{42}{subsection.57}
+\contentsline {subsection}{\numberline {6.2}Task Scenario}{41}{subsection.55}
+\contentsline {subsection}{\numberline {6.3}Task Organization Model}{43}{subsection.57}
 \contentsline {subsection}{\numberline {6.4}Concrete Use Cases (CUC)}{43}{subsection.59}
 \contentsline {paragraph}{CUC 01 - Benutzerprofil anlegen}{43}{section*.60}
-\contentsline {paragraph}{CUC 02 - Benutzerprofil bearbeiten}{43}{section*.62}
-\contentsline {paragraph}{CUC 03 - Diabetes-Ereignis anlegen}{43}{section*.64}
-\contentsline {paragraph}{CUC 04 - Mahlzeit anlegen}{44}{section*.66}
+\contentsline {paragraph}{CUC 02 - Benutzerprofil bearbeiten}{44}{section*.62}
+\contentsline {paragraph}{CUC 03 - Diabetes-Ereignis anlegen}{44}{section*.64}
+\contentsline {paragraph}{CUC 04 - Mahlzeit anlegen}{45}{section*.66}
 \contentsline {paragraph}{CUC 05 - Aktivit\IeC {\"a}t anlegen}{45}{section*.68}
-\contentsline {paragraph}{CUC 06 - Beitrag teilen}{45}{section*.70}
-\contentsline {section}{\numberline {7}Design}{46}{section.72}
-\contentsline {subsection}{\numberline {7.1}Reengineered Task Organization Model}{46}{subsection.73}
-\contentsline {subsection}{\numberline {7.2}Conceptual Model (CM) Design}{46}{subsection.75}
-\contentsline {subsection}{\numberline {7.3}Screen Design Standards (SDS)}{51}{subsection.82}
-\contentsline {subsection}{\numberline {7.4}Style Guide}{52}{subsection.85}
-\contentsline {subsection}{\numberline {7.5}Detailed User Interface Design (DUID)}{53}{subsection.86}
-\contentsline {section}{\numberline {8}Systemdokumentation}{56}{section.90}
-\contentsline {subsection}{\numberline {8.1}Systemarchitektur}{56}{subsection.91}
-\contentsline {subsubsection}{\numberline {8.1.1}Server-Client}{56}{subsubsection.93}
-\contentsline {subsubsection}{\numberline {8.1.2}Server}{57}{subsubsection.94}
-\contentsline {subsubsection}{\numberline {8.1.3}Client}{57}{subsubsection.95}
-\contentsline {subsubsection}{\numberline {8.1.4}Datenbank}{57}{subsubsection.96}
-\contentsline {subsubsection}{\numberline {8.1.5}Datenformat}{57}{subsubsection.97}
-\contentsline {subsubsection}{\numberline {8.1.6}Protokolle}{58}{subsubsection.98}
-\contentsline {subsubsection}{\numberline {8.1.7}Asynchrone und Synchrone Kommunikation}{58}{subsubsection.99}
-\contentsline {subsection}{\numberline {8.2}Datenstrukturen}{58}{subsection.100}
-\contentsline {subsubsection}{\numberline {8.2.1}Benutzerprofil}{58}{subsubsection.101}
-\contentsline {subsubsection}{\numberline {8.2.2}Beitr\IeC {\"a}g und Kommentare}{59}{subsubsection.152}
-\contentsline {subsubsection}{\numberline {8.2.3}Lebensmittel}{60}{subsubsection.170}
-\contentsline {subsubsection}{\numberline {8.2.4}Sportart}{60}{subsubsection.184}
-\contentsline {subsection}{\numberline {8.3}REST-Spezifikation}{60}{subsection.191}
-\contentsline {subsubsection}{\numberline {8.3.1}Benutzer}{61}{subsubsection.192}
-\contentsline {subsubsection}{\numberline {8.3.2}Beitrag}{61}{subsubsection.193}
-\contentsline {subsubsection}{\numberline {8.3.3}Lebensmittel}{62}{subsubsection.194}
-\contentsline {subsubsection}{\numberline {8.3.4}Sportart}{62}{subsubsection.195}
-\contentsline {subsection}{\numberline {8.4}Anwendungslogik}{62}{subsection.196}
-\contentsline {subsubsection}{\numberline {8.4.1}Client}{63}{subsubsection.197}
-\contentsline {paragraph}{BE/KE-Rechner}{64}{section*.259}
-\contentsline {paragraph}{Korrektureinheiten-Rechner}{65}{section*.284}
-\contentsline {paragraph}{Insulineinheiten-Rechner}{65}{section*.310}
-\contentsline {paragraph}{Kalorienbedarf}{66}{section*.336}
-\contentsline {subsubsection}{\numberline {8.4.2}Server}{67}{subsubsection.343}
-\contentsline {subsection}{\numberline {8.5}Installationsdokumentation}{69}{subsection.423}
-\contentsline {subsubsection}{\numberline {8.5.1}Server}{69}{subsubsection.424}
-\contentsline {subsubsection}{\numberline {8.5.2}Client}{69}{subsubsection.425}
-\contentsline {section}{\numberline {9}Fazit}{70}{section.426}
-\contentsline {section}{Literaturverzeichnis}{72}{section*.427}
-\contentsline {section}{Glossar}{74}{section*.428}
-\contentsline {part}{Anhang}{75}{part*.429}
-\contentsline {section}{\numberline {A}Zielhierarchie}{76}{appendix.430}
-\contentsline {subsection}{\numberline {A.1}Strategische Ziele}{76}{subsection.431}
-\contentsline {subsection}{\numberline {A.2}Taktische Ziele}{76}{subsection.432}
-\contentsline {subsection}{\numberline {A.3}Operative Ziele}{77}{subsection.433}
-\contentsline {section}{\numberline {B}Themenfeld/-recherche}{79}{appendix.434}
-\contentsline {subsection}{\numberline {B.1}Diabetes-Arten}{79}{subsection.435}
-\contentsline {subsection}{\numberline {B.2}Analoge Dokumentation}{80}{subsection.436}
-\contentsline {section}{\numberline {C}Evaluation}{82}{appendix.438}
-\contentsline {subsection}{\numberline {C.1}Vorgehensweise}{82}{subsection.439}
-\contentsline {subsection}{\numberline {C.2}Auswertung}{83}{subsection.440}
-\contentsline {subsubsection}{\numberline {C.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{83}{subsubsection.441}
-\contentsline {subsubsection}{\numberline {C.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{83}{subsubsection.442}
-\contentsline {subsubsection}{\numberline {C.2.3}Kategorie \IeC {\quotedblbase }Lebensstil\IeC {\textquotedblleft }}{84}{subsubsection.443}
-\contentsline {subsubsection}{\numberline {C.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{85}{subsubsection.444}
-\contentsline {subsection}{\numberline {C.3}Fazit}{85}{subsection.445}
-\contentsline {section}{Erkl\IeC {\"a}rung}{87}{section*.446}
+\contentsline {paragraph}{CUC 06 - Beitrag teilen}{46}{section*.70}
+\contentsline {section}{\numberline {7}Design}{47}{section.72}
+\contentsline {subsection}{\numberline {7.1}Reengineered Task Organization Model}{47}{subsection.73}
+\contentsline {subsection}{\numberline {7.2}Conceptual Model (CM) Design}{47}{subsection.75}
+\contentsline {subsection}{\numberline {7.3}Screen Design Standards (SDS)}{52}{subsection.82}
+\contentsline {subsection}{\numberline {7.4}Style Guide}{54}{subsection.85}
+\contentsline {subsection}{\numberline {7.5}Detailed User Interface Design (DUID)}{55}{subsection.86}
+\contentsline {section}{\numberline {8}Systemdokumentation}{58}{section.90}
+\contentsline {subsection}{\numberline {8.1}Systemarchitektur}{58}{subsection.91}
+\contentsline {subsubsection}{\numberline {8.1.1}Server-Client}{58}{subsubsection.93}
+\contentsline {subsubsection}{\numberline {8.1.2}Server}{59}{subsubsection.94}
+\contentsline {subsubsection}{\numberline {8.1.3}Client}{59}{subsubsection.95}
+\contentsline {subsubsection}{\numberline {8.1.4}Datenbank}{59}{subsubsection.96}
+\contentsline {subsubsection}{\numberline {8.1.5}Datenformat}{59}{subsubsection.97}
+\contentsline {subsubsection}{\numberline {8.1.6}Protokolle}{60}{subsubsection.98}
+\contentsline {subsubsection}{\numberline {8.1.7}Asynchrone und Synchrone Kommunikation}{60}{subsubsection.99}
+\contentsline {subsection}{\numberline {8.2}Datenstrukturen}{60}{subsection.100}
+\contentsline {subsubsection}{\numberline {8.2.1}Benutzerprofil}{60}{subsubsection.101}
+\contentsline {subsubsection}{\numberline {8.2.2}Beitr\IeC {\"a}g und Kommentare}{61}{subsubsection.152}
+\contentsline {subsubsection}{\numberline {8.2.3}Lebensmittel}{62}{subsubsection.170}
+\contentsline {subsubsection}{\numberline {8.2.4}Sportart}{62}{subsubsection.184}
+\contentsline {subsection}{\numberline {8.3}REST-Spezifikation}{63}{subsection.191}
+\contentsline {subsubsection}{\numberline {8.3.1}Benutzer}{63}{subsubsection.192}
+\contentsline {subsubsection}{\numberline {8.3.2}Beitrag}{63}{subsubsection.193}
+\contentsline {subsubsection}{\numberline {8.3.3}Lebensmittel}{64}{subsubsection.194}
+\contentsline {subsubsection}{\numberline {8.3.4}Sportart}{64}{subsubsection.195}
+\contentsline {subsection}{\numberline {8.4}Anwendungslogik}{65}{subsection.196}
+\contentsline {subsubsection}{\numberline {8.4.1}Client}{65}{subsubsection.197}
+\contentsline {paragraph}{BE/KE-Rechner}{66}{section*.259}
+\contentsline {paragraph}{Korrektureinheiten-Rechner}{67}{section*.284}
+\contentsline {paragraph}{Insulineinheiten-Rechner}{67}{section*.310}
+\contentsline {paragraph}{Kalorienbedarf}{68}{section*.336}
+\contentsline {subsubsection}{\numberline {8.4.2}Server}{69}{subsubsection.347}
+\contentsline {subsection}{\numberline {8.5}Installationsdokumentation}{71}{subsection.427}
+\contentsline {subsubsection}{\numberline {8.5.1}Server}{71}{subsubsection.428}
+\contentsline {subsubsection}{\numberline {8.5.2}Client}{71}{subsubsection.429}
+\contentsline {section}{\numberline {9}Fazit}{72}{section.430}
+\contentsline {section}{Literaturverzeichnis}{74}{section*.431}
+\contentsline {part}{Anhang}{76}{part*.432}
+\contentsline {section}{\numberline {A}Zielhierarchie}{77}{appendix.433}
+\contentsline {subsection}{\numberline {A.1}Strategische Ziele}{77}{subsection.434}
+\contentsline {subsection}{\numberline {A.2}Taktische Ziele}{77}{subsection.435}
+\contentsline {subsection}{\numberline {A.3}Operative Ziele}{78}{subsection.436}
+\contentsline {section}{\numberline {B}Themenfeld/-recherche}{80}{appendix.437}
+\contentsline {subsection}{\numberline {B.1}Diabetes-Arten}{80}{subsection.438}
+\contentsline {subsection}{\numberline {B.2}Analoge Dokumentation}{81}{subsection.439}
+\contentsline {section}{\numberline {C}Evaluation}{83}{appendix.441}
+\contentsline {subsection}{\numberline {C.1}Vorgehensweise}{83}{subsection.442}
+\contentsline {subsection}{\numberline {C.2}Auswertung}{84}{subsection.443}
+\contentsline {subsubsection}{\numberline {C.2.1}Kategorie \IeC {\quotedblbase }Pers\IeC {\"o}nliche Daten\IeC {\textquotedblleft }}{84}{subsubsection.444}
+\contentsline {subsubsection}{\numberline {C.2.2}Kategorie \IeC {\quotedblbase }Behandlung\IeC {\textquotedblleft }}{84}{subsubsection.445}
+\contentsline {subsubsection}{\numberline {C.2.3}Kategorie \glqq Lebensstil\grqq {} }{85}{subsubsection.446}
+\contentsline {subsubsection}{\numberline {C.2.4}Kategorie \IeC {\quotedblbase }Bewertung\IeC {\textquotedblleft }}{86}{subsubsection.447}
+\contentsline {subsection}{\numberline {C.3}Fazit}{86}{subsection.448}
+\contentsline {section}{Erkl\IeC {\"a}rung}{87}{section*.449}
