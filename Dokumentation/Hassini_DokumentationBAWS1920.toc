@@ -64,7 +64,7 @@
 \contentsline {subsubsection}{\numberline {8.1.7}Asynchrone und Synchrone Kommunikation}{60}{subsubsection.99}
 \contentsline {subsection}{\numberline {8.2}Datenstrukturen}{60}{subsection.100}
 \contentsline {subsubsection}{\numberline {8.2.1}Benutzerprofil}{60}{subsubsection.101}
-\contentsline {subsubsection}{\numberline {8.2.2}Beitr\IeC {\"a}g und Kommentare}{61}{subsubsection.152}
+\contentsline {subsubsection}{\numberline {8.2.2}Beitr\IeC {\"a}ge und Kommentare}{61}{subsubsection.152}
 \contentsline {subsubsection}{\numberline {8.2.3}Lebensmittel}{62}{subsubsection.170}
 \contentsline {subsubsection}{\numberline {8.2.4}Sportart}{62}{subsubsection.184}
 \contentsline {subsection}{\numberline {8.3}REST-Spezifikation}{63}{subsection.191}

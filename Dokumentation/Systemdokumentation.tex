@@ -33,7 +33,7 @@ Abbildung \ref{img:Systemarchitektur}: \glqq \nameref{img:Systemarchitektur}\grq
 	\subsubsection{Benutzerprofil}
 	Ein Benutzerprofil enthält alle erforderlichen benutzerbezogenen Daten, die bei der Registrierung erstellt und später geändert werden können. Tagebucheinträge werden jedem zugeordneten Benutzer hinzugefügt. Für jeden dokumentierten Tag gibt es einen Eintrag mit einer ID, einem Datum und den Ereignissen. Ereignisse enthalten Informationen zu Uhrzeit, Blutzucker, Mahlzeit, BE/KE, Insulin-Einheiten und sportlicher Aktivität. Ein Datensatz für Mahlzeiten besteht aus einer Beschreibung und der Anzahl der Kalorien, Kohlenhydrate, Eiweiße und Fette. Sportliche Aktivitäten enthalten eine Beschreibung, die Dauer und die Anzahl der verbrannten Kalorien.
 	\lstinputlisting{listings/benutzerprofil.json}
-	\subsubsection{Beiträg und Kommentare}
+	\subsubsection{Beiträge und Kommentare}
 	Ein Beitrag kann von einem Benutzer erstellt und von allen anderen Benutzern angezeigt werden. Um einem Benutzer einen Beitrag zuordnen zu können, erhält der Beitrag die Benutzer-ID und den Benutzernamen des Verfassers. Außerdem enthält jeder Beitrag seine zugehörigen Kommentare, die dieselbe Datenstruktur wie die Beiträge haben. Auf dem Client erbt die Comments-Klasse die Attribute der Post-Klasse. 
 	\lstinputlisting{listings/beitrag.json}
 	\subsubsection{Lebensmittel}
