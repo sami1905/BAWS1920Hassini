@@ -284,7 +284,7 @@ public class SignUpActivity extends AppCompatActivity implements AdapterView.OnI
                             nickname.getText().toString(), email.getText().toString(), password.getText().toString(), "", "", false, "", "",
                             0.0f, 0.0f, 0.0f, 0.0f, 0.0f,
                             0.0f, 0.0f,0.0f, 0.0f, 0.0f,
-                            0.0f, 0.0f, "Gewicht halten", 150, new ArrayList<Event>(), new ArrayList<Meal>(), new ArrayList<Sport>());
+                            0.0f, 0.0f, "Gewicht halten", 150);
 
                     createUser(newUser);
 

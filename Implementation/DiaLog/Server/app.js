@@ -8,8 +8,10 @@ app.use(bodyParser.json());
 const settings = {
     port: 3000,
     users: './users.json',
+    events: './events.json',
     posts: './posts.json',
-    food: './food.json'
+    food: './food.json',
+    "sport" : './sport.json'
 };
 
 app.use(function(err, req, res, next){
@@ -99,10 +101,7 @@ app.post('/users', bodyParser.json(), function(req, res){
                 "calorieDegreeFive" : req.body.calorieDegreeFive,
                 "calorieDegreeSix" : req.body.calorieDegreeSix,
                 "weightGoal" : req.body.weightGoal,
-                "score" : req.body.score,
-                "events" : [],
-                "meals" : [],
-                "sport" : []
+                "score" : req.body.score
         };
         
         //creat user
@@ -150,9 +149,6 @@ app.put('/users/:userID', bodyParser.json(), function(req, res){
           users[i].calorieDegreeSix = req.body.calorieDegreeSix;
           users[i].weightGoal = req.body.weightGoal;
           users[i].score = req.body.score;
-          if(req.body.events != null)users[i].events = req.body.events;
-          if(req.body.meals != null)users[i].meals = req.body.meals;
-          if(req.body.sport != null)users[i].sport = req.body.sport;
           fs.writeFile(settings.users, JSON.stringify(users, null, 2));
           res.status(200).send("User erfolgreich bearbeitet");
       }
@@ -357,11 +353,77 @@ app.delete('/comment/:commentID', function(req, res){
   });
 });
 
+//GET /events/:userID
+app.get('/events/:userID', function(req, res){
+    
+    fs.readFile(settings.events,function(err,data){
+        var events = JSON.parse(data);
+        var userID = req.param.userID;
+        var current_i;
+        var userEvents = [];
+        
+        for(var i = 0; i < events.length; i++ ){
+            if(events[i].userID == req.params.userID){
+                userEvents.splice(userEvents.length, 0, events[i])
+            }
+        }
+        if(userEvents.length == 0){res.status(404).send("Nicht gefunden")}
+        else {
+            res.status(200).send(userEvents);
+        }
+    });
+    
+});
+
+
+//POST /events
+app.post('/events', bodyParser.json(), function(req, res){
+    fs.readFile(settings.events, function(err, data){
+        var events = JSON.parse(data);
+        var numberOfEvents = events.length;
+        var eventsIndex = 0;
+        
+        //id of the last post is inserted into userIndex
+            for(var i = 0; i < numberOfEvents; i++){
+                if(events[i].id > eventsIndex){
+                    eventsIndex = events[i].id;
+                }
+            }
+
+        var eventToAdd = {
+                "id" : ++eventsIndex,
+                "userID" : req.body.userID,
+                "date" : req.body.date,
+                "time" : req.body.time,
+                "sugar" : req.body.sugar,
+                "kie" : req.body.kie,
+                "meals" : req.body.meals,
+                "be" : req.body.be,
+                "ie" : req.body.ie,
+                "sports" : req.body.sports
+        };
+    
+        
+        //creat post
+        events.splice(numberOfEvents, 0, eventToAdd);
+        fs.writeFile(settings.events, JSON.stringify(events, null, 2));
+        res.status(201).send("Event erfolgreich angelegt.");
+    });
+});
+
 //GET /food
 app.get('/food', function(req, res){
     fs.readFile(settings.food,function(err,data){
         var food = JSON.parse(data);
         res.status(200).send(food);
+    });
+});
+
+//GET /sport
+app.get('/sport', function(req, res){
+    fs.readFile(settings.sport,function(err,data){
+        var sport = JSON.parse(data);
+        res.status(200).send(sport);
     });
 });
 

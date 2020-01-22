@@ -78,11 +78,25 @@
             android:name=".HighscoreActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
-        <activity android:name=".ErnaehrungActivity" />
-        <activity android:name=".AktivitaetActivity" />
-        <activity android:name=".MyCommentsActivity" />
-        <activity android:name=".SearchItemActivity" />
-        <activity android:name=".ShowMealActifity"></activity>
+        <activity android:name=".ErnaehrungActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AktivitaetActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MyCommentsActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SearchItemActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ShowMealActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ShowSportActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

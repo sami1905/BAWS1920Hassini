@@ -63,15 +63,12 @@ public class TagebuchFragment extends Fragment {
             }
         }).attachToRecyclerView(bzRecyclerView);
 
-        addEvent(new Event(1, "12.01.2020", "03:22", 190.0f, 0.0f, 3.0f, 3.0f),null,null);
-        addEvent(new Event(1, "12.01.2020", "03:22", 190.0f, 0.0f, 3.0f, 3.0f),null,null);
-
 
 
         return v;
     }
 
-    public void addEvent( Event nEvent, Meal nMeal, Sport nSport){
+   /* public void addEvent( Event nEvent, Meal nMeal, Sport nSport){
 
         ArrayList<Event> currentEvents =  new ArrayList<Event>();
         ArrayList<Meal> currentMeal = user.getMeals();
@@ -109,7 +106,7 @@ public class TagebuchFragment extends Fragment {
 
 
 
-    }
+    }*/
 
     public void changeUser(User user){
         JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ShowMealActivity">
+
+    <TextView
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/josefin_sans_semibold"
+        android:layout_marginTop="13dp"
+        android:text="Zurück"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+
+    <TextView
+        android:id="@+id/meal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:gravity="center"
+        android:text=" "
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/meal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/meal">
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Menge:"
+            android:gravity="left"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+        <EditText
+            android:id="@+id/input_menge"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:fontFamily="@font/josefin_sans_semibold"
+            android:hint="ml"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="15dp"
+            android:textColor="@color/darkblue"/>
+    </LinearLayout>
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="left"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:layout_marginTop="30dp"
+        android:text="kcal: "
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="kcal: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Kohlenhydrate in g: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/kohlenhydrate"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Kohlenhydrate: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Eiweiß in g: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/eiweiss"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Eiweiß: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Fett in g: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/fett"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="left"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Fett: "
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/hinzufuegen_button"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/josefin_sans_bold"
+            android:text="Mahlzeit hinzufügen"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

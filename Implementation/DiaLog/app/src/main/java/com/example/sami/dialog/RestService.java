@@ -4,6 +4,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RestService {
+    private String url = "http://192.168.0.17:3000/";
     private static Retrofit retrofit;
     private static final String BASE_URL = "http://192.168.0.17:3000/";
 
@@ -13,5 +14,9 @@ public class RestService {
                     addConverterFactory(GsonConverterFactory.create()).build();
         }
         return retrofit;
+    }
+
+    public String getUrl() {
+        return url;
     }
 }

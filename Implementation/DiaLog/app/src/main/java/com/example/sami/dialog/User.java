@@ -73,13 +73,6 @@ public class User implements Parcelable {
     @SerializedName("score")
     private int score;
 
-    @SerializedName("events")
-    private ArrayList<Event> events;
-    @SerializedName("meals")
-    private ArrayList<Meal> meals;
-    @SerializedName("sport")
-    private ArrayList<Sport> sport;
-
     public User(int id, String firstname, String name, String birthday, int height,
                 float weight, String gender, String nickname, String email,
                 String password, String dmType, String insulin, boolean tablets,
@@ -87,8 +80,7 @@ public class User implements Parcelable {
                 float lowSugar, float upperSugar, float correctionFactor, float beFactor,
                 float calorieDegreeOne, float calorieDegreeTwo, float calorieDegreeThree,
                 float calorieDegreeFour, float calorieDegreeFive, float calorieDegreeSix,
-                String weightGoal, int score, ArrayList<Event> events, ArrayList<Meal> meals,
-                ArrayList<Sport> sport) {
+                String weightGoal, int score) {
         this.id = id;
         this.firstname = firstname;
         this.name = name;
@@ -118,9 +110,6 @@ public class User implements Parcelable {
         this.calorieDegreeSix = calorieDegreeSix;
         this.weightGoal = weightGoal;
         this.score = score;
-        this.events = events;
-        this.meals = meals;
-        this.sport = sport;
     }
 
     protected User(Parcel in) {
@@ -437,27 +426,4 @@ public class User implements Parcelable {
         this.score = score;
     }
 
-    public ArrayList<Event> getEvents() {
-        return events;
-    }
-
-    public void setEvents(ArrayList<Event> events) {
-        this.events = events;
-    }
-
-    public ArrayList<Meal> getMeals() {
-        return meals;
-    }
-
-    public void setMeals(ArrayList<Meal> meals) {
-        this.meals = meals;
-    }
-
-    public ArrayList<Sport> getSport() {
-        return sport;
-    }
-
-    public void setSport(ArrayList<Sport> sport) {
-        this.sport = sport;
-    }
 }

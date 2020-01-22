@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".ShowMealActifity">
+    tools:context=".ShowMealActivity">
 
     <TextView
         android:id="@+id/button_back"
@@ -56,7 +56,7 @@
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="Menge:"
+            android:text="Dauer in h:"
             android:gravity="left"
             android:textColor="@color/white"
             android:textSize="15dp" />
@@ -66,17 +66,15 @@
             android:layout_height="40dp"
             android:background="@color/white"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:hint="ml"
+            android:hint="h"
             android:inputType="numberDecimal"
             android:textColorHint="@color/colorAccent"
             android:textSize="15dp"
             android:textColor="@color/darkblue"/>
     </LinearLayout>
-
         <TextView
-            android:id="@+id/kcal"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="20dp"
             android:gravity="left"
             android:fontFamily="@font/josefin_sans_bold"
             android:layout_marginTop="30dp"
@@ -85,32 +83,12 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/kohlenhydrate"
+            android:id="@+id/kcal"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:gravity="left"
             android:fontFamily="@font/josefin_sans_bold"
-            android:text="Kohlenhydrate: "
-            android:textColor="@color/white"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/eiweiss"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="left"
-            android:fontFamily="@font/josefin_sans_bold"
-            android:text="Eiweiß: "
-            android:textColor="@color/white"
-            android:textSize="15dp" />
-
-        <TextView
-            android:id="@+id/fett"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:gravity="left"
-            android:fontFamily="@font/josefin_sans_bold"
-            android:text="Fett: "
+            android:text="kcal: "
             android:textColor="@color/white"
             android:textSize="15dp" />
 

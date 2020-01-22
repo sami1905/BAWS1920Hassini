@@ -50,6 +50,14 @@ public interface JsonPlaceHolderApi {
     @DELETE("comment/{id}")
     Call<Void> deleteComment(@Path("id") int id);
 
+    @POST("events")
+    Call<List<Event>> createEvents(@Body Event event);
+
+    @GET("events/{id}")
+    Call<List<Event>> getEvents(@Path("id") int id);
+
     @GET("food")
     Call<List<Food>> getFood();
+    @GET("sport")
+    Call<List<SportFromDataBase>> getSport();
 }

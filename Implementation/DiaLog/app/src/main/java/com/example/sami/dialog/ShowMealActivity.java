@@ -11,13 +11,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import static java.util.Calendar.YEAR;
 
-public class ShowMealActifity extends AppCompatActivity {
+public class ShowMealActivity extends AppCompatActivity {
     private User user;
-    private Food meal;
+    private ArrayList<Meal> meals = new ArrayList<>();
 
     private TextView back;
     private TextView textMeal;
@@ -32,14 +33,16 @@ public class ShowMealActifity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_meal_actifity);
+        setContentView(R.layout.activity_show_meal_activity);
 
         Intent intent = getIntent();
         user = intent.getParcelableExtra("User");
-        meal = intent.getParcelableExtra("Food");
+        meals = intent.getParcelableArrayListExtra("Meals");
+
+        final Meal meal = meals.get(meals.size()-1);
 
         textMeal = findViewById(R.id.meal);
-        textMeal.setText(meal.getName());
+        textMeal.setText(meal.getDescription());
 
         editMenge = findViewById(R.id.input_menge);
         editMenge.setText(String.valueOf(meal.getAmount()));
@@ -51,15 +54,14 @@ public class ShowMealActifity extends AppCompatActivity {
         textF = findViewById(R.id.fett);
 
         float kcal = (Float.valueOf(editMenge.getText().toString()) * meal.getKcal()) / meal.getAmount();
-        float kj = (Float.valueOf(editMenge.getText().toString()) * meal.getKj()) / meal.getAmount();
         float kh =  (Float.valueOf(editMenge.getText().toString()) * meal.getKh()) / meal.getAmount();
         float e =  (Float.valueOf(editMenge.getText().toString()) * meal.getE()) / meal.getAmount();
         float f =  (Float.valueOf(editMenge.getText().toString()) * meal.getF()) / meal.getAmount();
 
-        textkcal.setText("kcal: " + String.valueOf(kcal));
-        textKh.setText("Kohlenhydrate: " + String.valueOf(kh) + "g");
-        textE.setText("Eiweiß: " + String.valueOf(e) + "g");
-        textF.setText("Fett: " + String.valueOf(f) + "g");
+        textkcal.setText(String.valueOf(kcal));
+        textKh.setText(String.valueOf(kh));
+        textE.setText(String.valueOf(e));
+        textF.setText(String.valueOf(f));
 
         editMenge.addTextChangedListener(new TextWatcher() {
             @Override
@@ -69,23 +71,24 @@ public class ShowMealActifity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(!editMenge.getText().toString().isEmpty()){
-                    float kcal = (Float.valueOf(editMenge.getText().toString()) * meal.getKcal()) / meal.getAmount();
-                    float kj = (Float.valueOf(editMenge.getText().toString()) * meal.getKj()) / meal.getAmount();
-                    float kh =  (Float.valueOf(editMenge.getText().toString()) * meal.getKh()) / meal.getAmount();
-                    float e =  (Float.valueOf(editMenge.getText().toString()) * meal.getE()) / meal.getAmount();
-                    float f =  (Float.valueOf(editMenge.getText().toString()) * meal.getF()) / meal.getAmount();
 
-                    textkcal.setText("kcal: " + String.valueOf(kcal));
-                    textKh.setText("Kohlenhydrate: " + String.valueOf(kh) + "g");
-                    textE.setText("Eiweiß: " + String.valueOf(e) + "g");
-                    textF.setText("Fett: " + String.valueOf(f) + "g");
+                if(!editMenge.getText().toString().equals("")){
+                    float kcal = (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getKcal() / meals.get(meals.size()-1).getAmount());
+                    float kh =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getKh() / meals.get(meals.size()-1).getAmount());
+                    float e =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getE() / meals.get(meals.size()-1).getAmount());
+                    float f =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getF() / meals.get(meals.size()-1).getAmount());
+
+                    textkcal.setText(String.valueOf(kcal));
+                    textKh.setText(String.valueOf(kh));
+                    textE.setText(String.valueOf(e));
+                    textF.setText(String.valueOf(f));
+
                 }
                 else{
-                    textkcal.setText("kcal: 0");
-                    textKh.setText("Kohlenhydrate: 0g");
-                    textE.setText("Eiweiß: 0g");
-                    textF.setText("Fett: 0g");
+                    textkcal.setText("0");
+                    textKh.setText("0");
+                    textE.setText("0");
+                    textF.setText("0");
                 }
 
             }
@@ -102,29 +105,20 @@ public class ShowMealActifity extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(editMenge.getText().toString().isEmpty()){
+                if(editMenge.getText().toString() == null){
                     Toast toast = Toast.makeText(getBaseContext(), " Bitte gib die Menge an! ", Toast.LENGTH_LONG);
                     View toastView = toast.getView();
                     toastView.setBackgroundResource(R.drawable.toast_drawable);
                     toast.show();
                 }
                 else{
-                    float kcal = (Float.valueOf(editMenge.getText().toString()) * meal.getKcal()) / meal.getAmount();
-                    float kj = (Float.valueOf(editMenge.getText().toString()) * meal.getKj()) / meal.getAmount();
-                    float kh =  (Float.valueOf(editMenge.getText().toString()) * meal.getKh()) / meal.getAmount();
-                    float e =  (Float.valueOf(editMenge.getText().toString()) * meal.getE()) / meal.getAmount();
-                    float f =  (Float.valueOf(editMenge.getText().toString()) * meal.getF()) / meal.getAmount();
+                    float nkcal = (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textkcal.getText().toString())) / meals.get(meals.size()-1).getAmount();
+                    float nkh =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textKh.getText().toString())) / meals.get(meals.size()-1).getAmount();
+                    float ne =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textE.getText().toString())) / meals.get(meals.size()-1).getAmount();
+                    float nf =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textF.getText().toString())) / meals.get(meals.size()-1).getAmount();
 
                     int id = 0;
-                    if(!user.getMeals().isEmpty()){
 
-                        for(int i = 0; i < user.getMeals().size(); i++){
-                            if(id <= user.getMeals().get(i).getId() ){
-                                id = user.getMeals().get(i).getId()+1;
-                            }
-                        }
-
-                    }
 
                     Calendar cal = Calendar.getInstance();
                     int currentYear = cal.get(YEAR);
@@ -148,15 +142,15 @@ public class ShowMealActifity extends AppCompatActivity {
                     if (time.length() == 3 && time.indexOf(":") == 1) {
                         time = "0" + time.substring(0, 2) + "0" + time.substring(2, 3);
                     }
+                    int index = meals.size();
+                    meals.set(index-1, new Meal(id, 0, textMeal.getText().toString(), Float.valueOf(editMenge.getText().toString()), nkcal, ne, nkh, nf, meals.get(meals.size()-1).getUnit()));
 
-                    Meal nMeal = new Meal(id,date, time, meal.getName(), Float.valueOf(editMenge.getText().toString()), kcal, e, kh, f, meal.getUnit() );
-
-                    Intent intent = new Intent(ShowMealActifity.this, AddEventFragment.class);
-                    Bundle extra = new Bundle();
-                    extra.putParcelable("User", user);
-                    extra.putParcelable("Meal", nMeal);
-                    intent.putExtras(extra);
+                    Intent intent = new Intent(ShowMealActivity.this, HomeActivity.class);
+                    intent.putExtra("User", user);
+                    intent.putExtra("Meals", meals);
+                    intent.putExtra("Fragment", 2);
                     startActivity(intent);
+
 
 
                 }
@@ -169,9 +163,10 @@ public class ShowMealActifity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ShowMealActifity.this, SearchItem.class);
+                Intent intent = new Intent(ShowMealActivity.this, HomeActivity.class);
                 Bundle extra = new Bundle();
                 extra.putParcelable("User", user);
+                extra.putInt("Fragment", 2);
                 intent.putExtras(extra);
                 startActivity(intent);
             }

@@ -1,0 +1,17 @@
+[
+    {
+    "id" : 1,
+    "name" : "Billiard",
+    "met" : 3
+},
+{
+    "id" : 2,
+    "name" : "Schwimmen (moderat)",
+    "met" : 6
+},
+{
+    "id" : 3,
+    "name" : "Fussball",
+    "met" : 7
+}
+]

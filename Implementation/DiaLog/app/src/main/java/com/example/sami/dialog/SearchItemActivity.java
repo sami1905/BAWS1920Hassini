@@ -11,16 +11,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +28,10 @@ public class SearchItemActivity extends AppCompatActivity {
     private TextView back;
     private User user;
 
+    private ArrayList<Meal> meals = new ArrayList<>();
+    private ArrayList<Sport> sport = new ArrayList<>();
+    private int art;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +40,10 @@ public class SearchItemActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         user = intent.getParcelableExtra("User");
+        meals = intent.getParcelableArrayListExtra("Meals");
+        sport = intent.getParcelableArrayListExtra("Sport");
+        art = intent.getIntExtra("Art", 0);
+
         searchList = new ArrayList<>();
 
         back = findViewById(R.id.button_back);
@@ -98,38 +96,85 @@ public class SearchItemActivity extends AppCompatActivity {
             public void onItemClick(final int position) {
                 searchList.get(position);
 
-                JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+                if(art == 0) {
+                    JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
-                Call<List<Food>> call = jsonPlaceHolderApi.getFood();
+                    Call<List<Food>> call = jsonPlaceHolderApi.getFood();
 
-                call.enqueue(new Callback<List<Food>>() {
-                    @Override
-                    public void onResponse(Call<List<Food>> call, Response<List<Food>> response) {
-                        List<Food> food = response.body();
-                        for(int i = 0; i < food.size(); i++) {
-                            if(searchList.get(position).getId() == food.get(i).getId()){
-                                Food meal = food.get(i);
+                    call.enqueue(new Callback<List<Food>>() {
+                        @Override
+                        public void onResponse(Call<List<Food>> call, Response<List<Food>> response) {
+                            List<Food> food = response.body();
+                            for (int i = 0; i < food.size(); i++) {
 
-                                Intent intent = new Intent(SearchItemActivity.this, ShowMealActifity.class);
-                                Bundle extra = new Bundle();
-                                extra.putParcelable("User", user);
-                                extra.putParcelable("Food", meal);
-                                intent.putExtras(extra);
-                                startActivity(intent);
+                                if (filteredList.get(position).getId() == food.get(i).getId()) {
+
+                                    meals.add(new Meal(searchList.get(position).getId(), 0, food.get(i).getName(), food.get(i).getAmount(), food.get(i).getKcal(),
+                                            food.get(i).getE(), food.get(i).getKh(), food.get(i).getF(), food.get(i).getUnit()));
+
+                                    Intent intent = new Intent(SearchItemActivity.this, ShowMealActivity.class);
+                                    Bundle extra = new Bundle();
+                                    extra.putParcelable("User", user);
+                                    extra.putParcelableArrayList("Meals", meals);
+                                    intent.putExtras(extra);
+                                    startActivity(intent);
+                                }
                             }
                         }
-                    }
 
-                    @Override
-                    public void onFailure(Call<List<Food>> call, Throwable t) {
+                        @Override
+                        public void onFailure(Call<List<Food>> call, Throwable t) {
 
-                    }
-                });
+                        }
+                    });
+
+                }
+
+                if(art == 1){
+                    JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+                    Call<List<SportFromDataBase>> call = jsonPlaceHolderApi.getSport();
+
+                    call.enqueue(new Callback<List<SportFromDataBase>>() {
+                        @Override
+                        public void onResponse(Call<List<SportFromDataBase>> call, Response<List<SportFromDataBase>> response) {
+                            List<SportFromDataBase> data = response.body();
+                            for(int i = 0; i < data.size(); i++) {
+                                if(filteredList.get(position).getId() == (data.get(i).getId())){
+                                    sport.add(new Sport(data.get(i).getId(), 0, data.get(i).getName(), 0, data.get(i).getMet(), 0));
+
+                                    Intent intent = new Intent(SearchItemActivity.this, ShowSportActivity.class);
+                                    Bundle extra = new Bundle();
+                                    extra.putParcelable("User", user);
+                                    extra.putParcelableArrayList("Sport", sport);
+                                    intent.putExtras(extra);
+                                    startActivity(intent);
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<List<SportFromDataBase>> call, Throwable t) {
+
+                        }
+                    });
+                }
+
+
+
 
             }
         });
+        if(art == 0){
+            getFood();
+            filteredList=searchList;
 
-        getFood();
+        }
+        if(art == 1){
+            getSport();
+
+            filteredList=searchList;
+        }
 
         mAdapterSearch.notifyDataSetChanged();
     }
@@ -144,7 +189,7 @@ public class SearchItemActivity extends AppCompatActivity {
             public void onResponse(Call<List<Food>> call, Response<List<Food>> response) {
                 List<Food> food = response.body();
                 for(int i = 0; i < food.size(); i++) {
-                    searchList.add(new SearchItem(food.get(i).getId(), food.get(i).getName() + ", " + String.valueOf(food.get(i).getAmount()) + " " + food.get(i).getUnit(),
+                    searchList.add(new SearchItem(food.get(i).getId(), food.get(i).getName() + "| " + String.valueOf(food.get(i).getAmount()) + " " + food.get(i).getUnit(),
                             String.valueOf(food.get(i).getKcal()) + " kcal - " + String.valueOf(food.get(i).getKh())  + "g Kohlenhydrate - " +
                             String.valueOf(food.get(i).getE()) + "g Eiweiß - " + String.valueOf(food.get(i).getF()) + "g Fett"));
                     mAdapterSearch.notifyDataSetChanged();
@@ -154,6 +199,30 @@ public class SearchItemActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<Food>> call, Throwable t) {
+
+            }
+        });
+
+    }
+
+    public void getSport(){
+        JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
+
+        Call<List<SportFromDataBase>> call = jsonPlaceHolderApi.getSport();
+
+        call.enqueue(new Callback<List<SportFromDataBase>>() {
+            @Override
+            public void onResponse(Call<List<SportFromDataBase>> call, Response<List<SportFromDataBase>> response) {
+                List<SportFromDataBase> data = response.body();
+                for(int i = 0; i < data.size(); i++) {
+                    searchList.add(new SearchItem(data.get(i).getId(), data.get(i).getName(), " "));
+                    mAdapterSearch.notifyDataSetChanged();
+                }
+                mAdapterSearch.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onFailure(Call<List<SportFromDataBase>> call, Throwable t) {
 
             }
         });

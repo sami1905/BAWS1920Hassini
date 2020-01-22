@@ -27,7 +27,7 @@
         <TextView
             android:id="@+id/input_date"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@color/white"
@@ -54,7 +54,7 @@
         <TextView
             android:id="@+id/input_time"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:padding="7.5dp"
             android:layout_marginTop="10dp"
@@ -81,7 +81,7 @@
         <EditText
             android:id="@+id/input_bz"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:padding="7.5dp"
             android:layout_marginTop="10dp"
@@ -108,13 +108,13 @@
         <EditText
             android:id="@+id/input_kie"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:padding="7.5dp"
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:hint=" "
+            android:hint="IE"
             android:inputType="numberDecimal"
             android:textColorHint="@color/colorAccent"
             android:textSize="15dp"
@@ -142,7 +142,7 @@
             android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="270dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:padding="7.5dp"
                 android:background="@color/white"
                 android:fontFamily="@font/josefin_sans_semibold"
@@ -153,6 +153,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_gravity="center"
                 android:background="@drawable/ic_add_box"
                 android:backgroundTint="@color/colorAccent"/>
         </LinearLayout>
@@ -169,6 +170,7 @@
 
 
         <TextView
+            android:id="@+id/be_unit"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:layout_gravity="left"
@@ -183,13 +185,13 @@
         <EditText
             android:id="@+id/input_be"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:padding="7.5dp"
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:hint=" "
+            android:hint="Anzahl"
             android:inputType="numberDecimal"
             android:textColorHint="@color/colorAccent"
             android:textSize="15dp"
@@ -211,13 +213,13 @@
         <EditText
             android:id="@+id/input_ie"
             android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:padding="7.5dp"
             android:layout_marginTop="10dp"
             android:background="@color/white"
             android:fontFamily="@font/josefin_sans_semibold"
-            android:hint=" "
+            android:hint="IE"
             android:inputType="numberDecimal"
             android:textColorHint="@color/colorAccent"
             android:textSize="15dp"
@@ -245,7 +247,7 @@
             android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="270dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:padding="7.5dp"
                 android:background="@color/white"
                 android:fontFamily="@font/josefin_sans_semibold"
@@ -256,6 +258,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
+                android:layout_gravity="center"
                 android:background="@drawable/ic_add_box"
                 android:backgroundTint="@color/colorAccent"/>
         </LinearLayout>
