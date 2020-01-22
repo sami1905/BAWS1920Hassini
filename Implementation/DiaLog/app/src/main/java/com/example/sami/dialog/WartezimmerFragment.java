@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -28,15 +29,29 @@ public class WartezimmerFragment extends Fragment {
     private User user;
     private TextView text;
     private ArrayList<PostItem> postList;
+    private ImageView addButton;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_wartezimmer, container, false);
 
         if(getArguments() != null){
             user = getArguments().getParcelable("User");
         }
+        addButton = v.findViewById(R.id.image_button_post);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), NewPostActivity.class);
+                Bundle extra = new Bundle();
+                extra.putParcelable("User", user);
+                extra.putInt("Fragment", 3);
+                intent.putExtras(extra);
+                startActivity(intent);
+            }
+        });
 
 
 

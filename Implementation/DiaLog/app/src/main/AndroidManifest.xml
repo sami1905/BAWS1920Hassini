@@ -80,7 +80,9 @@
             android:screenOrientation="portrait" />
         <activity android:name=".ErnaehrungActivity" />
         <activity android:name=".AktivitaetActivity" />
-        <activity android:name=".MyCommentsActivity"></activity>
+        <activity android:name=".MyCommentsActivity" />
+        <activity android:name=".SearchItemActivity" />
+        <activity android:name=".ShowMealActifity"></activity>
     </application>
 
 </manifest>

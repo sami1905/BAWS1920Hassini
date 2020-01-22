@@ -8,7 +8,8 @@ app.use(bodyParser.json());
 const settings = {
     port: 3000,
     users: './users.json',
-    posts: './posts.json'
+    posts: './posts.json',
+    food: './food.json'
 };
 
 app.use(function(err, req, res, next){
@@ -98,7 +99,10 @@ app.post('/users', bodyParser.json(), function(req, res){
                 "calorieDegreeFive" : req.body.calorieDegreeFive,
                 "calorieDegreeSix" : req.body.calorieDegreeSix,
                 "weightGoal" : req.body.weightGoal,
-                "score" : req.body.score
+                "score" : req.body.score,
+                "events" : [],
+                "meals" : [],
+                "sport" : []
         };
         
         //creat user
@@ -146,6 +150,9 @@ app.put('/users/:userID', bodyParser.json(), function(req, res){
           users[i].calorieDegreeSix = req.body.calorieDegreeSix;
           users[i].weightGoal = req.body.weightGoal;
           users[i].score = req.body.score;
+          if(req.body.events != null)users[i].events = req.body.events;
+          if(req.body.meals != null)users[i].meals = req.body.meals;
+          if(req.body.sport != null)users[i].sport = req.body.sport;
           fs.writeFile(settings.users, JSON.stringify(users, null, 2));
           res.status(200).send("User erfolgreich bearbeitet");
       }
@@ -176,6 +183,8 @@ app.delete('/users/:userID', function(req, res){
     }
   });
 });
+
+
 
 
 //GET /posts
@@ -346,6 +355,14 @@ app.delete('/comment/:commentID', function(req, res){
       res.status(404).send("Comment NOT FOUND");
     }
   });
+});
+
+//GET /food
+app.get('/food', function(req, res){
+    fs.readFile(settings.food,function(err,data){
+        var food = JSON.parse(data);
+        res.status(200).send(food);
+    });
 });
 
 app.listen(settings.port, function(){

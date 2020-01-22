@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorAccent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="1dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/search_input_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:text="yyyy, 62min"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:layout_gravity="center"
+                    android:gravity="left"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+
+                android:layout_marginBottom="1dp"
+                android:orientation="horizontal"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/search_input_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="744 kcal verbrannt"
+                    android:textSize="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/josefin_sans_bold"
+                    android:gravity="left"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+</android.support.v7.widget.CardView>

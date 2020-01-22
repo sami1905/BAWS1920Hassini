@@ -73,12 +73,22 @@ public class User implements Parcelable {
     @SerializedName("score")
     private int score;
 
-    public User(int id, String firstname, String name, String birthday, int height, float weight,
-                String gender, String nickname, String email, String password, String dmType,
-                String insulin, boolean tablets, String unitBZ, String unitKH, float lowlimit,
-                float upperLimit, float lowSugar, float upperSugar, float correctionFactor, float beFactor, float calorieDegreeOne,
-                float calorieDegreeTwo, float calorieDegreeThree, float calorieDegreeFour,
-                float calorieDegreeFive, float calorieDegreeSix, String weightGoal, int score) {
+    @SerializedName("events")
+    private ArrayList<Event> events;
+    @SerializedName("meals")
+    private ArrayList<Meal> meals;
+    @SerializedName("sport")
+    private ArrayList<Sport> sport;
+
+    public User(int id, String firstname, String name, String birthday, int height,
+                float weight, String gender, String nickname, String email,
+                String password, String dmType, String insulin, boolean tablets,
+                String unitBZ, String unitKH, float lowlimit, float upperLimit,
+                float lowSugar, float upperSugar, float correctionFactor, float beFactor,
+                float calorieDegreeOne, float calorieDegreeTwo, float calorieDegreeThree,
+                float calorieDegreeFour, float calorieDegreeFive, float calorieDegreeSix,
+                String weightGoal, int score, ArrayList<Event> events, ArrayList<Meal> meals,
+                ArrayList<Sport> sport) {
         this.id = id;
         this.firstname = firstname;
         this.name = name;
@@ -108,6 +118,9 @@ public class User implements Parcelable {
         this.calorieDegreeSix = calorieDegreeSix;
         this.weightGoal = weightGoal;
         this.score = score;
+        this.events = events;
+        this.meals = meals;
+        this.sport = sport;
     }
 
     protected User(Parcel in) {
@@ -140,6 +153,44 @@ public class User implements Parcelable {
         calorieDegreeSix = in.readFloat();
         weightGoal = in.readString();
         score = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(firstname);
+        dest.writeString(name);
+        dest.writeString(birthday);
+        dest.writeInt(height);
+        dest.writeFloat(weight);
+        dest.writeString(gender);
+        dest.writeString(nickname);
+        dest.writeString(email);
+        dest.writeString(password);
+        dest.writeString(dmType);
+        dest.writeString(insulin);
+        dest.writeByte((byte) (tablets ? 1 : 0));
+        dest.writeString(unitBZ);
+        dest.writeString(unitKH);
+        dest.writeFloat(lowlimit);
+        dest.writeFloat(upperLimit);
+        dest.writeFloat(lowSugar);
+        dest.writeFloat(upperSugar);
+        dest.writeFloat(correctionFactor);
+        dest.writeFloat(beFactor);
+        dest.writeFloat(calorieDegreeOne);
+        dest.writeFloat(calorieDegreeTwo);
+        dest.writeFloat(calorieDegreeThree);
+        dest.writeFloat(calorieDegreeFour);
+        dest.writeFloat(calorieDegreeFive);
+        dest.writeFloat(calorieDegreeSix);
+        dest.writeString(weightGoal);
+        dest.writeInt(score);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {
@@ -386,41 +437,27 @@ public class User implements Parcelable {
         this.score = score;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public ArrayList<Event> getEvents() {
+        return events;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(id);
-        dest.writeString(firstname);
-        dest.writeString(name);
-        dest.writeString(birthday);
-        dest.writeInt(height);
-        dest.writeFloat(weight);
-        dest.writeString(gender);
-        dest.writeString(nickname);
-        dest.writeString(email);
-        dest.writeString(password);
-        dest.writeString(dmType);
-        dest.writeString(insulin);
-        dest.writeByte((byte) (tablets ? 1 : 0));
-        dest.writeString(unitBZ);
-        dest.writeString(unitKH);
-        dest.writeFloat(lowlimit);
-        dest.writeFloat(upperLimit);
-        dest.writeFloat(lowSugar);
-        dest.writeFloat(upperSugar);
-        dest.writeFloat(correctionFactor);
-        dest.writeFloat(beFactor);
-        dest.writeFloat(calorieDegreeOne);
-        dest.writeFloat(calorieDegreeTwo);
-        dest.writeFloat(calorieDegreeThree);
-        dest.writeFloat(calorieDegreeFour);
-        dest.writeFloat(calorieDegreeFive);
-        dest.writeFloat(calorieDegreeSix);
-        dest.writeString(weightGoal);
-        dest.writeInt(score);
+    public void setEvents(ArrayList<Event> events) {
+        this.events = events;
+    }
+
+    public ArrayList<Meal> getMeals() {
+        return meals;
+    }
+
+    public void setMeals(ArrayList<Meal> meals) {
+        this.meals = meals;
+    }
+
+    public ArrayList<Sport> getSport() {
+        return sport;
+    }
+
+    public void setSport(ArrayList<Sport> sport) {
+        this.sport = sport;
     }
 }

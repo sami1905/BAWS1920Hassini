@@ -1,5 +1,6 @@
 package com.example.sami.dialog;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.ResponseBody;
@@ -48,4 +49,7 @@ public interface JsonPlaceHolderApi {
 
     @DELETE("comment/{id}")
     Call<Void> deleteComment(@Path("id") int id);
+
+    @GET("food")
+    Call<List<Food>> getFood();
 }

@@ -60,7 +60,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         else if(whichFragment == 2){
             selectedFragment = new AddEventFragment();
-            textÜberschrift.setText(" ");
+            textÜberschrift.setText("Ereignis hinzufügen");
             bottomNav.setSelectedItemId(R.id.nav_add_event);
         }
         else if(whichFragment == 3) {
@@ -103,7 +103,7 @@ public class HomeActivity extends AppCompatActivity {
                             break;
                         case R.id.nav_add_event:
                             selectedFragment = new AddEventFragment();
-                            textÜberschrift.setText(" ");
+                            textÜberschrift.setText("Ereignis hinzufügen");
                             break;
                         case R.id.nav_wartezimmer:
                             selectedFragment = new WartezimmerFragment();
