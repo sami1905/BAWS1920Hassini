@@ -39,90 +39,50 @@ public class TagebuchFragment extends Fragment {
         }
 
 
-        bzList.add(new BzItem(0,2,"12:30", "99", "mg/dL", "3", "BE", "-", "4.5"));
-        bzList.add(new BzItem(0,2,"10:06", "211", "mg/dL", "-", "BE", "2.5", "2.5"));
-        bzList.add(new BzItem(0,2,"06:11", "142", "mg/dL", "6", "BE", "-", "9"));
 
         bzRecyclerView = v.findViewById(R.id.bz_recyclerview);
         bzLayoutManager = new LinearLayoutManager(getContext());
         bzAdapter = new BzAdapter(bzList);
         bzRecyclerView.setLayoutManager(bzLayoutManager);
         bzRecyclerView.setAdapter(bzAdapter);
+        getEvents("23.1.2020");
 
-        new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0,
-                ItemTouchHelper.LEFT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder viewHolder1) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
-                bzList.remove(viewHolder.getAdapterPosition());
-                bzAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
-            }
-        }).attachToRecyclerView(bzRecyclerView);
-
-
+        bzAdapter.notifyDataSetChanged();
 
         return v;
     }
 
-   /* public void addEvent( Event nEvent, Meal nMeal, Sport nSport){
 
-        ArrayList<Event> currentEvents =  new ArrayList<Event>();
-        ArrayList<Meal> currentMeal = user.getMeals();
-        ArrayList<Sport> currentSport = user.getSport();
+    public void getEvents(final String date){
 
-        if(nEvent != null){
-            if(user.getEvents() == null){
-                user.setEvents(new ArrayList<Event>());
-            }
-            user.getEvents().add(nEvent);
-        }
-
-
-        if(nMeal != null){
-            if(user.getMeals() == null){
-                user.setMeals(new ArrayList<Meal>());
-            }
-            user.getMeals().add(nMeal);
-        }
-
-
-        if(nSport != null){
-            if(user.getSport() == null){
-                user.setSport(new ArrayList<Sport>());
-            }
-            user.getSport().add(nSport);
-
-        }
-
-        bzList.add(new BzItem(user.getEvents().get(0).getId(),user.getId(),user.getEvents().get(0).getTime(),
-                String.valueOf(nEvent.getSugar()), user.getUnitBZ(), String.valueOf(nEvent.getBe()),
-                user.getUnitKH(), String.valueOf(nEvent.getKie()), String.valueOf(nEvent.getIe())));
-
-        changeUser(user);
-
-
-
-    }*/
-
-    public void changeUser(User user){
         JsonPlaceHolderApi jsonPlaceHolderApi = RestService.getRestService().create(JsonPlaceHolderApi.class);
 
-        Call<User> call = jsonPlaceHolderApi.putUser(user.getId(), user);
+        Call<List<Event>> call = jsonPlaceHolderApi.getEvents(user.getId());
 
-        call.enqueue(new Callback<User>() {
+        call.enqueue(new Callback<List<Event>>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                return;
+            public void onResponse(Call<List<Event>> call, Response<List<Event>> response) {
+                ArrayList<Event> dateEvents = new ArrayList<>();
+                float kh = 0;
+                List<Event> events = response.body();
+                for(Event e : events){
+                    if (e.getDate().equals(date)){
+                        dateEvents.add(e);
+                        for(Meal m : e.getMeals()){
+                            kh = kh + m.getKh();
+                        }
+                        bzList.add(new BzItem(0, user.getId(), e.getTime(), String.valueOf(e.getSugar()), user.getUnitBZ(), String.valueOf(kh), user.getUnitKH(),
+                                String.valueOf(e.getKie()), String.valueOf(e.getIe() )));
+
+                        bzAdapter.notifyDataSetChanged();
+                    }
+                }
 
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                return;
+            public void onFailure(Call<List<Event>> call, Throwable t) {
+
             }
         });
     }

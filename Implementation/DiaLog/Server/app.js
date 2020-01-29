@@ -427,6 +427,123 @@ app.get('/sport', function(req, res){
     });
 });
 
+//GET /food
+app.get('/food', function(req, res){
+    fs.readFile(settings.food,function(err,data){
+        var food = JSON.parse(data);
+        res.status(200).send(food);
+    });
+});
+
+//GET /statistics
+app.get('/statistics/:userID', function(req, res){
+    fs.readFile(settings.events,function(err,data){
+        var events = JSON.parse(data);
+        var userID = req.param.userID;
+        var current_i;
+        var userEvents = [];
+        
+        for(var i = 0; i < events.length; i++ ){
+            if(events[i].userID == req.params.userID){
+                userEvents.splice(userEvents.length, 0, events[i])
+            }
+        }
+        if(userEvents.length == 0){res.status(404).send("Nicht gefunden")}
+        else{
+            fs.readFile(settings.users,function(err,data){
+                var users = JSON.parse(data);
+                var currentUser;
+        
+                for(var i = 0; i < users.length; i++){
+                    if(users[i].id == req.params.userID){
+                    currentUser = users[i];
+                    }
+                
+                }
+                
+                var countBZ = 0;
+                var countLow = 0;
+                var countHigh = 0;
+                var countInRange = 0;
+                var averageSugar = 0;
+                var countBE = 0;
+                var bes = 0;
+                var ies = 0;
+                var days = [];
+                var hba1c = 0;
+
+                for(var i = 0; i < userEvents.length; i++){
+                    if(userEvents[i].sugar != 0 && userEvents[i].sugar < currentUser.lowLimit){
+                        countBZ++;
+                        countLow++;
+                    }
+                    
+                    if(userEvents[i].sugar != 0 && userEvents[i].sugar > currentUser.upperLimit){
+                        countBZ++;
+                        countHigh++;
+                    }
+                    
+                    if(userEvents[i].sugar != 0 && userEvents[i].sugar >= currentUser.lowLimit && userEvents[i].sugar <= currentUser.upperLimit){
+                        countBZ++;
+                        countInRange++;
+                    }
+                    averageSugar = averageSugar + userEvents[i].sugar;
+                    
+                    if(userEvents[i].be != 0){
+                        bes = bes + userEvents[i].be;
+                        countBE++;
+                    }
+                    if(days.length != 0){
+                        for(var j = 0; j < days.length; j++){
+                            if(days[j] == userEvents[i].date){
+                                break;
+                            }
+                            else{
+                                days.splice(days.length, 0, userEvents[i].date);
+                            }
+                        }
+                    }
+                    if(days.length == 0){
+                        days.splice(days.length, 0, userEvents[i].date);
+                    }
+                    ies = ies + userEvents[i].ie;
+                    
+                }
+                if(countBZ != 0){
+                    averageSugar = averageSugar/countBZ;    
+                }
+                if(countBE != 0){
+                    
+                    bes = bes/countBE;    
+                }
+                ies = ies / days.length;
+                
+                if(currentUser.unitBZ == "mg/dL" && averageSugar != 0){
+                    hba1c = 0.031 * averageSugar + 2.393;
+                }
+                
+                if(currentUser.unitBZ == "mmol/L" && averageSugar != 0) {
+                    hba1c = 0.031 * averageSugar * 18.02 + 2.393;
+                }
+                
+                var statistics = {
+                    "countBZ" : countBZ,
+                    "countLow" : countLow,
+                    "countHigh" : countHigh,
+                    "countInRange" : countInRange,
+                    "averageSugar" : averageSugar,
+                    "hba1c" : hba1c,
+                    "bePerMeal" : bes,
+                    "iesPerDay" : ies
+                }
+                
+                res.status(200).send(statistics)
+            });
+            
+        }
+    });
+});
+
 app.listen(settings.port, function(){
   console.log("Server läuft auf Port " + settings.port + ".");
 });

@@ -60,4 +60,7 @@ public interface JsonPlaceHolderApi {
     Call<List<Food>> getFood();
     @GET("sport")
     Call<List<SportFromDataBase>> getSport();
+
+    @GET("statistics/{id}")
+    Call<Statistik> getStats(@Path("id") int id);
 }
