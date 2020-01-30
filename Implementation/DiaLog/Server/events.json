@@ -1,74 +1,106 @@
 [
   {
     "id": 1,
-    "userID": 2,
-    "date": "22.1.2020",
-    "time": "22:42",
-    "sugar": 133,
-    "kie": 3.3,
-    "meals": [],
-    "be": 0,
-    "ie": 3.3,
+    "userID": 5,
+    "date": "30.1.2020",
+    "time": "03:20",
+    "sugar": 190,
+    "kie": 2,
+    "meals": [
+      {
+        "amount": 450,
+        "description": "Pizza Margherita, selbst zub.",
+        "e": 77.76,
+        "eventID": 0,
+        "f": 68.04,
+        "id": 0,
+        "kcal": 1911.6,
+        "kh": 239.76,
+        "unit": "g"
+      }
+    ],
+    "be": 20,
+    "ie": 52,
     "sports": []
   },
   {
     "id": 2,
     "userID": 1,
-    "date": "22.1.2020",
-    "time": "22:48",
-    "sugar": 77,
-    "kie": 3.7,
-    "meals": [],
-    "be": 0,
-    "ie": 3.7,
-    "sports": []
-  },
-    {
-    "id": 1,
-    "userID": 2,
-    "date": "23.1.2020",
-    "time": "22:42",
-    "sugar": 237,
-    "kie": 3.3,
-    "meals": [],
-    "be": 3,
-    "ie": 3.3,
-    "sports": []
-  },
-  {
-    "id": 2,
-    "userID": 1,
-    "date": "23.1.2020",
-    "time": "22:48",
-    "sugar": 237,
-    "kie": 3.7,
-    "meals": [],
-    "be": 0,
-    "ie": 3.7,
-    "sports": []
-  },
-    {
-    "id": 1,
-    "userID": 2,
-    "date": "24.1.2020",
-    "time": "22:42",
-    "sugar": 117,
-    "kie": 3.3,
-    "meals": [],
-    "be": 0,
-    "ie": 3.3,
+    "date": "30.1.2020",
+    "time": "03:27",
+    "sugar": 0,
+    "kie": 0,
+    "meals": [
+      {
+        "amount": 200,
+        "description": "Ayran",
+        "e": 3,
+        "eventID": 0,
+        "f": 4,
+        "id": 0,
+        "kcal": 70,
+        "kh": 5,
+        "unit": "ml"
+      }
+    ],
+    "be": 0.4,
+    "ie": 0.8,
     "sports": []
   },
   {
-    "id": 2,
-    "userID": 1,
-    "date": "25.1.2020",
-    "time": "22:48",
-    "sugar": 347,
-    "kie": 3.7,
+    "id": 3,
+    "userID": 6,
+    "date": "30.1.2020",
+    "time": "03:43",
+    "sugar": 200,
+    "kie": 2.8,
+    "meals": [
+      {
+        "amount": 50,
+        "description": "Buttermilch",
+        "e": 0.4375,
+        "eventID": 0,
+        "f": 0.0625,
+        "id": 0,
+        "kcal": 4.6875,
+        "kh": 0.5,
+        "unit": "ml"
+      },
+      {
+        "amount": 250,
+        "description": "Pizza Margherita, selbst zub.",
+        "e": 24,
+        "eventID": 0,
+        "f": 21,
+        "id": 1,
+        "kcal": 590,
+        "kh": 74,
+        "unit": "g"
+      }
+    ],
+    "be": 6.2,
+    "ie": 12.099999,
+    "sports": []
+  },
+  {
+    "id": 4,
+    "userID": 6,
+    "date": "30.1.2020",
+    "time": "03:44",
+    "sugar": 0,
+    "kie": 0,
     "meals": [],
     "be": 0,
-    "ie": 3.7,
-    "sports": []
+    "ie": 0,
+    "sports": [
+      {
+        "description": "Laufen (12 km/h)",
+        "duration": 0.5,
+        "eventID": 0,
+        "id": 0,
+        "kcal": 552,
+        "met": 12
+      }
+    ]
   }
 ]

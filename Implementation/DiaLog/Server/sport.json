@@ -3,15 +3,55 @@
     "id" : 1,
     "name" : "Billiard",
     "met" : 3
+},  
+    {
+    "id" : 2,
+    "name" : "Bowling",
+    "met" : 3
+},
+      {
+    "id" : 3,
+    "name" : "Volleyball",
+    "met" : 3
+},
+      {
+    "id" : 4,
+    "name" : "Bogenschiessen",
+    "met" : 4
+},
+      {
+    "id" : 5,
+    "name" : "Tischtennis",
+    "met" : 4
+},
+      {
+    "id" : 6,
+    "name" : "Golf",
+    "met" : 5
+},
+      {
+    "id" : 7,
+    "name" : "Laufen (5km/h)",
+    "met" : 5
 },
 {
-    "id" : 2,
+    "id" : 8,
     "name" : "Schwimmen (moderat)",
     "met" : 6
 },
 {
-    "id" : 3,
+    "id" : 9,
     "name" : "Fussball",
     "met" : 7
+},
+      {
+    "id" : 10,
+    "name" : "Radfahren (15 km/h)",
+    "met" : 6
+},
+      {
+    "id" : 11,
+    "name" : "Laufen (12 km/h)",
+    "met" : 12
 }
 ]

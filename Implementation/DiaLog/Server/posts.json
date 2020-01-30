@@ -1,43 +1,43 @@
 [
   {
-    "id": 4,
-    "userID": 3,
-    "userNickname": "Sami",
-    "text": "Hallo Welt!",
+    "id": 1,
+    "userID": 1,
+    "userNickname": "Markus",
+    "text": "Hallo, ich benutze erst seit 2 Wochen den Dexcom-Sensor. Als ich heute meinen Sensor neu gesetzt habe, habe ich sehr stark geblutet. Ist das normal? ",
     "date": "1/6/2020",
     "time": "3:15",
     "comments": [
       {
         "id": 1,
-        "userID": 1,
-        "userNickname": "Type_One",
-        "text": "werbist du",
+        "userID": 2,
+        "userNickname": "Maxi",
+        "text": "Ja, das Kommt schonmal vor.",
         "date": "1/19/2020",
         "time": "18:43"
       },
       {
         "id": 2,
-        "userID": 1,
-        "userNickname": "jsjs",
-        "text": "gg",
+        "userID": 4,
+        "userNickname": "Lara123",
+        "text": "Ganz normal. Mach dir keine Kopf. Das passiert ab und zu.",
         "date": "1/22/2020",
         "time": "2:41"
       },
       {
         "id": 3,
-        "userID": 2,
-        "userNickname": "jsjs",
-        "text": "jsjs",
-        "date": "1/22/2020",
-        "time": "22:40"
+        "userID": 6,
+        "userNickname": "Max94",
+        "text": "das passiert",
+        "date": "1/30/2020",
+        "time": "3:44"
       }
     ]
   },
   {
-    "id": 5,
-    "userID": 1,
-    "userNickname": "jsjs",
-    "text": "gg",
+    "id": 2,
+    "userID": 2,
+    "userNickname": "Maxi",
+    "text": "Ich bin auf der Suche nach einem schnellwirkenden Insulin. Welches verwendet ihr?",
     "date": "1/22/2020",
     "time": "16:43",
     "comments": []

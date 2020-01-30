@@ -226,5 +226,29 @@
     "kh": 5,
     "f": 5,
     "unit": "ml"
+  },
+    {
+    "id": 20,
+    "name": "Brötchen",
+    "category": "Brot",
+    "amount": 45,
+    "kcal": 125,
+    "kj": 520,
+    "e": 4,
+    "kh": 27,
+    "f": 1,
+    "unit": "g"
+  },
+    {
+    "id": 21,
+    "name": "Pizza Margherita, selbst zub.",
+    "category": "Pizza",
+    "amount": 250,
+    "kcal": 590,
+    "kj": 2460,
+    "e": 24,
+    "kh": 74,
+    "f": 21,
+    "unit": "g"
   }
 ]

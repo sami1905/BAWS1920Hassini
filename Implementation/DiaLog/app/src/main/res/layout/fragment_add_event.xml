@@ -163,7 +163,6 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:scrollbars="vertical"
             android:layout_marginLeft="20dp"
             android:layout_gravity="center"
             android:layout_marginRight="20dp"/>
@@ -268,7 +267,6 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:scrollbars="vertical"
             android:layout_marginLeft="20dp"
 
             android:layout_gravity="center"
