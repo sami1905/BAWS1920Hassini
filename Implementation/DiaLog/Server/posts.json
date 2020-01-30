@@ -41,5 +41,14 @@
     "date": "1/22/2020",
     "time": "16:43",
     "comments": []
+  },
+  {
+    "id": 3,
+    "userID": 6,
+    "userNickname": "Max94",
+    "text": "hallo gm",
+    "date": "1/30/2020",
+    "time": "4:37",
+    "comments": []
   }
 ]

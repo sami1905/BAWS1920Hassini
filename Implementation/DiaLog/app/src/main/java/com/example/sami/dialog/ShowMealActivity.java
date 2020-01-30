@@ -112,10 +112,10 @@ public class ShowMealActivity extends AppCompatActivity {
                     toast.show();
                 }
                 else{
-                    float nkcal = (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textkcal.getText().toString())) / meals.get(meals.size()-1).getAmount();
-                    float nkh =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textKh.getText().toString())) / meals.get(meals.size()-1).getAmount();
-                    float ne =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textE.getText().toString())) / meals.get(meals.size()-1).getAmount();
-                    float nf =  (Float.valueOf(editMenge.getText().toString()) * Float.valueOf(textF.getText().toString())) / meals.get(meals.size()-1).getAmount();
+                    float nkcal = (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getKcal() / meals.get(meals.size()-1).getAmount());
+                    float nkh =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getKh() / meals.get(meals.size()-1).getAmount());
+                    float ne =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getE() / meals.get(meals.size()-1).getAmount());
+                    float nf =  (Float.valueOf(editMenge.getText().toString()) * meals.get(meals.size()-1).getF() / meals.get(meals.size()-1).getAmount());
 
                     int id = 0;
 

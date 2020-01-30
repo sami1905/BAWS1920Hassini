@@ -316,7 +316,7 @@ public class TagebuchFragment extends Fragment implements DatePickerDialog.OnDat
                     float leistung = (float) (((user.getCalorieDegreeOne()*0.95)/a) + ((user.getCalorieDegreeTwo() * 1.2f)/a) + ((user.getCalorieDegreeThree() * 1.45f)/a) +
                             ((user.getCalorieDegreeFour() * 1.65f)/a) + ((user.getCalorieDegreeFive() * 1.85f)/a) + ((user.getCalorieDegreeSix() * 2.2f)/a));
 
-                    if(leistung != 0){
+                    if(a != 0){
 
                         kcal = Math.round(kcal*leistung);
                     }
@@ -361,9 +361,10 @@ public class TagebuchFragment extends Fragment implements DatePickerDialog.OnDat
                         kcal = Math.round(655.1f + (9.6f * user.getWeight()) + (1.8f * user.getHeight()) - (4.7f * age));
                     }
 
-                    float leistung = (float) (user.getCalorieDegreeOne()*0.95 + user.getCalorieDegreeTwo() * 1.2f + user.getCalorieDegreeThree() * 1.45f + user.getCalorieDegreeFour() * 1.65f + user.getCalorieDegreeFive() * 1.85f + user.getCalorieDegreeSix() * 2.2f);
-                    leistung = leistung /(user.getCalorieDegreeOne() + user.getCalorieDegreeTwo() + user.getCalorieDegreeThree() + user.getCalorieDegreeFour() + user.getCalorieDegreeFive() + user.getCalorieDegreeSix());
-                    if(leistung != 0){
+                    float a = user.getCalorieDegreeOne() + user.getCalorieDegreeTwo() + user.getCalorieDegreeThree() + user.getCalorieDegreeFour() + user.getCalorieDegreeFive() + user.getCalorieDegreeSix();
+                    float leistung = (float) (((user.getCalorieDegreeOne()*0.95)/a) + ((user.getCalorieDegreeTwo() * 1.2f)/a) + ((user.getCalorieDegreeThree() * 1.45f)/a) +
+                            ((user.getCalorieDegreeFour() * 1.65f)/a) + ((user.getCalorieDegreeFive() * 1.85f)/a) + ((user.getCalorieDegreeSix() * 2.2f)/a));
+                    if(a != 0){
 
                         kcal = Math.round(kcal*leistung);
                     }
